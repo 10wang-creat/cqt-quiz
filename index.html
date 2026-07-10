@@ -201,7 +201,7 @@ function pickCh(si){
 }
 
 /* ===== 出題引擎 ===== */
-let deck=null; /* {ids:[], i:0, label, mode:'practice'|'wrong', answered:{}, redo:0, right:0, wrongCnt:0} */
+let deck=null; /* {ids:[], i:0, label, mode:'practice'|'wrong', right:0, wrongCnt:0}；答錯只在 wrong 模式重排 */
 function shuffleArr(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a}
 
 let pending=null;
@@ -316,7 +316,7 @@ function grade(qid,chosen){
     el.classList.remove('sel');
   });
   const fb=document.getElementById('fbzone');
-  fb.innerHTML=`<div class="feedback ${correct?'ok':'bad'}"><b>${correct?'✅ 答對了！':'❌ 答錯了，正確答案：'+q.ans.split('').join('、')}</b>${q.expl?`<div class="expl">💡 ${esc(q.expl)}</div>`:''}${!correct&&deck.mode!=='wrong'?'<div class="expl">已加入錯題本，稍後會再出現。</div>':''}</div>`;
+  fb.innerHTML=`<div class="feedback ${correct?'ok':'bad'}"><b>${correct?'✅ 答對了！':'❌ 答錯了，正確答案：'+q.ans.split('').join('、')}</b>${q.expl?`<div class="expl">💡 ${esc(q.expl)}</div>`:''}${!correct&&deck.mode!=='wrong'?'<div class="expl">已加入錯題本，可用「錯題反覆練習」複習。</div>':''}</div>`;
   afterAnswer(qid,correct);
 }
 function revealOpen(qid){
@@ -331,12 +331,12 @@ function selfJudge(qid,ok){
   record(qid,ok);
   ok?deck.right++:deck.wrongCnt++;
   const fb=document.getElementById('fbzone');
-  if(!ok && deck.mode!=='wrong') fb.insertAdjacentHTML('beforeend','<div class="feedback bad">已加入錯題本，稍後會再出現。</div>');
+  if(!ok && deck.mode!=='wrong') fb.insertAdjacentHTML('beforeend','<div class="feedback bad">已加入錯題本，可用「錯題反覆練習」複習。</div>');
   afterAnswer(qid,ok);
 }
 function afterAnswer(qid,correct){
-  /* 答錯 → 重新排入本回合後段，直到答對 */
-  if(!correct){
+  /* 錯題練習模式：答錯 → 重新排入本回合後段，直到答對；一般練習不重複出現 */
+  if(!correct && deck.mode==='wrong'){
     const pos=Math.min(deck.i+1+4+Math.floor(Math.random()*3), deck.ids.length);
     deck.ids.splice(pos,0,qid);
   }
@@ -380,8 +380,8 @@ function result(){
     `<div class="card center">
       <div class="big">${acc>=80?'🎉':acc>=60?'💪':'📖'}</div>
       <div class="result-num">${acc}%</div>
-      <div style="margin:6px 0 2px">答對 ${deck.right}．答錯 ${deck.wrongCnt}（含重複作答）</div>
-      <div style="font-size:13.5px">本回合所有題目都已答對才結束 ✅</div>
+      <div style="margin:6px 0 2px">答對 ${deck.right}．答錯 ${deck.wrongCnt}${deck.mode==='wrong'?'（含重複作答）':''}</div>
+      ${deck.mode==='wrong'?'<div style="font-size:13.5px">錯題重複出現，全部答對才結束 ✅</div>':(deck.wrongCnt?'<div style="font-size:13.5px">答錯的題目已收進錯題本，可隨時複習 📖</div>':'')}
      </div>
      <div class="actions">
        ${S.wrong.length?`<button class="btn badb" onclick="startWrong()">錯題練習（${S.wrong.length}）</button>`:''}
