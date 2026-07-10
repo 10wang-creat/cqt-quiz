@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>統計品管 考試速查筆記</title>
 <style>
-:root{--bg:#faf9f5;--fg:#1a1a1a;--card:#fff;--line:#ddd;--acc:#b45309;--mark:#fde047;
---th:#f3efe6;--warn-bg:#fffbeb;--warn-bd:#f59e0b;--dim:#666;}
-html.dark{--bg:#16181d;--fg:#e6e4de;--card:#1f2229;--line:#3a3d45;--acc:#f0a850;--mark:#8a6d00;
---th:#2a2d35;--warn-bg:#2c2413;--warn-bd:#b98a1e;--dim:#9a988f;}
+:root{--bg:#F0EEF3;--fg:#34435E;--card:#fff;--line:#DFDAE8;--acc:#8981C2;--mark:#D7CBF2;
+--th:#ECE8F6;--warn-bg:#FBF0F4;--warn-bd:#E1A2BA;--dim:#7A7F96;}
+html.dark{--bg:#1B2231;--fg:#E4E2EC;--card:#242D40;--line:#3B465E;--acc:#BBADD8;--mark:#6D5E9E;
+--th:#2D3750;--warn-bg:#39303F;--warn-bd:#C88EA8;--dim:#98A0B6;}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;-webkit-text-size-adjust:100%}
 #bar{position:sticky;top:0;z-index:10;display:flex;gap:8px;align-items:center;padding:8px 10px;
@@ -57,6 +57,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <button onclick="openToc()">☰</button>
 <input id="q" type="search" placeholder="搜尋關鍵字…" oninput="doSearch()">
 <span id="hits"></span>
+<button onclick="location.href='index.html'" title="題庫練習">✏️</button>
 <button onclick="toggleDark()">🌓</button>
 </div>
 <nav id="toc"><div class="tocbtns"><button onclick="setAll(false)">全部展開</button><button onclick="setAll(true)">全部收合</button></div><a href="#s1" onclick="closeToc()">⓪ 考前必看：工程計算機設定（Casio fx-350MS）</a>
@@ -71,7 +72,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <a href="#s10" onclick="closeToc()">八、機率論基礎與集合論</a>
 <a href="#s11" onclick="closeToc()">九、事件機率與事件性質</a>
 <a href="#s12" onclick="closeToc()">十、條件機率例題 ⭐計算必考</a>
-<a href="#s13" onclick="closeToc()">十一、貝氏定理 (Bayes Theorem) ⭐⭐大題必考</a></nav>
+<a href="#s13" onclick="closeToc()">十一、貝氏定理 (Bayes Theorem) ⭐⭐大題必考</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
 <div id="ov" onclick="closeToc()"></div>
 <main>
 <h1>統計品管 — 考試速查筆記</h1>
@@ -2055,8 +2056,6 @@ function closeToc(){document.getElementById('toc').classList.remove('open');docu
 addEventListener('scroll',function(){document.getElementById('top').style.display=scrollY>600?'block':'none';});
 var tmr;
 function doSearch(){clearTimeout(tmr);tmr=setTimeout(run,200);}
-function clearMarks(){document.querySelectorAll('mark.sh').forEach(function(m){m.replaceWith(m.textContent);});
-document.querySelectorAll('main mark').length||document.normalize();}
 function run(){
  var q=document.getElementById('q').value.trim().toLowerCase();
  document.querySelectorAll('mark.sh').forEach(function(m){var t=document.createTextNode(m.textContent);m.parentNode.replaceChild(t,m);});

@@ -7,9 +7,9 @@
 <title>CQT 統計題庫練習</title>
 <style>
 :root{
-  --bg:#f4f5f7;--card:#fff;--text:#1a1d24;--sub:#6b7280;--line:#e5e7eb;
-  --pri:#2563eb;--pri-soft:#dbeafe;--ok:#16a34a;--ok-soft:#dcfce7;
-  --bad:#dc2626;--bad-soft:#fee2e2;--warn:#b45309;--warn-soft:#fef3c7;
+  --bg:#F0EEF3;--card:#fff;--text:#34435E;--sub:#7A7F96;--line:#DFDAE8;
+  --pri:#8981C2;--pri-soft:#ECE8F6;--ok:#4F8A6D;--ok-soft:#E2F0E8;
+  --bad:#C25573;--bad-soft:#F8E7ED;--warn:#8968B8;--warn-soft:#F1EAF9;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{margin:0;font-family:-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.55}
@@ -50,10 +50,10 @@ main{flex:1;padding:14px;padding-bottom:40px}
 .opt.bad{border-color:var(--bad);background:var(--bad-soft)}
 .opt:disabled{opacity:1;color:var(--text)}
 .feedback{border-radius:12px;padding:13px 14px;margin:10px 0;font-size:15px;white-space:pre-wrap;word-break:break-word}
-.feedback.ok{background:var(--ok-soft);border:1px solid #86efac}
-.feedback.bad{background:var(--bad-soft);border:1px solid #fca5a5}
+.feedback.ok{background:var(--ok-soft);border:1px solid #A9D7BC}
+.feedback.bad{background:var(--bad-soft);border:1px solid #EBB4C6}
 .feedback b{display:block;margin-bottom:4px}
-.expl{margin-top:8px;font-size:14px;color:#374151;border-top:1px dashed #d1d5db;padding-top:8px}
+.expl{margin-top:8px;font-size:14px;color:#4A5670;border-top:1px dashed #D8D3E3;padding-top:8px}
 .actions{display:flex;gap:10px;margin-top:12px}
 .btn{flex:1;border:none;border-radius:12px;padding:14px;font-size:16px;font-weight:700;cursor:pointer}
 .btn.pri{background:var(--pri);color:#fff}
@@ -65,7 +65,7 @@ main{flex:1;padding:14px;padding-bottom:40px}
 .center{text-align:center;padding:40px 16px;color:var(--sub)}
 .center .big{font-size:44px;margin-bottom:10px}
 .toggle-row{display:flex;align-items:center;justify-content:space-between;padding:4px 2px 12px;font-size:14.5px;color:var(--sub)}
-.switch{position:relative;width:46px;height:26px;background:#cbd5e1;border-radius:99px;border:none;cursor:pointer;transition:.2s}
+.switch{position:relative;width:46px;height:26px;background:#C7C2D6;border-radius:99px;border:none;cursor:pointer;transition:.2s}
 .switch.on{background:var(--pri)}
 .switch::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;background:#fff;border-radius:50%;transition:.2s}
 .switch.on::after{left:23px}
@@ -142,6 +142,9 @@ function home(){
      </button>
      <button class="big-btn" onclick="startRandom()">
        <span class="ic">🎲</span><span><div class="t">隨機 30 題測驗</div><div class="d">從全部題庫隨機抽 30 題</div></span>
+     </button>
+     <button class="big-btn" onclick="location.href='notes.html'">
+       <span class="ic">📖</span><span><div class="t">速查筆記</div><div class="d">公式、口訣、易錯觀念（HTML 版）</div></span>
      </button>
      <button class="big-btn" onclick="exportView()">
        <span class="ic">📤</span><span><div class="t">匯出錯題</div><div class="d">複製錯題清單，貼給 Claude 更新速查筆記</div></span>
