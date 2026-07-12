@@ -72,13 +72,15 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <a href="#s10" onclick="closeToc()">八、機率論基礎與集合論</a>
 <a href="#s11" onclick="closeToc()">九、事件機率與事件性質</a>
 <a href="#s12" onclick="closeToc()">十、條件機率例題 ⭐計算必考</a>
-<a href="#s13" onclick="closeToc()">十一、貝氏定理 (Bayes Theorem) ⭐⭐大題必考</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
+<a href="#s13" onclick="closeToc()">十一、貝氏定理 (Bayes Theorem) ⭐⭐大題必考</a>
+<a href="#s14" onclick="closeToc()">十二、重要機率分配 ⭐</a>
+<a href="#s15" onclick="closeToc()">十三、統計量分配（抽樣分配）— CQT 只需懂觀念</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
 <div id="ov" onclick="closeToc()"></div>
 <main>
 <h1>統計品管 — 考試速查筆記</h1>
 <hr />
 
-<p class="meta">更新：2026-07-10｜點章節標題可折疊｜考前印紙本請用 PDF 版</p>
+<p class="meta">更新：2026-07-12｜點章節標題可折疊｜考前印紙本請用 PDF 版</p>
 <section id="s1"><h2 onclick="tg(this)">⓪ 考前必看：工程計算機設定（Casio fx-350MS）<span class="ar">▾</span></h2><div class="sb">
 <h3>進入統計模式（SD 模式）＋清除舊資料</h3>
 <div class="tw"><table>
@@ -1281,6 +1283,65 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 </table></div>
 <p>驗證：資料 1~5 → 樣本標準差 1.581 → 平方 = <strong>2.5</strong> ✓（= SS/(n−1) = 10/4）</p>
 <p><strong>④ 查總和</strong>：SHIFT → 1 → 出現 Σx²(1)、Σx(2)、n(3)</p>
+<h3>4. 變異數 vs 變異係數（絕對 vs 相對離散）⭐必考</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>變異數 σ²／S²</th>
+<th>變異係數 CV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定義</td>
+<td>離差平方的平均</td>
+<td>標準差相對於平均數的比率</td>
+</tr>
+<tr>
+<td>公式</td>
+<td>σ²=SS/n；S²=SS/(n−1)</td>
+<td><strong>CV = (標準差 ÷ 平均數) × 100% = (S/X̄) × 100%</strong></td>
+</tr>
+<tr>
+<td>單位</td>
+<td>原資料單位的<strong>平方</strong>（有單位）</td>
+<td><strong>無單位</strong>（%，純比率）</td>
+</tr>
+<tr>
+<td>衡量</td>
+<td><strong>絕對</strong>離散程度</td>
+<td><strong>相對</strong>離散程度</td>
+</tr>
+<tr>
+<td>何時用</td>
+<td>兩組<strong>單位相同、平均相近</strong>時比誰分散</td>
+<td>兩組<strong>單位不同</strong>或<strong>平均差很大</strong>時比誰分散</td>
+</tr>
+<tr>
+<td>判讀</td>
+<td>越大越分散</td>
+<td>越大越分散／越不穩定、越不一致（品質越差）</td>
+</tr>
+<tr>
+<td>抗極端值</td>
+<td>✗ 怕（每個數值都參與計算）</td>
+<td>✗ 怕（標準差、平均數都怕）</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ <strong>判斷關鍵</strong>：要比「誰比較分散」時——
+單位相同、平均相近 → 直接看<strong>標準差／變異數</strong>即可；
+<strong>單位不同（如身高 cm vs 體重 kg）或平均差很大 → 一定要用 CV</strong>，才公平。
+陷阱：X̄ 為 0 或負時 CV 無意義；變異數帶「平方單位」，開根號還原成標準差才是原單位。</p>
+</blockquote>
+<p><strong>例：</strong> 甲組身高 平均 170cm、標準差 5cm；乙組體重 平均 60kg、標準差 5kg。誰比較分散？
+- 標準差都是 5，但<strong>單位不同不能直接比</strong> → 算 CV。
+- 甲：5/170 = <strong>2.94%</strong>；乙：5/60 = <strong>8.33%</strong> → <strong>乙組相對比較分散</strong>。</p>
+<blockquote>
+<p>🖩 <strong>Casio fx-350MS</strong>：CV 沒有專屬鍵。先在 SD 模式求標準差（<code>SHIFT → 2</code> → xσn 母體 σ／xσn−1 樣本 S）與 x̄，再 <code>標準差 ÷ x̄ × 100</code>。變異數則是取到標準差後 <code>Ans → x² → =</code>。</p>
+</blockquote>
 <hr />
 </div></section>
 <section id="s7"><h2 onclick="tg(this)">五、已分組數據的平均數與標準差<span class="ar">▾</span></h2><div class="sb">
@@ -2043,6 +2104,168 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <p>手寫速算：直接用 (50×0.4)/(50×0.4+30×0.6+20×1.2) = 20/62 = 0.32，百分比不用換算也可以！</p>
 </blockquote>
 <hr />
+</div></section>
+<section id="s14"><h2 onclick="tg(this)">十二、重要機率分配 ⭐<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 四大分配總覽（先分「計數值 vs 計量值」）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>分配</th>
+<th>資料型態</th>
+<th>使用時機（一句話）</th>
+<th>參數</th>
+<th>平均數</th>
+<th>變異數</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>超幾何</td>
+<td>計數值(離散)</td>
+<td>有限母體<strong>不放回</strong>抽樣，算成功次數</td>
+<td>N, D, n</td>
+<td>np（p=D/N）</td>
+<td>np(1−p)·(N−n)/(N−1)</td>
+</tr>
+<tr>
+<td>二項</td>
+<td>計數值(離散)</td>
+<td>n 次<strong>獨立</strong>試驗、成功率 p 固定，算成功次數</td>
+<td>n, p</td>
+<td>np</td>
+<td>np(1−p)</td>
+</tr>
+<tr>
+<td>卜瓦松</td>
+<td>計數值(離散)</td>
+<td>單位時間/面積內<strong>稀有事件</strong>的次數</td>
+<td>λ</td>
+<td>λ</td>
+<td>λ</td>
+</tr>
+<tr>
+<td>常態</td>
+<td>計量值(連續)</td>
+<td>對稱<strong>鐘形</strong>連續資料</td>
+<td>μ, σ</td>
+<td>μ</td>
+<td>σ²</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>判斷第一刀：<strong>計量值(量測、連續) → 常態</strong>；<strong>計數值(個數、次數) → 超幾何／二項／卜瓦松</strong>。</p>
+</blockquote>
+<h3>2. 超幾何分配 Hypergeometric（不放回）</h3>
+<ul>
+<li><strong>時機</strong>：母體 N 個中有 D 個成功(不良)，<strong>不放回</strong>抽 n 個，恰 x 個成功。</li>
+<li><strong>公式</strong>：P(X=x) = C(D,x)·C(N−D, n−x) ÷ C(N,n)</li>
+<li>平均數 = np、變異數 = np(1−p)·<strong>(N−n)/(N−1)</strong>（後段是<strong>有限母體修正項</strong>）；p = D/N</li>
+<li>例：100 件含 15 不良，取 10 件恰 3 不良 = C(15,3)·C(85,7) ÷ C(100,10)（＝第七章超幾何計數例）</li>
+</ul>
+<h3>3. 二項分配 Binomial ⭐</h3>
+<ul>
+<li><strong>時機</strong>：n 次試驗，每次只有成功/失敗兩種、各次<strong>獨立</strong>、成功率 p <strong>固定</strong>（放回，或母體極大 N≥10n）。</li>
+<li><strong>公式</strong>：P(X=x) = C(n,x)·pˣ·(1−p)ⁿ⁻ˣ，x=0,1,…,n</li>
+<li>平均數 μ = <strong>np</strong>；變異數 σ² = <strong>np(1−p) = npq</strong>；標準差 = √(npq)</li>
+<li>例：不良率 p=0.05，抽 20 件恰 2 件不良 = C(20,2)·0.05²·0.95¹⁸</li>
+</ul>
+<blockquote>
+<p>⚠️ 超幾何 vs 二項：<strong>不放回、有限母體 → 超幾何</strong>；<strong>放回，或 N≥10n → 二項</strong>（此時超幾何≈二項）。</p>
+</blockquote>
+<h3>4. 卜瓦松分配 Poisson ⭐</h3>
+<ul>
+<li><strong>時機</strong>：單位時間／長度／面積內，某<strong>稀有事件</strong>平均發生 λ 次，求恰發生 x 次。</li>
+<li><strong>公式</strong>：P(X=x) = e⁻λ·λˣ ÷ x!，x=0,1,2,…</li>
+<li>特徵：<strong>平均數 = 變異數 = λ</strong>（這是判斷卜瓦松的招牌）</li>
+<li>二項的極限：n 大、p 小（一般 n≥20 且 p≤0.05）可用卜瓦松近似二項，取 <strong>λ = np</strong></li>
+<li>品管應用：單位產品<strong>缺點數</strong>（c 管制圖、u 管制圖）</li>
+<li>例：每匹布平均 2 個瑕疵(λ=2)，某匹恰 3 個 = e⁻²·2³÷3! ≈ <strong>0.180</strong></li>
+</ul>
+<h3>5. 常態分配 Normal ⭐⭐（CQT 最重點）</h3>
+<ul>
+<li><strong>連續、對稱、鐘形</strong>；μ 決定<strong>中心位置</strong>、σ 決定<strong>胖瘦(離散程度)</strong>。記號 X~N(μ, σ²)。</li>
+<li><strong>標準化</strong>：Z = (X − μ)/σ → 轉成標準常態 N(0,1)，再查<strong>標準常態表</strong>求機率。</li>
+<li><strong>經驗法則</strong>（連第二章）：μ±1σ=68.26%、μ±2σ=95.44%、μ±3σ=<strong>99.73%</strong>。</li>
+<li>品管連結：管制圖 <strong>±3σ 界限</strong> ＝ 出界機率僅 0.27%，故<strong>出界視為異常</strong>；製程能力 Cp、Cpk 也建立在常態假設上。</li>
+<li>例：X~N(50, 2²)，求 P(X&gt;54)：Z=(54−50)/2=<strong>2</strong> → 查表 P(Z&gt;2)=<strong>0.0228</strong>。</li>
+</ul>
+<blockquote>
+<p>🖩 fx-350MS <strong>無</strong>內建常態查表，考試用<strong>附表</strong>；會算 Z 再查表即可。</p>
+</blockquote>
+<h3>6. 分配選擇判斷（總整理）⭐</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>問題特徵</th>
+<th>選哪個分配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>量測值、連續、鐘形</td>
+<td>常態</td>
+</tr>
+<tr>
+<td>不放回、有限母體，算成功數</td>
+<td>超幾何</td>
+</tr>
+<tr>
+<td>獨立試驗、p 固定，算成功數</td>
+<td>二項</td>
+</tr>
+<tr>
+<td>單位時間/面積內稀有事件的次數（只給平均 λ）</td>
+<td>卜瓦松</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</div></section>
+<section id="s15"><h2 onclick="tg(this)">十三、統計量分配（抽樣分配）— CQT 只需懂觀念<span class="ar">▾</span></h2><div class="sb">
+<blockquote>
+<p>「統計量分配」＝從母體<strong>重複抽樣</strong>時，樣本統計量（X̄、S²、R…）<strong>本身</strong>的分配。你手寫的「CQE 考、CQT 懂觀念」：這章 CQT <strong>記用途與時機</strong>即可，不必深入計算。四者都是「從常態母體抽樣」導出的分配。</p>
+</blockquote>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>分配</th>
+<th>是誰的分配</th>
+<th>用途／觀念</th>
+<th>品管連結</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>t 分配</strong> (T)</td>
+<td>小樣本 X̄（σ 未知，用 S 估計）</td>
+<td><strong>小樣本(n&lt;30)</strong>、母體 σ 未知時的平均數估計/檢定；比常態<strong>胖尾</strong>，自由度 df=n−1，df 越大越接近常態</td>
+<td>小樣本平均數檢定</td>
+</tr>
+<tr>
+<td><strong>S 分配</strong></td>
+<td>樣本標準差／變異數</td>
+<td>變異數／標準差的分配（與<strong>卡方 χ²</strong>有關）；用於變異數檢定</td>
+<td><strong>S 管制圖</strong>（標準差圖）</td>
+</tr>
+<tr>
+<td><strong>R 分配</strong></td>
+<td>全距 Range</td>
+<td>全距的抽樣分配；可由 <strong>σ̂ = R̄/d₂</strong> 估計母體 σ</td>
+<td><strong>X̄–R 管制圖</strong></td>
+</tr>
+<tr>
+<td><strong>F 分配</strong></td>
+<td>兩變異數比 S₁²/S₂²</td>
+<td>比較<strong>兩母體變異數</strong>是否相等；<strong>變異數分析 ANOVA</strong> 的檢定統計量；有分子、分母<strong>兩個</strong>自由度</td>
+<td>ANOVA、變異數比較</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>記法：<strong>T → 小樣本平均數</strong>、<strong>S → 變異數(χ²)</strong>、<strong>R → 全距估 σ</strong>、<strong>F → 兩變異數比／ANOVA</strong>。</p>
+</blockquote>
+<hr />
 <p><em>（待續：後續講義內容會依上傳陸續補充）</em></p></div></section>
 </main>
 <button id="top" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
@@ -2056,6 +2279,8 @@ function closeToc(){document.getElementById('toc').classList.remove('open');docu
 addEventListener('scroll',function(){document.getElementById('top').style.display=scrollY>600?'block':'none';});
 var tmr;
 function doSearch(){clearTimeout(tmr);tmr=setTimeout(run,200);}
+function clearMarks(){document.querySelectorAll('mark.sh').forEach(function(m){m.replaceWith(m.textContent);});
+document.querySelectorAll('main mark').length||document.normalize();}
 function run(){
  var q=document.getElementById('q').value.trim().toLowerCase();
  document.querySelectorAll('mark.sh').forEach(function(m){var t=document.createTextNode(m.textContent);m.parentNode.replaceChild(t,m);});
