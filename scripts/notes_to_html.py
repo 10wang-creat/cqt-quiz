@@ -46,7 +46,7 @@ def main():
         toc.append('<a href="#s%d" onclick="closeToc()">%s</a>' % (i, title))
         secs.append(
             '<section id="s%d"><h2 onclick="tg(this)">%s<span class="ar">▾</span></h2>'
-            '<div class="sb">%s</div></section>' % (i, m.group(1) if m else title, rest))
+            '<div class="sb">%s<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>' % (i, m.group(1) if m else title, rest))
     today = datetime.date.today().isoformat()
 
     html = TEMPLATE.replace("{{HEAD}}", head_html).replace("{{SECS}}", "\n".join(secs)) \
@@ -83,7 +83,8 @@ border-radius:8px;padding:6px 10px;font-size:15px}
 main{max-width:860px;margin:0 auto;padding:10px 14px 80px}
 h1{font-size:22px;margin:14px 0 4px}
 .meta{color:var(--dim);font-size:13px;margin-bottom:10px}
-section{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:12px 0;overflow:hidden}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:12px 0;overflow:hidden;scroll-margin-top:54px}
+.fold{display:block;margin:16px auto 2px;padding:8px 22px;border:1px solid var(--line);background:var(--bg);color:var(--acc);border-radius:20px;font-size:14.5px;cursor:pointer}
 h2{font-size:18px;margin:0;padding:12px 14px;cursor:pointer;display:flex;justify-content:space-between;
 align-items:center;gap:8px;color:var(--acc)}
 h2 .ar{transition:.2s;color:var(--dim)}
@@ -134,6 +135,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 if(localStorage.getItem('nk-dark')==='1'||(localStorage.getItem('nk-dark')===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');
 function toggleDark(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('nk-dark',d?'1':'0');}
 function tg(h){h.parentNode.classList.toggle('cl');}
+function foldSec(b){var s=b.closest('section');s.classList.add('cl');s.scrollIntoView({block:'start'});}
 function setAll(cl){document.querySelectorAll('section').forEach(function(s){s.classList.toggle('cl',cl);});closeToc();}
 function openToc(){document.getElementById('toc').classList.add('open');document.getElementById('ov').classList.add('on');}
 function closeToc(){document.getElementById('toc').classList.remove('open');document.getElementById('ov').classList.remove('on');}

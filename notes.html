@@ -22,7 +22,8 @@ border-radius:8px;padding:6px 10px;font-size:15px}
 main{max-width:860px;margin:0 auto;padding:10px 14px 80px}
 h1{font-size:22px;margin:14px 0 4px}
 .meta{color:var(--dim);font-size:13px;margin-bottom:10px}
-section{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:12px 0;overflow:hidden}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:12px 0;overflow:hidden;scroll-margin-top:54px}
+.fold{display:block;margin:16px auto 2px;padding:8px 22px;border:1px solid var(--line);background:var(--bg);color:var(--acc);border-radius:20px;font-size:14.5px;cursor:pointer}
 h2{font-size:18px;margin:0;padding:12px 14px;cursor:pointer;display:flex;justify-content:space-between;
 align-items:center;gap:8px;color:var(--acc)}
 h2 .ar{transition:.2s;color:var(--dim)}
@@ -74,9 +75,9 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <a href="#s11" onclick="closeToc()">九、事件機率與事件性質</a>
 <a href="#s12" onclick="closeToc()">十、條件機率例題 ⭐計算必考</a>
 <a href="#s13" onclick="closeToc()">十一、貝氏定理 (Bayes Theorem) ⭐⭐大題必考</a>
-<a href="#s14" onclick="closeToc()">十二、重要機率分配 ⭐</a>
-<a href="#s15" onclick="closeToc()">十三、統計量分配（抽樣分配）— CQT 只需懂觀念</a>
-<a href="#s16" onclick="closeToc()">十四、隨機變數、期望值與變異數 ⭐（十二章的基礎）</a>
+<a href="#s14" onclick="closeToc()">十二、隨機變數、期望值與變異數 ⭐（機率分配的基礎）</a>
+<a href="#s15" onclick="closeToc()">十三、重要機率分配 ⭐</a>
+<a href="#s16" onclick="closeToc()">十四、統計量分配（抽樣分配）— CQT 只需懂觀念</a>
 <a href="#s17" onclick="closeToc()">十五、管制圖之原理：X̄ 分配與管制界限（教科書第 2 章）</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
 <div id="ov" onclick="closeToc()"></div>
 <main>
@@ -129,7 +130,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <p>統計算完記得切回正常狀態模式，否則一般計算會出錯！</p>
 </blockquote>
 <hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s2"><h2 onclick="tg(this)">⓪-2 符號速查表<span class="ar">▾</span></h2><div class="sb">
 <h3>統計符號</h3>
 <div class="tw"><table>
@@ -414,7 +415,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <p>記法：螢幕上的 <strong>σn</strong> 結尾 = 除以 n = <strong>群體</strong>；<strong>σn−1</strong> 結尾 = 除以 n−1 = <strong>樣本</strong>。跟公式表完全對應！</p>
 </blockquote>
 <hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s3"><h2 onclick="tg(this)">一、數據的搜集與整理<span class="ar">▾</span></h2><div class="sb">
 <h3>1. 資料分類總覽</h3>
 <div class="tw"><table>
@@ -826,7 +827,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 </tbody>
 </table></div>
 <hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s4"><h2 onclick="tg(this)">二、基本統計量數<span class="ar">▾</span></h2><div class="sb">
 <h3>1. 五大統計量數定義</h3>
 <div class="tw"><table>
@@ -1015,9 +1016,9 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <blockquote>
 <p>記法：「<strong>位置型</strong>」量數（中位數、四分位數、IQR）抗極端值；「<strong>算全部</strong>」的量數（平均、變異數、標準差、全距）怕極端值。<strong>有極端值 → 報中位數＋IQR。</strong></p>
 </blockquote>
-<h3>6. 經驗法則 vs 柴比雪夫定理（內容已移至 <strong>第十二章第 7 節</strong>，與機率分配放在一起）</h3>
+<h3>6. 經驗法則 vs 柴比雪夫定理（內容已移至 <strong>第十三章第 7 節</strong>，與機率分配放在一起）</h3>
 <hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s5"><h2 onclick="tg(this)">三、四分位數 (Quartile)<span class="ar">▾</span></h2><div class="sb">
 <h3>1. 定義</h3>
 <div class="tw"><table>
@@ -1074,7 +1075,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <p><strong>範例二（n=6，整數情況）：</strong> 7, 15, 36, 39, 40, 41
 - Q1 = 15，Q2 = (36+39)/2 = <strong>37.5</strong>，Q3 = 40</p>
 <hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s6"><h2 onclick="tg(this)">四、變異數與標準差計算 ⭐計算必考<span class="ar">▾</span></h2><div class="sb">
 <h3>1. 核心公式表</h3>
 <div class="tw"><table>
@@ -1286,7 +1287,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <p>🖩 <strong>Casio fx-350MS</strong>：CV 沒有專屬鍵。先在 SD 模式求標準差（<code>SHIFT → 2</code> → xσn 母體 σ／xσn−1 樣本 S）與 x̄，再 <code>標準差 ÷ x̄ × 100</code>。變異數則是取到標準差後 <code>Ans → x² → =</code>。</p>
 </blockquote>
 <hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s7"><h2 onclick="tg(this)">五、已分組數據的平均數與標準差<span class="ar">▾</span></h2><div class="sb">
 <h3>1. 範例資料表（n=40）</h3>
 <div class="tw"><table>
@@ -1392,7 +1393,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <p>例：組中點 1.7 次數 2 → 按「1.7 → SHIFT → , → 2 → M+」</p>
 </blockquote>
 <hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s8"><h2 onclick="tg(this)">六、機率的定義<span class="ar">▾</span></h2><div class="sb">
 <p>機率：測度出象空間中各個事件發生的機會。</p>
 <p><strong>機率 P 的三大條件 ⭐</strong></p>
@@ -1422,7 +1423,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 - 出象空間有 n 種等可能出象 → 每一個出象機率 = <strong>1/n</strong>
 - 出象數目太龐大無法列舉時 → 用計次法則 (counting rule) 計算出象總數</p>
 <hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s9"><h2 onclick="tg(this)">七、計次法則 ⭐核心公式<span class="ar">▾</span></h2><div class="sb">
 <h3>1. 三大法則比較表</h3>
 <div class="tw"><table>
@@ -1601,7 +1602,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <p>套路：（不良品取法 × 良品取法）÷ 全部取法</p>
 </blockquote>
 <hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s10"><h2 onclick="tg(this)">八、機率論基礎與集合論<span class="ar">▾</span></h2><div class="sb">
 <h3>1. 機率論基本觀念</h3>
 <div class="tw"><table>
@@ -1783,7 +1784,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 </tbody>
 </table></div>
 <hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s11"><h2 onclick="tg(this)">九、事件機率與事件性質<span class="ar">▾</span></h2><div class="sb">
 <h3>1. 三種事件機率 ⭐必考（事件 vs 交集要分清楚）</h3>
 <div class="tw"><table>
@@ -1871,7 +1872,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <p><strong>【圖解】分割定理</strong></p>
 <p><img src="data:image/png;base64,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" width="360"></p>
 <hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s12"><h2 onclick="tg(this)">十、條件機率例題 ⭐計算必考<span class="ar">▾</span></h2><div class="sb">
 <h3>例題 1：交叉表型（應徵者資料）</h3>
 <div class="tw"><table>
@@ -1985,7 +1986,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <li>P(A∪B) = P(A) + P(B) − P(A∩B)</li>
 </ul>
 <hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s13"><h2 onclick="tg(this)">十一、貝氏定理 (Bayes Theorem) ⭐⭐大題必考<span class="ar">▾</span></h2><div class="sb">
 <h3>1. 觀念架構</h3>
 <p><strong>事前機率 ＋ 取得新資訊（條件機率）→（應用貝氏定理）→ 事後機率（修正機率）</strong></p>
@@ -2047,8 +2048,243 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <p>手寫速算：直接用 (50×0.4)/(50×0.4+30×0.6+20×1.2) = 20/62 = 0.32，百分比不用換算也可以！</p>
 </blockquote>
 <hr />
-</div></section>
-<section id="s14"><h2 onclick="tg(this)">十二、重要機率分配 ⭐<span class="ar">▾</span></h2><div class="sb">
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s14"><h2 onclick="tg(this)">十二、隨機變數、期望值與變異數 ⭐（機率分配的基礎）<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 隨機變數 (Random Variable)</h3>
+<p>定義：以<strong>樣本空間為定義域的實數值函數</strong>——把每個樣本點對應到一個實數。</p>
+<p>例：擲一枚銅板二次，X = 出現正面的次數（樣本空間｛正正、正反、反正、反反｝）</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>x</th>
+<th>0（反反）</th>
+<th>1（正反、反正）</th>
+<th>2（正正）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x)</td>
+<td>1/4</td>
+<td>2/4</td>
+<td>1/4</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>機率函數的合法條件 ⭐</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>離散型</th>
+<th>連續型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 ≤ f(xᵢ) ≤ 1</td>
+<td>f(x) ≥ 0</td>
+</tr>
+<tr>
+<td><strong>Σf(xᵢ) = 1</strong></td>
+<td><strong>∫f(x)dx = 1</strong>（全域積分）</td>
+</tr>
+<tr>
+<td>P(X=x) 可直接讀</td>
+<td>P(a≤X≤b) = 曲線下面積（單點機率 = 0）</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>手寫重點：CQT 骰子題<strong>最多 2 顆</strong>——直接<strong>列舉樣本點</strong>（6×6=36 格）用數的，不要硬套公式。分配包含位置 (location)、散佈 (spread)、形狀 (shape) 三種描述。</p>
+</blockquote>
+<h3>2. 期望值與變異數公式 ⭐</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>型態</th>
+<th>期望值 μ = E(X)</th>
+<th>變異數 σ² = V(X)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>離散</td>
+<td>Σ x·f(x)</td>
+<td>Σ(x−μ)²·f(x)</td>
+</tr>
+<tr>
+<td>連續</td>
+<td>∫x·f(x)dx</td>
+<td>∫(x−μ)²·f(x)dx</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⭐ <strong>速算公式（計算題幾乎都用這條）：V(X) = E(X²) − [E(X)]²</strong>。先算 E(X) 與 E(X²)，變異數一步到位；SD = √V。</p>
+</blockquote>
+<h3>3. 期望值與變異數的性質 ⭐必考</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>情況</th>
+<th>期望值</th>
+<th>變異數</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>線性轉換 g(X) = aX+b</td>
+<td>E(aX+b) = <strong>aE(X)+b</strong></td>
+<td>Var(aX+b) = <strong>a²Var(X)</strong>（b 直接消失！）</td>
+</tr>
+<tr>
+<td>常數 b</td>
+<td>E(b) = b</td>
+<td>Var(b) = <strong>0</strong></td>
+</tr>
+<tr>
+<td>和與差（任意 X、Y）</td>
+<td>E(X±Y) = E(X)±E(Y)</td>
+<td>——（要獨立才有下面那條）</td>
+</tr>
+<tr>
+<td>X、Y <strong>獨立</strong></td>
+<td>E(XY) = E(X)·E(Y)</td>
+<td><strong>Var(X±Y) = Var(X)＋Var(Y)</strong>（減也是<strong>加</strong>！負負得正）</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ 兩大陷阱：① Var(aX+b)——常數 b <strong>不影響</strong>變異數、係數 a 要<strong>平方</strong>；② 獨立變數<strong>相減</strong>時變異數仍然<strong>相加</strong>，絕不會相減。</p>
+</blockquote>
+<p><strong>經典考題（講義選擇題）：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題目</th>
+<th>解法</th>
+<th>答案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A 零件 σ=3、B 零件 σ=4，兩零件合成新產品，新產品<strong>標準差</strong>？</td>
+<td>標準差不能直接加：σ = √(3²+4²) = √25</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td>X、Y 常態，σₓ=4、σᵧ=3，X−Y 的<strong>變異數</strong>？</td>
+<td>V = 4²+3²（相減仍相加）</td>
+<td><strong>25</strong>（注意問的是變異數，別開根號）</td>
+</tr>
+<tr>
+<td>V(Y)=1，求 V(3Y+4)？</td>
+<td>3²×1（+4 不算）</td>
+<td><strong>9</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3>4. 例題：機率分配表求 E、V、SD ⭐計算必考</h3>
+<p>Y 的機率分配：y = 1~6，P(y) = 0.1、0.2、0.1、<strong>?</strong>、0.2、0.3</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>步驟</th>
+<th>計算</th>
+<th>結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 先補缺格（Σ機率=1）</td>
+<td>P(4) = 1−0.1−0.2−0.1−0.2−0.3</td>
+<td><strong>0.1</strong></td>
+</tr>
+<tr>
+<td>② E(Y)</td>
+<td>1×0.1+2×0.2+3×0.1+4×0.1+5×0.2+6×0.3</td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td>③ E(Y²)（x 平方再乘機率）</td>
+<td>1²×0.1+2²×0.2+…+6²×0.3</td>
+<td><strong>19.2</strong></td>
+</tr>
+<tr>
+<td>④ V(Y) = E(Y²)−[E(Y)]²</td>
+<td>19.2 − 16</td>
+<td><strong>3.2</strong></td>
+</tr>
+<tr>
+<td>⑤ SD(Y) = √V</td>
+<td>√3.2</td>
+<td><strong>1.789</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>函數的期望值</strong>（另一例：y=1~4，P=0.1、0.2、0.3、0.4；算得 E(Y)=3、E(Y²)=10）：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>求</th>
+<th>拆法</th>
+<th>答案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E(Y²+3Y+1)</td>
+<td>E(Y²)+3E(Y)+1 = 10+9+1（逐項拆開）</td>
+<td><strong>20</strong></td>
+</tr>
+<tr>
+<td>V(Y)</td>
+<td>10 − 3²</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>V(3Y+4)</td>
+<td>3²×V(Y) = 9×1</td>
+<td><strong>9</strong></td>
+</tr>
+<tr>
+<td>E(1/Y)</td>
+<td>1×0.1 + (1/2)×0.2 + (1/3)×0.3 + (1/4)×0.4</td>
+<td><strong>0.4</strong></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ E(1/Y) 是把 <strong>1/y 逐一乘機率加總</strong>，<strong>不是</strong> 1/E(Y)＝1/3！（函數期望值要重算，不能拿 E(Y) 直接代）</p>
+</blockquote>
+<h3>5. 累積分配函數 F(y) 反推機率</h3>
+<p>F(y) = P(Y≤y) 是「累積到 y」的機率，階梯型。<strong>單點機率 = 該階 − 前一階</strong>。</p>
+<p>例：F(y)＝0 (y&lt;0)、1/2 (0≤y&lt;1)、3/5 (1≤y&lt;2)、9/10 (2≤y&lt;3.5)、1 (3.5≤y)</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>y</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3.5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P(Y=y)</td>
+<td>1/2</td>
+<td>3/5−1/2 = <strong>1/10</strong></td>
+<td>9/10−3/5 = <strong>3/10</strong></td>
+<td>1−9/10 = <strong>1/10</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>求 P(0.5&lt;Y&lt;3.5)：夾在中間的只有 y=1、2 → 1/10 + 3/10 = <strong>2/5</strong>（0.5 與 3.5 都是<strong>開區間</strong>，端點 0、3.5 不含）。</p>
+<p>驗算：全部單點機率相加 1/2+1/10+3/10+1/10 = 1 ✓</p>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s15"><h2 onclick="tg(this)">十三、重要機率分配 ⭐<span class="ar">▾</span></h2><div class="sb">
 <h3>1. 四大分配總覽（先分「計數值 vs 計量值」）</h3>
 <div class="tw"><table>
 <thead>
@@ -2568,7 +2804,7 @@ N(210, <strong>25</strong>) → σ = √25 = <strong>5</strong>；N(50, <strong>
 <p>由柴比雪夫與經驗法則，大部分量測值落在距平均數<strong>兩倍標準差</strong>（μ±2σ）內 → 資料組的<strong>全距 R ≈ 4 倍標準差</strong>。
 <strong>R = 4s → s = R/4</strong>（同理 σ = R/4）。拿到一組資料想快速檢查標準差算得合不合理，就用全距除以 4 估一下。</p>
 </blockquote>
-<p><strong>綜合例（pmf 求 E、V 再套柴比雪夫，連第十四章）：</strong> 擲正常銅幣三次，X = 正面次數，依柴比雪夫求 μ±2σ 內的機率？</p>
+<p><strong>綜合例（pmf 求 E、V 再套柴比雪夫，連第十二章）：</strong> 擲正常銅幣三次，X = 正面次數，依柴比雪夫求 μ±2σ 內的機率？</p>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -2661,8 +2897,8 @@ N(210, <strong>25</strong>) → σ = √25 = <strong>5</strong>；N(50, <strong>
 <p>手寫重點：連續型 CQT <strong>只考常態</strong>，上表都是 CQE 範圍——選擇題認得「指數＝時間間隔、魏柏＝壽命、卡方＝變異數、伽瑪＝等候時間」這幾組關鍵字配對就夠。</p>
 </blockquote>
 <hr />
-</div></section>
-<section id="s15"><h2 onclick="tg(this)">十三、統計量分配（抽樣分配）— CQT 只需懂觀念<span class="ar">▾</span></h2><div class="sb">
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s16"><h2 onclick="tg(this)">十四、統計量分配（抽樣分配）— CQT 只需懂觀念<span class="ar">▾</span></h2><div class="sb">
 <blockquote>
 <p>「統計量分配」＝從母體<strong>重複抽樣</strong>時，樣本統計量（X̄、S²、R…）<strong>本身</strong>的分配。你手寫的「CQE 考、CQT 懂觀念」：這章 CQT <strong>記用途與時機</strong>即可，不必深入計算。四者都是「從常態母體抽樣」導出的分配。</p>
 </blockquote>
@@ -2712,242 +2948,7 @@ N(210, <strong>25</strong>) → σ = √25 = <strong>5</strong>；N(50, <strong>
 <p>記法：<strong>T → 小樣本平均數</strong>、<strong>S → 變異數(χ²)</strong>、<strong>R → 全距估 σ</strong>、<strong>F → 兩變異數比／ANOVA</strong>。</p>
 </blockquote>
 <hr />
-</div></section>
-<section id="s16"><h2 onclick="tg(this)">十四、隨機變數、期望值與變異數 ⭐（十二章的基礎）<span class="ar">▾</span></h2><div class="sb">
-<h3>1. 隨機變數 (Random Variable)</h3>
-<p>定義：以<strong>樣本空間為定義域的實數值函數</strong>——把每個樣本點對應到一個實數。</p>
-<p>例：擲一枚銅板二次，X = 出現正面的次數（樣本空間｛正正、正反、反正、反反｝）</p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>x</th>
-<th>0（反反）</th>
-<th>1（正反、反正）</th>
-<th>2（正正）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>f(x)</td>
-<td>1/4</td>
-<td>2/4</td>
-<td>1/4</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>機率函數的合法條件 ⭐</strong></p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>離散型</th>
-<th>連續型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0 ≤ f(xᵢ) ≤ 1</td>
-<td>f(x) ≥ 0</td>
-</tr>
-<tr>
-<td><strong>Σf(xᵢ) = 1</strong></td>
-<td><strong>∫f(x)dx = 1</strong>（全域積分）</td>
-</tr>
-<tr>
-<td>P(X=x) 可直接讀</td>
-<td>P(a≤X≤b) = 曲線下面積（單點機率 = 0）</td>
-</tr>
-</tbody>
-</table></div>
-<blockquote>
-<p>手寫重點：CQT 骰子題<strong>最多 2 顆</strong>——直接<strong>列舉樣本點</strong>（6×6=36 格）用數的，不要硬套公式。分配包含位置 (location)、散佈 (spread)、形狀 (shape) 三種描述。</p>
-</blockquote>
-<h3>2. 期望值與變異數公式 ⭐</h3>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>型態</th>
-<th>期望值 μ = E(X)</th>
-<th>變異數 σ² = V(X)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>離散</td>
-<td>Σ x·f(x)</td>
-<td>Σ(x−μ)²·f(x)</td>
-</tr>
-<tr>
-<td>連續</td>
-<td>∫x·f(x)dx</td>
-<td>∫(x−μ)²·f(x)dx</td>
-</tr>
-</tbody>
-</table></div>
-<blockquote>
-<p>⭐ <strong>速算公式（計算題幾乎都用這條）：V(X) = E(X²) − [E(X)]²</strong>。先算 E(X) 與 E(X²)，變異數一步到位；SD = √V。</p>
-</blockquote>
-<h3>3. 期望值與變異數的性質 ⭐必考</h3>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>情況</th>
-<th>期望值</th>
-<th>變異數</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>線性轉換 g(X) = aX+b</td>
-<td>E(aX+b) = <strong>aE(X)+b</strong></td>
-<td>Var(aX+b) = <strong>a²Var(X)</strong>（b 直接消失！）</td>
-</tr>
-<tr>
-<td>常數 b</td>
-<td>E(b) = b</td>
-<td>Var(b) = <strong>0</strong></td>
-</tr>
-<tr>
-<td>和與差（任意 X、Y）</td>
-<td>E(X±Y) = E(X)±E(Y)</td>
-<td>——（要獨立才有下面那條）</td>
-</tr>
-<tr>
-<td>X、Y <strong>獨立</strong></td>
-<td>E(XY) = E(X)·E(Y)</td>
-<td><strong>Var(X±Y) = Var(X)＋Var(Y)</strong>（減也是<strong>加</strong>！負負得正）</td>
-</tr>
-</tbody>
-</table></div>
-<blockquote>
-<p>⚠️ 兩大陷阱：① Var(aX+b)——常數 b <strong>不影響</strong>變異數、係數 a 要<strong>平方</strong>；② 獨立變數<strong>相減</strong>時變異數仍然<strong>相加</strong>，絕不會相減。</p>
-</blockquote>
-<p><strong>經典考題（講義選擇題）：</strong></p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>題目</th>
-<th>解法</th>
-<th>答案</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A 零件 σ=3、B 零件 σ=4，兩零件合成新產品，新產品<strong>標準差</strong>？</td>
-<td>標準差不能直接加：σ = √(3²+4²) = √25</td>
-<td><strong>5</strong></td>
-</tr>
-<tr>
-<td>X、Y 常態，σₓ=4、σᵧ=3，X−Y 的<strong>變異數</strong>？</td>
-<td>V = 4²+3²（相減仍相加）</td>
-<td><strong>25</strong>（注意問的是變異數，別開根號）</td>
-</tr>
-<tr>
-<td>V(Y)=1，求 V(3Y+4)？</td>
-<td>3²×1（+4 不算）</td>
-<td><strong>9</strong></td>
-</tr>
-</tbody>
-</table></div>
-<h3>4. 例題：機率分配表求 E、V、SD ⭐計算必考</h3>
-<p>Y 的機率分配：y = 1~6，P(y) = 0.1、0.2、0.1、<strong>?</strong>、0.2、0.3</p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>步驟</th>
-<th>計算</th>
-<th>結果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>① 先補缺格（Σ機率=1）</td>
-<td>P(4) = 1−0.1−0.2−0.1−0.2−0.3</td>
-<td><strong>0.1</strong></td>
-</tr>
-<tr>
-<td>② E(Y)</td>
-<td>1×0.1+2×0.2+3×0.1+4×0.1+5×0.2+6×0.3</td>
-<td><strong>4</strong></td>
-</tr>
-<tr>
-<td>③ E(Y²)（x 平方再乘機率）</td>
-<td>1²×0.1+2²×0.2+…+6²×0.3</td>
-<td><strong>19.2</strong></td>
-</tr>
-<tr>
-<td>④ V(Y) = E(Y²)−[E(Y)]²</td>
-<td>19.2 − 16</td>
-<td><strong>3.2</strong></td>
-</tr>
-<tr>
-<td>⑤ SD(Y) = √V</td>
-<td>√3.2</td>
-<td><strong>1.789</strong></td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>函數的期望值</strong>（另一例：y=1~4，P=0.1、0.2、0.3、0.4；算得 E(Y)=3、E(Y²)=10）：</p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>求</th>
-<th>拆法</th>
-<th>答案</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>E(Y²+3Y+1)</td>
-<td>E(Y²)+3E(Y)+1 = 10+9+1（逐項拆開）</td>
-<td><strong>20</strong></td>
-</tr>
-<tr>
-<td>V(Y)</td>
-<td>10 − 3²</td>
-<td><strong>1</strong></td>
-</tr>
-<tr>
-<td>V(3Y+4)</td>
-<td>3²×V(Y) = 9×1</td>
-<td><strong>9</strong></td>
-</tr>
-<tr>
-<td>E(1/Y)</td>
-<td>1×0.1 + (1/2)×0.2 + (1/3)×0.3 + (1/4)×0.4</td>
-<td><strong>0.4</strong></td>
-</tr>
-</tbody>
-</table></div>
-<blockquote>
-<p>⚠️ E(1/Y) 是把 <strong>1/y 逐一乘機率加總</strong>，<strong>不是</strong> 1/E(Y)＝1/3！（函數期望值要重算，不能拿 E(Y) 直接代）</p>
-</blockquote>
-<h3>5. 累積分配函數 F(y) 反推機率</h3>
-<p>F(y) = P(Y≤y) 是「累積到 y」的機率，階梯型。<strong>單點機率 = 該階 − 前一階</strong>。</p>
-<p>例：F(y)＝0 (y&lt;0)、1/2 (0≤y&lt;1)、3/5 (1≤y&lt;2)、9/10 (2≤y&lt;3.5)、1 (3.5≤y)</p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>y</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3.5</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>P(Y=y)</td>
-<td>1/2</td>
-<td>3/5−1/2 = <strong>1/10</strong></td>
-<td>9/10−3/5 = <strong>3/10</strong></td>
-<td>1−9/10 = <strong>1/10</strong></td>
-</tr>
-</tbody>
-</table></div>
-<p>求 P(0.5&lt;Y&lt;3.5)：夾在中間的只有 y=1、2 → 1/10 + 3/10 = <strong>2/5</strong>（0.5 與 3.5 都是<strong>開區間</strong>，端點 0、3.5 不含）。</p>
-<p>驗算：全部單點機率相加 1/2+1/10+3/10+1/10 = 1 ✓</p>
-<hr />
-</div></section>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s17"><h2 onclick="tg(this)">十五、管制圖之原理：X̄ 分配與管制界限（教科書第 2 章）<span class="ar">▾</span></h2><div class="sb">
 <h3>1. 樣本平均值的分配（X̄ 分配）⭐</h3>
 <div class="tw"><table>
@@ -2982,7 +2983,7 @@ N(210, <strong>25</strong>) → σ = √25 = <strong>5</strong>；N(50, <strong>
 </tbody>
 </table></div>
 <blockquote>
-<p>判斷還是同一把尺：<strong>n/N ≤ 1/10 → 無限群體，直接 σ/√n；n/N &gt; 1/10 → 有限群體，要乘修正係數</strong>（與第十二章分配判斷同一條規則）。
+<p>判斷還是同一把尺：<strong>n/N ≤ 1/10 → 無限群體，直接 σ/√n；n/N &gt; 1/10 → 有限群體，要乘修正係數</strong>（與第十三章分配判斷同一條規則）。
 中央極限定理：不論群體形狀（長方形、三角形都一樣），<strong>n ≥ 30</strong> 時 X̄ 近似常態 N(μ, σ²/n)；群體本身是常態時，X̄ 不論 n 多少都是常態。</p>
 </blockquote>
 <h3>2. 例題（先算 n/N 再選公式）</h3>
@@ -3081,16 +3082,17 @@ N(210, <strong>25</strong>) → σ = √25 = <strong>5</strong>；N(50, <strong>
 </tbody>
 </table></div>
 <blockquote>
-<p>取捨：界限放寬 → α 變小（少虛驚）但 β 變大（變遲鈍）；<strong>±3σ 是兩種錯誤的折衷</strong>，也就是第十二章 ±3σ＝99.73% 的品管應用來源。</p>
+<p>取捨：界限放寬 → α 變小（少虛驚）但 β 變大（變遲鈍）；<strong>±3σ 是兩種錯誤的折衷</strong>，也就是第十三章 ±3σ＝99.73% 的品管應用來源。</p>
 </blockquote>
 <hr />
-<p><em>（待續：後續講義內容會依上傳陸續補充）</em></p></div></section>
+<p><em>（待續：後續講義內容會依上傳陸續補充）</em></p><button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 </main>
 <button id="top" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script>
 if(localStorage.getItem('nk-dark')==='1'||(localStorage.getItem('nk-dark')===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');
 function toggleDark(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('nk-dark',d?'1':'0');}
 function tg(h){h.parentNode.classList.toggle('cl');}
+function foldSec(b){var s=b.closest('section');s.classList.add('cl');s.scrollIntoView({block:'start'});}
 function setAll(cl){document.querySelectorAll('section').forEach(function(s){s.classList.toggle('cl',cl);});closeToc();}
 function openToc(){document.getElementById('toc').classList.add('open');document.getElementById('ov').classList.add('on');}
 function closeToc(){document.getElementById('toc').classList.remove('open');document.getElementById('ov').classList.remove('on');}
