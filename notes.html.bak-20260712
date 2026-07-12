@@ -75,8 +75,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <a href="#s12" onclick="closeToc()">十、條件機率例題 ⭐計算必考</a>
 <a href="#s13" onclick="closeToc()">十一、貝氏定理 (Bayes Theorem) ⭐⭐大題必考</a>
 <a href="#s14" onclick="closeToc()">十二、重要機率分配 ⭐</a>
-<a href="#s15" onclick="closeToc()">十三、統計量分配（抽樣分配）— CQT 只需懂觀念</a>
-<a href="#s16" onclick="closeToc()">十四、隨機變數、期望值與變異數 ⭐（十二章的基礎）</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
+<a href="#s15" onclick="closeToc()">十三、統計量分配（抽樣分配）— CQT 只需懂觀念</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
 <div id="ov" onclick="closeToc()"></div>
 <main>
 <h1>統計品管 — 考試速查筆記</h1>
@@ -2170,12 +2169,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <li><strong>公式</strong>：P(X=x) = C(D,x)·C(N−D, n−x) ÷ C(N,n)</li>
 <li>平均數 = np、變異數 = np(1−p)·<strong>(N−n)/(N−1)</strong>（後段是<strong>有限母體修正項</strong>）；p = D/N</li>
 <li>例：100 件含 15 不良，取 10 件恰 3 不良 = C(15,3)·C(85,7) ÷ C(100,10)（＝第七章超幾何計數例）</li>
-<li>例（講義例3）：25 件電晶體含 3 件不良，抽 5 件——先判斷 n/N = 5/25 = 1/5 &gt; 1/10 → <strong>有限母體，用超幾何</strong>。
-  P(恰1件) = C(3,1)·C(22,4) ÷ C(25,5) = 5700/13800 = <strong>0.413</strong>；P(恰2件) = C(3,2)·C(22,3) ÷ C(25,5) = 1200/13800 = <strong>0.087</strong></li>
 </ul>
-<blockquote>
-<p>🖩 分子分母都用 nCr 直接按，不必展開階乘：「3 → nCr → 1 → × → 22 → nCr → 4 → ÷ → 25 → nCr → 5 → =」。</p>
-</blockquote>
 <h3>3. 二項分配 Binomial ⭐</h3>
 <ul>
 <li><strong>時機</strong>：n 次試驗，每次只有成功/失敗兩種、各次<strong>獨立</strong>、成功率 p <strong>固定</strong>（放回，或母體極大 N≥10n）。</li>
@@ -2183,61 +2177,12 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <li>平均數 μ = <strong>np</strong>；變異數 σ² = <strong>np(1−p) = npq</strong>；標準差 = √(npq)</li>
 <li>例：不良率 p=0.05，抽 20 件恰 2 件不良 = C(20,2)·0.05²·0.95¹⁸</li>
 </ul>
-<p><strong>圖形偏態（p 決定偏向）：</strong></p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>p 值</th>
-<th>圖形</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>p = 0.5</td>
-<td>左右<strong>對稱</strong></td>
-</tr>
-<tr>
-<td>p &lt; 0.5</td>
-<td><strong>右偏（正偏）</strong>——成功機率小，尾巴拖右邊</td>
-</tr>
-<tr>
-<td>p &gt; 0.5</td>
-<td><strong>左偏（負偏）</strong></td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>查表法 ⭐（二項累積表給的是 P{X≤k}）：</strong></p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>題目說法（先圈！）</th>
-<th>查法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>「<strong>最多</strong> k 件」＝ d ≤ k</td>
-<td><strong>P{X≤k} 直接查</strong>一格</td>
-</tr>
-<tr>
-<td>「<strong>恰好</strong> d 件」</td>
-<td><strong>P{X≤d} − P{X≤d−1}</strong>（兩格相減）</td>
-</tr>
-</tbody>
-</table></div>
-<ul>
-<li>例1（恰好）：p=0.05、n=20，恰 2 件——公式 C(20,2)·0.05²·0.95¹⁸ = <strong>0.189</strong>；查表 P{X≤2}−P{X≤1} = 0.925−0.736 = 0.189 ✓</li>
-<li>例2（最多）：p=0.1、n=20，<strong>最多 2 件</strong>（d=0,1,2）——查表 P{X≤2} = <strong>0.677</strong> 一格搞定（用公式要 d=0,1,2 三項相加，慢很多）</li>
-</ul>
 <blockquote>
-<p>手寫重點：二項<strong>計算考比較少、多用查表</strong>，主要考<strong>名詞或定義</strong>（伯努利試驗三條件：①每次只有成功/失敗兩種結果 ②p 固定 ③各次獨立）。</p>
 <p>⚠️ 超幾何 vs 二項：<strong>不放回、有限母體 → 超幾何</strong>；<strong>放回，或 N≥10n → 二項</strong>（此時超幾何≈二項）。</p>
 </blockquote>
 <h3>4. 卜瓦松分配 Poisson ⭐</h3>
 <ul>
-<li><strong>時機</strong>：單位時間／長度／面積內，某<strong>稀有事件</strong>平均發生 λ 次，求恰發生 x 次。（講義寫「波瓦松」，同一個分配）</li>
-<li><strong>典型情境（講義四例，認得出來就會選）</strong>：每 10 分鐘打進公司的電話通數、1 天內停車場停車數、高速公路每 10 公里的坑洞數、每頁報告的錯字數——都是「<strong>單位區間內事件發生的次數</strong>」。</li>
-<li><strong>卜瓦松實驗三特質</strong>：① 不同區間的發生次數<strong>互相獨立</strong> ② 區間內的期望值與<strong>區間大小成比例</strong> ③ 極短區間內只有「發生一次／不發生」兩種，兩次以上不考慮。</li>
+<li><strong>時機</strong>：單位時間／長度／面積內，某<strong>稀有事件</strong>平均發生 λ 次，求恰發生 x 次。</li>
 <li><strong>公式</strong>：P(X=x) = e⁻λ·λˣ ÷ x!，x=0,1,2,…</li>
 <li>特徵：<strong>平均數 = 變異數 = λ</strong>（這是判斷卜瓦松的招牌）</li>
 <li>二項的極限：n 大、p 小（一般 n≥20 且 p≤0.05）可用卜瓦松近似二項，取 <strong>λ = np</strong></li>
@@ -2327,241 +2272,6 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <blockquote>
 <p>記法：<strong>T → 小樣本平均數</strong>、<strong>S → 變異數(χ²)</strong>、<strong>R → 全距估 σ</strong>、<strong>F → 兩變異數比／ANOVA</strong>。</p>
 </blockquote>
-<hr />
-</div></section>
-<section id="s16"><h2 onclick="tg(this)">十四、隨機變數、期望值與變異數 ⭐（十二章的基礎）<span class="ar">▾</span></h2><div class="sb">
-<h3>1. 隨機變數 (Random Variable)</h3>
-<p>定義：以<strong>樣本空間為定義域的實數值函數</strong>——把每個樣本點對應到一個實數。</p>
-<p>例：擲一枚銅板二次，X = 出現正面的次數（樣本空間｛正正、正反、反正、反反｝）</p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>x</th>
-<th>0（反反）</th>
-<th>1（正反、反正）</th>
-<th>2（正正）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>f(x)</td>
-<td>1/4</td>
-<td>2/4</td>
-<td>1/4</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>機率函數的合法條件 ⭐</strong></p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>離散型</th>
-<th>連續型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0 ≤ f(xᵢ) ≤ 1</td>
-<td>f(x) ≥ 0</td>
-</tr>
-<tr>
-<td><strong>Σf(xᵢ) = 1</strong></td>
-<td><strong>∫f(x)dx = 1</strong>（全域積分）</td>
-</tr>
-<tr>
-<td>P(X=x) 可直接讀</td>
-<td>P(a≤X≤b) = 曲線下面積（單點機率 = 0）</td>
-</tr>
-</tbody>
-</table></div>
-<blockquote>
-<p>手寫重點：CQT 骰子題<strong>最多 2 顆</strong>——直接<strong>列舉樣本點</strong>（6×6=36 格）用數的，不要硬套公式。分配包含位置 (location)、散佈 (spread)、形狀 (shape) 三種描述。</p>
-</blockquote>
-<h3>2. 期望值與變異數公式 ⭐</h3>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>型態</th>
-<th>期望值 μ = E(X)</th>
-<th>變異數 σ² = V(X)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>離散</td>
-<td>Σ x·f(x)</td>
-<td>Σ(x−μ)²·f(x)</td>
-</tr>
-<tr>
-<td>連續</td>
-<td>∫x·f(x)dx</td>
-<td>∫(x−μ)²·f(x)dx</td>
-</tr>
-</tbody>
-</table></div>
-<blockquote>
-<p>⭐ <strong>速算公式（計算題幾乎都用這條）：V(X) = E(X²) − [E(X)]²</strong>。先算 E(X) 與 E(X²)，變異數一步到位；SD = √V。</p>
-</blockquote>
-<h3>3. 期望值與變異數的性質 ⭐必考</h3>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>情況</th>
-<th>期望值</th>
-<th>變異數</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>線性轉換 g(X) = aX+b</td>
-<td>E(aX+b) = <strong>aE(X)+b</strong></td>
-<td>Var(aX+b) = <strong>a²Var(X)</strong>（b 直接消失！）</td>
-</tr>
-<tr>
-<td>常數 b</td>
-<td>E(b) = b</td>
-<td>Var(b) = <strong>0</strong></td>
-</tr>
-<tr>
-<td>和與差（任意 X、Y）</td>
-<td>E(X±Y) = E(X)±E(Y)</td>
-<td>——（要獨立才有下面那條）</td>
-</tr>
-<tr>
-<td>X、Y <strong>獨立</strong></td>
-<td>E(XY) = E(X)·E(Y)</td>
-<td><strong>Var(X±Y) = Var(X)＋Var(Y)</strong>（減也是<strong>加</strong>！負負得正）</td>
-</tr>
-</tbody>
-</table></div>
-<blockquote>
-<p>⚠️ 兩大陷阱：① Var(aX+b)——常數 b <strong>不影響</strong>變異數、係數 a 要<strong>平方</strong>；② 獨立變數<strong>相減</strong>時變異數仍然<strong>相加</strong>，絕不會相減。</p>
-</blockquote>
-<p><strong>經典考題（講義選擇題）：</strong></p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>題目</th>
-<th>解法</th>
-<th>答案</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A 零件 σ=3、B 零件 σ=4，兩零件合成新產品，新產品<strong>標準差</strong>？</td>
-<td>標準差不能直接加：σ = √(3²+4²) = √25</td>
-<td><strong>5</strong></td>
-</tr>
-<tr>
-<td>X、Y 常態，σₓ=4、σᵧ=3，X−Y 的<strong>變異數</strong>？</td>
-<td>V = 4²+3²（相減仍相加）</td>
-<td><strong>25</strong>（注意問的是變異數，別開根號）</td>
-</tr>
-<tr>
-<td>V(Y)=1，求 V(3Y+4)？</td>
-<td>3²×1（+4 不算）</td>
-<td><strong>9</strong></td>
-</tr>
-</tbody>
-</table></div>
-<h3>4. 例題：機率分配表求 E、V、SD ⭐計算必考</h3>
-<p>Y 的機率分配：y = 1~6，P(y) = 0.1、0.2、0.1、<strong>?</strong>、0.2、0.3</p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>步驟</th>
-<th>計算</th>
-<th>結果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>① 先補缺格（Σ機率=1）</td>
-<td>P(4) = 1−0.1−0.2−0.1−0.2−0.3</td>
-<td><strong>0.1</strong></td>
-</tr>
-<tr>
-<td>② E(Y)</td>
-<td>1×0.1+2×0.2+3×0.1+4×0.1+5×0.2+6×0.3</td>
-<td><strong>4</strong></td>
-</tr>
-<tr>
-<td>③ E(Y²)（x 平方再乘機率）</td>
-<td>1²×0.1+2²×0.2+…+6²×0.3</td>
-<td><strong>19.2</strong></td>
-</tr>
-<tr>
-<td>④ V(Y) = E(Y²)−[E(Y)]²</td>
-<td>19.2 − 16</td>
-<td><strong>3.2</strong></td>
-</tr>
-<tr>
-<td>⑤ SD(Y) = √V</td>
-<td>√3.2</td>
-<td><strong>1.789</strong></td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>函數的期望值</strong>（另一例：y=1~4，P=0.1、0.2、0.3、0.4；算得 E(Y)=3、E(Y²)=10）：</p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>求</th>
-<th>拆法</th>
-<th>答案</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>E(Y²+3Y+1)</td>
-<td>E(Y²)+3E(Y)+1 = 10+9+1（逐項拆開）</td>
-<td><strong>20</strong></td>
-</tr>
-<tr>
-<td>V(Y)</td>
-<td>10 − 3²</td>
-<td><strong>1</strong></td>
-</tr>
-<tr>
-<td>V(3Y+4)</td>
-<td>3²×V(Y) = 9×1</td>
-<td><strong>9</strong></td>
-</tr>
-<tr>
-<td>E(1/Y)</td>
-<td>1×0.1 + (1/2)×0.2 + (1/3)×0.3 + (1/4)×0.4</td>
-<td><strong>0.4</strong></td>
-</tr>
-</tbody>
-</table></div>
-<blockquote>
-<p>⚠️ E(1/Y) 是把 <strong>1/y 逐一乘機率加總</strong>，<strong>不是</strong> 1/E(Y)＝1/3！（函數期望值要重算，不能拿 E(Y) 直接代）</p>
-</blockquote>
-<h3>5. 累積分配函數 F(y) 反推機率</h3>
-<p>F(y) = P(Y≤y) 是「累積到 y」的機率，階梯型。<strong>單點機率 = 該階 − 前一階</strong>。</p>
-<p>例：F(y)＝0 (y&lt;0)、1/2 (0≤y&lt;1)、3/5 (1≤y&lt;2)、9/10 (2≤y&lt;3.5)、1 (3.5≤y)</p>
-<div class="tw"><table>
-<thead>
-<tr>
-<th>y</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3.5</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>P(Y=y)</td>
-<td>1/2</td>
-<td>3/5−1/2 = <strong>1/10</strong></td>
-<td>9/10−3/5 = <strong>3/10</strong></td>
-<td>1−9/10 = <strong>1/10</strong></td>
-</tr>
-</tbody>
-</table></div>
-<p>求 P(0.5&lt;Y&lt;3.5)：夾在中間的只有 y=1、2 → 1/10 + 3/10 = <strong>2/5</strong>（0.5 與 3.5 都是<strong>開區間</strong>，端點 0、3.5 不含）。</p>
-<p>驗算：全部單點機率相加 1/2+1/10+3/10+1/10 = 1 ✓</p>
 <hr />
 <p><em>（待續：後續講義內容會依上傳陸續補充）</em></p></div></section>
 </main>
