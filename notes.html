@@ -78,13 +78,20 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <a href="#s14" onclick="closeToc()">十二、隨機變數、期望值與變異數 ⭐（機率分配的基礎）</a>
 <a href="#s15" onclick="closeToc()">十三、重要機率分配 ⭐</a>
 <a href="#s16" onclick="closeToc()">十四、統計量分配（抽樣分配）— CQT 只需懂觀念</a>
-<a href="#s17" onclick="closeToc()">十五、管制圖之原理：X̄ 分配與管制界限（教科書第 2 章）</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
+<a href="#s17" onclick="closeToc()">十五、管制圖之原理：X̄ 分配與管制界限（教科書第 2 章）</a>
+<a href="#s18" onclick="closeToc()">十六、管制圖基礎：界限、變異原因、種類（教科書第 1、3 章）</a>
+<a href="#s19" onclick="closeToc()">十七、計量值管制圖繪製與係數表（教科書第 4 章）⭐⭐大題必考</a>
+<a href="#s20" onclick="closeToc()">十八、計數值管制圖：p／np／c／u（教科書第 4 章）⭐</a>
+<a href="#s21" onclick="closeToc()">十九、管制圖判讀：點子動態與檢定規則（教科書第 5 章）⭐</a>
+<a href="#s22" onclick="closeToc()">二十、管制圖應用與雜式管制圖（教科書第 6、7 章）</a>
+<a href="#s23" onclick="closeToc()">二十一、規格與公差（教科書第 8 章）</a>
+<a href="#s24" onclick="closeToc()">二十二、製程管制與製程能力 Cp／Ca／Cpk（教科書第 9 章）⭐⭐必考</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
 <div id="ov" onclick="closeToc()"></div>
 <main>
 <h1>統計品管 — 考試速查筆記</h1>
 <hr />
 
-<p class="meta">更新：2026-07-12｜點章節標題可折疊｜考前印紙本請用 PDF 版</p>
+<p class="meta">更新：2026-07-15｜點章節標題可折疊｜考前印紙本請用 PDF 版</p>
 <section id="s1"><h2 onclick="tg(this)">⓪ 考前必看：工程計算機設定（Casio fx-350MS）<span class="ar">▾</span></h2><div class="sb">
 <h3>進入統計模式（SD 模式）＋清除舊資料</h3>
 <div class="tw"><table>
@@ -3083,6 +3090,557 @@ N(210, <strong>25</strong>) → σ = √25 = <strong>5</strong>；N(50, <strong>
 </table></div>
 <blockquote>
 <p>取捨：界限放寬 → α 變小（少虛驚）但 β 變大（變遲鈍）；<strong>±3σ 是兩種錯誤的折衷</strong>，也就是第十三章 ±3σ＝99.73% 的品管應用來源。</p>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s18"><h2 onclick="tg(this)">十六、管制圖基礎：界限、變異原因、種類（教科書第 1、3 章）<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 規格界限 vs 管制界限 ⭐⭐必考（最愛考的對比）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>規格界限 Specification（Su／SL）</th>
+<th>管制界限 Control（UCL／LCL）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>誰決定</td>
+<td><strong>人為訂定</strong>（設計、顧客、規格）</td>
+<td><strong>製程資料算出</strong>（平均值 ±3σ）</td>
+</tr>
+<tr>
+<td>判斷對象</td>
+<td><strong>個別</strong>單位產品是否合格（允收/拒收）</td>
+<td><strong>一群</strong>（樣本）產品、製程是否正常</td>
+</tr>
+<tr>
+<td>用途</td>
+<td>核對每一件產品符不符規格</td>
+<td>監視製程有無非機遇原因、是否穩定</td>
+</tr>
+<tr>
+<td>圖上線</td>
+<td>—</td>
+<td>中心線 CL 實線；UCL／LCL 用<strong>紅色虛線</strong></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ <strong>易錯：兩者不可混用。</strong> 規格界限判「個別產品」、管制界限判「一群／製程」。管制圖點子在管制界限內≠產品都合格；製程在管制狀態也可能做出超規格品（要看 6σ 與公差比較，見二十二製程能力）。</p>
+</blockquote>
+<p>管制圖：Shewhart 於 <strong>1924 年</strong>發明（SQC 之始）。三條線＝CL（中心線＝平均值）、UCL、LCL。</p>
+<h3>2. 機遇原因 vs 非機遇原因 ⭐必考</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>機遇原因 Chance／Common（共同、偶然）</th>
+<th>非機遇原因 Assignable／Special（可歸屬、異常）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>別稱</td>
+<td>不可避免、非人為、系統的一部分</td>
+<td>可避免、人為、局部的</td>
+</tr>
+<tr>
+<td>變異</td>
+<td>每個影響<strong>都小</strong></td>
+<td>少數幾個即造成<strong>大變異</strong></td>
+</tr>
+<tr>
+<td>次數</td>
+<td>多</td>
+<td>少</td>
+</tr>
+<tr>
+<td>例</td>
+<td>量測微小差異、機器固有振動</td>
+<td>刀具磨損、材料不良、新手、儀器沒校正</td>
+</tr>
+<tr>
+<td>製程狀態</td>
+<td>只有它 → <strong>在管制狀態</strong>、穩定、可預測</td>
+<td>有它 → <strong>不穩定</strong>、不可預測</td>
+</tr>
+<tr>
+<td>對策</td>
+<td>屬先天，去除不經濟（通常不追）</td>
+<td>現場可追查除去，除去後不再發生</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Shewhart vs Deming 看法</strong>：機遇原因——Shewhart 說「每個影響都小」、Deming 說「是系統(system)的一部分」；非機遇原因——Shewhart 說「每個都有明顯影響」、Deming 說「本質是局部(local)的」。
+變異三來源：<strong>件內</strong>（同一件不同部位）、<strong>件間</strong>（同時間各件）、<strong>時間</strong>（不同時間）。</p>
+</blockquote>
+<h3>3. 管制圖之分類 ⭐</h3>
+<p><strong>依數據性質分兩大類</strong>（考點：「兩大類」）：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>類別</th>
+<th>數據</th>
+<th>管制圖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>計量值</strong>（連續、可量測：長度重量成份）</td>
+<td>計量值</td>
+<td>X̄–R、X̄–s、X̃–R、X–Rm</td>
+</tr>
+<tr>
+<td><strong>計數值</strong>（間斷、計數：不良/缺點個數）</td>
+<td>計數值</td>
+<td>p、pn（np）、c、u</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>依用途分</strong>：<strong>解析用</strong>（事前，決定方針/製程解析/製程能力研究，先算界限）→ 確定後轉 <strong>管制用</strong>（事中，預防性，點子出界即追查）。</p>
+<blockquote>
+<p>直方圖 vs 管制圖：直方圖＝製程<strong>完成後</strong>看全體（靜態）；管制圖＝製程<strong>進行中</strong>看少數（動態、可看趨勢）。</p>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s19"><h2 onclick="tg(this)">十七、計量值管制圖繪製與係數表（教科書第 4 章）⭐⭐大題必考<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 選圖流程（依 n）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>情況</th>
+<th>用圖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每組 n＝2~5（常用 4、5）</td>
+<td><strong>X̄–R</strong>（最常用）或 X̃–R</td>
+</tr>
+<tr>
+<td>每組 n＞10（一般 10&lt;n&lt;25）</td>
+<td><strong>X̄–s</strong>（n 大時 R 估 σ 效率差，改用 s）</td>
+</tr>
+<tr>
+<td>每次只有 1 個（n＝1）</td>
+<td><strong>X–Rm</strong>（個別值-移動全距）</td>
+</tr>
+<tr>
+<td>要免受極端值影響、現場易算</td>
+<td>X̃–R（中位數，效率略遜 X̄–R）</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>判讀順序：<strong>先看 R（全距）圖再看 X̄ 圖</strong>——因 X̄ 的界限用 R̄ 算，R 圖不穩則 X̄ 界限不可信。</p>
+</blockquote>
+<h3>2. 四種計量值圖公式（σ 未知、用樣本估，實務用式）⭐</h3>
+<p>CL＝中心線；UCL／LCL＝中心 ± 3σ。σ̂ ＝ <strong>R̄/d₂</strong>（由全距估母體標準差）。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>圖</th>
+<th>中心線 CL</th>
+<th>UCL</th>
+<th>LCL</th>
+<th>用到的係數</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X̄</strong>（平均）</td>
+<td>X̿ ＝ ΣX̄/k</td>
+<td>X̿ ＋ <strong>A₂</strong>R̄</td>
+<td>X̿ − A₂R̄</td>
+<td>A₂</td>
+</tr>
+<tr>
+<td><strong>R</strong>（全距）</td>
+<td>R̄ ＝ ΣR/k</td>
+<td><strong>D₄</strong>R̄</td>
+<td><strong>D₃</strong>R̄（n≤6 時＝0）</td>
+<td>D₃、D₄</td>
+</tr>
+<tr>
+<td><strong>X̄</strong>（配 s 圖）</td>
+<td>X̿</td>
+<td>X̿ ＋ <strong>A₃</strong>s̄</td>
+<td>X̿ − A₃s̄</td>
+<td>A₃</td>
+</tr>
+<tr>
+<td><strong>s</strong>（標準差）</td>
+<td>s̄ ＝ Σs/k</td>
+<td><strong>B₄</strong>s̄</td>
+<td><strong>B₃</strong>s̄（n≤5 時＝0）</td>
+<td>B₃、B₄</td>
+</tr>
+<tr>
+<td><strong>X̃</strong>（中位數）</td>
+<td>X̿̃ ＝ ΣX̃/k</td>
+<td>X̿̃ ＋ <strong>m₃A₂</strong>R̄</td>
+<td>X̿̃ − m₃A₂R̄</td>
+<td>m₃A₂、D₃、D₄</td>
+</tr>
+<tr>
+<td><strong>X</strong>（個別值）</td>
+<td>X̄ ＝ ΣX/k</td>
+<td>X̄ ＋ <strong>E₂</strong>R̄m</td>
+<td>X̄ − E₂R̄m</td>
+<td>E₂（＝3/d₂）、D₃、D₄</td>
+</tr>
+<tr>
+<td><strong>Rm</strong>（移動全距）</td>
+<td>R̄m</td>
+<td>D₄R̄m</td>
+<td>D₃R̄m</td>
+<td>Rm＝|Xᵢ−Xᵢ₊₁|</td>
+</tr>
+</tbody>
+</table></div>
+<p>其中 <strong>A₂＝3/(d₂√n)</strong>、<strong>A₃＝3/(C₄√n)</strong>、<strong>E₂＝3/d₂</strong>、σ̂ 也可用 s̄/C₄。</p>
+<h3>3. 管制圖係數表（教科書附表1，常態抽樣常數）⭐背 n＝4、5</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>n</th>
+<th>A₂</th>
+<th>A₃</th>
+<th>d₂</th>
+<th>D₃</th>
+<th>D₄</th>
+<th>B₃</th>
+<th>B₄</th>
+<th>E₂</th>
+<th>m₃A₂</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>1.880</td>
+<td>2.659</td>
+<td>1.128</td>
+<td>—</td>
+<td>3.267</td>
+<td>—</td>
+<td>3.267</td>
+<td>2.660</td>
+<td>1.880</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.023</td>
+<td>1.954</td>
+<td>1.693</td>
+<td>—</td>
+<td>2.574</td>
+<td>—</td>
+<td>2.568</td>
+<td>1.772</td>
+<td>1.187</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>0.729</strong></td>
+<td>1.628</td>
+<td>2.059</td>
+<td>—</td>
+<td><strong>2.282</strong></td>
+<td>—</td>
+<td>2.266</td>
+<td>1.457</td>
+<td>0.796</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>0.577</strong></td>
+<td>1.427</td>
+<td>2.326</td>
+<td>—</td>
+<td><strong>2.114</strong></td>
+<td>—</td>
+<td>2.089</td>
+<td>1.290</td>
+<td>0.691</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0.483</td>
+<td>1.287</td>
+<td>2.534</td>
+<td>—</td>
+<td>2.004</td>
+<td>0.030</td>
+<td>1.970</td>
+<td>1.184</td>
+<td>0.549</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0.419</td>
+<td>1.182</td>
+<td>2.704</td>
+<td>0.076</td>
+<td>1.924</td>
+<td>0.118</td>
+<td>1.882</td>
+<td>1.109</td>
+<td>0.509</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0.373</td>
+<td>1.099</td>
+<td>2.847</td>
+<td>0.136</td>
+<td>1.864</td>
+<td>0.185</td>
+<td>1.815</td>
+<td>1.054</td>
+<td>—</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0.337</td>
+<td>1.032</td>
+<td>2.970</td>
+<td>0.184</td>
+<td>1.816</td>
+<td>0.239</td>
+<td>1.761</td>
+<td>1.010</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0.308</td>
+<td>0.975</td>
+<td>3.078</td>
+<td>0.223</td>
+<td>1.777</td>
+<td>0.284</td>
+<td>1.716</td>
+<td>0.975</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>「—」表 LCL 取 0（負值無意義）。<strong>D₃：n≤6 為 0；B₃：n≤5 為 0</strong>。X–Rm 移動全距取相鄰 2 點時，E₂ 用 n＝2 列＝<strong>2.66</strong>、D₄＝3.267。</p>
+</blockquote>
+<h3>4. X̄–R 例題（背算法）</h3>
+<p>紫銅管內徑，n＝5、k＝25，ΣX̄＝1254、ΣR＝120：
+X̿＝1254/25＝<strong>50.16</strong>；R̄＝120/25＝<strong>4.8</strong>。查 n＝5：A₂＝0.577、D₄＝2.114、D₃＝0。
+- X̄圖：CL＝50.16；UCL＝50.16＋0.577×4.8＝<strong>52.93</strong>；LCL＝50.16−2.77＝<strong>47.39</strong>
+- R圖：CL＝4.8；UCL＝2.114×4.8＝<strong>10.15</strong>；LCL＝<strong>0</strong></p>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s20"><h2 onclick="tg(this)">十八、計數值管制圖：p／np／c／u（教科書第 4 章）⭐<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 四圖對照 ⭐必考（率 vs 數、不合格 vs 缺點、n 固定與否）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>圖</th>
+<th>管制對象</th>
+<th>樣本 n</th>
+<th>中心線 CL</th>
+<th>UCL／LCL</th>
+<th>標準差</th>
+<th>分配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>p</strong>（不合格率）</td>
+<td>不合格「品」比率</td>
+<td><strong>可不固定</strong></td>
+<td>p̄＝Σd/Σn</td>
+<td>p̄ ± 3√(p̄(1−p̄)/n)</td>
+<td>√(p̄(1−p̄)/n)</td>
+<td>二項</td>
+</tr>
+<tr>
+<td><strong>pn</strong>（不合格數）</td>
+<td>不合格「品」個數</td>
+<td><strong>必須固定</strong></td>
+<td>p̄n＝Σd/k</td>
+<td>p̄n ± 3√(p̄n(1−p̄))</td>
+<td>√(p̄n(1−p̄))</td>
+<td>二項</td>
+</tr>
+<tr>
+<td><strong>c</strong>（缺點數）</td>
+<td>缺點總數</td>
+<td><strong>必須固定</strong>（面積/長度/時間固定）</td>
+<td>c̄＝Σc/k</td>
+<td>c̄ ± 3√c̄</td>
+<td>√c̄</td>
+<td>卜瓦松</td>
+</tr>
+<tr>
+<td><strong>u</strong>（單位缺點數）</td>
+<td>每單位缺點數</td>
+<td><strong>可不固定</strong></td>
+<td>ū＝Σc/Σn</td>
+<td>ū ± 3√(ū/n)</td>
+<td>√(ū/n)</td>
+<td>卜瓦松</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>不合格「品」vs 缺點</strong>：不合格品＝整件判良/不良；缺點＝一件上的瑕疵點數（一件可有多個缺點）。<strong>率</strong>（p、u）樣本可不固定；<strong>數</strong>（pn、c）樣本要固定。LCL 算出負值一律取 0。</p>
+</blockquote>
+<h3>2. p 圖樣本大小規則 ⭐</h3>
+<ul>
+<li>使每組約含 1~5 個不合格品：<strong>n ＝ 1/p̄ ~ 5/p̄</strong>。</li>
+<li>要 LCL ≥ 0（不落負）：<strong>n ≥ 9(1−p̄)/p̄</strong>。（例 p̄＝0.05 → n≥171）</li>
+<li>各組 n 相差在 <strong>20% 以內</strong> → 可用平均樣本數 n̄ 算共同界限；超過 → 各組individually算（<strong>階梯狀界限</strong>）。</li>
+</ul>
+<h3>3. 計數值例題</h3>
+<ul>
+<li>p 圖（n＝100 固定）：Σd＝125、Σn＝2500 → p̄＝5%；UCL＝5%＋3√(5×95/100)%≈<strong>11.54%</strong>；LCL＝0。</li>
+<li>c 圖：ΣC＝84、k＝20 → c̄＝4.2；UCL＝4.2＋3√4.2≈<strong>10.35</strong>；LCL＝0。</li>
+<li>pn 圖（n＝100）：Σd＝65、k＝25 → p̄n＝2.6；UCL＝2.6＋3√(2.6×0.974)≈<strong>7.4</strong>；LCL＝0。</li>
+</ul>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s21"><h2 onclick="tg(this)">十九、管制圖判讀：點子動態與檢定規則（教科書第 5 章）⭐<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 正常（管制狀態）四判準</h3>
+<p>① 多數點集中在中心線附近 ② 少數點在界限附近 ③ 分佈<strong>隨機</strong>、無規則 ④ 沒有（或極少）點出界。</p>
+<h3>2. 不正常型態</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>型態</th>
+<th>特徵</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>混合型 Mixture</strong></td>
+<td>中心線附近<strong>幾乎無點</strong></td>
+<td>樣本來自兩群體（一偏大一偏小）</td>
+</tr>
+<tr>
+<td><strong>層別型 Stratification</strong></td>
+<td>界限附近幾乎無點（都擠中心線）</td>
+<td>群體已被挑選/分層，變異被人為縮小</td>
+</tr>
+<tr>
+<td><strong>不穩定型 Instability</strong></td>
+<td>有點子跑出界限</td>
+<td>非機遇原因、變異過大</td>
+</tr>
+<tr>
+<td><strong>趨勢 Trend</strong></td>
+<td>連續朝同方向升/降</td>
+<td>刀具磨損、疲勞</td>
+</tr>
+<tr>
+<td><strong>週期 Cycle</strong></td>
+<td>週期性起伏</td>
+<td>溫度/輪班等週期因素</td>
+</tr>
+</tbody>
+</table></div>
+<h3>3. 不正常判定規則（區域檢定 A/B/C 區）⭐必考</h3>
+<p>以 σ 分帶：<strong>C 區＝±1σ 內、B 區＝1σ~2σ、A 區＝2σ~3σ</strong>。判為異常（任一即算）：
+- 一點落在<strong>界限（3σ）外</strong>。
+- 連續 <strong>3 點中 2 點</strong>在同側 <strong>A 區（超 2σ）</strong>。
+- 連續 <strong>5 點中 4 點</strong>在同側 <strong>B 區（超 1σ）</strong>。
+- 連續 <strong>7 點</strong>在中心線<strong>同一側</strong>（延伸：11 中 10、14 中 12、17 中 14、20 中 16）。
+- <strong>趨勢</strong>：連續 <strong>5 點</strong>升/降→注意；<strong>6 點</strong>→查原因；<strong>7 點</strong>→必有原因、立即處置。
+- 近 2σ：連續 3 點中 2、7 點中 3、10 點中 4 → 異常。</p>
+<h3>4. 連串理論 Theory of Runs</h3>
+<p>以中心線（或中位線）為界，一點或連續數點在同一方＝一個「<strong>串 run</strong>」。數全圖總串數，對照 Swed–Eisenhart 臨界值表：<strong>總串數 &gt; 臨界值 → 隨機（正常）；串數過少 → 非隨機、有非機遇原因</strong>。</p>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s22"><h2 onclick="tg(this)">二十、管制圖應用與雜式管制圖（教科書第 6、7 章）<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 合理樣組（Rational Subgroup）⭐必考</h3>
+<p>目標：<strong>組內變異小、組間差異大</strong>。
+- <strong>組內變動</strong>＝機遇原因（抽樣＋量測＋隨機）；<strong>組間變動</strong>＝可歸屬原因（日間、機台間、人員間差異）。
+- 分組取樣目的：① 求組內變動大小 ② 看是否隨時間變化（組間）。</p>
+<h3>2. 管制界限重算時機</h3>
+<p>規格/政策/標準變更、製程已變、製程老是不穩常出界（不良率高），或製程太好界限太寬時 → 重算。重算原則：<strong>剔除已查明原因的異常點</strong>後再算；原因不明的點保留。</p>
+<h3>3. 異常原因三大類（第 6 章）</h3>
+<p>① <strong>管理不善</strong>（未標準化、訓練不足、保養差、材料混入）② <strong>技術不足</strong>（機械精度、環境、設計矛盾、製程能力不足）③ <strong>其他</strong>（疏忽、未照標準、條件突變、量測錯誤）。→ 用<strong>層別法</strong>分析消除。</p>
+<h3>4. 雜式管制圖（用途速記）</h3>
+<ul>
+<li><strong>修正管制界限</strong>：規格公差 &gt; 6σ 時可放寬界限；上下限＝X̄ ± K·R̄，<strong>K＝(3/d₂)(1−1/√n)</strong>。</li>
+<li><strong>趨勢管制圖</strong>：刀具/模具磨損、平均值漸變仍合規格時，中心線為斜線（最小二乘 X̄＝a＋bh）。</li>
+<li><strong>或然率管制圖</strong>：以或然率定界限（外側處置 0.002↔3.09σ、內側警戒 0.05↔1.96σ）；適用非常態。</li>
+<li><strong>警戒界限（複式）管制圖</strong>：外側＝處置界限（3σ）、內側＝<strong>警戒界限</strong>（2σ/1.96σ）。</li>
+<li><strong>L–S（最大最小值）圖</strong>：CL＝M̄＝(L̄＋S̄)/2、UCL/LCL＝M̄ ± A₉R̄、R̄＝L̄−S̄。</li>
+<li><strong>個別值圖</strong>＝點圖（Dot Chart）；<strong>移動平均圖 X̄m</strong>：連續化學製程、資料變化小時用，曲線平滑強調趨勢。</li>
+</ul>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s23"><h2 onclick="tg(this)">二十一、規格與公差（教科書第 8 章）<span class="ar">▾</span></h2><div class="sb">
+<ul>
+<li>設計者常把規格訂得比實際「嚴」（缺時間資料、求安全）；公差過嚴會增加製造成本。</li>
+<li>訂規格法：依類似品、依製程能力、與現有規格比較、依設計公差、依上下游要求。</li>
+<li><strong>自然公差（製程自然界限）＝ X̄ ± 3σ</strong>，常態下涵蓋 <strong>99.73%</strong> 產品；σ 可用 R̄/d₂ 或 s̄/C₄ 估。</li>
+<li><strong>統計公差合成 ⭐</strong>：組合物公差<strong>不等於</strong>各零件公差算術和。獨立變數和/差的標準差＝<strong>√(σ₁²＋σ₂²＋…)</strong>（平方和開方）。公差版：(U−L)組合＝√[Σ(U−L)零件²]，比直接相加<strong>小</strong>。前提：各零件<strong>彼此獨立</strong>。</li>
+<li>反推某站公差：(U−L)₁＝√[(U−L)和² −(U−L)₂²]。</li>
+</ul>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s24"><h2 onclick="tg(this)">二十二、製程管制與製程能力 Cp／Ca／Cpk（教科書第 9 章）⭐⭐必考<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 製程管制（Process Control）</h3>
+<ul>
+<li>＝在製品之品質管制（<strong>IPQC</strong>／PQC）；管制製程中的<strong>品質、產量、交期、成本</strong>四大項。</li>
+<li>影響品質四大因素 <strong>4M</strong>：<strong>原料、機械、方法、人</strong>（Material, Machine, Method, Man）。</li>
+<li>製造流程圖 5 符號：<strong>○操作、□檢驗、D 遲延、▽儲存、⇒搬運</strong>；改善重點＝減少搬運與儲存。</li>
+<li>石川馨分類：造成品質變異的<strong>製造條件</strong>＝<strong>查核點(check point)</strong>；作業<strong>結果/品質特性</strong>＝<strong>管制點(control point)</strong>。</li>
+</ul>
+<h3>2. 製程能力分析 ⭐⭐（大題／選擇必考）</h3>
+<p>前提：製程須在<strong>統計管制狀態</strong>且近似<strong>常態</strong>。<strong>製程能力＝6σ̂</strong>（自然公差），σ̂＝R̄/d₂。自然公差與規格公差 T＝Su−SL 比較：6σ<T（佳）、6σ≒T、6σ>T（能力不足）。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>指標</th>
+<th>公式</th>
+<th>意義</th>
+<th>分級</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ca 準確度</strong></td>
+<td>Ca＝(X̄−μ)/(T/2)（μ＝規格中心）</td>
+<td>製程中心偏離規格中心</td>
+<td>A ≤12.5%、B ≤25%、C ≤50%、D &gt;50%（取絕對值）</td>
+</tr>
+<tr>
+<td><strong>Cp 精密度</strong></td>
+<td>Cp＝T/6σ̂＝(Su−SL)/6σ̂</td>
+<td>分散寬度 vs 公差</td>
+<td>A ≥1.33、B 1.00~1.33、C 0.83~1.00、D &lt;0.83</td>
+</tr>
+<tr>
+<td><strong>Cpk 綜合</strong></td>
+<td>Cpk＝(1−|Ca|)·Cp＝min{(Su−X̄)/3σ̂,(X̄−SL)/3σ̂}</td>
+<td>Ca＋Cp 綜合</td>
+<td>A ≥1.33、B 1.0~1.33、C &lt;1.0</td>
+</tr>
+<tr>
+<td><strong>Cr 能力比</strong></td>
+<td>Cr＝6σ̂/T＝1/Cp</td>
+<td>Cp 倒數，越小越好</td>
+<td>目標 ≤0.75</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>關係：<strong>Ca＝0（不偏）時 Cpk＝Cp；Cpk ≤ Cp 恆成立</strong>。單邊規格用 Cp＝(Su−X̄)/3σ̂ 或 (X̄−SL)/3σ̂。
+<strong>Cp＝1.67</strong> 且中心不偏 → 規格＝μ ± <strong>5σ</strong>（因 T/2＝3σ̂×Cp＝3×1.67σ̂＝5σ̂）。<strong>Cp＝1.33</strong> → μ ± 4σ。
+處置：Ca 不良找<strong>製造單位</strong>（中心偏了，去調機）；Cp 不良找<strong>技術單位</strong>（太分散，要提升製程能力）。
+計數值製程能力＝管制圖的中心線值（p̄、c̄…）。</p>
 </blockquote>
 <hr />
 <p><em>（待續：後續講義內容會依上傳陸續補充）</em></p><button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
