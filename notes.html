@@ -87,7 +87,9 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <a href="#s23" onclick="closeToc()">二十一、計量值管制圖：X̄–R／X̄–s／X̃–R／X–Rm ⭐⭐大題必考</a>
 <a href="#s24" onclick="closeToc()">二十二、計數值管制圖：p／pn／c／u ⭐</a>
 <a href="#s25" onclick="closeToc()">二十三、管制圖判讀：點子動態與判異規則 ⭐⭐（第三堂課下午）</a>
-<a href="#s26" onclick="closeToc()">二十四、製程管制與品質變異因素（補充，課堂尚未上到）</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
+<a href="#s26" onclick="closeToc()">二十四、製程管制與品質變異因素（補充，課堂尚未上到）</a>
+<a href="#s27" onclick="closeToc()">二十五、管制圖之應用法（課本第6章，P168~183）⭐（第四堂課）</a>
+<a href="#s28" onclick="closeToc()">二十六、雜式管制圖：修正界限／趨勢／或然率界限（課本第7章，P185~195）⭐（第四堂課）</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
 <div id="ov" onclick="closeToc()"></div>
 <main>
 <h1>統計品管 — 考試速查筆記</h1>
@@ -4631,6 +4633,49 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 <li>連串數的抽樣分配接近常態；<strong>串數太多或太少都可能是非隨機（有非機遇原因）</strong>。</li>
 <li>查連串數判定表（<strong>P＝0.005 處置界限、P＝0.05 警戒界限</strong>，依 n 查臨界值）。</li>
 </ul>
+<h4>7-1. 連串查表判定法（Swed &amp; Eisenhart，課本 5.5，P158~165）⭐（第四堂課）</h4>
+<p>判定步驟：</p>
+<ol>
+<li>數中心線上方、下方的<strong>點數</strong>：點數少的一側＝<strong>r</strong>、多的一側＝<strong>s</strong>（s≥r）</li>
+<li>數全圖<strong>總串數</strong></li>
+<li>查「成串之最低總數表」：<strong>表27＝α0.005（處置）、表28＝α0.05（警戒）</strong>，以 (r, s) 查臨界值</li>
+<li><strong>總串數 ＞ 臨界值 → 隨機（正常）；總串數 ≤ 臨界值 → 串數太少 → 非隨機（有非機遇原因）</strong></li>
+</ol>
+<p>補充規則：恰落在<strong>中心線（中位線）上</strong>的點，可視實際需要<strong>任意分屬上方或下方</strong>再統計；<strong>中位數管制圖</strong>上下點數必相等（r＝s），改查<strong>表29「低於和高於中位值之最低總串數表」</strong>。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>例題</th>
+<th>兩側點數</th>
+<th>總串數</th>
+<th>臨界值（0.005／0.05）</th>
+<th>判定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p 圖（P̄＝0.013，圖30）</td>
+<td>上 14（r）、下 20（s）</td>
+<td>8＋7＝<strong>15</strong></td>
+<td>9／12</td>
+<td>15＞12 → <strong>隨機</strong></td>
+</tr>
+<tr>
+<td>中位數圖（X̃＝1.7495，圖31）</td>
+<td>上下各 39（r＝s）</td>
+<td><strong>42</strong></td>
+<td>28／32</td>
+<td>42＞32 → <strong>隨機</strong></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ 陷阱：</p>
+<ul>
+<li>r、s 是「中心線上下<strong>兩側的點數</strong>」，不是串數；別跟總串數混用。</li>
+<li>課本查表法只給「<strong>最低</strong>總串數」→ 只檢定<strong>串數太少</strong>；理論上串數<strong>太多</strong>（交互跳動）也可能非隨機，但作答以「≤ 臨界值＝異常」為準。</li>
+</ul>
+</blockquote>
 <h3>8. ARL 兩面（平均連串長度）⭐</h3>
 <div class="tw"><table>
 <thead>
@@ -4714,6 +4759,350 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 <li><strong>演進</strong>：4M（人、機、料、法）→ ＋量測 Measurement ＝ 5M → ＋環境 Environment ＝ 6M；故 6M 也寫成 <strong>5M1E</strong></li>
 <li>⚠️ 英文陷阱：量測＝<strong>Measurement</strong>、環境＝<strong>Milieu</strong>（湊 M）或 <strong>Environment（E）</strong>；出現 Money／Management 是延伸 8M，不算經典 6M</li>
 <li>用途：畫<strong>魚骨圖</strong>分析不良原因時，大骨就用這 6 類展開</li>
+</ul>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s27"><h2 onclick="tg(this)">二十五、管制圖之應用法（課本第6章，P168~183）⭐（第四堂課）<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 管制項目之決定（6.1）</h3>
+<ul>
+<li>先決定<strong>管制項目</strong>（特性之選擇與數量）→ 再決定用計量值或計數值管制圖；取捨視<strong>經濟性、技術性與品質要求程度</strong>。</li>
+<li>項目多時用<strong>重點分析</strong>：<strong>柏拉圖（Pareto）</strong>或<strong>特性要因圖（魚骨圖）</strong>找出有問題之因素優先管制。</li>
+<li><strong>不宜由少數人單獨決定</strong> → 有關人員（操作員、領班、管理員、主管）公開研討，以免偏差。</li>
+</ul>
+<h3>2. 管制標準（管制界限）之決定（6.2）⭐</h3>
+<ul>
+<li>使用管制圖前，先將現有<strong>製程、步驟、工作方法標準化</strong>——否則日後不易區別機遇 vs 非機遇原因。</li>
+<li>第一張圖＝<strong>解析用</strong>：除去不正常因素後<strong>重新計算界限</strong>；用了一段時間後應重新檢討。</li>
+</ul>
+<p><strong>應重新檢討管制界限的 4 時機</strong>：① 經營政策或消費者要求明確改變 ② 技術標準、規格、作業／檢驗標準變更 ③ 確知<strong>製程已有變化</strong> ④ 管制圖<strong>已使用一段時間</strong>。</p>
+<p><strong>重新計算界限注意 5 點</strong>：</p>
+<ol>
+<li>製程始終不穩、常出界 → <strong>縮短</strong>檢討期間</li>
+<li>管制狀態良好 → 檢討期間可酌量<strong>延長</strong></li>
+<li>點子向<strong>好方向</strong>出界（如 p 圖跌破 LCL）→ <strong>仍應追查原因</strong>，並檢討檢驗標準與管制標準</li>
+<li>出界點<strong>查得出原因 → 除去後重算</strong>；<strong>原因不明 → 重算時仍予使用</strong>（不可任意剔除）</li>
+<li>步驟宜<strong>標準化＋專人負責</strong>，按規定記錄保存</li>
+</ol>
+<blockquote>
+<p>⚠️ 易錯：</p>
+<ul>
+<li>「往好方向出界」不是好消息就不管——一樣要追查（可能是量測或檢驗標準出問題）。</li>
+<li>只有「<strong>原因查明</strong>」的出界點才能剔除重算；原因不明的數據要<strong>保留</strong>。</li>
+</ul>
+</blockquote>
+<h3>3. 抽樣方法之決定（6.3）</h3>
+<ul>
+<li>核心＝<strong>合理樣組：組內變異小、組間變異大</strong>。失效機制：組內變異大 → R̄ 大 → <strong>界限變寬</strong> → 組間異常落在界限內 → <strong>檢出力下降</strong>。</li>
+<li>檢查現行取樣是否適當：點子全集中在 <strong>CL±1.5σ 內</strong> → 必是<strong>分組不妥</strong>（層別型徵兆）。</li>
+<li>p 圖樣本大小原則：<strong>n ＝ 1/p̄ ～ 5/p̄</strong>。</li>
+<li><strong>樣本小、組數多較有利</strong>（及早發現異常）：<strong>n＝4×20 組 優於 n＝8×10 組</strong>。</li>
+<li><strong>抽樣頻率</strong>：間隔愈大、期間發生變化的風險愈大；可靠<strong>過去記錄</strong>（刀具磨耗率、溶液廢損率）決定；<strong>開始時多抽</strong>，有信心後再減少。</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>依製造次序連續取樣</th>
+<th>小批內隨機抽樣</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>作法</td>
+<td>每次連續測量<strong>最後 n 個</strong>製品</td>
+<td>一段時間的小批內<strong>隨機</strong>抽 n 個</td>
+</tr>
+<tr>
+<td>優點</td>
+<td>組內變異小，σ 代表<strong>製程理想能力</strong>；對<strong>平均值移動靈敏</strong></td>
+<td>樣組<strong>代表該時段製品品質</strong></td>
+</tr>
+<tr>
+<td>適用</td>
+<td><strong>製造程序間之管制</strong></td>
+<td><strong>成品驗收</strong>；批內常有修正或速度快難分辨改變時</td>
+</tr>
+<tr>
+<td>注意</td>
+<td>抽樣間隔<strong>之間</strong>的改變不會表現在圖上</td>
+<td><strong>R 圖出界≠變異變大</strong>——批內平均值移動也會使 R 出界</td>
+</tr>
+</tbody>
+</table></div>
+<h3>4. 樣組大小 n 之建議（6.4.1）⭐</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>管制圖</th>
+<th>建議樣組大小</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X̄–R</strong></td>
+<td><strong>n＝2~5</strong> 最適當；n＝6 → 分 2 組各 3；n＝10 → 分 2 組各 5</td>
+</tr>
+<tr>
+<td><strong>X̃–R</strong></td>
+<td>取<strong>奇數</strong>（中位數好找），n＝3 或 5</td>
+</tr>
+<tr>
+<td><strong>p、pn</strong></td>
+<td><strong>n＞50</strong>，可能時 n＞100；使各組<strong>不良個數 ≥1</strong>（可能時 ≥5）</td>
+</tr>
+<tr>
+<td><strong>c、u</strong></td>
+<td>使各組<strong>平均缺點數 ≥1</strong>（可能時 ≥3）</td>
+</tr>
+</tbody>
+</table></div>
+<h3>5. 分組抽樣：目的、原則與分組方法（6.4、6.4.2）⭐</h3>
+<p><strong>分組目的 2 個</strong>：① 求<strong>組內變動</strong>大小，進一步<strong>層別</strong>求層間差異 ② 瞭解組內變動是否在管制狀態、是否隨時間變化。</p>
+<p><strong>分組 3 原則</strong>：① 組內變異<strong>只含機遇原因</strong> ② 組內與組間變異的原因在技術上<strong>能明顯區別</strong> ③ <strong>要管制的變異必須顯示在組間</strong>。</p>
+<p><strong>例（表30~33）</strong>：機械 I、II 各 2 位作業者，2 日，各人上、下午各測 2 件——同一批數據、三種分組法：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>分組法</th>
+<th>組內變動包含</th>
+<th>組間變動包含</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>法1：各人「上午2個」「下午2個」各成組（n=2）</td>
+<td>半天內變動＋抽樣／測量誤差</td>
+<td>作業者間、上下午間、日間、機械間</td>
+</tr>
+<tr>
+<td>法2：各人「上午1＋下午1」成組（n=2）</td>
+<td><strong>一天內（上午到下午）之變動</strong>＋誤差</td>
+<td>作業者間、日間、機械間</td>
+</tr>
+<tr>
+<td>法3：每機械每半天 4 個數據成組（n=4）</td>
+<td>半天內變動＋誤差＋<strong>同機械兩作業者間之變動</strong></td>
+<td>機械間、上下午間、日間</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>判斷關鍵：想偵測哪個原因，就把它<strong>留在組間</strong>；被放進組內的原因會被當成「機遇」而看不見。<strong>變更分組方法後比較各圖，即可解析出異常原因的成份</strong>。</p>
+</blockquote>
+<h3>6. 不正常現象之改正措施（6.5）＝時效問題</h3>
+<ul>
+<li>實施管制圖<strong>最重要者＝時效</strong>：發現愈早 → 對策愈簡單、收效愈快；行動太慢 → 不良品大增、影響產量與交期，且<strong>事過境遷，失去找出真正原因的機會</strong>。</li>
+</ul>
+<p><strong>點子出界（或形狀不正常）時的檢討 5 步驟（P178）</strong>：</p>
+<ol>
+<li>先確認<strong>計算</strong>有無錯誤、抽樣是否正確、測定是否準確</li>
+<li>調查<strong>原料、零件</strong>是否與原來不同；人員是否照<strong>作業標準</strong>工作</li>
+<li>改變<strong>分組方式</strong>或用<strong>層別</strong>比較（機械別、原料別、作業者別）</li>
+<li>與<strong>其他管制圖比較</strong>（成品圖出界 → 回頭比對原料、加工、前製程的圖）</li>
+<li>用<strong>簡單檢定或實驗計劃</strong>找出原因與最佳條件</li>
+</ol>
+<h3>7. 如何使管制圖生效（6.6）</h3>
+<p><strong>三大前提</strong>：① <strong>全體員工合作（Team Work）</strong> ② <strong>適當時間採取適當行動</strong>（管理效能） ③ <strong>自始至終熱心追查</strong>，防止毛病重複發生。</p>
+<p>詳細方法精華：</p>
+<ul>
+<li>品質特性選<strong>使毛病發生最大者</strong>；測定量要一致（同一人、混亂順序<strong>重複測 5 次</strong>，以 <strong>R̄/d₂</strong> 算出<strong>測定誤差</strong>）。</li>
+<li><strong>計量值管制圖比計數值管制圖更容易找出問題原因</strong>——無量具時應設法添置。</li>
+<li>儘量靠近毛病發生的<strong>道次</strong>取樣並立即試驗；與操作者、檢驗員、領班、工程師商討。</li>
+<li>新數據用<strong>同一人、同一量具</strong>測定；舊數據仍值得作比較用。</li>
+<li>證明一種非機遇原因＝<strong>一項實驗工作</strong>；改正行動往往要花錢，<strong>需高層主管支持</strong>。</li>
+<li>報告<strong>簡要、清楚、確實</strong>＋圖表輔助；<strong>繼續追蹤</strong>（圖延續用、間隔可放長），否則操作易越軌。</li>
+</ul>
+<h3>8. 管制圖上異常原因之分析檢討（6.7）⭐</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>分類</th>
+<th>細項舉例</th>
+<th>管制圖上的表現與對策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>管理不善</strong></td>
+<td>未推行標準化、訓練不夠、機械未保養、工具不當、不良材料混入、設計／藍圖錯誤、儀器未校正</td>
+<td>p／pn／c／u 圖<strong>不良（缺點）很多</strong>；X̄–R 呈<strong>甚大變動</strong>。對策＝<strong>先確立管理制度、推行標準化</strong></td>
+</tr>
+<tr>
+<td><strong>技術不足</strong></td>
+<td>機械精度不足、環境不當、設計矛盾、測定儀器／方法不當、缺技術人才、綜合製程能力不足</td>
+<td><strong>界限很寬</strong>、品質分散<strong>比規格界限寬</strong>、<strong>p̄ 或 u 比規定大</strong>。對策＝<strong>加強製程能力</strong>，否則只能全數檢查</td>
+</tr>
+<tr>
+<td><strong>其他因素</strong></td>
+<td>人員疏忽、未按標準作業、標準不完備、未隨機抽樣、計算錯誤、<strong>機械自然磨損</strong>、操作條件突變、異質材料突入、日夜班困擾</td>
+<td><strong>有系統可尋 → 用層別分析</strong>；不規則出現 → 較易被發現而消除</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ 判斷關鍵：</p>
+<ul>
+<li>「界限寬、分散比規格寬、p̄ 偏大」→ 選<strong>技術不足（製程能力不足）</strong>，不是管理不善。</li>
+<li>「不良／缺點很多、大變動」→ 選<strong>管理不善</strong>，對策先<strong>標準化</strong>。</li>
+<li>「刀具自然磨損、日夜班、異質材料突入」→ <strong>其他因素</strong>，有系統性就用<strong>層別</strong>。</li>
+</ul>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s28"><h2 onclick="tg(this)">二十六、雜式管制圖：修正界限／趨勢／或然率界限（課本第7章，P185~195）⭐（第四堂課）<span class="ar">▾</span></h2><div class="sb">
+<p><strong>第7章全覽</strong>：7.1 修正管制界限｜7.2 趨勢管制圖（傾斜界限管制圖）｜7.3 或然率界限管制圖｜7.4 警戒界限（複式）管制圖｜7.5 最大值與最小值管制圖｜7.6 個別值管制圖｜7.7 中位值管制圖｜7.8 變異值管制圖｜7.9 移動平均值管制圖。</p>
+<h3>1. 修正管制界限（Modified Control Limits，7.1）⭐</h3>
+<p><strong>用途</strong>：<strong>規格允差遠寬於製程變異</strong>時，不必死守 ±3σx̄——改依<strong>規格允差</strong>定管制界限，允許製程均數在規格內移動；特別有利於<strong>設備逐漸耗損</strong>（如刀具磨損）的場合。</p>
+<p><strong>推導</strong>（個別值不出規格 → 均數最多移到離規格界限 d 處）：</p>
+<ul>
+<li>d ＝ 3σx − 3σx̄ ＝ 3(σx − σx/√n) ＝ 3(1 − 1/√n)σx ＝ (3/d₂)(1 − 1/√n)R̄ ＝ <strong>KR̄</strong></li>
+<li><strong>修正 UCL ＝ SU − KR̄；修正 LCL ＝ SL ＋ KR̄</strong>（由規格界限往內縮）</li>
+</ul>
+<p><strong>表34 修正界限之 R̄ 乘數</strong>（K＝(3/d₂)(1−1/√n)、L＝6/d₂）：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>n</th>
+<th>K</th>
+<th>L</th>
+<th>n</th>
+<th>K</th>
+<th>L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>0.779</td>
+<td>5.317</td>
+<td>7</td>
+<td>0.690</td>
+<td>2.219</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.749</td>
+<td>3.545</td>
+<td>8</td>
+<td>0.681</td>
+<td>2.107</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.728</td>
+<td>2.914</td>
+<td>9</td>
+<td>0.673</td>
+<td>2.020</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.713</td>
+<td>2.579</td>
+<td>10</td>
+<td>0.667</td>
+<td>1.949</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0.701</td>
+<td>2.388</td>
+<td>12</td>
+<td>0.655</td>
+<td>1.841</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ 使用前提與陷阱：</p>
+<ul>
+<li>先算 <strong>LR̄（＝6σx）</strong>，確認 <strong>LR̄ ＜ 規格公差（SU−SL）</strong> 才能用修正界限（公差須 ＞ 6σx）。</li>
+<li>K、L 都是乘 <strong>R̄</strong>（不是乘 σ）；K 已內含 3/d₂ 與 (1−1/√n)。</li>
+<li>要更保證合格可加大 d：英國式 <strong>d ＝ 3.09σx − 1.96σx̄</strong>（0.005／0.025 或然率水準）。</li>
+</ul>
+</blockquote>
+<h3>2. 趨勢管制圖（傾斜界限管制圖，7.2）⭐⭐大題</h3>
+<p><strong>適用</strong>：R（或 σ）圖在管制狀態、變異穩定不變，但 <strong>X̄ 之均數以一定速率隨時間升降</strong>——典型例：<strong>刀具磨損</strong>（幾乎＝趨勢管制圖的代名詞）。老師補充：又稱<strong>迴歸直線管制圖</strong>；判斷關鍵＝「<strong>X̄ 有趨勢性、R 無趨勢性</strong>」。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>一般 X̄ 圖</th>
+<th>趨勢管制圖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中心線</td>
+<td>水平線 X̿</td>
+<td><strong>斜直線 X̄ ＝ a ＋ bh</strong>（h＝樣組號）</td>
+</tr>
+<tr>
+<td>管制界限</td>
+<td>CL ± A₂R̄（水平）</td>
+<td>中心斜線上下 <strong>± A₂R̄ 的平行斜線</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>最小平方法求 a、b</strong>：聯立 ΣX̄＝ka＋bΣh、ΣhX̄＝aΣh＋bΣh²（k＝組數）。
+<strong>簡化技巧：修正組號使 Σh＝0</strong>（k 奇數時 h＝…−2,−1,0,1,2…）→ <strong>a ＝ ΣX̄/k（＝X̿）、b ＝ ΣhX̄/Σh²</strong>。</p>
+<p><strong>例題（表35、36）</strong>：規格 0.644±0.004 吋（SL＝0.6400、SU＝0.6480），每半小時抽 n＝5、k＝13 組；X̿＝0.6437、R̄＝0.0010。取 h＝−6…0…＋6，編碼後 ΣX̄＝481、ΣhX̄＝599、Σh²＝182：</p>
+<ul>
+<li>a ＝ 481/13 ＝ 37.0、b ＝ 599/182 ＝ 3.29（編碼值）→ 還原：<strong>中心線 X̄ ＝ 0.6437 ＋ 0.000329h</strong>（h＝−6 → 0.6417；h＝＋6 → 0.6457）</li>
+<li>界限 ＝ 中心斜線 ± <strong>A₂R̄ ＝ 0.577×0.0010 ≈ 0.0006</strong>（課本取 0.58）</li>
+</ul>
+<p><strong>安裝機器與換刀時機 6 步驟</strong>：</p>
+<ol>
+<li>估計 σ ＝ R̄/d₂ ＝ 0.0010/2.326 ＝ 0.00043</li>
+<li>檢查公差 vs 6σ：SU−SL ＝ 0.0080 ≈ <strong>18.6σ ≫ 6σ</strong>（可用）</li>
+<li>安裝機器中心初值 ＝ <strong>SL ＋ 4σ</strong> ＝ 0.6417</li>
+<li>均數升至 <strong>SU − 4σ</strong> ＝ 0.6463 時<strong>更換刀具</strong></li>
+<li>換刀間隔 ＝ (0.6463−0.6417) ÷ 0.000329 ＝ <strong>14 樣組</strong></li>
+<li>每半小時一樣組 → 換刀時機 ＝ 0.5×14 ＝ <strong>7 小時</strong></li>
+</ol>
+<p><strong>脫離管制之可能原因有三</strong>：① 非機遇原因 ② 趨勢管制界限<strong>建立錯誤</strong>（新作業沿用舊界限、磨損不穩定） ③ 不符合條件（規格公差須遠大於自然公差、均數須以一定速率變動）。</p>
+<blockquote>
+<p>⚠️ 判斷關鍵：</p>
+<ul>
+<li>換刀點取「<strong>規格界限內縮 4σ</strong>」；可移動距離 ÷ 斜率 b ＝ 樣組數，再乘抽樣間隔換成時間。</li>
+<li>趨勢圖只有<strong>位置（中心線）</strong>在變，分配形態與變異都不變；樣組間產量應大致相等、組內製品連續取得。</li>
+</ul>
+</blockquote>
+<h3>3. 或然率界限管制圖（Probability Limits，7.3）⭐</h3>
+<p><strong>英國工業界</strong>主張：X̄ 分佈不一定常態、不一定對稱，硬用 3σx̄ 欠妥——改「<strong>先規定機率，再回推界限</strong>」（美式 3σ 則是先定界限、機率 0.27% 為結果，兩者出發點相反）。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>或然率（雙尾合計）</th>
+<th>兩尾各佔</th>
+<th>界限內機率</th>
+<th>界限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0.002</strong></td>
+<td>0.001</td>
+<td>99.8%</td>
+<td>X̿ ± <strong>3.09σx̄</strong>（行動／處置界限）</td>
+</tr>
+<tr>
+<td><strong>0.05</strong></td>
+<td>0.025</td>
+<td>95%</td>
+<td>X̿ ± <strong>1.96σx̄</strong>（警戒界限）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>係數修正（7.3.1）</strong>：附表 A、A₁、A₂ 皆按 3σ 制定；改用 0.002 或然率界限時，因 3.09/3＝<strong>1.03</strong>，查表值<strong>須乘 1.03</strong> 再代入。</li>
+</ul>
+<blockquote>
+<p>⚠️ 陷阱：</p>
+<ul>
+<li>「0.002 或然率界限」是<strong>雙尾合計</strong>（單尾 0.001）；「0.05」單尾各 0.025——別把雙尾當單尾。</li>
+<li>3.09σ ↔ 99.8%、1.96σ ↔ 95%，與第十八章常態表對應。</li>
 </ul>
 </blockquote>
 <hr />
