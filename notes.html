@@ -90,7 +90,8 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <a href="#s26" onclick="closeToc()">二十四、製程管制與品質變異因素（補充，課堂尚未上到）</a>
 <a href="#s27" onclick="closeToc()">二十五、管制圖之應用法（課本第6章，P168~183）⭐（第四堂課）</a>
 <a href="#s28" onclick="closeToc()">二十六、雜式管制圖：修正界限／趨勢／或然率界限（課本第7章，P185~195）⭐（第四堂課）</a>
-<a href="#s29" onclick="closeToc()">二十七、課本查表索引：哪個表在第幾頁 ⭐考場翻書用</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
+<a href="#s29" onclick="closeToc()">二十七、課本查表索引：哪個表在第幾頁 ⭐考場翻書用</a>
+<a href="#s30" onclick="closeToc()">二十八、讀題抓數字：n vs k、係數來源、各圖分母對照 ⭐⭐算題前先做這三件事</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
 <div id="ov" onclick="closeToc()"></div>
 <main>
 <h1>統計品管 — 考試速查筆記</h1>
@@ -3862,6 +3863,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 </table></div>
 <blockquote>
 <p>判讀順序：<strong>先看 R（全距）圖再看 X̄ 圖</strong>——X̄ 界限用 R̄ 算，R 圖不穩則 X̄ 界限不可信。</p>
+<p>📐 動筆算之前先確認 n 與 k 有沒有抓對、中心線該除以什麼 → 見 <strong>第二十八章「讀題抓數字」</strong>。</p>
 </blockquote>
 <h3>2. 四種計量值圖公式（σ 未知、用樣本估）⭐</h3>
 <p><strong>先分清楚 3 個符號（看懂公式的關鍵）：</strong></p>
@@ -4341,6 +4343,7 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 <li><strong>P̄ ＝ Σ(np) ÷ Σn ＝ Σ(np) ÷ (k×n)</strong>（除以<strong>總檢驗數</strong>）</li>
 <li>看到求「中心線」用組數 k；求「平均不良率」才除總檢驗數。</li>
 </ul>
+<p>📐 四圖的 CL 分母各不相同（p 除 Σn、pn 除 k、c 除 k、u 除 Σn）→ 對照表見 <strong>第二十八章第 3 節</strong>。</p>
 </blockquote>
 <h3>2. p 圖樣本大小規則 ⭐</h3>
 <ul>
@@ -5438,6 +5441,276 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 <li>連串判定 → <strong>表27／28（P160~161）</strong>；中位數圖 → 表29。</li>
 <li>常態機率 → 附表2（P310~313，<strong>右尾</strong>）。</li>
 <li>修正界限 K、L → 表34（P188）。</li>
+</ul>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s30"><h2 onclick="tg(this)">二十八、讀題抓數字：n vs k、係數來源、各圖分母對照 ⭐⭐算題前先做這三件事<span class="ar">▾</span></h2><div class="sb">
+<p>管制圖計算題失分，多半不是公式背錯，而是<strong>數字抓錯</strong>：n 與 k 弄反、該除組數卻除了總檢驗數。動筆前先照這三步走一遍。</p>
+<h3>1. 第一步：分清楚 n 與 k ⭐最常錯</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>符號</th>
+<th>意思</th>
+<th>題目怎麼說</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>n</strong></td>
+<td>每一組抽幾個（樣本大小）</td>
+<td>「每次抽 5 件」「每 5 罐成一組」「每 4 包成一樣組」</td>
+<td><strong>決定查係數表哪一列</strong>（A₂、D₄、d₂…）</td>
+</tr>
+<tr>
+<td><strong>k</strong></td>
+<td>一共幾組（樣組數）</td>
+<td>「每天 2 次 × 10 天」「檢查 26 次」「28 批樣本」</td>
+<td><strong>當分母</strong>：X̿ ＝ ΣX̄ ÷ k</td>
+</tr>
+<tr>
+<td><strong>Σ</strong></td>
+<td>把 k 組的值全部加起來</td>
+<td>表格整欄相加</td>
+<td>當分子</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>🔑 <strong>判斷關鍵：n 橫著數、k 直著數</strong></p>
+<ul>
+<li><strong>n ＝ 一列裡有幾個數</strong>（表頭有 X₁~X₄ 四欄 → n＝4）</li>
+<li><strong>k ＝ 表格有幾列</strong>（批次編到 28 → k＝28）</li>
+<li>題目沒直接寫 k 時用<strong>乘的</strong>：「每天取樣 2 次、10 天內」→ k ＝ 2×10 ＝ <strong>20</strong></li>
+<li>n 只影響「查表查哪一列」、k 只影響「除以多少」，兩者用途完全不重疊</li>
+</ul>
+<p>⚠️ <strong>易錯：同一題出現兩個一樣的數字</strong></p>
+<ul>
+<li>例：「每次抽樣 <strong>20 件</strong>，今抽驗 <strong>20 組</strong>樣組，ΣX̄＝1,612.9、Σs＝71.4」</li>
+<li>前一個 20 是 <strong>n</strong> → 查 n＝20 那一列：A₃＝0.680、B₃＝0.510、B₄＝1.490、C₄＝0.9869</li>
+<li>後一個 20 是 <strong>k</strong> → X̿＝1612.9÷20＝80.645、s̄＝71.4÷20＝3.57</li>
+<li>抓反就會拿 n 當分母、或拿 k 去查表，整題全錯</li>
+</ul>
+<p>⚠️ <strong>易錯：題目給的是 X̄、R 還是原始值？</strong></p>
+<ul>
+<li>欄位已是 <strong>X̄／R</strong> → 直接整欄加總再除以 k</li>
+<li>欄位是 <strong>X₁~X₅</strong> → 要<strong>先自己算出每組的 X̄（或 X̃）與 R</strong>，才能加總</li>
+<li>看到 X₁~Xₙ 欄卻把整張表所有數字加起來除以 k ＝ 白算</li>
+</ul>
+</blockquote>
+<h3>2. 第二步：查係數用 n、代公式用 Σ ÷ k</h3>
+<p>順序固定三步，不會亂：</p>
+<ol>
+<li><strong>抓 n</strong> → 到係數表（第二十一章第 3 節）抽出這一列會用到的係數</li>
+<li><strong>抓 k、算 Σ</strong> → 得中心線 X̿、R̄（或 s̄、R̄m、p̄、c̄、ū）</li>
+<li><strong>套 ±3σ 公式</strong> → 中心線 ± 係數 × 平均變異（公式總表在第二十二章第 5 節）</li>
+</ol>
+<blockquote>
+<p>🖩 fx-350MS 求 Σ 與平均：<code>MODE 2</code>（SD）→ 逐筆輸入按 <code>DT</code> → <code>SHIFT 1 → 2 =</code> 得 Σx、<code>SHIFT 2 → 1 =</code> 直接得 x̄。X̄ 欄與 R 欄各做一次，比手加快又不易漏。</p>
+</blockquote>
+<h3>3. 第三步：中心線的分母對照 ⭐⭐（最容易漏的一步）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>管制圖</th>
+<th>中心線算法</th>
+<th>分母是什麼</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X̄／X̃／R／s</td>
+<td>ΣX̄÷k、ΣX̃÷k、ΣR÷k、Σs÷k</td>
+<td><strong>組數 k</strong></td>
+<td>每組貢獻一個點</td>
+</tr>
+<tr>
+<td>X（個別值）</td>
+<td>ΣX ÷ k</td>
+<td><strong>點數 k</strong></td>
+<td>一次只量一個值</td>
+</tr>
+<tr>
+<td><strong>Rm（移動全距）</strong></td>
+<td>ΣRm ÷ <strong>(k−1)</strong></td>
+<td><strong>k−1</strong></td>
+<td>第 1 點沒有前一點可相減，Rm 比 X 少一個</td>
+</tr>
+<tr>
+<td>p（n 固定）</td>
+<td>Σd ÷ (n×k)</td>
+<td><strong>總檢驗個數</strong></td>
+<td>不合格「率」的分母是檢驗了幾個</td>
+</tr>
+<tr>
+<td><strong>p（n 變動）</strong></td>
+<td>Σd ÷ <strong>Σn</strong></td>
+<td><strong>樣本大小欄的總和</strong></td>
+<td>大樣本要佔較重的權重</td>
+</tr>
+<tr>
+<td>pn</td>
+<td>Σ(np) ÷ <strong>k</strong></td>
+<td><strong>組數 k</strong></td>
+<td>中心線是每組平均幾「個」不合格品</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Σc ÷ <strong>k</strong></td>
+<td><strong>組數 k</strong></td>
+<td>檢驗單位大小不進公式</td>
+</tr>
+<tr>
+<td>u</td>
+<td>Σc ÷ <strong>Σn</strong></td>
+<td><strong>總檢驗單位數</strong></td>
+<td>單位數會變動</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ <strong>三個最常踩的分母</strong></p>
+<ul>
+<li><strong>Rm 除 (k−1)、X 除 k</strong>：同一題兩個分母（26 次記錄 → X̄＝ΣX÷26、R̄m＝ΣRm÷25）</li>
+<li><strong>n 變動的 p 圖不可以「各組 p 相加再除以組數」</strong>，一定是 <strong>Σd ÷ Σn</strong></li>
+<li><strong>c 圖的 c̄ 除以組數 k</strong>，不是除以「每次抽 50 顆」的 50——50 只是檢驗單位的定義，不進公式</li>
+</ul>
+</blockquote>
+<h3>4. 係數怎麼來的：全部都是同一句「中心 ± 3σ」⭐</h3>
+<p>管制界限只有一個原理：<strong>界限 ＝ 中心線 ± 3 ×（畫上去那個點的標準差）</strong>。四種計量值係數只是把「3 ÷ 估計式」包成一個數字，免得每次自己算 σ。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>步驟</th>
+<th>X̄ 圖的推法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>點是 x̄，其標準差</td>
+<td>σx̄ ＝ σ ÷ √n</td>
+</tr>
+<tr>
+<td>界限</td>
+<td>X̿ ± 3σ/√n</td>
+</tr>
+<tr>
+<td>σ 未知，用全距估</td>
+<td>σ̂ ＝ R̄ ÷ d₂</td>
+</tr>
+<tr>
+<td>代入、把常數包起來</td>
+<td>X̿ ± [3 ÷ (d₂√n)] × R̄ ＝ X̿ ± <strong>A₂</strong>R̄</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>係數</th>
+<th>＝</th>
+<th>驗算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A₂</strong></td>
+<td>3 ÷ (d₂√n)</td>
+<td>n＝5：3 ÷ (2.326×√5) ＝ 3÷5.201 ＝ <strong>0.577</strong> ✓</td>
+</tr>
+<tr>
+<td><strong>A₃</strong></td>
+<td>3 ÷ (C₄√n)</td>
+<td>n＝20：3 ÷ (0.9869×√20) ＝ 3÷4.414 ＝ <strong>0.680</strong> ✓</td>
+</tr>
+<tr>
+<td><strong>E₂</strong></td>
+<td>3 ÷ d₂（n＝2）</td>
+<td>3 ÷ 1.128 ＝ <strong>2.66</strong> ✓</td>
+</tr>
+<tr>
+<td><strong>D₄／D₃</strong></td>
+<td>1 ± 3d₃/d₂</td>
+<td>n≤6 時 D₃ 算出負值 → <strong>取 0</strong>（小樣本 R 圖沒有下限）</td>
+</tr>
+<tr>
+<td><strong>B₄／B₃</strong></td>
+<td>1 ± 3C₅/C₄</td>
+<td>n≤5 時 B₃ 為 0</td>
+</tr>
+</tbody>
+</table></div>
+<p>計數值三個公式則直接來自分配本身：二項分配的 σ ＝ √(p̄(1−p̄)/n)、卜瓦松分配「平均＝變異數」所以 σ ＝ √c̄。</p>
+<blockquote>
+<p>⚠️ <strong>易錯：c 圖的根號裡只有一個 c̄</strong></p>
+<ul>
+<li>p 圖：√(p̄(1−p̄)/n) —— 有 (1−p̄)，因為是二項分配</li>
+<li>c 圖：√c̄ —— <strong>沒有 (1−c̄)</strong>，因為卜瓦松分配的變異數就等於平均數</li>
+<li>u 圖：√(ū/n) —— 卜瓦松除以單位數，一樣沒有 (1−ū)</li>
+</ul>
+<p>課本出處與 μσ 已知時的版本見第二十一章第 7 節；完整公式總表見第二十二章第 5 節（附表11／課本 P337）。</p>
+</blockquote>
+<h3>5. 讀題關鍵字 → 該抓的數字</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題目出現這句</th>
+<th>抓到的是</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「每次樣本大小 n＝5」「每 5 罐成一組」「每 4 包成一樣組」</td>
+<td><strong>n</strong></td>
+<td>直接決定查表列</td>
+</tr>
+<tr>
+<td>「每天取樣 2 次，10 天內」</td>
+<td><strong>k ＝ 2×10 ＝ 20</strong></td>
+<td>要自己乘</td>
+</tr>
+<tr>
+<td>「檢查 26 次之記錄」「28 批樣本」「20 組樣組」</td>
+<td><strong>k</strong></td>
+<td>表格列數可互相驗證</td>
+</tr>
+<tr>
+<td>「每批抽樣 100 顆」＋「28 批」</td>
+<td>p 圖的 <strong>n＝100、k＝28</strong></td>
+<td>p̄＝Σd÷(100×28)</td>
+</tr>
+<tr>
+<td>樣本大小欄每列都不同</td>
+<td><strong>n 變動</strong> → p 圖界限逐組算</td>
+<td>p̄＝Σd÷Σn</td>
+</tr>
+<tr>
+<td>「每次抽樣 50 顆」缺點數</td>
+<td><strong>檢驗單位固定 → c 圖</strong></td>
+<td>c̄ 除以組數，不除 50</td>
+</tr>
+<tr>
+<td>「樣本平均值之標準差 σx̄」</td>
+<td>是<strong>標準誤</strong>不是 σ</td>
+<td>σ ＝ σx̄ × √n</td>
+</tr>
+<tr>
+<td>日期欄跳號（缺 6、12、19…）</td>
+<td><strong>k 要實際數，不能看最後一個編號</strong></td>
+<td>常見陷阱</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ <strong>干擾項要認得出來</strong></p>
+<ul>
+<li>「經 2 個月之抽驗結果」「每 2 小時抽查一次」這類敘述多半只交代抽樣頻率，<strong>不進任何公式</strong></li>
+<li>由 σx̄ 反推 σ 的題目，只需要 σx̄ 與 n，其餘數字全是干擾</li>
+<li>判斷方式：問自己「這個數字是進分子、分母，還是查表？」三者都不是就是干擾項</li>
 </ul>
 </blockquote>
 <hr />
