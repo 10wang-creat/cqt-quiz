@@ -5090,6 +5090,12 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 <td>X̿ ± <strong>3.09σx̄</strong>（行動／處置界限）</td>
 </tr>
 <tr>
+<td>0.010</td>
+<td>0.005</td>
+<td>99.0%</td>
+<td>（常用三檔之一，見表37）</td>
+</tr>
+<tr>
 <td><strong>0.05</strong></td>
 <td>0.025</td>
 <td>95%</td>
@@ -5098,13 +5104,171 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 </tbody>
 </table></div>
 <ul>
-<li><strong>係數修正（7.3.1）</strong>：附表 A、A₁、A₂ 皆按 3σ 制定；改用 0.002 或然率界限時，因 3.09/3＝<strong>1.03</strong>，查表值<strong>須乘 1.03</strong> 再代入。</li>
+<li><strong>係數修正（7.3.1）</strong>：附表 A、A₁、A₂ 皆按 3σ 制定；改用 0.002 界限 → 3.09/3＝<strong>1.03</strong>，查表值<strong>乘 1.03</strong>；改用 0.05 界限 → 1.96/3＝<strong>0.653</strong>，查表值<strong>乘 0.653</strong>（成對記：0.002→×1.03、0.05→×0.653）。</li>
+<li>手寫速記（P196）：UCL＝X̿＋(3.09/3)A₂R̄、LCL＝X̿−(3.09/3)A₂R̄；0.05 用 (1.96/3)A₂R̄；機率值查<strong>附表2（P310）</strong>：z＝3.09 右尾 0.001×2＝0.002、z＝1.96 右尾 0.025×2＝0.05。</li>
 </ul>
 <blockquote>
 <p>⚠️ 陷阱：</p>
 <ul>
 <li>「0.002 或然率界限」是<strong>雙尾合計</strong>（單尾 0.001）；「0.05」單尾各 0.025——別把雙尾當單尾。</li>
 <li>3.09σ ↔ 99.8%、1.96σ ↔ 95%，與第十八章常態表對應。</li>
+</ul>
+</blockquote>
+<h4>3-1. R 與 S 之或然率管制圖（7.3.2，P197~199）（第四堂課第二節）</h4>
+<p><strong>為什麼 R、S 要另訂界限</strong>：R 及 S 之分配<strong>非常態、向右偏</strong>（樣本愈小愈偏）→ 超出上限與下限的機率<strong>不相等</strong>，須另訂<strong>兩條與 R̄（S̄）不對稱</strong>的管制界限（美式 D₃R̄／D₄R̄ 的對稱推法不適用）。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>圖</th>
+<th>界限公式</th>
+<th>係數來源</th>
+<th>查表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>或然率 R 圖</td>
+<td><strong>UCL_R／LCL_R ＝ D_R × R̄</strong></td>
+<td>W＝R/σₓ 之機率分配</td>
+<td><strong>表38（P199）</strong>：D₀.₀₀₁／D₀.₀₀₅／D₀.₀₂₅（下限）、D₀.₉₇₅／D₀.₉₉₅／D₀.₉₉₉（上限）</td>
+</tr>
+<tr>
+<td>或然率 S 圖</td>
+<td><strong>UCL_S／LCL_S ＝ B × σ</strong></td>
+<td>B 由 <strong>χ² 分配</strong>演算而來</td>
+<td><strong>表39（P199）</strong></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ 判斷關鍵：</p>
+<ul>
+<li>下標＝<strong>單尾累積機率</strong>：0.002 雙尾界限查 D₀.₀₀₁＋D₀.₉₉₉ 成對；0.05 查 D₀.₀₂₅＋D₀.₉₇₅。</li>
+<li>R 圖係數乘 <strong>R̄</strong>；S 圖係數乘 <strong>σ</strong>（不是 s̄），σ 未知時用不偏估計值。</li>
+</ul>
+</blockquote>
+<h3>4. 警戒界限或複式管制圖（7.4，P200~202）⭐（第四堂課第二節）</h3>
+<p>同一張圖設<strong>兩組管制界限</strong>（圖37＝美式 3σ＋2σ，P200；圖36＝英式 0.002＋0.05，P201）：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>別名</th>
+<th>美式（3σ 制）</th>
+<th>英式（或然率制）</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>外側界限（Outer limits）</strong></td>
+<td><strong>行動／處置界限（Action limits）</strong></td>
+<td>3σx̄</td>
+<td><strong>0.002</strong>（3.09σx̄）</td>
+<td>超出即採取行動</td>
+</tr>
+<tr>
+<td><strong>內側界限（Inner limits）</strong></td>
+<td><strong>警戒界限（Warning limits）</strong></td>
+<td>2σx̄</td>
+<td><strong>0.05</strong>（1.96σx̄)</td>
+<td>落在內外之間 → 懷疑態度、密切注意</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>單獨一點落在 2σ~3σ 警戒區的機率＝½×4.28%＝<strong>2.14%</strong>，偶而一點不稀奇。</li>
+<li>但警戒區出現<strong>連串</strong>就要行動：<strong>連續 2 點</strong>、<strong>3 中 2</strong>、<strong>7 中 3</strong>、<strong>10 中 4</strong>（與二十三章「管制界限近旁」判異同源）。</li>
+<li>此圖只適合<strong>品管造詣較深</strong>之人員使用。</li>
+</ul>
+<blockquote>
+<p>⚠️ 名詞配對是考點：</p>
+<ul>
+<li>Outer＝<strong>Action（行動）</strong>＝3σ／0.002；Inner＝<strong>Warning（警戒）</strong>＝2σ／0.05——選擇題最愛對調。</li>
+<li>美式＝先定 σ 倍數（2σ、3σ）；英式＝先定或然率（0.05、0.002）再回推倍數。</li>
+</ul>
+</blockquote>
+<h3>5. 最大值與最小值管制圖（L−S 圖，7.5，P202~203）⭐考過（第四堂課第二節）</h3>
+<p><strong>適用</strong>：計量值；產品或零件之<strong>不圓、不均勻、偏心、面之不平行</strong>等問題（老師註明「如何應用」考試考過）。每樣組測 n 個，只點<strong>最大值 L 與最小值 S</strong>（圖39：●＝L、×＝S），可與 R 管制圖併用。</p>
+<ul>
+<li>CL ＝ M̄ ＝ <strong>(L̄＋S̄)/2</strong></li>
+<li>UCL／LCL ＝ <strong>M̄ ± A₉R̄</strong>，式中 <strong>R̄ ＝ L̄ − S̄</strong></li>
+</ul>
+<p><strong>表40 L−S 係數 A₉（P203）</strong>：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>n</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th><strong>5</strong></th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A₉</td>
+<td>2.695</td>
+<td>1.826</td>
+<td>1.522</td>
+<td><strong>1.363</strong></td>
+<td>1.263</td>
+<td>1.194</td>
+<td>1.143</td>
+<td>1.104</td>
+<td>1.072</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>例題（講義）</strong>：n＝5，L̄＝60、S̄＝40、R̄＝10 → CL＝(60＋40)/2＝<strong>50</strong>；UCL＝50＋1.363×10＝<strong>63.63</strong>。🖩 50 ＋ 1.363 × 10 ＝</p>
+<blockquote>
+<p>⚠️ 陷阱：</p>
+<ul>
+<li>A₉ 乘的是 <strong>R̄＝L̄−S̄</strong>（不是除以 2）；CL 才是取平均。</li>
+<li>n＝5 → A₉＝<strong>1.363</strong>，跟 X̄ 圖 A₂＝0.577 不同表，別查錯。</li>
+<li>L−S 圖<strong>檢出力不好</strong>，但可用圖形表明工程狀況，<strong>現場使用效果仍佳</strong>（是非題考點）。</li>
+</ul>
+</blockquote>
+<h3>6. 個別值管制圖（點圖）與中位值管制圖（7.6~7.7，P204~206）（第四堂課第二節）</h3>
+<p><strong>個別值管制圖（7.6）</strong>＝<strong>點圖（Dot Chart）</strong>：按適當間隔抽 <strong>3~5 個</strong>，量得值<strong>直接點在圖上</strong>；非常簡單易懂、<strong>對工作者饒有教育意義</strong>，用於<strong>不需要 X̄–R 敏銳性</strong>之場合（圖40，P204）。界限＝<strong>X̄ ± 3σ</strong>；亦可把界限設在<strong>距規格界限 1σ</strong> 處，有點出界再觀察是否超出 D₄R̄ 範圍後採取措施。</p>
+<p><strong>中位值管制圖（7.7）</strong>：個別值圖之特型，<strong>兼有 X̄–R 圖之敏銳性</strong>；奇數個數據的<strong>中位值加圓圈</strong>代替 X̄（省算平均）。界限算法與 X̄ 圖相同但<strong>加寬 25%</strong>（小樣組時中位值效用不及平均值）。最大優點：讓工作者明瞭「<strong>平均值（中位值）與個別值應有不同之管制界限</strong>」（圖41，P206）。</p>
+<blockquote>
+<p>⚠️ 區分：</p>
+<ul>
+<li>此處「個別值管制圖」＝第7章的<strong>現場簡易點圖</strong>（每次點 3~5 個、靠目視）；<strong>X–Rm</strong>（二十一章）是 n＝1、用 E₂ 算界限——不同脈絡。</li>
+<li>考「最簡單／對工作者最有教育意義」→ 點圖；考「兼有敏銳性、界限寬 25%」→ 中位值圖。</li>
+</ul>
+</blockquote>
+<h3>7. 變異值管制圖（7.8，P207~208）（第四堂課第二節）</h3>
+<p><strong>新式管制圖</strong>，專門表現「<strong>品性本身（Within Piece）</strong>」之變異——<strong>不均勻、不圓、偏心、面不平行</strong>（與 L−S 圖同用途、互為備選）。</p>
+<ul>
+<li>這些小變異有時可<strong>大到超過機器能力（Machine Capability）</strong>，不可忽視。</li>
+<li>作法：<strong>一直線代表一樣本</strong>，直線繪於該尺度的<strong>最大值與最小值之間</strong>；由線長直接看出不圓等範圍，並可與機器能力、刀具損耗比較。</li>
+<li>圖42（P207）三種型態：① 個別樣本身變異大 ② 樣本間變異大 ③ 因時間的變異大。</li>
+<li>界限與個別值圖同法，設在<strong>距規格界限 1σ</strong> 處。</li>
+</ul>
+<blockquote>
+<p>⚠️ 關鍵詞配對：<strong>Within Piece（品性本身）＝變異值管制圖</strong>；「不圓／偏心／面不平行」同時是 L−S 與變異值圖的場景。</p>
+</blockquote>
+<h3>8. 移動平均值管制圖（X̄ₘ 圖，7.9，P208~213）⭐（第四堂課第二節）</h3>
+<p><strong>適用</strong>：<strong>連續式化學品製造廠</strong>之原料及半成品管制。X̄ₘ 變化微小 ＝ 製程內<strong>摻和（blending）與混合（mixing）</strong>均勻。</p>
+<p><strong>步驟（m＝3 日移動，k＝20 日，製酒酒精含量%例，表40，P210）</strong>：每日分析值 → 3 日移動平均 X̄ₘ（共 k−m＋1＝18 個）→ 3 日移動全距 Rₘ。</p>
+<ul>
+<li>X̿ₘ ＝ ΣX̄ₘ/(k−m＋1) ＝ 293.94/18 ＝ <strong>16.33</strong></li>
+<li>R̄ₘ ＝ ΣRₘ/(k−m＋1) ＝ 17.7/18 ＝ <strong>0.98</strong></li>
+<li>以 <strong>m 當 n 查 A₂</strong>（m＝3 → A₂＝1.02）：CL＝<strong>16.33</strong>、UCL＝16.33＋1.02×0.98＝<strong>17.33</strong>、LCL＝<strong>15.33</strong>（圖43，P213）</li>
+</ul>
+<blockquote>
+<p>⚠️ 判讀特殊規則（必考觀念）：</p>
+<ul>
+<li>移動平均的<strong>相鄰點彼此相關</strong>（共用同批數據）→ <strong>連串（連續超限）規則在此不適用</strong>：m＝3 時圖上 3 點成串超限，實際只相當於 R 圖<strong>一點</strong>超限。</li>
+<li>點成串出現在中心線一側的解釋，也與 X̄／R 圖不同。</li>
+<li>分母都是 <strong>k−m＋1</strong>（與二十一章 R̄ₘ 同形）；曲線比個別值圖<strong>平滑</strong>，看的是<strong>趨勢</strong>不是點間變動。</li>
 </ul>
 </blockquote>
 <hr />
@@ -5160,6 +5324,31 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 <td>表35、36</td>
 <td>刀具磨損趨勢管制圖例題數據與編碼計算</td>
 <td>P190~191</td>
+</tr>
+<tr>
+<td>表37</td>
+<td>R 及 S 管制圖常用之或然率（α → 每尾 ½α）</td>
+<td>P197</td>
+</tr>
+<tr>
+<td><strong>表38</strong></td>
+<td>或然率 R 管制圖係數 D_R（n → D₀.₀₀₁~D₀.₉₉₉）</td>
+<td><strong>P199</strong></td>
+</tr>
+<tr>
+<td>表39</td>
+<td>或然率 S 管制圖係數 B（χ² 演算）</td>
+<td>P199</td>
+</tr>
+<tr>
+<td><strong>表40</strong></td>
+<td>L−S 管制圖係數 A₉（n＝2~10）⚠️課本表號重複</td>
+<td><strong>P203</strong></td>
+</tr>
+<tr>
+<td>表40（重號）</td>
+<td>移動平均與移動全距計算例（製酒酒精%）</td>
+<td>P210</td>
 </tr>
 </tbody>
 </table></div>
