@@ -3670,6 +3670,11 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <li>⚠️ 英文陷阱：量測＝<strong>Measurement</strong>、環境＝<strong>Milieu</strong>（湊 M）或 <strong>Environment（E）</strong>；出現 Money／Management 是延伸 8M，不算經典 6M</li>
 <li>用途：畫<strong>魚骨圖</strong>分析不良原因時，大骨就用這 6 類展開</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-07-25，錯1題）：4M 是哪四個</strong></p>
+<ul>
+<li>4M ＝ <strong>原料 Material、機械 Machine、方法 Method、人 Man</strong>。</li>
+<li>陷阱選項：測試／測定（那是 5M 才加的 Measurement）、金錢 Money、市場 Market、士氣 Morale——都不是經典 4M。</li>
+</ul>
 </blockquote>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
@@ -4005,6 +4010,13 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <li>出界情形很多 → 用較窄界限較佳。</li>
 <li>2σ 太嚴（無的放矢、浪費）；4σ 太寬（非機遇原因藏在 4σ 內漏抓）；<strong>±3σ 最經濟</strong>。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-07-25，錯1題）：樣本數 n 與管制界限寬窄</strong></p>
+<ul>
+<li>X̄ 圖界限寬度 ∝ σ/√n → <strong>n 愈大、界限愈窄</strong>（不是愈寬、也不是不變）。</li>
+<li>直覺記法：樣本多 → 平均值愈穩 → 界限可以收緊。</li>
+</ul>
+</blockquote>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s23"><h2 onclick="tg(this)">二十、管制圖的種類與建立步驟 ⭐<span class="ar">▾</span></h2><div class="sb">
@@ -4594,6 +4606,16 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 <li>數據小數位多時，先<strong>編碼</strong>：簡化值 ＝（原始值 − 基準）× 倍率（例：(x − 6.4)×1000），用簡化值算 CL／UCL／LCL，最後<strong>再換回原單位</strong>。</li>
 <li>中位數求法：n 奇數 → 排序取中央值；n 偶數 → 中央兩數平均。X̃–R 每組<strong>最好取奇數</strong>（3 或 5），現場常由領班／作業員直接點繪。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-07-25，錯6題）：X̄–R 圖的係數由來與判讀順序</strong></p>
+<ul>
+<li><strong>n＞10 → 改用 X̄–s 圖</strong>（R 只用最大最小兩值，n 大時估計效率差）。</li>
+<li><strong>σ̂ ＝ R̄/d₂</strong>（分子是 R̄ 不是 X̄；別選 X̄/d₂）。</li>
+<li>個別值散佈範圍 ＝ <strong>6σ ＝ 6R̄/d₂</strong>（不是 2A₂R̄、不是 D₄R̄）。</li>
+<li>係數由來：<strong>D₄ ＝ 1 ＋ 3d₃/d₂</strong>、D₃ ＝ 1 − 3d₃/d₂（有「1±」！別選 3d₃/d₂）；<strong>σ_R ＝ (1/3)(1−D₃)R̄</strong>。</li>
+<li>判讀順序：<strong>先看 R 圖</strong>再看 X̄ 圖——X̄ 的界限（A₂R̄）是用 R̄ 算的，R 不穩定則 X̄ 圖沒意義。</li>
+</ul>
+</blockquote>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s25"><h2 onclick="tg(this)">二十二、計數值管制圖：p／pn／c／u ⭐<span class="ar">▾</span></h2><div class="sb">
@@ -4836,6 +4858,12 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 <blockquote>
 <p>係數 A₂／A₃／D₃／D₄／E₂／m₃A₂／B₃／B₄ 查第二十一章第 3 節係數表；σ̂＝R̄/d₂ 或 s̄/C₄。
 <strong>註 1（p̄ 低時近似）</strong>、<strong>註 2（各組樣本不定用 n̄）</strong> 的公式見本章第 3 節。LCL 算出負值一律取 0。</p>
+<p>⚠️ <strong>易錯（2026-07-25，錯3題）：計數值圖的 n 與標準差</strong></p>
+<ul>
+<li>p 圖樣本大小：<strong>n ＝ 1/P̄ ～ 5/P̄</strong>（使 nP̄ 落在 1~5；不是 5/P̄~10/P̄）。</li>
+<li><strong>σ_c ＝ √c̄</strong>：板玻璃平均 0.25 件缺點 → σ＝√0.25＝<strong>0.50</strong>（開根號，不是照抄 0.25）。</li>
+<li>σ_p 統計上＝<strong>√(P̄(1−P̄)/n)</strong>；但課本測驗題答案表印 √(nP̄(1−P̄))（那是 <strong>pn 圖</strong>的 σ）——遇到這題<strong>依題目引用的書本作答</strong>，觀念上記清楚兩者差在有沒有除以 n。</li>
+</ul>
 </blockquote>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
@@ -4849,6 +4877,11 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 </ul>
 <blockquote>
 <p>正常管制圖 ＝ 點子維持常態分配、符合隨機分佈。</p>
+<p>⚠️ <strong>易錯（2026-07-25，錯2題）：正常動態與出界的意義</strong></p>
+<ul>
+<li>「正常管制圖點子動態」考選擇題時，四判準<strong>全對 → 選「以上皆是」</strong>（集中中心線附近＋少數靠界限＋隨機無規則＋不出界，缺一不可）。</li>
+<li><strong>X̄ 圖出界 ＝ 製程「平均數」發生變化</strong>；R 圖出界才是「變異」變大——X̄ 管位置、R 管散佈，別答成變異。</li>
+</ul>
 </blockquote>
 <h3>2. 不正常型態 ⭐</h3>
 <div class="tw"><table>
@@ -5266,6 +5299,12 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 <li>K、L 都是乘 <strong>R̄</strong>（不是乘 σ）；K 已內含 3/d₂ 與 (1−1/√n)。</li>
 <li>要更保證合格可加大 d：英國式 <strong>d ＝ 3.09σx − 1.96σx̄</strong>（0.005／0.025 或然率水準）。</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-07-25，錯3題）：修正管制界限</strong></p>
+<ul>
+<li>「特別有利於<strong>設備逐漸耗損</strong>場合之個別值或平均值管制」——課本測驗題答案是<strong>修正管制界限圖</strong>（不是趨勢管制圖；趨勢圖是均數「以一定速率」變動時畫斜線那張，兩題敘述很像，依題目用詞作答）。</li>
+<li><strong>K 值等價式</strong>：K＝(3/d₂)(1−1/√n)＝3/d₂ − 3/(d₂√n)＝(1/d₂)(3−3/√n)——只要能化成這個形的都對；<strong>2/d₂ 之類「換掉 3」的就是錯的</strong>（考「何者錯誤」）。</li>
+<li>先決條件：<strong>規格公差 (U−L) ＞ 6σ</strong>（個別值的 6σ，<strong>不是 6σx̄</strong>）。</li>
+</ul>
 </blockquote>
 <h3>2. 趨勢管制圖（傾斜界限管制圖，7.2）⭐⭐大題</h3>
 <p><strong>適用</strong>：R（或 σ）圖在管制狀態、變異穩定不變，但 <strong>X̄ 之均數以一定速率隨時間升降</strong>——典型例：<strong>刀具磨損</strong>（幾乎＝趨勢管制圖的代名詞）。老師補充：又稱<strong>迴歸直線管制圖</strong>；判斷關鍵＝「<strong>X̄ 有趨勢性、R 無趨勢性</strong>」。</p>
@@ -5369,8 +5408,13 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 </tbody>
 </table></div>
 <blockquote>
-<p>成對記：<strong>0.002 → ×1.03、0.05 → ×0.653</strong>（分子就是 3.09 或 1.96，分母都是 3）。
-- 手寫速記（P196）：UCL＝X̿＋(3.09/3)A₂R̄、LCL＝X̿−(3.09/3)A₂R̄；0.05 用 (1.96/3)A₂R̄；機率值查<strong>附表2（P310）</strong>：z＝3.09 右尾 0.001×2＝0.002、z＝1.96 右尾 0.025×2＝0.05。</p>
+<p>成對記：<strong>0.002 → ×1.03、0.05 → ×0.653</strong>（分子就是 3.09 或 1.96，分母都是 3）。</p>
+<p>⚠️ <strong>易錯（2026-07-25，錯2題）：或然率界限的實際套用</strong></p>
+<ul>
+<li>X̄ 圖 0.05 警戒界限公式 ＝ <strong>X̄ ± 0.653A₂R̄</strong>（把 A₂ 乘 0.653，不是乘 1.96、也不是直接 ±1.96）。</li>
+<li>或然率 <strong>R 圖</strong>照樣查 D 係數：0.05、n＝4 → 查表38 之 <strong>D₀.₉₇₅＝1.93</strong> → UCL_R＝1.93×R̄＝1.93×5＝<strong>9.65</strong>（下限配 D₀.₀₂₅；0.05 → 每尾 0.025 成對查）。</li>
+<li>手寫速記（P196）：UCL＝X̿＋(3.09/3)A₂R̄、LCL＝X̿−(3.09/3)A₂R̄；0.05 用 (1.96/3)A₂R̄；機率值查<strong>附表2（P310）</strong>：z＝3.09 右尾 0.001×2＝0.002、z＝1.96 右尾 0.025×2＝0.05。</li>
+</ul>
 <p>⚠️ 陷阱：</p>
 <ul>
 <li>「0.002 或然率界限」是<strong>雙尾合計</strong>（單尾 0.001）；「0.05」單尾各 0.025——別把雙尾當單尾。</li>
@@ -5880,6 +5924,13 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 </ul>
 <blockquote>
 <p>⚠️ 考點：暫時對策 vs 防止再發對策 ＝ <strong>治標 vs 治本</strong>。</p>
+<p>⚠️ <strong>易錯（2026-07-25，錯4題）：製程管制觀念選擇題</strong></p>
+<ul>
+<li>「製程管制即是」→ <strong>在製品之管制</strong>（IPQC；不是製成品、也不能籠統選品質管制）。</li>
+<li>製造程序中實施品管，求得的變化狀態 → <strong>「可以預測」</strong>（管制狀態＝穩定可預測，此題答案取「可以預測」）。</li>
+<li>詳細的製造流程圖 → <strong>可以節省許多文字的敘述</strong>（不是要雙語、顏色密碼或幹部姓名）。</li>
+<li>從取得原料到準時交貨、符合品質，生產之前必須有 → <strong>精密的計劃</strong>。</li>
+</ul>
 </blockquote>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
@@ -6008,6 +6059,14 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 </tbody>
 </table></div>
 <p><strong>例9.4</strong>：硬度規格 65±2.0；一月實績 64±1.4 → Cp＝4/(1.4×2)＝<strong>1.43（A）</strong>；二月 65±2.5 → Cp＝4/5＝<strong>0.80（D）</strong>。🖩 4 ÷ ( 1.4 × 2 ) ＝</p>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-07-25，錯3題）：製程能力與 Cp 的數字題</strong></p>
+<ul>
+<li>「一般定義製程能力＝幾個 σ」→ <strong>6σ</strong>（不是 3σ、8σ）。</li>
+<li><strong>Cp＞1 ＝ B 級「尚佳」</strong>，不是「良好」——「良好（A）」要 Cp≧1.33，分級用詞是考點。</li>
+<li>Cp 換算 σ 倍數：<strong>T/2 ＝ 3σ×Cp</strong>。例：Cp＝1.67 → 規格＝μ±3×1.67σ＝<strong>μ±5σ</strong>（順向 T＝6σ×Cp 也通）。</li>
+</ul>
+</blockquote>
 <p><strong>Cp 與不良率對照（P268）</strong>：</p>
 <div class="tw"><table>
 <thead>
