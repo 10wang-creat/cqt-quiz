@@ -5346,11 +5346,31 @@ Rm 也可 3 個、4 個一組（每組個數 m）：R̄m＝ΣRm/(k−m+1)，E₂
 </tr>
 </tbody>
 </table></div>
-<ul>
-<li><strong>係數修正（7.3.1）</strong>：附表 A、A₁、A₂ 皆按 3σ 制定；改用 0.002 界限 → 3.09/3＝<strong>1.03</strong>，查表值<strong>乘 1.03</strong>；改用 0.05 界限 → 1.96/3＝<strong>0.653</strong>，查表值<strong>乘 0.653</strong>（成對記：0.002→×1.03、0.05→×0.653）。</li>
-<li>手寫速記（P196）：UCL＝X̿＋(3.09/3)A₂R̄、LCL＝X̿−(3.09/3)A₂R̄；0.05 用 (1.96/3)A₂R̄；機率值查<strong>附表2（P310）</strong>：z＝3.09 右尾 0.001×2＝0.002、z＝1.96 右尾 0.025×2＝0.05。</li>
-</ul>
+<p><strong>係數修正（7.3.1）</strong>——附表之 A、A₁、A₂ 皆按 3σ 制定，改用或然率界限時查表值要<strong>乘一個換算係數</strong>：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>改用的界限</th>
+<th>換算</th>
+<th>查表值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0.002</strong>（3.09σx̄）</td>
+<td>3.09 ÷ 3</td>
+<td><strong>× 1.03</strong></td>
+</tr>
+<tr>
+<td><strong>0.05</strong>（1.96σx̄）</td>
+<td>1.96 ÷ 3</td>
+<td><strong>× 0.653</strong></td>
+</tr>
+</tbody>
+</table></div>
 <blockquote>
+<p>成對記：<strong>0.002 → ×1.03、0.05 → ×0.653</strong>（分子就是 3.09 或 1.96，分母都是 3）。
+- 手寫速記（P196）：UCL＝X̿＋(3.09/3)A₂R̄、LCL＝X̿−(3.09/3)A₂R̄；0.05 用 (1.96/3)A₂R̄；機率值查<strong>附表2（P310）</strong>：z＝3.09 右尾 0.001×2＝0.002、z＝1.96 右尾 0.025×2＝0.05。</p>
 <p>⚠️ 陷阱：</p>
 <ul>
 <li>「0.002 或然率界限」是<strong>雙尾合計</strong>（單尾 0.001）；「0.05」單尾各 0.025——別把雙尾當單尾。</li>
