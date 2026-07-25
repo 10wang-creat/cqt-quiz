@@ -113,6 +113,23 @@ transform:translateX(-105%);transition:.25s;overflow-y:auto;padding:14px;border-
 color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:none}
 .tocbtns{display:flex;gap:8px;margin-bottom:8px}
 .tocbtns button{flex:1;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px}
+@media print{
+ html,html.dark{--bg:#fff;--fg:#000;--card:#fff;--line:#999;--acc:#333;--mark:#ddd;
+ --th:#eee;--warn-bg:#f5f5f5;--warn-bd:#888;--dim:#555}
+ #bar,#toc,#ov,#top,.fold,.ar,.meta{display:none!important}
+ body{background:#fff;font-size:12.5px;line-height:1.5}
+ main{max-width:none;padding:0}
+ section{page-break-before:always;border:none;border-radius:0;margin:0}
+ section:first-of-type{page-break-before:auto}
+ section.cl .sb,.sb{display:block!important;padding:0}
+ h2{color:#000;border-bottom:2.5px solid #000;padding:4px 0 6px;font-size:17px}
+ h3{page-break-after:avoid}
+ .tw{overflow:visible}
+ table{font-size:11.5px}
+ tr,blockquote,img{page-break-inside:avoid}
+ blockquote{background:#f5f5f5;border-left:3px solid #000}
+ a{color:inherit;text-decoration:none}
+}
 </style>
 </head>
 <body>
