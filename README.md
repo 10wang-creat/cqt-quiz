@@ -48,3 +48,4 @@ GitHub Pages 約 1~2 分鐘後生效。
 
 - 課程講義 PDF（有著作權）**不放進這個公開 repo**，留在本機／OneDrive 私存。
 - 若 GitHub Desktop 出現 `A lock file already exists`（`.git/index.lock`）：關掉 GitHub Desktop、刪掉 `.git/index.lock` 再重開即可。
+- 
