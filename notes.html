@@ -2,37 +2,86 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F0EEF3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B2231" media="(prefers-color-scheme: dark)">
 <title>統計品管 考試速查筆記｜選擇單元</title>
 <style>
-:root{--bg:#F0EEF3;--fg:#34435E;--card:#fff;--line:#DFDAE8;--acc:#8981C2;--dim:#7A7F96;}
+:root{--bg:#F0EEF3;--fg:#34435E;--card:#fff;--line:#DFDAE8;--acc:#8981C2;--dim:#7A7F96;
+--tag:#ECE8F6;--warn:#FBF0F4;--warnbd:#E1A2BA;}
 @media (prefers-color-scheme: dark){
-:root{--bg:#1B2231;--fg:#E4E2EC;--card:#242D40;--line:#3B465E;--acc:#BBADD8;--dim:#98A0B6;}
+:root{--bg:#1B2231;--fg:#E4E2EC;--card:#242D40;--line:#3B465E;--acc:#BBADD8;--dim:#98A0B6;
+--tag:#2D3750;--warn:#39303F;--warnbd:#C88EA8;}
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
-display:flex;min-height:100vh;align-items:center;justify-content:center;padding:20px}
-.wrap{max-width:440px;width:100%}
-h1{font-size:22px;text-align:center;margin:0 0 6px}
-p.sub{text-align:center;color:var(--dim);margin:0 0 22px;font-size:14px}
-a.big{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);
-border-radius:14px;padding:18px 16px;margin-bottom:14px;text-decoration:none;color:var(--fg);
+body{margin:0;background:var(--bg);color:var(--fg);
+font:16px/1.6 -apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+-webkit-text-size-adjust:100%;
+padding:26px 16px calc(26px + env(safe-area-inset-bottom));
+display:flex;justify-content:center}
+.wrap{max-width:460px;width:100%}
+h1{font-size:21px;text-align:center;margin:0 0 4px;letter-spacing:.5px}
+p.sub{text-align:center;color:var(--dim);margin:0 0 18px;font-size:13.5px}
+a.big{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;
+padding:16px;margin-bottom:12px;text-decoration:none;color:inherit;
 box-shadow:0 1px 3px rgba(52,67,94,.08)}
-a.big:active{transform:scale(.98)}
-.ic{font-size:30px}
-.t{font-weight:700;font-size:17px}
-.d{color:var(--dim);font-size:13px}
-a.quiz{display:block;text-align:center;color:var(--acc);margin-top:8px;font-size:14px;text-decoration:none}
+a.big:active{transform:scale(.985);opacity:.92}
+a.big:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.unit{font-size:26px;font-weight:800;line-height:1;letter-spacing:2px}
+.when{font-size:12.5px;font-weight:700;color:#fff;background:var(--acc);
+border-radius:999px;padding:3px 10px;white-space:nowrap}
+.arrow{margin-left:auto;color:var(--dim);font-size:20px;line-height:1}
+ul.wt{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+ul.wt li{font-size:12.5px;background:var(--tag);border-radius:8px;padding:4px 9px;white-space:nowrap}
+ul.wt li.todo{color:var(--dim);background:transparent;border:1px dashed var(--line)}
+a.quiz{display:block;text-align:center;background:var(--card);border:1px solid var(--line);
+border-radius:14px;padding:15px;margin-top:2px;text-decoration:none;
+color:var(--acc);font-weight:700;font-size:15.5px}
+a.quiz:active{transform:scale(.985);opacity:.92}
+a.quiz:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+p.tip{font-size:12.5px;line-height:1.6;background:var(--warn);border-left:4px solid var(--warnbd);
+border-radius:0 8px 8px 0;padding:9px 11px;margin:18px 0 0}
+p.tip b{font-weight:700}
 </style>
 </head>
 <body>
 <div class="wrap">
+
 <h1>統計品管 考試速查筆記</h1>
-<p class="sub">考試分甲（早上）／乙（下午）兩單元，各一冊</p>
-<a class="big" href="notes_a.html"><span class="ic">🅰</span><span><div class="t">甲單元筆記（早上考）</div><div class="d">基本統計 45%｜管制圖與製程管制 40%｜品管七手法 15%（待補）</div></span></a>
-<a class="big" href="notes_b.html"><span class="ic">🅱</span><span><div class="t">乙單元筆記（下午考）</div><div class="d">抽樣計畫 25%｜檢驗與測試 15%（待補）｜品質概念 60%（待補）</div></span></a>
-<a class="quiz" href="index.html">✏️ 回題庫練習</a>
+<p class="sub">分甲、乙兩個單元，各一冊——今天考哪個就開哪個</p>
+
+<a class="big" href="notes_a.html">
+  <div class="row">
+    <span class="unit">甲</span>
+    <span class="when">早上考</span>
+    <span class="arrow">›</span>
+  </div>
+  <ul class="wt">
+    <li>基本統計 45%</li>
+    <li>管制圖與製程管制 40%</li>
+    <li class="todo">品管七手法 15%・待補</li>
+  </ul>
+</a>
+
+<a class="big" href="notes_b.html">
+  <div class="row">
+    <span class="unit">乙</span>
+    <span class="when">下午考</span>
+    <span class="arrow">›</span>
+  </div>
+  <ul class="wt">
+    <li>抽樣計畫 25%</li>
+    <li class="todo">檢驗與測試 15%・待補</li>
+    <li class="todo">品質概念 60%・待補</li>
+  </ul>
+</a>
+
+<a class="quiz" href="index.html">✏️ 題庫練習</a>
+
+<p class="tip"><b>考場用法：</b>開啟後先看第一頁「⓪-0 考場翻頁地圖」，用題目關鍵字查到章號再翻該章；乙冊另有「⓪-0 §3 抽樣計畫總覽決策表」可一次判斷該用哪個計畫、查哪張表。<br><b>目前進度：</b>乙冊只收錄抽樣計畫 25%，其餘 75% 待開課後補。</p>
+
 </div>
 </body>
 </html>
