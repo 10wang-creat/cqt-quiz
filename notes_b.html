@@ -2798,41 +2798,52 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s14"><h2 onclick="tg(this)">乙十一、計量值規準型抽樣 JIS Z9003／Z9004 ⭐（第六堂課，課本 3.1~3.3，P113~132）<span class="ar">▾</span></h2><div class="sb">
-<h3>1. 計量值抽樣的原理</h3>
-<ul>
-<li>假定品質特性<strong>常態分配</strong>，抽 n 個算 x̄（與 s）估計 μ、σ，由規格界限外的常態面積估計<strong>批不良率 p̂</strong>——<strong>p̂ ≤ M（最大允許不良率）→ 允收</strong>。</li>
-<li>優缺點（乙一§5 之外的完整版，選擇題常考特徵組合）：</li>
-</ul>
+<blockquote>
+<p>🎯 <strong>本章一張表選路：先判「保證什麼」，再判「σ 知不知道」</strong></p>
 <div class="tw"><table>
 <thead>
 <tr>
-<th>優點</th>
-<th>缺點</th>
+<th>保證</th>
+<th>σ</th>
+<th>查什麼</th>
+<th>允收判定</th>
+<th>本章</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>同保證下<strong>樣本數遠少於</strong>計數值</td>
-<td><strong>單件檢驗費用較高</strong></td>
+<td>批<strong>平均值</strong>（給 m₀/m₁）</td>
+<td>已知</td>
+<td>表 3.1（|m₁−m₀|/σ → n、G₀），P122</td>
+<td>x̄ 與 <strong>m₀±G₀σ</strong> 比（往外推）</td>
+<td>§2、§4</td>
 </tr>
 <tr>
-<td>量測值可回饋、改進製程</td>
-<td>每一特性須<strong>個別</strong>抽樣測定判定</td>
+<td>批<strong>不良率</strong>（給 p₀/p₁）</td>
+<td>已知</td>
+<td>表 3.3（→ n、k；＊用公式），P124</td>
+<td>x̄ 與 <strong>Sᵤ−kσ／Sʟ＋kσ</strong> 比（往內縮）</td>
+<td>§3、§4</td>
 </tr>
 <tr>
-<td>適用<strong>破壞性檢驗／樣本貴重</strong></td>
-<td>送驗批<strong>必須常態分配</strong>（常考前提）</td>
-</tr>
-<tr>
-<td>檢驗測定錯誤容易偵測</td>
-<td>紀錄計算複雜、人員水準要求高</td>
-</tr>
-<tr>
-<td>增加不合格品處理判斷依據</td>
-<td>樣本無不良品的壞批被拒收時難服眾</td>
+<td>批<strong>不良率</strong></td>
+<td><strong>未知</strong></td>
+<td>表 3.4（空格用公式），P129</td>
+<td><strong>x̄＋ks ≤ Sᵤ／x̄−ks ≥ Sʟ</strong></td>
+<td>§5</td>
 </tr>
 </tbody>
 </table></div>
+<ul>
+<li>Z9003＝σ 已知、Z9004＝σ 未知；固定 α=5%、β=10%（同 Z9002 的規準型精神，見乙五§1）。</li>
+</ul>
+</blockquote>
+<h3>1. 計量值抽樣的原理</h3>
+<ul>
+<li>假定品質特性<strong>常態分配</strong>，抽 n 個算 x̄（與 s）估計 μ、σ，由規格界限外的常態面積估計<strong>批不良率 p̂</strong>——<strong>p̂ ≤ M（最大允許不良率）→ 允收</strong>。</li>
+<li>三個關鍵前提（選擇題常考特徵組合）：<strong>必須常態分配</strong>；樣本少但<strong>單件檢驗費用高</strong>、每一特性<strong>個別</strong>抽驗；<strong>樣本中無不良品的批仍可能被拒收</strong>（難服眾 → 混合抽樣的由來，乙八§3）。</li>
+<li>與計數值的完整七項對比 → <strong>乙十三§1（表 5.1，老師標星）</strong>，不在此重複；本章獨有補充考點：檢驗測定的<strong>錯誤容易偵測</strong>、<strong>增加不合格品處理的判斷依據</strong>。</li>
+</ul>
 <h3>2. Z9003（σ 已知）保證批平均值・單邊 ⭐</h3>
 <div class="tw"><table>
 <thead>
@@ -3033,6 +3044,15 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s15"><h2 onclick="tg(this)">乙十二、MIL-STD-1916 ⭐⭐（第六堂課，課本第 4 章，P173~197，紅筆「考觀念」）<span class="ar">▾</span></h2><div class="sb">
+<blockquote>
+<p>📌 <strong>本章 4 個入口（先確認你要哪一個）</strong></p>
+<ul>
+<li>觀念題（特點、0收1退、VL/CL、<strong>Cpk 門檻</strong>、取代 105E）→ <strong>§1~§3</strong></li>
+<li>要查 <strong>n／k／F／i／f</strong> → <strong>§4</strong>（表 I~IV 怎麼查、加嚴左欄減量右欄）</li>
+<li>判<strong>鬆緊怎麼轉</strong> → <strong>§5</strong> 速記表</li>
+<li>計算判定（K 法／F 法／連續抽樣／OC）→ <strong>§6~§7</strong></li>
+</ul>
+</blockquote>
 <h3>1. 精神與特點 ⭐（觀念題大本營）</h3>
 <ul>
 <li>美國國防部 <strong>1996</strong> 年發行，<strong>取代 MIL-STD-105E</strong> 作為美軍採購主要抽樣標準（414、1235 亦一併被取代）。</li>
@@ -3443,9 +3463,34 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s17"><h2 onclick="tg(this)">乙十四、抽樣檢驗之實施與抽樣技術（第六堂課，課本第 6 章，P209~234）<span class="ar">▾</span></h2><div class="sb">
 <h3>1. 實施的四個因素與 12 步驟</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>四因素（練習 6-1）</th>
+<th>重點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①正確的檢驗方法</td>
+<td>有國家標準採國家標準（外銷採輸入國/國際標準）；量規儀器須<strong>校正</strong></td>
+</tr>
+<tr>
+<td>②適當的品質基準</td>
+<td><strong>非必要不宜提高</strong>（基準越高→計畫越嚴→成本越高）；品管委員會<strong>跨部門</strong>商定</td>
+</tr>
+<tr>
+<td>③合理的抽樣計畫</td>
+<td>檢討 n、費時、批量；必要時查 <strong>OC 曲線</strong>了解判別力</td>
+</tr>
+<tr>
+<td>④正確的抽樣方式</td>
+<td><strong>代表性樣品</strong>最重要，不可因搬運困難只抽表面</td>
+</tr>
+</tbody>
+</table></div>
 <ul>
-<li>四因素：<strong>①正確的檢驗方法</strong>（有國家標準採國家標準；量規儀器須校正）<strong>②適當的品質基準</strong>（非必要不宜提高——基準越高成本越高；由品管委員會跨部門商定）<strong>③合理的抽樣計畫</strong>（檢討 n、費時、批量，必要時查 OC 曲線）<strong>④正確的抽樣方式</strong>（代表性樣品最重要，不可只抽表面）。</li>
-<li>擬定 12 步驟（問答題 6-1）：定檢驗特性 → 研擬檢驗方法 → 定品質判定基準 → 定批量批數 → 指定品質基準（AQL/LTPD/AOQL）→ 定冒險率 → 選抽樣表 → 討論（n、c、OC、成本）→ 決定/修改計畫 → 實施 → 檢討 → 修改。</li>
+<li>擬定 12 步驟（問答題）：定檢驗特性 → 研擬檢驗方法 → 定品質判定基準 → 定批量批數 → 指定品質基準（AQL/LTPD/AOQL）→ 定冒險率 → 選抽樣表 → 討論（n、c、OC、成本）→ 決定/修改計畫 → 實施 → 檢討 → 修改。</li>
 </ul>
 <h3>2. 隨機抽樣四原則 ⭐（第 6 章最常考）</h3>
 <blockquote>
