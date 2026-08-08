@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>統計品管速查筆記【乙單元・下午】</title>
+<style>
+:root{--bg:#F0EEF3;--fg:#34435E;--card:#fff;--line:#DFDAE8;--acc:#8981C2;--mark:#D7CBF2;
+--th:#ECE8F6;--warn-bg:#FBF0F4;--warn-bd:#E1A2BA;--dim:#7A7F96;}
+html.dark{--bg:#1B2231;--fg:#E4E2EC;--card:#242D40;--line:#3B465E;--acc:#BBADD8;--mark:#6D5E9E;
+--th:#2D3750;--warn-bg:#39303F;--warn-bd:#C88EA8;--dim:#98A0B6;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;-webkit-text-size-adjust:100%}
+#bar{position:sticky;top:0;z-index:10;display:flex;gap:8px;align-items:center;padding:8px 10px;
+background:var(--card);border-bottom:1px solid var(--line)}
+#bar button{border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:8px;
+padding:6px 10px;font-size:15px}
+#q{flex:1;min-width:0;border:1px solid var(--line);background:var(--bg);color:var(--fg);
+border-radius:8px;padding:6px 10px;font-size:15px}
+#hits{font-size:12px;color:var(--dim);white-space:nowrap}
+main{max-width:860px;margin:0 auto;padding:10px 14px 80px}
+h1{font-size:22px;margin:14px 0 4px}
+.meta{color:var(--dim);font-size:13px;margin-bottom:10px}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:12px 0;overflow:hidden;scroll-margin-top:54px}
+.fold{display:block;margin:16px auto 2px;padding:8px 22px;border:1px solid var(--line);background:var(--bg);color:var(--acc);border-radius:20px;font-size:14.5px;cursor:pointer}
+h2{font-size:18px;margin:0;padding:12px 14px;cursor:pointer;display:flex;justify-content:space-between;
+align-items:center;gap:8px;color:var(--acc)}
+h2 .ar{transition:.2s;color:var(--dim)}
+section.cl .sb{display:none}
+section.cl .ar{transform:rotate(-90deg)}
+.sb{padding:0 14px 14px}
+h3{font-size:16.5px;margin:18px 0 8px;border-left:4px solid var(--acc);padding-left:8px}
+.tw{overflow-x:auto;margin:10px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;font-size:14.5px;min-width:100%}
+th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+th{background:var(--th);white-space:nowrap}
+blockquote{margin:10px 0;padding:8px 12px;background:var(--warn-bg);border-left:4px solid var(--warn-bd);
+border-radius:0 8px 8px 0;font-size:15px}
+blockquote p{margin:4px 0}
+img{max-width:100%;height:auto;border-radius:8px;background:#fff}
+code,pre{background:var(--th);border-radius:6px;font-size:14px}
+pre{padding:8px;overflow-x:auto}
+mark{background:var(--mark);color:inherit;border-radius:2px}
+#toc{position:fixed;inset:0 25% 0 0;max-width:320px;background:var(--card);z-index:20;
+transform:translateX(-105%);transition:.25s;overflow-y:auto;padding:14px;border-right:1px solid var(--line)}
+#toc.open{transform:none;box-shadow:4px 0 20px rgba(0,0,0,.3)}
+#toc a{display:block;padding:9px 6px;color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line);font-size:15px}
+#ov{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:15;display:none}
+#ov.on{display:block}
+#top{position:fixed;right:14px;bottom:18px;z-index:10;border:1px solid var(--line);background:var(--card);
+color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:none}
+.tocbtns{display:flex;gap:8px;margin-bottom:8px}
+.tocbtns button{flex:1;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px}
+@media print{
+ html,html.dark{--bg:#fff;--fg:#000;--card:#fff;--line:#999;--acc:#333;--mark:#ddd;
+ --th:#eee;--warn-bg:#f5f5f5;--warn-bd:#888;--dim:#555}
+ #bar,#toc,#ov,#top,.fold,.ar,.meta{display:none!important}
+ body{background:#fff;font-size:12.5px;line-height:1.5}
+ main{max-width:none;padding:0}
+ section{page-break-before:always;border:none;border-radius:0;margin:0}
+ section:first-of-type{page-break-before:auto}
+ section.cl .sb,.sb{display:block!important;padding:0}
+ h2{color:#000;border-bottom:2.5px solid #000;padding:4px 0 6px;font-size:17px}
+ h3{page-break-after:avoid}
+ .tw{overflow:visible}
+ table{font-size:11.5px}
+ tr,blockquote,img{page-break-inside:avoid}
+ blockquote{background:#f5f5f5;border-left:3px solid #000}
+ a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<div id="bar">
+<button onclick="openToc()">☰</button>
+<input id="q" type="search" placeholder="搜尋關鍵字…" oninput="doSearch()">
+<span id="hits"></span>
+<button onclick="location.href='index.html'" title="題庫練習">✏️</button>
+<button onclick="toggleDark()">🌓</button>
+</div>
+<nav id="toc"><div class="tocbtns"><button onclick="setAll(false)">全部展開</button><button onclick="setAll(true)">全部收合</button></div><a href="#s1" onclick="closeToc()">⓪-0 考場翻頁地圖（紙本第一頁）⭐先看這頁</a>
+<a href="#s2" onclick="closeToc()">⓪ 考前必看：工程計算機設定（Casio fx-350MS）</a>
+<a href="#s3" onclick="closeToc()">⓪-2 符號速查表</a>
+<a href="#s4" onclick="closeToc()">乙一、抽樣檢驗基本概念（第五堂課，抽樣檢驗課本第1章 P1~13）</a>
+<a href="#s5" onclick="closeToc()">乙二、允收機率計算：超幾何／二項／卜氏（抽樣檢驗課本 2.1，P15~23）</a>
+<a href="#s6" onclick="closeToc()">乙三、OC 曲線與 AQL／LTPD／α／β ⭐⭐（抽樣檢驗課本 2.1.4，P24~33）</a>
+<a href="#s7" onclick="closeToc()">乙四、AQL 之設定三法（抽樣檢驗課本 2.1.4(7)，P34~38）</a>
+<a href="#s8" onclick="closeToc()">乙五、規準型抽樣計畫 JIS Z9002 ⭐（抽樣檢驗課本 2.2，P39~45）</a>
+<a href="#s9" onclick="closeToc()">乙六、選別型抽樣計畫：AOQ／AOQL／ATI／Dodge-Romig ⭐（抽樣檢驗課本 2.3，P46~58）</a>
+<a href="#s10" onclick="closeToc()">乙七、調整型抽樣計畫 CNS 2779-1／MIL-STD-105E ⭐⭐（第五堂課下午，抽樣檢驗課本 2.4，P59~97）</a>
+<a href="#s11" onclick="closeToc()">乙八、計量值調整型 MIL-STD-414／CNS 9445-1（第五堂課下午講義）</a>
+<a href="#s12" onclick="closeToc()">乙九、連續生產型 CSP-1 與逐次抽樣（抽樣檢驗課本 2.5~2.6，P98~109）</a>
+<a href="#s13" onclick="closeToc()">乙十、抽樣檢驗課本查表索引 ⭐考場翻書用</a><a href="index.html" style="color:var(--acc);font-weight:700">✏️ 前往題庫練習</a></nav>
+<div id="ov" onclick="closeToc()"></div>
+<main>
+<h1>統計品管 考試速查筆記【乙單元・下午】</h1>
+<hr />
+
+<p class="meta">更新：2026-08-08｜點章節標題可折疊｜考前印紙本請用 PDF 版</p>
+<section id="s1"><h2 onclick="tg(this)">⓪-0 考場翻頁地圖（紙本第一頁）⭐先看這頁<span class="ar">▾</span></h2><div class="sb">
+<blockquote>
+<p>📌 本冊使用法：</p>
+<ul>
+<li>本冊＝<strong>乙單元（下午考）</strong>：抽樣計畫 25%（乙一～乙十章）。甲單元（早上考）另有一冊，考甲帶甲冊。</li>
+<li>每一章都從新的一頁開始，章號就是頁籤——先查下面兩張表得到章號，再翻到該章。</li>
+<li>《抽樣檢驗》課本要翻第幾頁 → 翻<strong>「乙十、抽樣檢驗課本查表索引」</strong>。</li>
+<li>建議貼標籤：⓪、乙三、乙六、乙七、乙十（⭐最常翻）。</li>
+<li>⚠️ 檢驗與測試 15%、<strong>品質概念 60%（乙最大配分）</strong>尚未開課，之後陸續補於本冊。</li>
+</ul>
+</blockquote>
+<h3>0. 甲乙單元對照（考試配分）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>單元</th>
+<th>子題（配分）</th>
+<th>對應章</th>
+<th>狀態</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>甲（早上）</strong></td>
+<td>基本統計 <strong>45%</strong></td>
+<td>⓪～十四（分區 A~D）</td>
+<td>✅ 已收錄</td>
+</tr>
+<tr>
+<td></td>
+<td>管制圖與製程管制 <strong>40%</strong></td>
+<td>十五～二十九（分區 E~G）</td>
+<td>✅ 已收錄</td>
+</tr>
+<tr>
+<td></td>
+<td>品管七手法 <strong>15%</strong></td>
+<td>—</td>
+<td>⏳ 尚未開課，待補</td>
+</tr>
+<tr>
+<td><strong>乙（下午）</strong></td>
+<td>抽樣計畫 <strong>25%</strong></td>
+<td>乙一～乙十</td>
+<td>✅ 已收錄</td>
+</tr>
+<tr>
+<td></td>
+<td>檢驗與測試 <strong>15%</strong></td>
+<td>—</td>
+<td>⏳ 待補</td>
+</tr>
+<tr>
+<td></td>
+<td>品質概念 <strong>60%</strong>（基本概念10＋國際品保/組織/標準化20＋產品安全/進料/稽核15＋品管圈/提案/品質成本15）</td>
+<td>—</td>
+<td>⏳ 待補（乙單元最大配分）</td>
+</tr>
+</tbody>
+</table></div>
+<h3>1. 分區 → 章號</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>分區</th>
+<th>章</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>抽樣計畫（第五堂）</strong></td>
+<td>乙一 基本概念（名詞、單雙多比較、型式與標準）｜乙二 允收機率（超幾何/二項/卜氏）｜<strong>乙三 OC 曲線與 AQL/LTPD/α/β⭐⭐</strong>｜乙四 AQL 設定三法｜<strong>乙五 規準型 JIS Z9002⭐</strong>｜<strong>乙六 選別型 AOQ/AOQL/ATI⭐</strong>｜<strong>乙七 調整型 CNS 2779-1/105E⭐⭐（轉換規則）</strong>｜乙八 計量值 MIL-STD-414｜乙九 CSP-1 與逐次｜<strong>乙十 抽樣檢驗課本查表索引</strong></td>
+</tr>
+<tr>
+<td>檢驗與測試</td>
+<td>⏳ 待補</td>
+</tr>
+<tr>
+<td>品質概念（乙最大配分 60%）</td>
+<td>⏳ 待補</td>
+</tr>
+</tbody>
+</table></div>
+<h3>2. 看到這種題目 → 翻這章</h3>
+<p><strong>計算題</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題目關鍵字</th>
+<th>翻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抽 n 件得 d 件不良的機率（超幾何/二項/卜氏、查表相減）</td>
+<td>乙二</td>
+</tr>
+<tr>
+<td>單次抽樣求 Pa、繪 OC 曲線</td>
+<td>乙三§4</td>
+</tr>
+<tr>
+<td><strong>雙次抽樣求 Pa（畫表格法）</strong></td>
+<td><strong>乙三§5</strong></td>
+</tr>
+<tr>
+<td>p₀、p₁ 查 JIS Z9002（含＊號用輔助表）</td>
+<td>乙五</td>
+</tr>
+<tr>
+<td>AOQ、<strong>AOQL＝y(1/n−1/N)</strong>、y 係數表</td>
+<td>乙六§2~3</td>
+</tr>
+<tr>
+<td>ATI 計算、指定 LTPD 求最小 ATI</td>
+<td>乙六§4~5</td>
+</tr>
+<tr>
+<td>調整型查計畫（N＋AQL＋水準→代字→n/Ac/Re）</td>
+<td>乙七§4（頁碼在乙十）</td>
+</tr>
+<tr>
+<td>轉換分數加分、AOQL＝係數×(1−n/N)、LQ 反查 AQL</td>
+<td>乙七§5~6</td>
+</tr>
+<tr>
+<td>計量值 s 法/全距法/σ法、k 法 vs M 法判定</td>
+<td>乙八</td>
+</tr>
+<tr>
+<td>CSP-1 查 i、f、L；逐次判定線 h₀/h₁/s</td>
+<td>乙九</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>觀念／選擇題</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題目關鍵字</th>
+<th>翻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抽樣檢驗名詞（批量N/樣本n/Ac、缺點三級）、Dodge &amp; Romig 創始</td>
+<td>乙一§1~3</td>
+</tr>
+<tr>
+<td>單次/雙次/多次比較（估計最準？行政費最少？）</td>
+<td>乙一§7</td>
+</tr>
+<tr>
+<td>規準型/選別型/調整型、JIS/CNS/MIL-STD-1916 對照</td>
+<td>乙一§8</td>
+</tr>
+<tr>
+<td>AQL、LTPD、α、β 定義與慣用值</td>
+<td>乙三§2</td>
+</tr>
+<tr>
+<td>比例抽檢 vs 定量抽檢、OC 曲線特性</td>
+<td>乙三§3</td>
+</tr>
+<tr>
+<td>AQL 設定（經驗法/損益平衡/歸納分類、特採）</td>
+<td>乙四</td>
+</tr>
+<tr>
+<td>選別型兩種保證、不適用破壞性檢驗</td>
+<td>乙六§1</td>
+</tr>
+<tr>
+<td>Dodge-Romig SL/DL/SA/DA、p̄&gt;½LTPD 無表</td>
+<td>乙六§6</td>
+</tr>
+<tr>
+<td><strong>轉換規則（5批2拒→加嚴、轉換分數30→減量、加嚴5批→中止）</strong></td>
+<td><strong>乙七§5</strong></td>
+</tr>
+<tr>
+<td>檢驗水準 II 預設、S-1~S-4、AQL≤10% 上限</td>
+<td>乙七§2~3</td>
+</tr>
+<tr>
+<td>三級缺點綜合判定（Ac 個別＋總量）</td>
+<td>乙七§7</td>
+</tr>
+<tr>
+<td>ISO 2859-1 vs MIL-STD-105E 差異（新舊制）</td>
+<td>乙七§5 對照表</td>
+</tr>
+<tr>
+<td>逐次抽樣適用破壞性試驗、JIS Z9009</td>
+<td>乙九§2</td>
+</tr>
+<tr>
+<td>「抽樣檢驗課本第幾頁」</td>
+<td><strong>乙十</strong></td>
+</tr>
+</tbody>
+</table></div>
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s2"><h2 onclick="tg(this)">⓪ 考前必看：工程計算機設定（Casio fx-350MS）<span class="ar">▾</span></h2><div class="sb">
+<h3>進入統計模式（SD 模式）＋清除舊資料</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>步驟</th>
+<th>按法</th>
+<th>畫面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一：進入統計模式</td>
+<td><strong>MODE → 選 SD → 按 2</strong></td>
+<td>COMP(1) / SD(2) / REG(3)</td>
+</tr>
+<tr>
+<td>二：清除舊資料</td>
+<td><strong>SHIFT → MODE → 選 Scl → 按 1 → = → AC</strong></td>
+<td>出現 Stat clear</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ 每次計算新一組資料前都要 Stat Clear，避免舊數據混入！</p>
+</blockquote>
+<h3>考完／算完恢復正常模式 ⚠️</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>步驟</th>
+<th>按法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>恢復一般計算模式</td>
+<td><strong>MODE 連按 3 次 → 選 Norm 按 3 → Norm 1~2? 選擇</strong></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>統計算完記得切回正常狀態模式，否則一般計算會出錯！</p>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s3"><h2 onclick="tg(this)">⓪-2 符號速查表<span class="ar">▾</span></h2><div class="sb">
+<h3>統計符號</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>符號</th>
+<th>唸法</th>
+<th>意義</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N</td>
+<td>—</td>
+<td><strong>群體</strong>大小</td>
+<td>大寫 = 群體</td>
+</tr>
+<tr>
+<td>n</td>
+<td>—</td>
+<td><strong>樣本</strong>大小</td>
+<td>小寫 = 樣本</td>
+</tr>
+<tr>
+<td>X̄</td>
+<td>X bar</td>
+<td>平均數</td>
+<td>ΣX/n</td>
+</tr>
+<tr>
+<td>σ</td>
+<td>sigma（小寫）</td>
+<td><strong>群體</strong>標準差</td>
+<td>分母 ÷ n；是一個<strong>數值</strong></td>
+</tr>
+<tr>
+<td>σ²</td>
+<td>sigma 平方</td>
+<td><strong>群體</strong>變異數</td>
+<td>分母 ÷ n</td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td>—</td>
+<td><strong>樣本</strong>（估計）標準差</td>
+<td>分母 ÷ (n−1)；英文字母給樣本、希臘字母給群體</td>
+</tr>
+<tr>
+<td>S²、V</td>
+<td>—</td>
+<td><strong>樣本</strong>（不偏）變異數</td>
+<td>分母 ÷ (n−1)</td>
+</tr>
+<tr>
+<td><strong>SS</strong></td>
+<td>—</td>
+<td><strong>平方和</strong> Sum of Square</td>
+<td>= Σx² − (Σx)²/n；兩個字母，跟標準差 S 無關！</td>
+</tr>
+<tr>
+<td>Σ</td>
+<td>sigma（大寫）</td>
+<td>總和<strong>運算</strong></td>
+<td>ΣX = 全部加起來；<strong>後面一定接東西</strong>（ΣX、Σfx），σ 則單獨出現是數值</td>
+</tr>
+<tr>
+<td>Q1/Q2/Q3</td>
+<td>—</td>
+<td>四分位數</td>
+<td>Q2 = 中位數</td>
+</tr>
+<tr>
+<td>R</td>
+<td>—</td>
+<td>全距 Range</td>
+<td>Max − Min</td>
+</tr>
+<tr>
+<td>CV</td>
+<td>—</td>
+<td>變異係數</td>
+<td>標準差 ÷ 平均數</td>
+</tr>
+</tbody>
+</table></div>
+<h3>機率與集合符號</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>符號</th>
+<th>唸法</th>
+<th>意義</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>S</strong>、Ω</td>
+<td>樣本空間／omega</td>
+<td>所有可能出象的<strong>全體</strong></td>
+<td>P(S)=1；文氏圖的大矩形；集合論寫 Ω、機率寫 S，同一個東西</td>
+</tr>
+<tr>
+<td>Φ</td>
+<td>phi</td>
+<td><strong>空集合</strong>（無元素）</td>
+<td>P(Φ)=0；互斥 = A∩B=Φ</td>
+</tr>
+<tr>
+<td>∈ / ∉</td>
+<td>屬於／不屬於</td>
+<td>元素與集合的關係</td>
+<td>1∈{0,1}、2∉{0,1}</td>
+</tr>
+<tr>
+<td>⊂</td>
+<td>含於</td>
+<td>A⊂B：A 是 B 的子集</td>
+<td>—</td>
+</tr>
+<tr>
+<td>∪</td>
+<td>聯集（或）</td>
+<td>A∪B：屬於 A <strong>或</strong> B</td>
+<td>加法定理</td>
+</tr>
+<tr>
+<td>∩</td>
+<td>交集（且）</td>
+<td>A∩B：<strong>同時</strong>屬於 A 和 B</td>
+<td>可簡寫 AB；乘法定理</td>
+</tr>
+<tr>
+<td>A′</td>
+<td>A 補／餘集</td>
+<td><strong>不屬於</strong> A 的部分</td>
+<td>P(A′) = 1−P(A)</td>
+</tr>
+<tr>
+<td>A−B</td>
+<td>A 去 B</td>
+<td>在 A 但不在 B</td>
+<td>= A∩B′</td>
+</tr>
+<tr>
+<td>P(A)</td>
+<td>—</td>
+<td>事件 A 的機率</td>
+<td>邊際機率</td>
+</tr>
+<tr>
+<td>P(A∩B)</td>
+<td>—</td>
+<td>A、B <strong>同時</strong>發生</td>
+<td>聯合機率</td>
+</tr>
+<tr>
+<td>P(A|B)</td>
+<td>A given B</td>
+<td><strong>已知 B 發生</strong>下 A 的機率</td>
+<td>條件機率 = P(A∩B)/P(B)；直線後面是「已知」</td>
+</tr>
+<tr>
+<td>ₙPₘ</td>
+<td>—</td>
+<td>排列（考慮順序）</td>
+<td>n!/(n−m)!</td>
+</tr>
+<tr>
+<td>ₙCₘ</td>
+<td>—</td>
+<td>組合（不考慮順序）</td>
+<td>n!/[m!(n−m)!]</td>
+</tr>
+<tr>
+<td>!</td>
+<td>階乘</td>
+<td>n! = n×(n−1)×…×1</td>
+<td>0! = 1</td>
+</tr>
+</tbody>
+</table></div>
+<h3>計算機螢幕符號（fx-350MS）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>螢幕顯示</th>
+<th>意義</th>
+<th>出現位置</th>
+<th>對應筆記符號</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COMP / SD / REG</td>
+<td>一般計算／<strong>統計</strong>／迴歸 模式</td>
+<td>按 MODE 後的選單（統計選 <strong>SD 按 2</strong>）</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Scl → Stat clear</td>
+<td>清除統計舊資料</td>
+<td>SHIFT → MODE → 1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>n</td>
+<td>已輸入的資料筆數</td>
+<td>每按一次 M+ 後顯示</td>
+<td>樣本大小 n</td>
+</tr>
+<tr>
+<td>x̄</td>
+<td>平均值</td>
+<td>SHIFT → 2 → <strong>選 1</strong></td>
+<td>X̄</td>
+</tr>
+<tr>
+<td><strong>xσn</strong></td>
+<td><strong>群體</strong>標準差（÷n）</td>
+<td>SHIFT → 2 → <strong>選 2</strong></td>
+<td>σ</td>
+</tr>
+<tr>
+<td><strong>xσn−1</strong></td>
+<td><strong>樣本</strong>標準差（÷(n−1)）</td>
+<td>SHIFT → 2 → <strong>選 3</strong></td>
+<td>S</td>
+</tr>
+<tr>
+<td>Σx²</td>
+<td>所有資料平方的總和</td>
+<td>SHIFT → 1 → 選 1</td>
+<td>Σx²（算 SS 用）</td>
+</tr>
+<tr>
+<td>Σx</td>
+<td>所有資料的總和</td>
+<td>SHIFT → 1 → 選 2</td>
+<td>ΣX</td>
+</tr>
+<tr>
+<td>Ans</td>
+<td>上一個計算結果</td>
+<td>按 Ans 鍵叫出</td>
+<td>求變異數：Ans → x² → =</td>
+</tr>
+<tr>
+<td>; （分號）</td>
+<td>分組輸入的「組中點<strong>；</strong>次數」分隔</td>
+<td>SHIFT → 逗號鍵</td>
+<td>分組資料輸入</td>
+</tr>
+<tr>
+<td>M+</td>
+<td>輸入一筆統計資料</td>
+<td>每筆資料按一次</td>
+<td>—</td>
+</tr>
+<tr>
+<td>nCr / nPr</td>
+<td>組合／排列</td>
+<td>nCr 直接按；nPr 要 <strong>SHIFT</strong>＋nCr</td>
+<td>ₙCₘ／ₙPₘ</td>
+</tr>
+<tr>
+<td><strong>^</strong>（xʸ）</td>
+<td><strong>次方</strong>（乘冪）</td>
+<td>底數 → <strong>^</strong> → 指數 → =（例：0.95 → ^ → 18 → = ≈ 0.3972）</td>
+<td>pˣ、(1−p)ⁿ⁻ˣ</td>
+</tr>
+<tr>
+<td>Norm</td>
+<td>一般顯示模式</td>
+<td>MODE 連按 3 次 → Norm（考完恢復用）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>記法（跟公式表完全對應）：</p>
+<ul>
+<li>螢幕 <strong>σn</strong> 結尾 = 除以 n = <strong>群體</strong></li>
+<li>螢幕 <strong>σn−1</strong> 結尾 = 除以 n−1 = <strong>樣本</strong></li>
+</ul>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s4"><h2 onclick="tg(this)">乙一、抽樣檢驗基本概念（第五堂課，抽樣檢驗課本第1章 P1~13）<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 起源與定義</h3>
+<ul>
+<li><strong>抽樣檢驗（Sampling Inspection）由美國貝爾電話研究所的 H.F. Dodge 及 H.G. Romig 所創始</strong>——用少數樣本去判斷一批製品的良窳。（課本螢光重點，考過）</li>
+<li>二次大戰初期美軍全數檢驗人力不堪負荷，兵工署採貝爾研究所建議改用抽樣檢驗計畫。</li>
+</ul>
+<h3>2. 基本名詞與符號 ⭐</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>名詞</th>
+<th>符號</th>
+<th>定義關鍵</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>批量</td>
+<td>N</td>
+<td>每個<strong>檢驗批</strong>內製品單位的數量</td>
+</tr>
+<tr>
+<td>樣本數</td>
+<td>n</td>
+<td>樣本中所含製品單位數（隨機、不看品質好壞抽出）</td>
+</tr>
+<tr>
+<td>合格判定數</td>
+<td>c（Ac）</td>
+<td>判定合格/不合格的基準不良個數（計量值對應 k→統計）</td>
+</tr>
+<tr>
+<td>缺點</td>
+<td>d</td>
+<td>品質特性不合規格處（計量值對應 x→統計）</td>
+</tr>
+<tr>
+<td>不良品</td>
+<td>D</td>
+<td>有一個以上檢驗項目不合格的製品</td>
+</tr>
+<tr>
+<td>不良率</td>
+<td>p</td>
+<td>p＝100d/n(%)；平均不良率 p̄＝100Σd/Σn</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>「批」＝相同來源、相同條件生產的一群相同規格產品（製造批）；檢驗批為便利抽驗而構成，可由製造批細分，但<strong>不可把多個製造批合併成一個檢驗批</strong>。</li>
+</ul>
+<h3>3. 缺點與不良品三級分類 ⭐</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>等級</th>
+<th>缺點（defect）</th>
+<th>不良品（defective）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>嚴重</td>
+<td>危害使用者/攜帶者<strong>生命或安全</strong></td>
+<td>所含缺點最高為嚴重者（D_Cr）</td>
+</tr>
+<tr>
+<td>主要</td>
+<td>使用性能不能達到期望目的，或顯著減低實用性</td>
+<td>所含缺點最高為主要者（D_Ma）</td>
+</tr>
+<tr>
+<td>次要</td>
+<td>實際上不影響使用目的（例：外觀、顏色）</td>
+<td>所含缺點只有次要者（D_Mi）</td>
+</tr>
+</tbody>
+</table></div>
+<h3>4. 抽樣計畫三要素 ⭐</h3>
+<blockquote>
+<p>📌 <strong>計畫組成（螢光重點）</strong></p>
+<ul>
+<li>計數值抽樣計畫＝<strong>批量 N＋樣本數 n＋合格判定數 c</strong>。</li>
+<li>計量值抽樣計畫＝批量 N＋樣本數＋<strong>合格判定值（k 或 M，允收常數）</strong>，判定前須先統計計算。</li>
+<li>分配原理：<strong>計數值→超幾何／二項／卜氏分配；計量值→常態分配</strong>。</li>
+</ul>
+</blockquote>
+<h3>5. 抽樣檢驗的方式（4 種）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方式</th>
+<th>判定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不良個數計數</td>
+<td>樣本不良品 ≤ c 合格</td>
+</tr>
+<tr>
+<td>缺點數計數</td>
+<td>樣本缺點數 ≤ d 合格</td>
+</tr>
+<tr>
+<td>計量（σ 已知）</td>
+<td>x̄ 與合格判定值 X̄_L／X̄_U 比較</td>
+</tr>
+<tr>
+<td>計量（σ 未知）</td>
+<td>x̄±ks 與規格 S_U／S_L 比較</td>
+</tr>
+</tbody>
+</table></div>
+<h3>6. 抽樣檢驗的形式：單次／雙次／多次／逐次</h3>
+<ul>
+<li>單次：抽 1 個樣本 n，d≤c 允收。</li>
+<li>雙次：第一次 n₁——d₁≤c₁ 允收、d₁≥r₁ 拒收、介於其間抽第二次 n₂——d₁+d₂≤c₂ 允收。</li>
+<li>多次：雙次之延續；<strong># 記號＝第 1 次樣本不允收該批</strong>（只能繼續抽或拒收）。</li>
+<li>逐次：每次僅抽 1 個，累計判定；唯一不能事先預知抽樣數。（<strong>手寫註記：不考</strong>）</li>
+</ul>
+<h3>7. 單次／雙次／多次比較表 ⭐⭐（練習 1-5～1-7 有考過，必背）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>單次</th>
+<th>雙次</th>
+<th>多次</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>對產品品質的保證</td>
+<td>幾乎相同</td>
+<td>幾乎相同</td>
+<td>幾乎相同</td>
+</tr>
+<tr>
+<td>對供應者心理上的影響</td>
+<td>最差</td>
+<td>中間</td>
+<td><strong>最好</strong></td>
+</tr>
+<tr>
+<td>總檢驗費用</td>
+<td>最多</td>
+<td>中間</td>
+<td><strong>最少</strong></td>
+</tr>
+<tr>
+<td><strong>行政費用</strong>（訓練、記錄、抽樣等）</td>
+<td><strong>最少</strong>⭐</td>
+<td>中間</td>
+<td>最多</td>
+</tr>
+<tr>
+<td><strong>對每批品質估計之準確性</strong></td>
+<td><strong>最好</strong>⭐（1-6 必考）</td>
+<td>中間</td>
+<td>最差</td>
+</tr>
+<tr>
+<td>對製程平均數估計之決策速度</td>
+<td><strong>最快</strong>⭐（1-7 必考）</td>
+<td>較慢</td>
+<td>最慢</td>
+</tr>
+<tr>
+<td>檢驗人員及設備之使用率</td>
+<td>最佳</td>
+<td>較差</td>
+<td>較差</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>🎯 <strong>記法：單次「三最」——行政費最少、估計最準、決策最快</strong></p>
+<ul>
+<li>單次一次抽完：紀錄單純（行政少）、樣本資訊完整（估最準）、馬上判（最快）。</li>
+<li>但總檢驗費用最多（每批都抽大樣本）、心理觀感最差（一翻兩瞪眼）。</li>
+<li>品質保證三者<strong>幾乎相同</strong>——考「哪個保證較好」是陷阱。</li>
+</ul>
+</blockquote>
+<h3>8. 抽樣檢驗的型式（5 種）與標準對照 ⭐</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>型式</th>
+<th>特徵</th>
+<th>代表標準</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>規準型</strong></td>
+<td>兼顧買賣雙方利益，固定 α＝5%、β＝10%，一次裁定</td>
+<td>計數：<strong>JIS Z9002</strong>（單次）；計量：JIS Z9003（σ已知）／Z9004（σ未知）</td>
+</tr>
+<tr>
+<td><strong>選別型</strong></td>
+<td>拒收批<strong>不退貨</strong>，全數剔選、不良品換良品</td>
+<td><strong>Dodge-Romig</strong>（LTPD 型＋AOQL 型）</td>
+</tr>
+<tr>
+<td><strong>調整型</strong></td>
+<td>依歷史品質調整正常/加嚴/減量；<strong>須連續批</strong>才能用</td>
+<td>計數：ISO 2859-1（<strong>CNS 2779-1</strong>）；計量：ISO 3951-1（<strong>CNS 9445-1</strong>）</td>
+</tr>
+<tr>
+<td>連續生產型</td>
+<td>製程上邊生產邊抽驗</td>
+<td>CSP-1</td>
+</tr>
+<tr>
+<td>逐次型</td>
+<td>一個一個抽（不考）</td>
+<td>JIS Z9009</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>MIL-STD-1916</strong>：含計數值、計量值及連續抽樣，<strong>且均為調整型</strong>。（<strong>手寫註記：有考</strong>）</li>
+</ul>
+<h3>9. 抽樣 vs 全數檢驗</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>適合抽樣檢驗</th>
+<th>適合全數檢驗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>產量大、連續生產無法全檢</td>
+<td>批量太少，抽驗失去意義</td>
+</tr>
+<tr>
+<td><strong>破壞性試驗</strong>（只能抽驗）</td>
+<td>檢驗手續簡單、不費人力</td>
+</tr>
+<tr>
+<td>允許某種程度不良品存在</td>
+<td><strong>不允許不良品</strong>（有致命影響）</td>
+</tr>
+<tr>
+<td>欲省檢驗時間費用</td>
+<td>工程能力不足、不良率超規</td>
+</tr>
+<tr>
+<td>刺激生產者改善品質</td>
+<td>欲了解該批實際品質</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>抽樣檢驗優點：省時省力省成本、降低檢驗損壞與人員疲勞誤差、可拒收整批刺激改善、<strong>可用於破壞性檢驗</strong>、適合連續生產。</li>
+<li>缺點：批的資訊較少、有允收壞批/拒收好批之風險、合格批中仍有不良品、規劃較費時。</li>
+<li><strong>隨機抽樣為必要條件</strong>（螢光重點）；發現樣本有不良品不能立即武斷全批不良。</li>
+</ul>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s5"><h2 onclick="tg(this)">乙二、允收機率計算：超幾何／二項／卜氏（抽樣檢驗課本 2.1，P15~23）<span class="ar">▾</span></h2><div class="sb">
+<p>（分配的一般性質見「十三、重要機率分配」；本章是抽樣檢驗情境的應用與查表技巧。）</p>
+<h3>1. 三種分配比較 ⭐</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>分配</th>
+<th>公式</th>
+<th>適用情境</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>超幾何</td>
+<td>Pd＝C(Np,d)·C(N−Np,n−d) ÷ C(N,n)</td>
+<td><strong>有限</strong>群體、不放回抽樣（計數值）</td>
+</tr>
+<tr>
+<td>二項</td>
+<td>Pd＝C(n,d)·p^d·(1−p)^(n−d)</td>
+<td>N 視為<strong>無限</strong>（經驗：<strong>n/N＜0.1</strong> 即可用）</td>
+</tr>
+<tr>
+<td>卜氏</td>
+<td>Pd＝(λ^d/d!)·e^(−λ)，λ＝np</td>
+<td>n 大、p 小（λ＝np≤7）；可查表最快</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ <strong>超幾何分配的偏態（有考過）</strong></p>
+<ul>
+<li>p＝1/2：對稱。</li>
+<li><strong>p＜1/2：右偏（正偏）</strong>——不良率低時常見，考過。</li>
+<li>p＞1/2：左偏（負偏）。</li>
+<li>卜氏分配也是：N 大、不良少 → 分配<strong>呈右偏</strong>，故不能用常態近似。</li>
+</ul>
+</blockquote>
+<ul>
+<li>卜氏近似的實用條件（課本經驗值）：n/N＜0.1、<strong>n＞16</strong>、<strong>p＜10%</strong>。</li>
+<li>三法答案很接近——同一題（N 大、p=3%、n=100、d=0）：超幾何 0.04036、二項 0.04755、卜氏 0.04979 ≈ 0.05。</li>
+</ul>
+<h3>2. 例題示範（例 2.1~2.3）</h3>
+<p>例 2.1（超幾何）：N=1,000、p=3%、n=100 → Np=30。
+P₀＝C(30,0)C(970,100)/C(1000,100)＝0.04036；P₁＝C(30,1)C(970,99)/C(1000,100)＝0.13895。
+（實務用<strong>階乘對數表</strong>：log P₀＝(log900!＋log970!)−(log870!＋log1000!)＝−1.3941）</p>
+<blockquote>
+<p>📌 <strong>fx-350MS 反對數按鍵（log p → p）</strong></p>
+<ul>
+<li>已算出 log P₀＝−1.3941。</li>
+<li>按：<code>SHIFT</code> → <code>log</code>（＝10^x）→ <code>(−)</code> → <code>1.3941</code> → <code>=</code> → <strong>0.04036</strong>。</li>
+</ul>
+</blockquote>
+<p>例 2.2（二項）：N=100,000、n/N=0.001＜0.1 → 可用二項。
+P₀＝C(100,0)(0.97)^100＝0.04755；P₁＝100×0.03×(0.97)^99＝0.1471。</p>
+<p>例 2.3（卜氏）：λ＝np＝100×0.03＝3。
+P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
+<blockquote>
+<p>🎯 <strong>查卜氏累計表求「恰好 k 個」：相鄰兩格相減</strong></p>
+<ul>
+<li>表給的是累計機率 F(c)＝P(d≤c)。</li>
+<li>P(d＝0)＝F(0)＝0.050。</li>
+<li>P(d＝1)＝F(1)−F(0)＝0.199−0.050＝0.149。</li>
+<li>這招是雙次抽樣 Pa 計算（乙三章「畫表格」法）的基礎。</li>
+</ul>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s6"><h2 onclick="tg(this)">乙三、OC 曲線與 AQL／LTPD／α／β ⭐⭐（抽樣檢驗課本 2.1.4，P24~33）<span class="ar">▾</span></h2><div class="sb">
+<h3>1. OC 曲線（Operating Characteristic Curve，操作特性曲線）</h3>
+<ul>
+<li>定義：各種不良率 p 的送驗批，經抽樣計畫判定<strong>允收之機率 Pa</strong> 所繪成的曲線。<strong>X 軸＝不良率 p，Y 軸＝允收機率 Pa</strong>。</li>
+<li>功能：顯示抽樣計畫<strong>分辨良批與遜批的能力</strong>；p=0 時 Pa=1，p=1 時 Pa=0。</li>
+<li>完美 OC 曲線＝階梯形（AQL 前全收、之後全拒），實際曲線為平滑反 S 形，中間有「不明區域」。</li>
+</ul>
+<h3>2. 四個關鍵定義 ⭐⭐（與「十八、兩種錯誤」同源，必背）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>名詞</th>
+<th>定義</th>
+<th>慣用值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AQL</strong>（Acceptable Quality Limit 允收品質界限）</td>
+<td>消費者滿意的送驗批所含<strong>最大</strong>不良率＝<strong>p₀</strong></td>
+<td>允收機率 Pa＝1−α＝<strong>95%</strong> 時之不良率</td>
+</tr>
+<tr>
+<td><strong>LTPD</strong>（Lot Tolerance Percent Defective 拒收水準）</td>
+<td>消費者認為品質惡劣的送驗批所含<strong>最低</strong>不良率＝<strong>p₁</strong></td>
+<td>允收機率 Pa＝<strong>10%</strong> 時之不良率</td>
+</tr>
+<tr>
+<td><strong>生產者冒險率 α</strong>（PR）</td>
+<td>品質良好卻被誤判<strong>拒收</strong>＝<strong>第一型誤差 Type I</strong></td>
+<td>於 AQL 處，α＝<strong>5%</strong></td>
+</tr>
+<tr>
+<td><strong>消費者冒險率 β</strong>（CR）</td>
+<td>品質惡劣卻被誤判<strong>允收</strong>＝<strong>第二型誤差 Type II</strong></td>
+<td>於 LTPD 處，β＝<strong>10%</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>收驗的四種結果（象限表）：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>良批</th>
+<th>遜批</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>允收</td>
+<td>正確（1−α）</td>
+<td><strong>誤收：β（第二型）</strong></td>
+</tr>
+<tr>
+<td>拒收</td>
+<td><strong>誤拒：α（第一型）</strong></td>
+<td>正確（1−β）</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>🎯 <strong>記法：「誰倒楣就掛誰的名字」</strong></p>
+<ul>
+<li>好批被拒收 → <strong>生產者</strong>白做工 → α＝生產者冒險率（5%）。</li>
+<li>壞批被允收 → <strong>消費者</strong>吃虧 → β＝消費者冒險率（10%）。</li>
+<li>α 在 OC 曲線<strong>左上</strong>（AQL 處距 100% 的缺口）；β 在<strong>右下</strong>（LTPD 處的殘餘允收率）。</li>
+</ul>
+</blockquote>
+<h3>3. OC 曲線五大特性 ⭐（課本特性①~⑤，選擇題最愛）</h3>
+<blockquote>
+<p>⚠️ <strong>比例抽檢 vs 定量抽檢（① vs ②，有考過）</strong></p>
+<ul>
+<li>① <strong>按同一比例（如 10%）抽樣：不能得到相同程度的品質保證</strong>——批小則 n 小，OC 曲線平緩（N=50,n=5,c=0 在 p=2% 時 Pa 高達 90%；N=1000,n=100,c=0 僅 13%）。過去「規定抽百分之幾」即犯此錯。</li>
+<li>② <strong>固定樣本數 n（如一律抽 20 個）：品質保證相當接近</strong>——批量 50~1000 曲線幾乎重疊。</li>
+<li>口訣：<strong>「比例不保證，定量才穩定」</strong>。</li>
+</ul>
+</blockquote>
+<ul>
+<li>③ 任何抽樣計畫都無法完全避免不良品混入。</li>
+<li>④ 允收數 c 不必等於 0：n 加大時 c≥1 也可得同等保證，且生產者心理較安。</li>
+<li>⑤ <strong>n 愈大，OC 曲線愈陡，區分好壞批能力愈強</strong>；<strong>c 愈小，計畫愈嚴</strong>（允收率下降）。</li>
+</ul>
+<h3>4. 單次抽樣 OC 曲線計算（例 2.4）</h3>
+<p>N=10,000、n=100、c=4；n/N=0.01＜0.1 → 查卜氏表（λ=np，c=4 欄）。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>p</th>
+<th>0</th>
+<th>0.01</th>
+<th>0.02</th>
+<th>0.03</th>
+<th>0.04</th>
+<th>0.05</th>
+<th>0.06</th>
+<th>0.07</th>
+<th>0.08</th>
+<th>0.09</th>
+<th>0.10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>np</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Pa</td>
+<td>1.000</td>
+<td>0.996</td>
+<td>0.947</td>
+<td>0.815</td>
+<td>0.629</td>
+<td>0.440</td>
+<td>0.285</td>
+<td>0.173</td>
+<td>0.100</td>
+<td>0.055</td>
+<td>0.029</td>
+</tr>
+</tbody>
+</table></div>
+<h3>5. 雙次抽樣 Pa：老師的「畫表格」解法 ⭐⭐（例 2.5，大題）</h3>
+<p>題型：N=1,000、n₁=50、c₁=1、n₂=100、c₂=3，求 p=0.01 時之 Pa。</p>
+<p>允收的路徑只有三種：①d₁≤c₁ 直接允收；②d₁=2 且 d₂≤1（湊到 ≤c₂=3）；③d₁=3 且 d₂=0。d₁≥4 必拒收（打叉）。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>d₁≤1（直接收）</th>
+<th>d₁=2</th>
+<th>d₁=3</th>
+<th>d₁≥4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一次 n₁p＝50×0.01＝0.5</td>
+<td>F(1)＝<strong>0.910</strong></td>
+<td>F(2)−F(1)＝0.986−0.910＝0.076</td>
+<td>F(3)−F(2)＝0.998−0.986＝0.012</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>第二次 n₂p＝100×0.01＝1.0</td>
+<td>（不必抽）✗</td>
+<td>還可收 d₂≤1：F(1)＝0.736</td>
+<td>只能收 d₂=0：F(0)＝0.368</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>相乘再相加</td>
+<td>Pa₁＝0.910</td>
+<td>0.076×0.736＝0.056</td>
+<td>0.012×0.368＝0.004</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Pa＝Pa₁＋Pa₂＝0.910＋(0.056＋0.004)＝0.970</strong>。同法 p=0.02 時 Pa＝0.736＋0.184×0.406＋0.061×0.135＝<strong>0.819</strong>。</p>
+<blockquote>
+<p>🎯 <strong>畫表格四步驟（板書法）</strong></p>
+<ul>
+<li>第 1 列：n₁p 查卜氏表——直接允收欄填 F(c₁)，其餘欄用<strong>相鄰相減</strong>求 P(d₁=k)。</li>
+<li>第 2 列：n₂p 查表——每欄第二次「還能收幾個」＝c₂−d₁，填 F(c₂−d₁)。</li>
+<li>第 3 列：<strong>同欄上下相乘</strong>，各欄<strong>橫向相加</strong>得 Pa₂。</li>
+<li>Pa＝Pa₁＋Pa₂。d₁＞c₂ 的欄整欄打叉。</li>
+</ul>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s7"><h2 onclick="tg(this)">乙四、AQL 之設定三法（抽樣檢驗課本 2.1.4(7)，P34~38）<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 三法總覽</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>依據</th>
+<th>要點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>經驗法</td>
+<td>類似產品/製程的過去經驗</td>
+<td>(A) 依缺點等級分：愈重要 AQL 愈嚴；(B) 依檢驗項目數：<strong>項目少→AQL 嚴，項目多→AQL 寬</strong></td>
+</tr>
+<tr>
+<td>損益平衡點法</td>
+<td>成本</td>
+<td><strong>B.E.P＝每件檢驗成本 ÷ 每一不良總成之修理成本</strong>，再查表取最近 AQL；缺點：兩成本難算準</td>
+</tr>
+<tr>
+<td><strong>歸納分類法（風險法）</strong></td>
+<td>五要素綜合</td>
+<td><strong>考很多</strong>（老師註記）；最實用可行</td>
+</tr>
+</tbody>
+</table></div>
+<h3>2. 經驗法對照表</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>主要不良：檢驗項目</th>
+<th>AQL(%)</th>
+<th>次要不良：檢驗項目</th>
+<th>AQL(%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4 以下</td>
+<td>0</td>
+<td>2 以下</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>5~7</td>
+<td>0.65</td>
+<td>3~4</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>8~11</td>
+<td>1.0</td>
+<td>5~7</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td>12~19</td>
+<td>1.5</td>
+<td>8~18</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>20~48</td>
+<td>2.5</td>
+<td>19 以上</td>
+<td>6.5</td>
+</tr>
+<tr>
+<td>49 以上</td>
+<td>4.0</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h3>3. 損益平衡點法對照表</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>B.E.P.(%)</th>
+<th>0.5~1</th>
+<th>1~1.75</th>
+<th>1.75~3</th>
+<th>3~4</th>
+<th>4~6</th>
+<th>6~10.5</th>
+<th>10.5~17</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AQL(%)</td>
+<td>0.25</td>
+<td>0.65</td>
+<td>1.0</td>
+<td>2.5</td>
+<td>4.0</td>
+<td>6.5</td>
+<td>10</td>
+</tr>
+</tbody>
+</table></div>
+<h3>4. 歸納分類法（風險法）⭐——考很多</h3>
+<p>五要素，每要素分三類，由起點沿箭頭走到右邊得 AQL（0.065%~15%，由嚴到寬）：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>要素</th>
+<th>嚴（AQL 小）↗</th>
+<th>中 →</th>
+<th>寬（AQL 大）↘</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>檢驗成本/修理成本比</td>
+<td>0.5 以下</td>
+<td>0.5~1</td>
+<td>1 以上</td>
+</tr>
+<tr>
+<td>可能發現不良地區</td>
+<td><strong>顧客使用時</strong></td>
+<td>最終檢查</td>
+<td>中間檢查</td>
+</tr>
+<tr>
+<td>不良品處理方式</td>
+<td><strong>報廢處理</strong></td>
+<td>整修處理</td>
+<td><strong>特採（降低品質/規格使用）</strong></td>
+</tr>
+<tr>
+<td>製程方式</td>
+<td>全自動</td>
+<td>半自動</td>
+<td>人工生產</td>
+</tr>
+<tr>
+<td>鑑定不良之難易</td>
+<td>很難鑑定</td>
+<td>不易鑑定</td>
+<td>容易鑑定</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ <strong>易誤觀念：特採（有考過）</strong></p>
+<ul>
+<li>特採＝不合格品<strong>降低品質（規格）使用</strong>，不是報廢也不是整修。</li>
+<li>處理方式愈「傷」（報廢）→ 後果愈重 → AQL 訂愈<strong>嚴（小）</strong>；可特採 → AQL 可放<strong>寬（大）</strong>。</li>
+<li>「發現地區」同理：流到<strong>顧客</strong>手上才發現 → 最嚴；廠內中間檢查就能攔 → 較寬。</li>
+</ul>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s8"><h2 onclick="tg(this)">乙五、規準型抽樣計畫 JIS Z9002 ⭐（抽樣檢驗課本 2.2，P39~45）<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 規準型的精神</h3>
+<ul>
+<li>買賣雙方<strong>約定品質條件</strong>、各自承擔冒險率，一次裁定允收/拒收：<strong>α＝5%（生產者）、β＝10%（消費者）</strong>。</li>
+<li><strong>p₀＝滿意批（合格批）的最高不良率＝AQL</strong>；<strong>p₁＝不滿意批（不合格批）的最低不良率＝LTPD</strong>。</li>
+<li>OC 曲線通過（p₀, 1−α）與（p₁, β）兩點。</li>
+<li>JIS Z9002（1956，日本）＝計數<strong>規準型單次</strong>抽樣表；適用斷續製程的群體批或一次購入大量製品。<strong>雙次規準型至今無抽樣表</strong>（試誤法太繁）。</li>
+</ul>
+<h3>2. 查表步驟（本表）⭐</h3>
+<ol>
+<li>雙方協議 p₀、p₁；決定批量 N。</li>
+<li>查本表：<strong>p₀ 找「列」、p₁ 找「欄」</strong>，交點格讀「n c」（左 n 右 c）。</li>
+<li>格中是箭頭（↓↑←→）→ 採用箭頭所指方向的第一個抽樣計畫。</li>
+<li>格中是＊ → 改用<strong>輔助表</strong>計算。</li>
+</ol>
+<p>例 2.6：p₀=0.8%（落 0.711~0.900 列）、p₁=5%（落 4.51~5.60 欄）、N=3,000 → 查得 <strong>n=100、c=2</strong>。</p>
+<h3>3. 輔助表（＊號時用）⭐</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>p₁/p₀</th>
+<th>c</th>
+<th>n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17 以上</td>
+<td>0</td>
+<td>2.56/p₀＋115/p₁</td>
+</tr>
+<tr>
+<td>16~7.9</td>
+<td>1</td>
+<td>17.8/p₀＋194/p₁</td>
+</tr>
+<tr>
+<td>7.8~5.6</td>
+<td>2</td>
+<td>40.9/p₀＋266/p₁</td>
+</tr>
+<tr>
+<td>5.5~4.4</td>
+<td>3</td>
+<td>68.3/p₀＋334/p₁</td>
+</tr>
+<tr>
+<td>4.3~3.6</td>
+<td>4</td>
+<td>98.5/p₀＋400/p₁</td>
+</tr>
+<tr>
+<td>3.5~2.8</td>
+<td>6</td>
+<td>164/p₀＋527/p₁</td>
+</tr>
+<tr>
+<td>2.7~2.3</td>
+<td>10</td>
+<td>308/p₀＋770/p₁</td>
+</tr>
+<tr>
+<td>2.2~2.0</td>
+<td>15</td>
+<td>502/p₀＋1065/p₁</td>
+</tr>
+<tr>
+<td>1.99~1.86</td>
+<td>20</td>
+<td>704/p₀＋1350/p₁</td>
+</tr>
+</tbody>
+</table></div>
+<p>步驟：算 <strong>p₁/p₀</strong> → 查得 c → 把 p₀、p₁（<strong>百分率值</strong>）代入 n 公式 → n 不是整數就<strong>無條件進位</strong>。</p>
+<p>例 2.7：p₀=0.8%、p₁=2% → 交點為＊ → p₁/p₀＝2.5（落 2.7~2.3）→ c=10 → n＝308/0.8＋770/2＝385＋385＝<strong>770</strong> →（N=3,000, n=770, c=10）。</p>
+<blockquote>
+<p>⚠️ <strong>使用 JIS Z9002 的三個注意</strong></p>
+<ul>
+<li>查得 n＞N 時 → 改<strong>全數檢驗</strong>。</li>
+<li><strong>p₁/p₀ 應大於 1.86</strong>，否則 n 過大不經濟（表也只列到 1.86）。</li>
+<li>求得 n、c 後宜檢討檢驗費用與 OC 曲線，必要時修正 p₀、p₁ 重求。</li>
+</ul>
+<p>🎯 <strong>判斷關鍵：題目給什麼就是哪型</strong></p>
+<ul>
+<li>給「<strong>合格批最高不良率＋不合格批最低不良率</strong>」（p₀、p₁）→ 規準型查 JIS Z9002。</li>
+<li>給「<strong>LTPD 或 AOQL＋作業平均不良率 p̄</strong>」→ 選別型查 Dodge-Romig（乙六章）。</li>
+<li>給「AQL＋批量＋檢驗水準」→ 調整型 CNS 2779-1／MIL-STD-105E。</li>
+</ul>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s9"><h2 onclick="tg(this)">乙六、選別型抽樣計畫：AOQ／AOQL／ATI／Dodge-Romig ⭐（抽樣檢驗課本 2.3，P46~58）<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 選別型的特質與兩種保證</h3>
+<ul>
+<li>拒收批<strong>不退貨</strong>→ 100% 全數剔選，發現的不良品剔除<strong>補以良品</strong>。用於無法選擇供應者時；<strong>不適用於破壞性檢驗</strong>或檢驗成本太高者（螢光重點）。</li>
+<li>兩種保證：①不良率在 <strong>LTPD（p₁）以上</strong>的批，允收機率壓在 <strong>10% 以下</strong>（保證<strong>每一批</strong>）；②長期連續使用，出廠平均不良率不超過 <strong>AOQL</strong>（保證<strong>平均品質</strong>）。</li>
+</ul>
+<h3>2. AOQ 平均出廠品質 ⭐</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>情境</th>
+<th>公式</th>
+<th>手寫註記</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>允收批中驗出的不良品<strong>也更換</strong></td>
+<td><strong>AOQ＝Pa·p·(1−n/N)</strong>（公式 4）</td>
+<td>「有限批」</td>
+</tr>
+<tr>
+<td>N 大、n 小（n/N→0），只更換拒收批</td>
+<td><strong>AOQ ≅ Pa·p</strong>（公式 5）</td>
+<td>「無限批」</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>邏輯：拒收批全檢後不良＝0；允收批平均留下 Pa·p(N−n) 個不良 → 除以 N 得 AOQ。</li>
+<li>AOQ 對 p 的曲線：由 0 上升到<strong>最大值後回降</strong>（p 再大反而常被拒收→全檢→出廠更乾淨）。</li>
+</ul>
+<h3>3. AOQL 平均出廠品質界限 ⭐（必考）</h3>
+<ul>
+<li><strong>AOQL＝AOQ 之最大值</strong>＝選別檢驗下出廠品質最壞情況。</li>
+<li>近似公式：<strong>AOQL＝y(1/n−1/N)</strong>，y 隨 c 而變（查表，<strong>必考</strong>）：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>c</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>y</td>
+<td>0.368</td>
+<td>0.841</td>
+<td>1.372</td>
+<td>1.946</td>
+<td>2.544</td>
+<td>3.172</td>
+<td>3.810</td>
+<td>4.465</td>
+<td>5.150</td>
+<td>5.836</td>
+<td>6.535</td>
+<td>7.243</td>
+</tr>
+</tbody>
+</table></div>
+<p>例 2.8：N=10,000、n=100、c=4 → y=2.544 → AOQL＝2.544×(1/100−1/10000)＝2.544×0.0099＝0.0252＝<strong>2.52%</strong>。
+（同一計畫的 AOQ 表在 p=0.04 時最大＝0.0252，兩法一致；實際 AOQ 常比 AOQL 小。）</p>
+<h3>4. ASN 與 ATI</h3>
+<ul>
+<li><strong>ASN 平均樣本數</strong>＝做出允收/拒收決策所需的平均<strong>樣本</strong>大小。</li>
+<li><strong>ATI 平均總檢驗件數</strong>＝剔選檢驗下每批平均<strong>檢驗</strong>件數（含拒收批全檢），用來估<strong>檢驗費用與工時</strong>（螢光重點）。</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>計畫</th>
+<th>ATI 公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>單次</td>
+<td><strong>ATI＝n＋(1−Pa)(N−n)</strong>＝nPa＋N(1−Pa)（公式 7）</td>
+</tr>
+<tr>
+<td>雙次</td>
+<td>ATI＝n₁＋n₂(1−Pa₁)＋(N−n₁−n₂)(1−Pa)＝n₁Pa₁＋(n₁＋n₂)Pa₂＋N(1−Pa)（公式 8）</td>
+</tr>
+<tr>
+<td>多次</td>
+<td>ATI＝n₁Pa₁＋(n₁+n₂)Pa₂＋…＋(n₁+…+nₖ)Paₖ＋N(1−Pa)，Pa＝ΣPaᵢ（公式 9）</td>
+</tr>
+</tbody>
+</table></div>
+<p>例 2.9（N=800、p=0.01）：
+- 單次 n=75、c=2：np=0.75 → Pa=0.959 → ATI＝75＋0.041×725＝<strong>105</strong>。
+- 雙次 n₁=39、c₁=0、n₂=81、c₂=4：Pa₁=0.677、Pa₂=0.316、Pa=0.993 → ATI＝39＋81×0.323＋680×0.007＝<strong>70</strong>。
+- 結論：<strong>雙次 ATI 全程比單次小</strong>（總檢驗費較省），與乙一章比較表「總檢驗費用單次最多」相呼應。</p>
+<h3>5. 指定 LTPD 下求最小 ATI（例 2.10）⭐大題</h3>
+<p>題：N=2,500、β=10%、LTPD=5%、作業平均不良率 p̄=1.25%，求 ATI 最小的計畫。</p>
+<blockquote>
+<p>🎯 <strong>解題流程（每個 c 跑一輪，ATI 呈 U 形取谷底）</strong></p>
+<ul>
+<li>① 查卜氏表：找 <strong>Pa=10% 對應的 np</strong>（用 LTPD 那條）→ n＝np/LTPD。</li>
+<li>② 換算 <strong>n·p̄</strong>（注意：這裡改用<strong>作業平均不良率</strong>）→ 再查表得 Pa。</li>
+<li>③ ATI＝n＋(1−Pa)(N−n)。</li>
+<li>④ c 逐一加大，ATI 先降後升（U 形），取最小。</li>
+</ul>
+</blockquote>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>c</th>
+<th>np(Pa=10%)</th>
+<th>n＝np/0.05</th>
+<th>n·p̄</th>
+<th>Pa</th>
+<th>ATI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3.89</td>
+<td>78</td>
+<td>0.975</td>
+<td>0.745</td>
+<td>695</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6.681</td>
+<td>134</td>
+<td>1.67</td>
+<td>0.911</td>
+<td>344</td>
+</tr>
+<tr>
+<td>5</td>
+<td>9.295</td>
+<td>186</td>
+<td>2.33</td>
+<td>0.968</td>
+<td>260</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>10.53</td>
+<td><strong>210</strong></td>
+<td>2.625</td>
+<td>0.982</td>
+<td><strong>252 ←最小</strong></td>
+</tr>
+<tr>
+<td>7</td>
+<td>11.792</td>
+<td>236</td>
+<td>2.95</td>
+<td>0.989</td>
+<td>261</td>
+</tr>
+</tbody>
+</table></div>
+<p>答：<strong>N=2,500、n=210、c=6，ATI=252</strong>。Dodge-Romig 的 LTPD 表就是照這方法製成。</p>
+<h3>6. Dodge-Romig 抽樣表（1941）⭐</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>表</th>
+<th>型</th>
+<th>抽樣</th>
+<th>規格數</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SL</strong></td>
+<td>LTPD 型</td>
+<td>單次</td>
+<td>LTPD 分 8 種：0.5, 1, 2, 3, 4, 5, 7, 10%</td>
+</tr>
+<tr>
+<td><strong>DL</strong></td>
+<td>LTPD 型</td>
+<td>雙次</td>
+<td>（各計畫附 AOQL 值參考）</td>
+</tr>
+<tr>
+<td><strong>SA</strong></td>
+<td>AOQL 型</td>
+<td>單次</td>
+<td>AOQL 分 13 種：0.1~10%</td>
+</tr>
+<tr>
+<td><strong>DA</strong></td>
+<td>AOQL 型</td>
+<td>雙次</td>
+<td>（各計畫附 β=10% 之 LTPD 值 pt 參考）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>記法：<strong>S</strong>ingle／<strong>D</strong>ouble＋<strong>L</strong>TPD／<strong>A</strong>OQL。</li>
+<li>選表：保證<strong>單批</strong>品質 → LTPD 型（SL/DL）；保證<strong>多批平均</strong>品質 → AOQL 型（SA/DA）。<strong>LTPD 表適用少見的送驗批，AOQL 表適用長期送驗批</strong>。</li>
+<li>使用步驟：選單/雙次 → 求作業平均不良率 <strong>p̄</strong> → 定 N → 選 LTPD（或 AOQL）值 → 找對應表 → 依 N 與 p̄ 範圍查 n、c（或 n₁c₁n₂c₂）。</li>
+<li>例 2.11：N=2,000、p̄=1%、LTPD=4% → SL-4.0% 表：n=195、c=4（AOQL=1.2%）。</li>
+<li>例 2.12：N=1,000、AOQL=3%、p̄=1% → SA-3.0% 表：n=44、c=2（pt=11.8%）。</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>無表可查的限制</strong></p>
+<ul>
+<li><strong>p̄＞½·LTPD</strong> 時：無 SL/DL 表可查。</li>
+<li><strong>p̄＞AOQL</strong> 時：無 SA/DA 表可查。</li>
+<li>意即：製程平均太爛（相對於要保證的水準）時，選別型抽樣已無意義，只能全檢或改善製程。</li>
+</ul>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s10"><h2 onclick="tg(this)">乙七、調整型抽樣計畫 CNS 2779-1／MIL-STD-105E ⭐⭐（第五堂課下午，抽樣檢驗課本 2.4，P59~97）<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 調整型的精神</h3>
+<ul>
+<li>依過去檢驗結果<strong>調整鬆緊</strong>：品質好 → 減量檢驗（省成本的優待）；品質壞 → 加嚴檢驗（提高拒收壞批能力）。買賣雙方都受益，並促使供應者改善品質。</li>
+<li><strong>必須是連續系列批</strong>才能用轉換規則；單獨批應改查 LQ 型（ISO 2859-2）或分析 OC 曲線。</li>
+<li>CNS 2779-1＝ISO 2859-1（計數值，由 MIL-STD-105E 演進）；CNS 9445-1＝ISO 3951-1（計量值，由 MIL-STD-414 演進）。</li>
+</ul>
+<h3>2. 關鍵用語（CNS 2779-1 新制）⭐</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>用語</th>
+<th>重點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AQL 允收品質界限</td>
+<td><strong>Acceptance Quality Limit</strong>（105E 舊名：Acceptable Quality Level 允收品質水準）＝連續批送驗時「最差的可容忍<strong>過程平均</strong>」</td>
+</tr>
+<tr>
+<td>不允收</td>
+<td>取代「拒收」一詞（涉消費者措施時仍用拒收，如「拒收數 Re」）</td>
+</tr>
+<tr>
+<td>不符合 vs 缺點</td>
+<td>不符合＝未滿足<strong>規定</strong>要求；缺點＝未滿足<strong>預期使用</strong>要求。A 類（關切度最高，AQL 最小）＞B 類＞C 類</td>
+</tr>
+<tr>
+<td>過程平均</td>
+<td>供應者的平均品質水準；<strong>要求過程平均比 AQL 更小</strong>，否則會被轉加嚴</td>
+</tr>
+<tr>
+<td>轉換分數 (switching score)</td>
+<td>正常檢驗下判斷可否轉<strong>減量</strong>的累積指標（新制取代 105E 的「連續 10 批允收」）</td>
+</tr>
+<tr>
+<td>CRQ 消費者風險品質</td>
+<td>對應某規定消費者風險（通常 10%）的品質水準（新制取代「界限品質」表）</td>
+</tr>
+<tr>
+<td>LQ 界限品質</td>
+<td>單獨批考量時，限制在低允收機率的品質水準（意義相當於選別型的 LTPD）</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ <strong>AQL 值的上限（規定）</strong></p>
+<ul>
+<li>以<strong>不符合品項百分率</strong>表示：AQL <strong>不得超過 10%</strong>。</li>
+<li>以<strong>百件不符合數</strong>表示：AQL 可到 <strong>1,000</strong>。</li>
+<li>AQL 級距為幾何級數，<strong>次一級約為前一級的 1.6 倍</strong>；樣本大小亦按幾何級數排列。</li>
+</ul>
+</blockquote>
+<h3>3. 檢驗水準與代字</h3>
+<ul>
+<li>一般水準 <strong>I、II、III</strong>：<strong>未指定時一律用 II</strong>；判別力 III＞II＞I。</li>
+<li>特殊水準 <strong>S-1～S-4</strong>：樣本小、風險大時用（注意與 AQL 相容性，如 S-1 代字最大 D）。</li>
+<li>批量 N＋檢驗水準 → 查<strong>表 1</strong> 得<strong>樣本大小代字</strong>；代字＋AQL → 查主表得 n、Ac、Re。</li>
+<li><strong>正常/加嚴/減量之間轉換時，檢驗水準不變</strong>（水準與鬆緊是兩回事）。</li>
+<li>樣本資訊量取決於樣本<strong>絕對大小</strong>，非佔批量比例（呼應乙三章「比例抽檢不保證」）。</li>
+</ul>
+<h3>4. 抽驗程序 8 步驟 ⭐（含課本附表頁碼，考場直接翻）</h3>
+<ol>
+<li>指定批量 N　2. 決定 AQL　3. 選單次/雙次/多次　4. 檢驗水準（未指定→II）</li>
+<li>表 1（<strong>P323</strong>）查<strong>代字</strong></li>
+<li>依方式與鬆緊選表：單次<strong>表 II-A/B/C（正常/加嚴/減量，P324/325/326）</strong>；雙次表 III-A/B/C（P327~329）；多次表 IV-A/B/C（P330~332）</li>
+<li>代字×AQL 交叉格 → <strong>n、Ac、Re</strong>（格中箭頭：依箭頭方向改用第一個計畫，代字與 n 跟著變）</li>
+<li><strong>開始一律用正常檢驗</strong>，之後按轉換規則調整；表 10（OC 曲線）看保證程度。</li>
+</ol>
+<p>例 2.17（N=3,000、AQL=1.5%、II 級、單次 → 代字 K）：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>檢驗</th>
+<th>n</th>
+<th>Ac</th>
+<th>Re</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正常</td>
+<td>125</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>加嚴</td>
+<td>125</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>減量</td>
+<td>50</td>
+<td>3</td>
+<td>4（課本 CNS 新制；105E 舊表為 Ac2/Re5 留間隙）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>例 2.18 雙次（代字 K）：正常 n₁=80（Ac2/Re5）＋n₂=80（累計 Ac6/Re7）。</li>
+<li>例 2.19 多次（代字 K）：正常每次 n=32 共 <strong>5 次</strong>（新制由 105E 的 7 次改為 5 次），第 1 次 Ac＝#（不能允收）。</li>
+</ul>
+<h3>5. 轉換規則 ⭐⭐（最愛考，7-15 整題就是它）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>轉換</th>
+<th>條件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正常 → 加嚴</td>
+<td>初始檢驗<strong>連續 5 批（含）以內有 2 批不允收</strong>（再送驗批不計）</td>
+</tr>
+<tr>
+<td>加嚴 → 正常</td>
+<td>加嚴下<strong>連續 5 批</strong>均允收</td>
+</tr>
+<tr>
+<td>正常 → 減量</td>
+<td><strong>同時滿足</strong>：①<strong>轉換分數 ≥ 30</strong>（或經權責核准以「先前已允收 10 批」替代）②生產穩定 ③權責單位同意</td>
+</tr>
+<tr>
+<td>減量 → 正常</td>
+<td><strong>任一</strong>發生：①有一批不允收 ②生產變異或延遲 ③其他正當理由</td>
+</tr>
+<tr>
+<td>加嚴 → 中止檢驗</td>
+<td>加嚴下<strong>不允收批累積達 5 批</strong> → 中止；供應者改善並經權責同意後<strong>恢復時仍用加嚴</strong></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>🎯 <strong>轉換分數的加分規則（新制，附錄 A 有 25 批示例）</strong></p>
+<ul>
+<li>單次、Ac≥2：該批若「AQL 加嚴一級仍允收」→ <strong>＋3</strong>；否則歸 0。</li>
+<li>單次、Ac=0 或 1：該批允收 → <strong>＋2</strong>；否則歸 0。</li>
+<li>雙次：第 1 次樣本就允收 → ＋3；多次：第 3 次（含）前允收 → ＋3；否則歸 0。</li>
+<li>從初始正常檢驗起算（起始 0 分），每批檢驗後更新；轉入減量後不再計分。</li>
+</ul>
+<p>⚠️ <strong>新舊制對照（比較題會考）</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>MIL-STD-105E 舊制</th>
+<th>CNS 2779-1/ISO 2859-1 新制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正常→減量</td>
+<td>連續 10 批允收＋製程穩定＋主管批准</td>
+<td><strong>轉換分數 ≥30</strong>＋穩定＋核准</td>
+</tr>
+<tr>
+<td>停止檢驗</td>
+<td>連續 10 批處於嚴格檢驗（品質無改善→拒絕往來）</td>
+<td>加嚴下<strong>累積 5 批不允收</strong>即中止</td>
+</tr>
+<tr>
+<td>減量表</td>
+<td>允收數與拒收數<strong>留間隙</strong>（Ac&lt;X&lt;Re 無法判定→允收該批但恢復正常）</td>
+<td>表 2C <strong>取消間隙</strong></td>
+</tr>
+<tr>
+<td>多次抽樣</td>
+<td>7 次</td>
+<td><strong>5 次</strong></td>
+</tr>
+<tr>
+<td>AQL</td>
+<td>Acceptable Quality <strong>Level</strong></td>
+<td>Acceptance Quality <strong>Limit</strong></td>
+</tr>
+<tr>
+<td>其他新增</td>
+<td>—</td>
+<td>轉換分數、CRQ、跳批（ISO 2859-3）、分數允收數計畫（表 11）、權責單位</td>
+</tr>
+</tbody>
+</table></div>
+</blockquote>
+<ul>
+<li>105E 減量檢驗的「無法判定」情況（7-16 類考點）：減量表 Ac 與 Re 之間出現的不良數 → 該批<strong>允收</strong>，但<strong>下批恢復正常檢驗</strong>。</li>
+</ul>
+<h3>6. 一表多用（CNS 2779-1 的四種用法）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>用法</th>
+<th>作法</th>
+<th>例題</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>調整型（主用途）</td>
+<td>8 步驟＋轉換規則</td>
+<td>例 2.17~2.19</td>
+</tr>
+<tr>
+<td>選別型</td>
+<td>拒收批全檢剔選；查<strong>表 8A（105E 表 V-A，P342）</strong>得 AOQL 係數，AOQL＝係數×(1−n/N)</td>
+<td>例 2.14：代字 H、AQL1.5% → 2.74 → <strong>AOQL=2.74×0.9=2.47%</strong>；例 2.15 反向：AOQL=6% → 6/0.9=6.67 → 表中找 ≤6.67 得 6.3x → <strong>AQL=4.0%</strong> → (50, Ac5, Re6)</td>
+</tr>
+<tr>
+<td>單批 LQ 保證</td>
+<td>查<strong>表 7A／表 10K-1（P352）</strong>：Pa=10% 列向右找 ≤LQ 的值 → 往上讀 AQL → 查主表</td>
+<td>例 2.16：N=2,000、LQ=5%、Pa=10% → 4.26 → AQL=0.65% → <strong>(125, Ac2, Re3)</strong></td>
+</tr>
+<tr>
+<td>規準型</td>
+<td>表 10 由 AQL(p₀) 與 LTPD(p₁) 湊近似計畫</td>
+<td>p₀=1%、p₁=5% → 表 10L → (200, Ac5)</td>
+</tr>
+</tbody>
+</table></div>
+<h3>7. ASN 比較（例 2.13）與綜合判定（例 2.20）⭐</h3>
+<ul>
+<li>例 2.13：N=150、AQL=4.0、II 級 → 代字 F → (20, Ac2, Re3)。查<strong>表 IX（ASN 曲線，P344）</strong>在 n×AQL＝20×0.04＝0.8 處：<strong>多次平均檢驗量只需單次的 62%、雙次 87% → 單次最不經濟</strong>（總檢驗費用單次最多，與乙一章比較表一致）。</li>
+<li>例 2.20 三級缺點綜合判定：N=2,000、II 級、單次、AQL 分別 0.65／1.0／2.5 → n=125，Ac(Cr)=2、Ac(Ma)=3、Ac(Mi)=7；綜合 AQL＝0.65+1.0+2.5＝4.15 → 取 4.0 查得 Ac=10。</li>
+</ul>
+<blockquote>
+<p>🎯 <strong>綜合判定的允收條件（四個同時成立）</strong></p>
+<ul>
+<li>dCr ≤ 2 <strong>且</strong> dMa ≤ 3 <strong>且</strong> dMi ≤ 7 <strong>且</strong> dCr＋dMa＋dMi ≤ 10。</li>
+<li>意義：三類缺點各自不能超標，且<strong>不可同時以最高允收數出現</strong>（總量再卡一道）。</li>
+</ul>
+</blockquote>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s11"><h2 onclick="tg(this)">乙八、計量值調整型 MIL-STD-414／CNS 9445-1（第五堂課下午講義）<span class="ar">▾</span></h2><div class="sb">
+<h3>1. 架構總覽</h3>
+<ul>
+<li>計量值抽樣：量測數據（假設<strong>常態分配</strong>）算統計量判允收，樣本數比計數值小得多。</li>
+<li>三種變異情況 × 兩種形式：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>變異情況</th>
+<th>品質指數 Q</th>
+<th>查表係數</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>變異未知—<strong>標準差法（s 法）</strong></td>
+<td>Q_U＝(U−x̄)/s、Q_L＝(x̄−L)/s</td>
+<td>表 B 系列</td>
+</tr>
+<tr>
+<td>變異未知—<strong>全距法（R 法）</strong></td>
+<td>Q＝(U−x̄)·c/R̄ 或 (x̄−L)·c/R̄（c 查表）</td>
+<td>表 C 系列</td>
+</tr>
+<tr>
+<td>變異已知（σ 法）</td>
+<td>Q＝(U−x̄)·V/σ 或 (x̄−L)·V/σ（V 查表）</td>
+<td>表 D 系列</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>形式</th>
+<th>允收準則</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>形式 1（k 法）</strong></td>
+<td>算出量 Q <strong>≥ k</strong>（允收常數，查表）→ 允收</td>
+</tr>
+<tr>
+<td><strong>形式 2（M 法）</strong></td>
+<td>Q → 查表換算<strong>批內不良率估計值 p̂</strong> → <strong>p̂ ≤ M</strong>（最大允許不良率，查表）→ 允收</td>
+</tr>
+</tbody>
+</table></div>
+<h3>2. 標準計算步驟（s 法，例 3.8/3.9 為模板）⭐</h3>
+<p>題型：規格上限 U=209°F、N=40、IV 級水準、正常、AQL=1%、n=5，觀測值 197,188,184,205,201。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>步驟</th>
+<th>公式</th>
+<th>本例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ΣX、ΣX²</td>
+<td>—</td>
+<td>975、190,435</td>
+</tr>
+<tr>
+<td>修正因數 CF</td>
+<td>(ΣX)²/n</td>
+<td>190,125</td>
+</tr>
+<tr>
+<td>修正平方和 SS</td>
+<td>ΣX²−CF</td>
+<td>310</td>
+</tr>
+<tr>
+<td>變異數 V</td>
+<td>SS/(n−1)</td>
+<td>77.5</td>
+</tr>
+<tr>
+<td>樣本標準差 s</td>
+<td>√V</td>
+<td>8.80</td>
+</tr>
+<tr>
+<td>平均 x̄</td>
+<td>ΣX/n</td>
+<td>195</td>
+</tr>
+<tr>
+<td>品質指數 Q_U</td>
+<td>(U−x̄)/s</td>
+<td>(209−195)/8.8＝1.59</td>
+</tr>
+<tr>
+<td>形式 1</td>
+<td>Q_U ≥ k？</td>
+<td>1.59 &gt; k=1.53 → <strong>允收</strong></td>
+</tr>
+<tr>
+<td>形式 2</td>
+<td>p̂_U（查表）≤ M？</td>
+<td>2.19% &lt; M=3.32% → <strong>允收</strong></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>🎯 <strong>fx-350MS 快解</strong>：進 SD 模式輸入 5 筆 → 直接叫出 x̄ 與 xσn−1（樣本標準差 s）→ 代 Q＝(U−x̄)/s，比手算 SS 快又不易錯。</p>
+</blockquote>
+<ul>
+<li><strong>雙邊規格（同一 AQL）</strong>：Q_U、Q_L 各查出 p̂_U、p̂_L → <strong>P＝p̂_U＋p̂_L ≤ M</strong> 判定（例 3.10：2.85%&lt;3.32% 允收）。</li>
+<li><strong>雙邊不同 AQL</strong>：分別查 M_U、M_L → 三條件：p̂_U≤M_U、p̂_L≤M_L、P≤max 側（例 3.11）。</li>
+<li>全距法把 s 換成 R̄（樣組平均全距）配係數 c（例 3.12~3.15）；σ 已知把 s 換成 σ 配係數 V（例 3.16~3.19）。</li>
+</ul>
+<h3>3. 計量值＋計數值混合抽樣（例 3.25）</h3>
+<ul>
+<li>步驟：先查 <strong>MIL-STD-414（正常、IV 級）</strong>得計量計畫（n₁、M）；再查 <strong>MIL-STD-105E（加嚴、II 級）</strong>得計數計畫（n、Ac、Re）。第一樣本兼作第二樣本的一部分。</li>
+<li>例 3.25：N=100、AQL=2.5% → 414：代碼 F、n=10、M=7.29%；105E：代碼 F、n=32、Ac=1、Re=2。先抽 10 個算 x̄、s、估計不良率 ≤M 允收；否則補抽 22 個湊 32，不良 ≤1 允收、≥2 拒收（第一樣本已有 2 個不良可直接拒收）。</li>
+</ul>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s12"><h2 onclick="tg(this)">乙九、連續生產型 CSP-1 與逐次抽樣（抽樣檢驗課本 2.5~2.6，P98~109）<span class="ar">▾</span></h2><div class="sb">
+<p>（上午投影片將連續型/逐次型劃線——老師表示非重點，但<strong>綜合測驗 7-18 考過 CSP-1 查表</strong>，仍需會查。）</p>
+<h3>1. CSP-1（MIL-STD-1235；同系列還有 CSP-2、CSP-A、CSP-M）</h3>
+<ul>
+<li>適用<strong>連續生產線</strong>（批不易劃分）；全數檢驗與抽樣檢驗<strong>交替輪換</strong>。</li>
+<li>運作：開始 100% 檢驗 → <strong>連續 i 個無缺點</strong>（且製程勻稱）→ 改按頻率 <strong>f</strong> 抽驗（每 f 個抽 1）→ <strong>一發現不良品即恢復 100% 檢驗</strong>，重新累積 i 個。</li>
+<li>全檢期間檢驗數超過 <strong>L 值</strong> → 顧客有權停止驗收，待改善。</li>
+<li>查表流程（附表五）：表(二)得<strong>頻率代字</strong> → 表(三)由代字×AQL 得 <strong>i 與 f</strong> → 表(四)得 <strong>L</strong>。</li>
+<li>課本實例：N=3,000、AQL=1.5%、II 級 → <strong>i=65、f=1/15、L=325</strong>；綜合測驗 7-18（同條件但 AQL=1.0%）→ <strong>i=100、f=1/15</strong>。</li>
+</ul>
+<h3>2. 逐次抽樣（Sequential）</h3>
+<ul>
+<li>每次抽 1 件即判：允收／拒收／繼續抽；平均抽驗件數最少，<strong>適用破壞性試驗</strong>；唯一不能事先預知抽樣數。</li>
+<li>判定線（由 SPR 逐次機率比推導）：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>允收線</td>
+<td>d₀＝−h₀＋s·n（累計不良 ≤d₀ 允收）</td>
+</tr>
+<tr>
+<td>拒收線</td>
+<td>d₁＝h₁＋s·n（累計不良 ≥d₁ 拒收；之間繼續抽）</td>
+</tr>
+<tr>
+<td>參數</td>
+<td>g₁＝log(p₁/p₀)、g₂＝log[(1−p₀)/(1−p₁)]、a＝log[(1−β)/α]、b＝log[(1−α)/β]</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>h₀＝b/(g₁+g₂)、h₁＝a/(g₁+g₂)、s＝g₂/(g₁+g₂)</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>OC 五點：(0,1)、(p₀,1−α)、(s, h₁/(h₀+h₁))、(p₁,β)、(1,0)。</li>
+<li>例 2.22：p₀=0.05、α=0.05、p₁=0.30、β=0.10 → g₁=log6=0.7782、g₂=log(0.95/0.70)=0.1326 → h₀=1.073、h₁=1.378、<strong>s=0.145</strong> → d₀＝−1.073＋0.145n、d₁＝1.378＋0.145n；化成整數表時<strong>允收數取小於 d₀ 的整數、拒收數取大於 d₁ 的整數</strong>。</li>
+<li>JIS Z9009 為逐次抽樣表（練習 2-14：AQL=1%、α=5%、LTPD=10%、β=10% → h₀=0.939、h₁=1.205、s=0.0397）。</li>
+</ul>
+<hr />
+<button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<section id="s13"><h2 onclick="tg(this)">乙十、抽樣檢驗課本查表索引 ⭐考場翻書用<span class="ar">▾</span></h2><div class="sb">
+<p>《抽樣檢驗》課本（與二十九章的《管制圖》課本是不同本）。<strong>綜合測驗在 P235~240、全部答案在 P242~244</strong>。</p>
+<h3>1. 正文重要表格與例題頁</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>內容</th>
+<th>頁</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JIS Z9002 本表（表 2.1）</td>
+<td>P41</td>
+</tr>
+<tr>
+<td>JIS Z9002 輔助表（表 2.2）</td>
+<td>P45</td>
+</tr>
+<tr>
+<td>AOQL 之 y 係數表（表 2.4）⭐必考</td>
+<td>P49</td>
+</tr>
+<tr>
+<td>ATI 公式 7/8/9</td>
+<td>P50~52</td>
+</tr>
+<tr>
+<td>Dodge-Romig 使用步驟＋例 2.10~2.12</td>
+<td>P54~58</td>
+</tr>
+<tr>
+<td>CNS 2779-1 轉換規則（圖 1）</td>
+<td>P74~77</td>
+</tr>
+<tr>
+<td>CNS 2779-1 使用 8 步驟＋例 2.17~2.20</td>
+<td>P88~91</td>
+</tr>
+<tr>
+<td>CSP-1 實例（i=65、f=1/15、L=325）</td>
+<td>P100~101</td>
+</tr>
+<tr>
+<td>逐次抽樣判定線推導＋例 2.22</td>
+<td>P102~109</td>
+</tr>
+</tbody>
+</table></div>
+<h3>2. 書末附表區（P245 起）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>附表</th>
+<th>內容</th>
+<th>頁</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>附表一</td>
+<td>常數表（對數表、階乘對數表）</td>
+<td>P245~</td>
+</tr>
+<tr>
+<td>附表二</td>
+<td>標準常態分配表</td>
+<td>~P258</td>
+</tr>
+<tr>
+<td><strong>附表三</strong></td>
+<td><strong>Dodge-Romig 四表</strong>（SL/DL/SA/DA；LTPD 8 種、AOQL 13 種）</td>
+<td>約 P260~319（最大宗）</td>
+</tr>
+<tr>
+<td><strong>附表四</strong></td>
+<td><strong>CNS 2779-1 計數值調整型</strong>：表 I 代字 <strong>P323</strong>｜表 II-A/B/C 單次正常/加嚴/減量 <strong>P324/325/326</strong>｜表 III-A/B/C 雙次 <strong>P327~329</strong>｜表 IV-A/B/C 多次 <strong>P330~332</strong>｜表 6C/7A 消費者風險品質 P338~339｜表 V-A（8A）AOQL 係數 <strong>P342</strong>｜表 IX ASN 曲線 <strong>P344</strong>｜表 10K-1（LQ 用）<strong>P352</strong></td>
+<td>P320~355</td>
+</tr>
+<tr>
+<td>附表五</td>
+<td>MIL-STD-1235 CSP-1 表(一)(二)(三)（AOQL、頻率代字、i 值）</td>
+<td>P358~</td>
+</tr>
+<tr>
+<td>附表六</td>
+<td>CNS 9445-1 計量值：表 6A-1 代字 P374~375、k 值表、M 值表等</td>
+<td>P374~395</td>
+</tr>
+<tr>
+<td>附錄</td>
+<td>實務問答 P398~｜MIL-STD-1916 混合抽樣實例 P418~｜跳批隨機抽選 P434</td>
+<td>P396~434</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>🎯 <strong>考場翻書優先順序（抽樣檢驗題）</strong></p>
+<ul>
+<li>調整型查計畫 → <strong>P323 代字表 → P324~332 主表</strong>。</li>
+<li>AOQL 係數（調整型當選別型用）→ <strong>P342</strong>；y 係數（Dodge-Romig 式）→ <strong>P49</strong>。</li>
+<li>規準型 → 本表 <strong>P41</strong>、輔助表 <strong>P45</strong>。</li>
+<li>Dodge-Romig → 附表三（P260~319），先分清 SL/DL/SA/DA。</li>
+<li>ASN 單雙多比較曲線 → <strong>P344</strong>；LQ 單批保證 → <strong>P352</strong>。</li>
+</ul>
+</blockquote>
+<hr />
+<p><em>（待續：後續講義內容會依上傳陸續補充）</em></p><button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+</main>
+<button id="top" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+if(localStorage.getItem('nk-dark')==='1'||(localStorage.getItem('nk-dark')===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');
+function toggleDark(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('nk-dark',d?'1':'0');}
+function tg(h){h.parentNode.classList.toggle('cl');}
+function foldSec(b){var s=b.closest('section');s.classList.add('cl');s.scrollIntoView({block:'start'});}
+function setAll(cl){document.querySelectorAll('section').forEach(function(s){s.classList.toggle('cl',cl);});closeToc();}
+function openToc(){document.getElementById('toc').classList.add('open');document.getElementById('ov').classList.add('on');}
+function closeToc(){document.getElementById('toc').classList.remove('open');document.getElementById('ov').classList.remove('on');}
+addEventListener('scroll',function(){document.getElementById('top').style.display=scrollY>600?'block':'none';});
+var tmr;
+function doSearch(){clearTimeout(tmr);tmr=setTimeout(run,200);}
+function clearMarks(){document.querySelectorAll('mark.sh').forEach(function(m){m.replaceWith(m.textContent);});
+document.querySelectorAll('main mark').length||document.normalize();}
+function run(){
+ var q=document.getElementById('q').value.trim().toLowerCase();
+ document.querySelectorAll('mark.sh').forEach(function(m){var t=document.createTextNode(m.textContent);m.parentNode.replaceChild(t,m);});
+ var hits=0;
+ document.querySelectorAll('section').forEach(function(sec){
+  if(!q){sec.style.display='';sec.classList.remove('cl');return;}
+  var found=false,walker=document.createTreeWalker(sec,NodeFilter.SHOW_TEXT),nodes=[];
+  while(walker.nextNode())nodes.push(walker.currentNode);
+  nodes.forEach(function(n){
+   var t=n.nodeValue,i=t.toLowerCase().indexOf(q);
+   if(i<0)return;
+   found=true;
+   var frag=document.createDocumentFragment(),pos=0,low=t.toLowerCase();
+   while(i>=0){frag.appendChild(document.createTextNode(t.slice(pos,i)));
+    var mk=document.createElement('mark');mk.className='sh';mk.textContent=t.slice(i,i+q.length);frag.appendChild(mk);
+    hits++;pos=i+q.length;i=low.indexOf(q,pos);}
+   frag.appendChild(document.createTextNode(t.slice(pos)));
+   n.parentNode.replaceChild(frag,n);});
+  sec.style.display=found?'':'none';
+  if(found)sec.classList.remove('cl');});
+ document.getElementById('hits').textContent=q?hits+' 處':'';
+}
+</script>
+</body>
+</html>
