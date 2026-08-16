@@ -100,7 +100,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <h1>統計品管 考試速查筆記【乙單元・下午】</h1>
 <hr />
 
-<p class="meta">更新：2026-08-15｜點章節標題可折疊｜考前印紙本請用 PDF 版</p>
+<p class="meta">更新：2026-08-16｜點章節標題可折疊｜考前印紙本請用 PDF 版</p>
 <section id="s1"><h2 onclick="tg(this)">⓪-0 考場翻頁地圖（紙本第一頁）⭐先看這頁<span class="ar">▾</span></h2><div class="sb">
 <blockquote>
 <p>📌 本冊使用法：</p>
@@ -162,6 +162,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 </tbody>
 </table></div>
 <h3>1. 分區 → 章號</h3>
+<p>🏷️ <strong>考前準備</strong>：實體課本標籤照 <strong>乙十§5「乙場帶書貼標籤清單」</strong> 貼好再進考場。</p>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -452,7 +453,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <td>出現 <strong>VL（查證水準）＋CL（A~E）</strong>、<strong>0收1退</strong></td>
 <td>連續調整型</td>
 <td><strong>MIL-STD-1916</strong></td>
-<td>表 I <strong>P194</strong>／II <strong>P195</strong>／III <strong>P196</strong>／IV <strong>P197</strong></td>
+<td>表 I／II 同在 <strong>P195</strong>、III <strong>P196</strong>、IV <strong>P197</strong></td>
 <td><strong>乙十二</strong></td>
 </tr>
 </tbody>
@@ -1168,7 +1169,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tr>
 <tr>
 <td><strong>LTPD</strong>（Lot Tolerance Percent Defective 拒收水準）</td>
-<td>消費者認為品質惡劣的送驗批所含<strong>最低</strong>不良率＝<strong>p₁</strong></td>
+<td>消費者認為品質惡劣的送驗批所含<strong>最低</strong>不良率＝<strong>p₁</strong>；正式別名 <strong>RQL</strong>（Rejectable Quality Level 拒收品質水準，講義：AQL 由生產者決定、RQL 由消費者決定）</td>
 <td>允收機率 Pa＝<strong>10%</strong> 時之不良率</td>
 </tr>
 <tr>
@@ -1226,6 +1227,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>③ 任何抽樣計畫都無法完全避免不良品混入。</li>
 <li>④ 允收數 c 不必等於 0：n 加大時 c≥1 也可得同等保證，且生產者心理較安。</li>
 <li>⑤ <strong>n 愈大，OC 曲線愈陡，區分好壞批能力愈強</strong>；<strong>c 愈小，計畫愈嚴</strong>（允收率下降）。</li>
+<li>⑥（講義補充第❼點）<strong>c 與 n 的搭配有降低檢驗成本的可能</strong>——同等保證下選 n 較小的組合省檢驗費。</li>
 </ul>
 <h3>4. 單次抽樣 OC 曲線計算（例 2.4）</h3>
 <p>N=10,000、n=100、c=4；n/N=0.01＜0.1 → 查卜氏表（λ=np，c=4 欄）。</p>
@@ -1387,7 +1389,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <td>12~19</td>
 <td>1.5</td>
 <td>8~18</td>
-<td>4.0</td>
+<td><strong>4.5</strong>（⚠️講義表10-1 印 4.5；本表舊版曾抄 4.0，以講義為準）</td>
 </tr>
 <tr>
 <td>20~48</td>
@@ -1560,6 +1562,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <p>步驟：算 <strong>p₁/p₀</strong> → 查得 c → 把 p₀、p₁（<strong>百分率值</strong>）代入 n 公式 → n 不是整數就<strong>無條件進位</strong>。</p>
 <p>例 2.7：p₀=0.8%、p₁=2% → 交點為＊ → p₁/p₀＝2.5（落 2.7~2.3）→ c=10 → n＝308/0.8＋770/2＝385＋385＝<strong>770</strong> →（N=3,000, n=770, c=10）。</p>
 <blockquote>
+<p>💡 <strong>查表近似的觀念題（講義例 2.6-1 檢討）</strong>：p₀=0.65%、α=5%、p₁=3%、β=10% 查表得 (200, 3)，但精算應為 (211, 3)——<strong>查表是近似</strong>，等於把 p₀ 放寬到約 0.68%、p₁ 退讓到約 3.34%。考「查表值與理論值為何不同」就是這個觀念。</p>
 <p>⚠️ <strong>使用 JIS Z9002 的三個注意</strong></p>
 <ul>
 <li>查得 n＞N 時 → 改<strong>全數檢驗</strong>。</li>
@@ -1826,6 +1829,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>使用步驟：選單/雙次 → 求作業平均不良率 <strong>p̄</strong> → 定 N → 選 LTPD（或 AOQL）值 → 找對應表 → 依 N 與 p̄ 範圍查 n、c（或 n₁c₁n₂c₂）。</li>
 <li>例 2.11：N=2,000、p̄=1%、LTPD=4% → SL-4.0% 表：n=195、c=4（AOQL=1.2%）。</li>
 <li>例 2.12：N=1,000、AOQL=3%、p̄=1% → SA-3.0% 表：n=44、c=2（pt=11.8%）。</li>
+<li>講義練習例 2.12-1：N=1,800、p̄=0.45%、AOQL=2% → 單次 (65, 2)、pt=8.2%；雙次 (37,0)＋(63,3)、pt=7.5%。</li>
 </ul>
 <blockquote>
 <p>⚠️ <strong>無表可查的限制</strong></p>
@@ -1884,14 +1888,19 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tr>
 <tr>
 <td>CRQ 消費者風險品質</td>
-<td>對應某規定消費者風險（通常 10%）的品質水準（新制取代「界限品質」表）</td>
+<td>對應某規定消費者風險（通常 10%）的品質水準（新制取代「界限品質」表）；課本附表另有生產者風險表 5A~5C、CRQ 表 6A~7C</td>
 </tr>
 <tr>
 <td>LQ 界限品質</td>
 <td>單獨批考量時，限制在低允收機率的品質水準（意義相當於選別型的 LTPD）</td>
 </tr>
+<tr>
+<td>品質表示公式</td>
+<td><strong>不符合品項百分率＝(d/n)×100</strong>；<strong>百件不符合數＝(100D/N)</strong>（D＝不符合總數，可＞100）</td>
+</tr>
 </tbody>
 </table></div>
+<p><strong>適用範圍（CNS 2779-1 條文 9 項，講義 P65）</strong>：最終產品／零組件及原料／操作或<strong>服務</strong>／在製品／過程中物料／庫存供應品／維修操作／<strong>數據或紀錄</strong>／<strong>行政管理程序</strong>——不只實體產品，服務與文書也適用（觀念題）。</p>
 <blockquote>
 <p>⚠️ <strong>AQL 值的上限（規定）</strong></p>
 <ul>
@@ -2127,12 +2136,12 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <tr>
 <td>選別型</td>
 <td>拒收批全檢剔選；查<strong>表 8A（105E 表 V-A，P342）</strong>得 AOQL 係數，AOQL＝係數×(1−n/N)</td>
-<td>例 2.14：代字 H、AQL1.5% → 2.74 → <strong>AOQL=2.74×0.9=2.47%</strong>；例 2.15 反向：AOQL=6% → 6/0.9=6.67 → 表中找 ≤6.67 得 6.3x → <strong>AQL=4.0%</strong> → (50, Ac5, Re6)</td>
+<td>例 2.14：代字 H、AQL1.5% → 2.74 → <strong>AOQL=2.74×0.9=2.47%</strong>（✅三方核實：頂層 pptx、老師手寫、AOQL=y(1/n−1/N) 交叉驗算 2.4696%；⚠️下午講義另一份簡報印 2.7/2.43% 為舊版誤植）；例 2.15 反向：AOQL=6% → 6/0.9=6.67 → 表中找 ≤6.67 得 6.3x → <strong>AQL=4.0%</strong> → (50, Ac5, Re6)</td>
 </tr>
 <tr>
 <td>單批 LQ 保證</td>
 <td>查<strong>表 7A／表 10K-1（P352）</strong>：Pa=10% 列向右找 ≤LQ 的值 → 往上讀 AQL → 查主表</td>
-<td>例 2.16：N=2,000、LQ=5%、Pa=10% → 4.26 → AQL=0.65% → <strong>(125, Ac2, Re3)</strong></td>
+<td>例 2.16：N=2,000、LQ=5%、Pa=10% → 4.26 → AQL=0.65% → <strong>(125, Ac2, Re3)</strong>；變體（Pa=β=<strong>25%</strong> 版）：同 N、LQ=5% → 4.09 → AQL=1.0% → (125, Ac3, Re4)</td>
 </tr>
 <tr>
 <td>規準型</td>
@@ -2152,6 +2161,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>dCr ≤ 2 <strong>且</strong> dMa ≤ 3 <strong>且</strong> dMi ≤ 7 <strong>且</strong> dCr＋dMa＋dMi ≤ 10。</li>
 <li>意義：三類缺點各自不能超標，且<strong>不可同時以最高允收數出現</strong>（總量再卡一道）。</li>
 </ul>
+<p>⚠️ <strong>對答案注意：兩份調整型簡報的例題編號不同步</strong>——「N=3,000、AQL1.5%、單次」在頂層《2CQT-2-1抽樣計畫》pptx 標「例2.17」（＝本筆記編號）；下午講義那份《2CQT-1調整型》pptx 卻標「例2.18」，且它的「例2.17」是另一題（LQ、Pa=25%）。對照下午講義時以題目內容認題，別只看編號。</p>
 </blockquote>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
@@ -2215,6 +2225,9 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tr>
 </tbody>
 </table></div>
+<blockquote>
+<p>⚠️ <strong>編號陷阱（課本 P113~115，✅08-16 補拍核對）</strong>：課本第 3 章基本原理節的命名順序<strong>相反</strong>——「<strong>第一型</strong>」＝p̂ ≤ M（M 法）、「<strong>第二型</strong>」＝Zᵤ=(U−x̄)/σ ≥ k（k 法，等價於 <strong>x̄ ≤ U−kσ＝A</strong>，把 k 換成 x̄ 的規格界限 A）。而 MIL-STD-414 的慣例是<strong>形式 1＝k 法、形式 2＝M 法</strong>。考題問「第一型/第二型」看是引課本原理節還是 414 表，別背反。</p>
+</blockquote>
 <h3>2. 標準計算步驟（s 法，例 3.8/3.9 為模板）⭐</h3>
 <p>題型：規格上限 U=209°F、N=40、IV 級水準、正常、AQL=1%、n=5，觀測值 197,188,184,205,201。</p>
 <div class="tw"><table>
@@ -2389,7 +2402,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>圖解法：畫直線 x̄＝U−ks（上限，<strong>線下方為允收區</strong>）或 x̄＝L＋ks（下限，線上方允收）；逐批描 (s, x̄) 點判定。</li>
 <li><strong>x̄ 落在規格界限外 → 不必算 s 即可判不允收</strong>（紀錄完整性仍要算）。</li>
 <li>課本例 3.8（單邊上限）：U=60℃、N=100、II 級、AQL=2.5%、正常 → 代字 F、n=13、k=1.426（P375）。13 筆量測 → x̄=54.62、s=3.330 → Qᵤ＝(60−54.62)/3.330＝1.617 &gt; 1.426 → <strong>允收</strong>。</li>
-<li>課本例 3.9（單邊下限＋箭頭）：L=4.0 秒、N=1,000、II 級、AQL=0.1% → 代字 J 遇<strong>↓箭頭 → 改用代字 K</strong>：n=28、k=2.580（P395）。x̄=6.551、s=0.3251 → Q_L＝7.847 &gt; 2.580 → <strong>允收</strong>。</li>
+<li>課本例 3.9（單邊下限＋箭頭）：L=4.0 秒、N=1,000、II 級、AQL=0.1% → 代字 J 遇<strong>↓箭頭 → 改用代字 K</strong>：n=28、k=2.580（表 B-1，<strong>P375</strong>；舊註 P395 有誤——P395 是附錄二 ASN 公式）。x̄=6.551、s=0.3251 → Q_L＝7.847 &gt; 2.580 → <strong>允收</strong>。</li>
 </ul>
 <blockquote>
 <p>🎯 <strong>fx-350MS 快解</strong>：SD 模式輸入資料 → SHIFT→2 取 x̄ 與 xσn−1（＝s）→ 代 Q＝(U−x̄)/s 或 (x̄−L)/s，直接和 k 比大小。</p>
@@ -2574,7 +2587,15 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tr>
 <tr>
 <td>1916 表 I（代字）／表 II（計數 na）／表 III（計量 n,k,F）／表 IV（連續 i,f）</td>
-<td><strong>P194／P195／P196／P197</strong></td>
+<td><strong>P195／P195／P196／P197</strong>（⚠️表 I 與表 II 同在 P195；P194 是第 4 章練習題，舊註 P194 有誤）</td>
+</tr>
+<tr>
+<td>卜氏分配曲線圖（Thorndike 圖解，讀 Pa 的替代法）</td>
+<td>P22~23</td>
+</tr>
+<tr>
+<td>表 6.1 ASTM(D492-48)／BS(1017) 最大粒度與取量對照</td>
+<td>P231</td>
 </tr>
 <tr>
 <td>計量 vs 計數：表 5.1（特性比較）／表 5.2（樣本數）／<strong>表 5.3（常用抽樣表總覽⭐）</strong></td>
@@ -2587,6 +2608,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tbody>
 </table></div>
 <h3>2. 書末附表區（P245 起）</h3>
+<p>✅ 2026-08-16 已用附件掃描逐頁重建（_28~_128＝P235~434 全數核對）：</p>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -2598,33 +2620,68 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <tbody>
 <tr>
 <td>附表一</td>
-<td>常數表（對數表、階乘對數表）</td>
-<td>P245~</td>
+<td>1-1 對數表 P245~247｜1-2 階乘對數表 P246~251｜<strong>1-3 亂數表 P252~253</strong>（隨機抽樣選號）</td>
+<td>P245~253</td>
 </tr>
 <tr>
 <td>附表二</td>
-<td>標準常態分配表</td>
-<td>~P258</td>
+<td><strong>2-1 卜氏分配數值表 P253~257 ⭐（np×c → 累積 Pa，抽樣計畫算允收機率最常翻）</strong>｜2-2 標準常態分配表 P258~259</td>
+<td>P253~259</td>
 </tr>
 <tr>
 <td><strong>附表三</strong></td>
-<td><strong>Dodge-Romig 四表</strong>（SL/DL/SA/DA；LTPD 8 種、AOQL 13 種）</td>
-<td>約 P260~319（最大宗）</td>
+<td><strong>Dodge-Romig 四表</strong>：SL <strong>P260~267</strong>｜DL <strong>P268~283</strong>（每種 LTPD 跨 2 頁）｜SA <strong>P284~296</strong>｜DA <strong>P297~322</strong>（每種 AOQL 跨 2 頁）。單次一種佔 1 頁、雙次一種佔 2 頁——看到「(續)」翻下一頁接著讀</td>
+<td>P260~322</td>
 </tr>
 <tr>
 <td><strong>附表四</strong></td>
-<td><strong>CNS 2779-1 計數值調整型</strong>（8 張表的明細拆表見<strong>本章§3</strong>）</td>
-<td>P320~355</td>
+<td><strong>CNS 2779-1 計數值調整型</strong>（主表明細見<strong>本章§3</strong>）；主體含 LQ 個別代字表 10G~10M 到 <strong>P357</strong></td>
+<td>P320~357</td>
+</tr>
+<tr>
+<td>附表五</td>
+<td>MIL-STD-1235（<strong>CSP-1 連續生產型</strong>）表(三) i 值——<strong>不考</strong>，別誤翻</td>
+<td>P358~360</td>
 </tr>
 <tr>
 <td>附表六</td>
-<td>CNS 9445-1 計量值：表 A.1 代字 <strong>P374~375</strong>、表 B-1 s法 k 值 <strong>P375</strong>、表 C-1 σ法 <strong>P378</strong>、表 D fs(MSSD) <strong>P381~383</strong>（正常/加嚴/減量）、表 E-1 f_σ(MPSD) <strong>P384</strong>、表 G-1 p* <strong>P388</strong>、M 值表等</td>
-<td>P374~395</td>
+<td>CNS 9445-1 計量值：<strong>P361~373＝圖 6-1~6-13（各代字 OC 曲線）</strong>；表 A.1 代字 <strong>P374</strong>、表 B（s 法 k 值）正常/加嚴/減量 <strong>P375~377</strong>、表 C（σ 法）<strong>P378~381</strong>、表 D fs(MSSD) <strong>P381~383</strong>、表 E f_σ(MPSD) <strong>P384~385</strong>、表 F（p̂ 之 Q 值）<strong>P385~387</strong>、表 G p* <strong>P388</strong>、表 I 減量資格附加允收常數 <strong>P389</strong>（⚠️舊註「起點 P374」有誤，附表六自 P361 起）</td>
+<td><strong>P361~389</strong></td>
 </tr>
 <tr>
-<td>附錄</td>
-<td>實務問答 P398~｜MIL-STD-1916 混合抽樣實例 P418~｜跳批隨機抽選 P434</td>
-<td>P396~434</td>
+<td>附表七</td>
+<td>JIS Z9009 逐次抽樣表——<strong>不考</strong></td>
+<td>P390</td>
+</tr>
+<tr>
+<td>附錄一</td>
+<td>JIS Z9003 單邊規格公式推導</td>
+<td>P391~394</td>
+</tr>
+<tr>
+<td>附錄二</td>
+<td>單/雙/多次 <strong>ASN 公式推導</strong></td>
+<td>P395</td>
+</tr>
+<tr>
+<td>附錄三</td>
+<td>品管信箱問答 4 題（Dodge-Romig 計算、105E 實務）</td>
+<td>P396~403</td>
+</tr>
+<tr>
+<td><strong>附錄四</strong></td>
+<td><strong>MIL-STD-1916 vs MIL-STD-105E 應用比較（17 項逐條對照＋調整型流程圖）⭐乙十二觀念題重要來源</strong></td>
+<td><strong>P404~413</strong></td>
+</tr>
+<tr>
+<td>附錄五</td>
+<td>允收機率計算範例／OC 曲線比較／<strong>1916 標準完整應用實例（品質指數 Qu、K 值判定）</strong></td>
+<td>P414~419</td>
+</tr>
+<tr>
+<td>附錄六</td>
+<td>ISO 2859-3 <strong>跳批</strong>抽樣程序（資格得分、頻率、骰子隨機抽選法 P433~434）</td>
+<td>P420~434</td>
 </tr>
 </tbody>
 </table></div>
@@ -2675,8 +2732,8 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tr>
 <tr>
 <td>LQ 單批保證</td>
-<td>表 10K-1</td>
-<td><strong>P352</strong></td>
+<td>表 10G~10M（代字 G/H/J/K/L/M 各一組，含 OC 曲線＋10x-1/10x-2）</td>
+<td>P346~357（<strong>K＝P352~353</strong>）</td>
 </tr>
 </tbody>
 </table></div>
@@ -2697,6 +2754,122 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li><strong>乙十一</strong>✅：表 3.1＝P122、表 3.2＝P123、表 3.3＝P124~125（主表＋輔助表同編 3.3）、表 3.4＝P129，頁碼全對。</li>
 <li><strong>乙十一例 3.7</strong>✅：課本 P131 原文 n=137、k=2.08。</li>
 <li><strong>乙十二 表 III 的 F 值</strong>✅：課本 P196 為三位小數（A 列 .136/.145/.157/.174/.193/.222/<strong>.271</strong>/<strong>.370</strong>/.707），以課本為準。</li>
+</ul>
+</blockquote>
+<h3>5. 🏷️ 乙場帶書貼標籤清單（考前照這張貼）⭐⭐</h3>
+<p>100 題／2 小時＝<strong>平均 72 秒一題</strong>。乙場的查表題比甲場多，這本《抽樣檢驗》課本標籤要貼滿：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>標籤寫什麼</th>
+<th>貼哪頁</th>
+<th>什麼時候翻</th>
+<th>筆記有無縮版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Z9002 本表</strong></td>
+<td><strong>P41</strong>（表 2.1）</td>
+<td>規準型查 (n, c)</td>
+<td>❌ 大表<strong>必翻</strong>（查表步驟在乙五）</td>
+</tr>
+<tr>
+<td>Z9002 輔助表</td>
+<td>P45（表 2.2）</td>
+<td>＊號時查 c 算 n</td>
+<td>✅ 乙五§3 已整表收錄（保險）</td>
+</tr>
+<tr>
+<td>y 係數表</td>
+<td>P49（表 2.4）</td>
+<td>AOQL＝y(1/n−1/N)</td>
+<td>✅ 乙六§3 已收錄</td>
+</tr>
+<tr>
+<td><strong>卜氏表</strong></td>
+<td><strong>P253</strong>（附表二 2-1）</td>
+<td>算允收機率 Pa（λ=np 查累積）</td>
+<td>❌ <strong>必翻</strong>（最常用的一張）</td>
+</tr>
+<tr>
+<td>常態表</td>
+<td>P258（附表二 2-2）</td>
+<td>計量值抽樣查 Z</td>
+<td>常用值在筆記</td>
+</tr>
+<tr>
+<td><strong>D-R 表</strong></td>
+<td><strong>P260</strong>（附表三起點）</td>
+<td>選別型 SL/DL/SA/DA 查 (n, c)</td>
+<td>❌ <strong>必翻</strong>；分段 SL260/DL268/SA284/DA297</td>
+</tr>
+<tr>
+<td><strong>代字表</strong></td>
+<td><strong>P323</strong>（附表四 表 I）</td>
+<td>調整型第一步查樣本代字</td>
+<td>❌ <strong>必翻</strong></td>
+</tr>
+<tr>
+<td><strong>單次主表</strong></td>
+<td><strong>P324~326</strong>（II-A/B/C 正常/加嚴/減量）</td>
+<td>調整型查 n/Ac/Re（雙次 327~329、多次 330~332 順頁）</td>
+<td>❌ <strong>必翻</strong>（乙場核心）</td>
+</tr>
+<tr>
+<td>AOQL 係數</td>
+<td>P342（表 8A）</td>
+<td>調整型當選別型用</td>
+<td>例題結果在乙七§6</td>
+</tr>
+<tr>
+<td>ASN 曲線</td>
+<td>P344（表 9）</td>
+<td>單/雙/多次檢驗量比較</td>
+<td>結論（62%/87%）在乙七§7</td>
+</tr>
+<tr>
+<td>LQ 表</td>
+<td>P346（表 10G 起）</td>
+<td>單批 LQ 保證</td>
+<td>查法在乙七§6</td>
+</tr>
+<tr>
+<td><strong>Z9003/9004</strong></td>
+<td><strong>P122~129</strong>（表 3.1~3.4）</td>
+<td>計量規準型查 n、k、G₀</td>
+<td>門檻值部分在乙十一，全表要翻</td>
+</tr>
+<tr>
+<td><strong>9445-1 k 值</strong></td>
+<td><strong>P374~375</strong>（表 A.1 代字＋表 B-1）</td>
+<td>計量調整型 s 法查 n、k（練習 3-2~3-12 全靠它；σ 法 P378）</td>
+<td>❌ <strong>必翻</strong></td>
+</tr>
+<tr>
+<td><strong>1916 表</strong></td>
+<td><strong>P195~197</strong>（表 I~IV 集中四頁）</td>
+<td>MIL-STD-1916 查 CL/na/n,k,F/i,f</td>
+<td>❌ <strong>必翻</strong>（表 I、II 同在 P195）</td>
+</tr>
+<tr>
+<td>1916vs105E</td>
+<td>P404（附錄四）</td>
+<td>兩標準比較觀念題不確定時</td>
+<td>重點已在乙十二，翻書當保險</td>
+</tr>
+<tr>
+<td>綜合測驗解答</td>
+<td>P242</td>
+<td>（練習用，考試不用）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<ul>
+<li>標籤顏色建議：紅＝必翻大表（Z9002 本表、卜氏表、D-R、代字＋主表、9445-1、1916）、藍＝保險。</li>
+<li>⚠️ <strong>P358~360（CSP-1）與 P390（逐次）不考</strong>——翻到這兩區表示翻錯了，往前或往後翻。</li>
 </ul>
 </blockquote>
 <hr />
@@ -2857,6 +3030,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tr>
 </tbody>
 </table></div>
+<p>表 3.2 門檻值全表（P0 → 門檻，講義完整 13 欄）：0.10%→<strong>7.9</strong>、0.15%→7.7、0.25%→7.4、0.40%→7.0、0.65%→<strong>6.7</strong>、1.0%→<strong>6.4</strong>、1.5%→6.1、2.5%→5.7、4.0%→5.2、6.5%→4.7、10%→4.2、15%→<strong>3.8</strong>（記兩端 7.9／3.8 與常用 1%→6.4 即可，其餘考場翻 P123）。</p>
 <ul>
 <li>例 3.3（平均值）：長度 10±0.05 合格、10±0.07 不合格，σ=0.02 → (mᵤ₁−mᵤ₀)/σ＝1.00 → n=9、G₀=0.548；檢核 (10.05−9.95)/(0.02/√9)＝15 &gt; 1.7 ✓ → 允收區間 <strong>9.94 ≤ x̄ ≤ 10.06mm</strong>。</li>
 <li>例 3.4（不良率）：鋼珠 6±0.05，p₀=1%、p₁=6%、σ=0.01 → (Sᵤ−Sʟ)/σ＝10 &gt; 6.4 ✓ → n=14、k=1.88 → <strong>5.97 ≤ x̄ ≤ 6.03mm</strong> 允收。</li>
@@ -2955,6 +3129,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>要查 <strong>n／k／F／i／f</strong> → <strong>§4</strong>（表 I~IV 怎麼查、加嚴左欄減量右欄）</li>
 <li>判<strong>鬆緊怎麼轉</strong> → <strong>§5</strong> 速記表</li>
 <li>計算判定（K 法／F 法／連續抽樣／OC）→ <strong>§6~§7</strong></li>
+<li>1916 vs 105E 逐條比較（17 項）→ 課本<strong>附錄四 P404~413</strong>（觀念題來源，考前翻一次）</li>
 </ul>
 </blockquote>
 <h3>1. 精神與特點 ⭐（觀念題大本營）</h3>
@@ -3076,7 +3251,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </thead>
 <tbody>
 <tr>
-<td>表 I（P194）</td>
+<td>表 I（<strong>P195</strong>，⚠️非 P194——P194 是第 4 章練習題，表 I 與表 II 同頁）</td>
 <td>批量 × VL(VII~I)</td>
 <td><strong>樣本代字 CL（A~E）</strong></td>
 </tr>
@@ -3195,6 +3370,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </blockquote>
 <ul>
 <li>連續抽樣（表 IV）：生產開始 <strong>100% 篩選 → 連續 i 件合格 → 改頻率 f 抽驗</strong>；抽驗發現不符合／生產中斷 3 工作天以上／不再穩定 → <strong>回 100%</strong>。先決條件：移動性產品、有 100% 檢驗的場地設備人力、製程穩定。發現<strong>嚴重</strong>不合格品 → 前次合格件之後全部檢驗。</li>
+<li>完整走一遍（講義範例，VL-II、生產 8 小時 800 件）：查表 IV 得 <strong>i=116、f=1/48</strong> → 開始 100% 篩選，連續 116 件合格 → 轉抽驗每 48 件抽 1 件 → 抽驗發現不合格 → <strong>回 100% 篩選重新累計 i</strong>。</li>
 </ul>
 <h3>7. 應用實例 ⭐（三題都完整演練過）</h3>
 <ul>
@@ -3251,6 +3427,11 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <td>拒收證據</td>
 <td>樣本不良數超過 Ac</td>
 <td><strong>估計不良率</strong>超標——<strong>批中可能一個不良品都沒有</strong></td>
+</tr>
+<tr>
+<td>轉換關係</td>
+<td><strong>Go／No-Go（規準）檢驗＝把計量特性改為計數值抽樣</strong>（用界限規判過/不過）</td>
+<td>—</td>
 </tr>
 </tbody>
 </table></div>
@@ -3477,6 +3658,8 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>瓶中液化氣體<strong>自液化部份抽樣</strong>（氣化部份偏含易揮發成份）。</li>
 <li>連續體儘量<strong>不斷而測定</strong>（放射線、X 光、電阻等間接量測），或找相關特性避免破壞。</li>
 <li>水份測定用樣本<strong>另抽一份</strong>；最好用自動抽樣。</li>
+<li>液體樣本 12 種命名（課本 P222~227，A~L；名詞配對題認得即可）：<strong>平均</strong>樣本、<strong>全層</strong>樣本、<strong>上部／中部／下部</strong>樣本、<strong>混合</strong>樣本、<strong>頂部</strong>樣本（Top）、<strong>出口</strong>樣本、<strong>連續</strong>樣本、<strong>柄杓</strong>樣本（Dipper）、<strong>攪拌</strong>樣本等；泥狀體可用<strong>卡片法</strong>（100 張卡分 25 區隨機抽）。</li>
+<li>塊粉取量的具體磅數對照＝<strong>表 6.1（P231，ASTM D492-48／BS 1017）</strong>——考數字時翻書。</li>
 </ul>
 <hr />
 <p><em>（待續：後續講義內容會依上傳陸續補充）</em></p><button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
