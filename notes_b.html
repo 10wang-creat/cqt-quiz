@@ -114,7 +114,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <h1>統計品管 考試速查筆記【乙單元・下午】</h1>
 <hr />
 
-<p class="meta">更新：2026-09-05｜點章節標題可折疊｜考前印紙本請用 PDF 版</p>
+<p class="meta">更新：2026-09-06｜點章節標題可折疊｜考前印紙本請用 PDF 版</p>
 <section id="s1"><h2 onclick="tg(this)">⓪-0 考場翻頁地圖（紙本第一頁）⭐先看這頁<span class="ar">▾</span></h2><div class="sb">
 <blockquote>
 <p>📌 本冊使用法：</p>
@@ -176,7 +176,7 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 </tbody>
 </table></div>
 <h3>1. 分區 → 章號</h3>
-<p>🏷️ <strong>考前準備</strong>：實體課本標籤照 <strong>乙十§5「乙場帶書貼標籤清單」</strong> 貼好再進考場。</p>
+<p>🏷️ <strong>考前準備</strong>：實體課本標籤照 <strong>乙十§4「乙場帶書貼標籤清單」</strong> 貼好再進考場。</p>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -1099,6 +1099,42 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <li>多次：雙次之延續；<strong># 記號＝第 1 次樣本不允收該批</strong>（只能繼續抽或拒收）。</li>
 <li>逐次：每次僅抽 1 個，累計判定；唯一不能事先預知抽樣數。（形式分類要認得；<strong>判定線計算不考</strong>）</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：雙次抽樣判定——三段式，第二次看「累計」</strong></p>
+<ul>
+<li>誤區：把「d₁ &gt; c₁」直接當拒收；或第二次只看 d₂ 不看 d₁+d₂；或以為雙次「檢驗量加倍」。</li>
+<li>正確（n₁,c₁；n₂,c₂）：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>第一次結果</th>
+<th>處置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d₁ ≤ c₁</td>
+<td>允收，不抽第二次</td>
+</tr>
+<tr>
+<td>d₁ &gt; c₂</td>
+<td>拒收，不抽第二次</td>
+</tr>
+<tr>
+<td>c₁ &lt; d₁ ≤ c₂</td>
+<td>抽 n₂；<strong>d₁+d₂ ≤ c₂ 允收</strong>，否則拒收</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>迷你例（#2318：50,2；100,8）：d₁=3 → 不能允收（3&gt;2）要抽第二次；d₁=4 再抽、合計 8 ≤ 8 允收；d₁=8 未超過 c₂ 仍要抽第二次；合計 9 才拒收。</li>
+<li>
+<h1>1901：雙次的好處＝品質很好或很壞時第一次就能判，<strong>平均檢驗量（ASN）較少</strong>——不是「拒收更多批」。</h1>
+</li>
+<li>判斷關鍵：選項出現「d₁ &gt; c₁ 拒收」一定錯；表格上若給 Re₁（如 CNS 2779-1）則 d₁ ≥ Re₁ 才第一次拒收。</li>
+</ul>
+</blockquote>
 <h3>7. 單次／雙次／多次比較表 ⭐⭐（練習 1-5～1-7 有考過，必背）</h3>
 <div class="tw"><table>
 <thead>
@@ -1247,6 +1283,16 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <li>缺點：批的資訊較少、有允收壞批/拒收好批之風險、合格批中仍有不良品、規劃較費時。</li>
 <li><strong>隨機抽樣為必要條件</strong>（螢光重點）；發現樣本有不良品不能立即武斷全批不良。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：抽樣驗收的目的是「判定允收／拒收」，不是「估計批品質」</strong></p>
+<ul>
+<li>誤區：把「抽樣驗收」跟「抽樣估計」混在一起，選了「目的在估計批貨品質」為正確。</li>
+<li>正確：抽樣驗收＝對送驗批做<strong>允收／拒收的決策</strong>；它不能「藉檢驗建立品質」（品質是做出來的）。</li>
+<li>同批品質相同的各批，抽驗後仍會<strong>有些允收、有些拒收</strong>（隨機性）——這句是對的。</li>
+<li>適用時機：檢驗成本高於放過不良品的代價、破壞性檢驗、大量連續生產。</li>
+<li>判斷關鍵：「估計批品質」四個字出現在目的裡就是錯的敘述。</li>
+</ul>
+</blockquote>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s5"><h2 onclick="tg(this)">乙二、允收機率計算：超幾何／二項／卜氏（抽樣檢驗課本 2.1，P15~23）<span class="ar">▾</span></h2><div class="sb">
@@ -1292,6 +1338,46 @@ color:var(--fg);border-radius:50%;width:42px;height:42px;font-size:18px;display:
 <li>⚠️ 其他教材常寫 <strong>np≤5</strong>；題目若採 5 的版本，以題目所引標準為準。</li>
 <li>三法結果很接近——同一組數據（N 大、p=3%、n=100、d=0）：超幾何 0.04036、二項 0.04755、卜氏 0.04979 ≈ 0.05。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯7題）：允收機率——先看 n/N 決定分配，再算</strong></p>
+<ul>
+<li>誤區：N 很小（n/N ≥ 0.1）仍用二項或卜氏；或 c=0 時忘了 Pa 就是 P(d=0)。</li>
+<li>正確判分配：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>條件</th>
+<th>用哪個</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n/N ≥ 0.1（小批不放回）</td>
+<td><strong>超幾何</strong></td>
+<td>Pa＝Σ C(Np,d)·C(N−Np,n−d) ÷ C(N,n)</td>
+</tr>
+<tr>
+<td>n/N &lt; 0.1、n 不大</td>
+<td><strong>二項</strong></td>
+<td>Pa＝Σ C(n,d)·p^d·(1−p)^(n−d)</td>
+</tr>
+<tr>
+<td>n/N &lt; 0.1、n &gt; 16、p &lt; 10%、λ=np ≤ 7</td>
+<td><strong>卜氏（查表最快）</strong></td>
+<td>Pa＝Σ (λ^d/d!)·e^(−λ)</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>迷你例 #348/#349：N=20、5 不良、n=2、c=0 → n/N=0.1 → 超幾何 → Pa＝C(15,2)/C(20,2)＝105/190＝<strong>21/38</strong>。fx-350MS：<code>15 SHIFT nCr 2 ÷ 20 SHIFT nCr 2 =</code>。</li>
+<li>迷你例 c=0 二項：#1825 n=6、p=0.05 → 0.95⁶＝0.735 ≈ <strong>74%</strong>；#1862 n=20、良率 0.9 → 0.9²⁰＝<strong>0.122</strong>。按鍵：<code>0.95 ^ 6 =</code>。</li>
+<li>迷你例 c=1：#1835 n=10、p=0.02 → 0.98¹⁰＋10×0.02×0.98⁹＝0.817＋0.167＝<strong>0.984</strong>。</li>
+<li>陷阱：同一題在不同卷選項不同——#1095 給 98.2%（卜氏 λ=0.2 查表）、#1835 給 98.5%（二項精算），<strong>選最接近的那個</strong>，兩法差 0.3% 內。</li>
+<li>判斷關鍵：題目寫「查卜氏表」→ 直接 λ=np 查表；題目給 N ≤ 50 → 超幾何；c=0 的題永遠只算 P(0)。</li>
+</ul>
+</blockquote>
 <h3>2. 例題示範（例 2.1~2.3）</h3>
 <p>例 2.1（超幾何）：N=1,000、p=3%、n=100 → Np=30。
 P₀＝C(30,0)C(970,100)/C(1000,100)＝0.04036；P₁＝C(30,1)C(970,99)/C(1000,100)＝0.13895。
@@ -1314,6 +1400,16 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>P(d＝0)＝F(0)＝0.050。</li>
 <li>P(d＝1)＝F(1)−F(0)＝0.199−0.050＝0.149。</li>
 <li>這招是雙次抽樣 Pa 計算（乙三章「畫表格」法）的基礎。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯9題）：卜氏查表求 Pa／拒收率／反查 p</strong></p>
+<ul>
+<li>誤區：查到 P(d=c) 單點而非累計 P(d ≤ c)；問「拒收機率」忘了 1−Pa；問「允收數 c=1」誤讀 c=0 欄。</li>
+<li>正確：λ＝n·p → 課本附表二 2-1（<strong>P253~257</strong>）找 λ 列、c 欄 → 讀累計 Pa。無表時 c ≤ 2 手算：Pa＝e^(−λ)(1＋λ＋λ²/2)。</li>
+<li>迷你例：#1085 λ=3、c=1 → 0.199；#1447 λ=2.5、c=3 → 0.758；#1469 c=2：λ=1.5/2.5/5 → 0.809/0.544/0.125；#1091 λ=0.3、c=0 → e^(−0.3)＝0.741。</li>
+<li>拒收率：#1874 λ=1.6、c=1 → Pa＝0.525 → 拒收 0.475（選項沒有 → <strong>以上皆非</strong>）；#1094 缺點 λ=1/3、c=0 → 拒收＝1−e^(−1/3)＝0.28。</li>
+<li>反查 p（#1523）：c=0 → Pa＝e^(−np) → np＝−ln(Pa)＝ln(1/0.8)＝0.223 → p＝0.223/80＝0.28%。按鍵：<code>ln ( 1 ÷ 0.8 ) ÷ 80 =</code>。</li>
+<li>fx-350MS e^x：<code>SHIFT ln (−) 0.48 =</code> → 0.619（#1519）。</li>
+<li>判斷關鍵：「有一件或以上即退貨」＝c=0；「2 件或以上退貨」＝c=1；問「拒收」先算 Pa 再 1−Pa。</li>
 </ul>
 </blockquote>
 <hr />
@@ -1386,6 +1482,16 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>壞批被允收 → <strong>消費者</strong>吃虧 → β＝消費者冒險率（10%）。</li>
 <li>α 在 OC 曲線<strong>左上</strong>（AQL 處距 100% 的缺口）；β 在<strong>右下</strong>（LTPD 處的殘餘允收率）。</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：AQL 由 Pa=0.95 反推；α 大 β 小是「保護消費者」</strong></p>
+<ul>
+<li>誤區：#1818 不知道「AQL 之不良率」要用 Pa＝1−α＝0.95 反查 np；#1878 把 α、β 的方向反了。</li>
+<li>正確：AQL＝OC 曲線上 Pa＝0.95 對應的 p；LTPD＝Pa＝0.10 對應的 p。</li>
+<li>迷你例 #1818：n=50、c=2 → 卜氏表 c=2 欄找 Pa≈0.95 → np≈0.82 → AQL＝0.82/50＝<strong>1.64%</strong>。</li>
+<li>
+<h1>1878：H₀＝良品。「寧可良品被退，也不賣出不良品」→ 容忍拒好批（α 大）、嚴防收壞批（<strong>β 小</strong>）→ (A) α 大、β 小。</h1>
+</li>
+<li>判斷關鍵：誰倒楣掛誰的名——好批被退＝生產者冒險 α；壞批被收＝消費者冒險 β。保護消費者就是壓低 β。</li>
+</ul>
 </blockquote>
 <h3>3. OC 曲線五大特性 ⭐（課本特性①~⑤，選擇題最愛）</h3>
 <blockquote>
@@ -1402,6 +1508,53 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>⑤ <strong>n 愈大，OC 曲線愈陡，區分好壞批能力愈強</strong>；<strong>c 愈小，計畫愈嚴</strong>（允收率下降）。</li>
 <li>⑥（講義補充第❼點）<strong>c 與 n 的搭配有降低檢驗成本的可能</strong>——同等保證下選 n 較小的組合省檢驗費。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯3題）：OC 曲線——n 大變陡、Ac 小變嚴；比例抽檢不保證</strong></p>
+<ul>
+<li>誤區：再次選了「按同一比例抽樣能得相同保證」；#1848 以為 Ac 也要變大才保護買方。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>動作</th>
+<th>OC 曲線</th>
+<th>對誰有利</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n ↑（Ac 固定）</td>
+<td>更陡、判別力↑</td>
+<td>買方（消費者）</td>
+</tr>
+<tr>
+<td>Ac ↑（n 固定）</td>
+<td>更平緩、更鬆</td>
+<td>賣方（生產者）</td>
+</tr>
+<tr>
+<td>按比例抽（批小 n 小）</td>
+<td>各批曲線不同</td>
+<td><strong>不能</strong>得相同保證</td>
+</tr>
+<tr>
+<td>固定 n</td>
+<td>曲線幾乎重疊</td>
+<td>保證相近</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<h1>1848 答案：<strong>Ac 固定、n 愈大</strong>愈保護買方（A）；「Ac 變大且 n 變小」是最鬆的組合。</h1>
+</li>
+<li>
+<h1>1857：樣本愈大 → OC 曲線愈<strong>陡峭</strong>、判別能力愈<strong>強</strong>（D）。</h1>
+</li>
+<li>判斷關鍵：口訣「比例不保證，定量才穩定」；「n 大陡、c 小嚴」。</li>
+</ul>
+</blockquote>
 <h3>4. 單次抽樣 OC 曲線計算（例 2.4）</h3>
 <p>N=10,000、n=100、c=4；n/N=0.01＜0.1 → 查卜氏表（λ=np，c=4 欄）。</p>
 <div class="tw"><table>
@@ -1498,6 +1651,52 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>第 3 列：<strong>同欄上下相乘</strong>，各欄<strong>橫向相加</strong>得 Pa₂。</li>
 <li>Pa＝Pa₁＋Pa₂。d₁＞c₂ 的欄整欄打叉。</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：雙次 Pa 畫表格；「第一次即拒收」看 Re₁ 不看 Ac₁</strong></p>
+<ul>
+<li>誤區：雙次 Pa 只算 Pa₁；或第一次拒收率算成 1−F(Ac₁)。</li>
+<li>正確（#1470：50,2；100,4；p=0.05）：λ₁=2.5、λ₂=5.0。</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>欄</th>
+<th>d₁ ≤ 2</th>
+<th>d₁=3</th>
+<th>d₁=4</th>
+<th>d₁ ≥ 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一次 λ=2.5</td>
+<td>F(2)=0.544</td>
+<td>F(3)−F(2)=0.758−0.544=0.214</td>
+<td>F(4)−F(3)=0.891−0.758=0.133</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>第二次 λ=5.0</td>
+<td>—</td>
+<td>還可收 d₂ ≤ 1：F(1)=0.040</td>
+<td>只能收 d₂=0：F(0)=0.007</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>相乘</td>
+<td>0.544</td>
+<td>0.0086</td>
+<td>0.0009</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Pa＝0.544＋0.0086＋0.0009＝<strong>0.553</strong>。</li>
+<li>
+<h1>1830（CNS 2779-1 代字 K 雙次正常 AQL 1.0：n₁=80、Ac₁=1、Re₁=3；p=1.5%）：第一次即拒收＝P(d₁ ≥ Re₁=3)＝1−F(2)，λ=1.2 → 1−e^(−1.2)(1＋1.2＋0.72)＝1−0.879＝<strong>0.121</strong>。</h1>
+</li>
+<li>判斷關鍵：「拒收率」用 Re₁：P(d₁ ≥ Re₁)＝1−F(Re₁−1)；「允收率」用 Ac₁：F(Ac₁)。中間 Ac₁&lt;d₁&lt;Re₁ 是「再抽」，既非收也非拒。</li>
+</ul>
 </blockquote>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
@@ -1529,6 +1728,14 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tr>
 </tbody>
 </table></div>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：AQL 設定三法「以上皆是」</strong></p>
+<ul>
+<li>誤區：只記得歸納分類法（風險法）就選單一選項。</li>
+<li>正確：經驗法、損益平衡點法（B.E.P＝每件檢驗成本 ÷ 每件不良修理成本 → 查表取 AQL）、歸納分類法（五要素風險法，最實用）——三者皆是。</li>
+<li>判斷關鍵：題目列出「經驗法／損益平衡點法／歸納分類法」三項＋「以上皆是」→ 選以上皆是。</li>
+</ul>
+</blockquote>
 <h3>2. 經驗法對照表</h3>
 <div class="tw"><table>
 <thead>
@@ -1675,6 +1882,21 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>格中是＊ → 改用<strong>輔助表</strong>計算。</li>
 </ol>
 <p>例 2.6：p₀=0.8%（落 0.711~0.900 列）、p₁=5%（落 4.51~5.60 欄）、N=3,000 → 查得 <strong>n=100、c=2</strong>。</p>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯4題）：Z9002——p₀ 找列、p₁ 找欄；＊號用輔助表算 n</strong></p>
+<ul>
+<li>誤區：列欄找反；＊號時不知道要算 p₁/p₀；輔助表代入時 p₀、p₁ 用小數而非百分率值。</li>
+<li>查表步驟：①p₀（AQL）找<strong>列</strong>、p₁（LTPD）找<strong>欄</strong>（本表 <strong>P41</strong>）→ 交點讀「n c」；②箭頭 → 依箭頭取第一個計畫；③＊ → 輔助表（<strong>P45</strong>）：算 p₁/p₀ → 查 c → n＝(a/p₀＋b/p₁)（p 用 %），不整數<strong>進位</strong>。</li>
+<li>該題答案：#1450／#1475 p₀=2%（1.81~2.24 列）×p₁=6%（5.61~7.10 欄）→ <strong>(150, 6)</strong>。</li>
+<li>
+<h1>1451 p₀=1%、p₁=2.5% → ＊ → 2.5/1＝2.5（落 2.7~2.3）→ c=10 → n＝308/1＋770/2.5＝308＋308＝<strong>616</strong>。</h1>
+</li>
+<li>
+<h1>1827 p₀=0.5%、p₁=1.8% → ＊ → 1.8/0.5＝3.6（落 4.3~3.6）→ c=4 → n＝98.5/0.5＋400/1.8＝197＋222.2＝419.2 → 官方答 <strong>(419, 4)</strong>（選項無 420，取最接近）。</h1>
+</li>
+<li>判斷關鍵：題目同時給「合格批最高不良率」＋「不合格批最低不良率」＝規準型；α、β 不必再用（表已內建 5%/10%）。</li>
+</ul>
+</blockquote>
 <h3>3. 輔助表（＊號時用）⭐</h3>
 <div class="tw"><table>
 <thead>
@@ -1786,6 +2008,42 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>邏輯：拒收批全檢後不良＝0；允收批平均留下 Pa·p(N−n) 個不良 → 除以 N 得 AOQ。</li>
 <li>AOQ 對 p 的曲線：由 0 上升到<strong>最大值後回降</strong>（p 再大反而常被拒收→全檢→出廠更乾淨）。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：選別型精神——拒收批全檢換良品；AOQ＝p·Pa；AOQL 是 AOQ 的「最大值」</strong></p>
+<ul>
+<li>誤區：#1850 選了「AOQL 是 AOQ 的最小值」為正確；#1832 以為顧客會收到 4 個或 3 個不良品；#1826 不知道 N 大時 AOQ≈p·Pa。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>拒收批</td>
+<td>100% 剔選，不良品<strong>換良品</strong> → 出廠不良＝<strong>0</strong></td>
+</tr>
+<tr>
+<td>AOQ</td>
+<td>Pa·p·(1−n/N)；N 大時 ≈ <strong>Pa·p</strong></td>
+</tr>
+<tr>
+<td>AOQL</td>
+<td>AOQ 曲線的<strong>最大值</strong>（最壞平均出廠品質，只能求近似）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>迷你例 #1826：p=5%、Pa=0.2 → AOQ≈0.05×0.2＝<strong>0.01</strong>。</li>
+<li>
+<h1>1832：n=10、c=3，抽到 4 個不良 → 拒收 → 全檢 → 顧客收到 <strong>0</strong> 個不良。</h1>
+</li>
+<li>判斷關鍵：看到「選別」就想「拒收批全檢、不退貨」；AOQL 永遠是「最大／最高」。</li>
+</ul>
+</blockquote>
 <h3>3. AOQL 平均出廠品質界限 ⭐（必考）</h3>
 <ul>
 <li><strong>AOQL＝AOQ 之最大值</strong>＝選別檢驗下出廠品質最壞情況。</li>
@@ -1859,6 +2117,44 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </blockquote>
 <p>例 2.8：N=10,000、n=100、c=4 → y=2.544 → AOQL＝2.544×(1/100−1/10000)＝2.544×0.0099＝0.0252＝<strong>2.52%</strong>。
 （同一計畫的 AOQ 表在 p=0.04 時最大＝0.0252，兩法一致；實際 AOQ 常比 AOQL 小。）</p>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯4題）：兩個 AOQL 公式——只給 n,c 用 y；有代字／AQL 用係數表</strong></p>
+<ul>
+<li>誤區：再次拿錯公式；y 係數對錯 c；係數×(1−n/N) 的 n/N 算成 N/n。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題目給什麼</th>
+<th>公式</th>
+<th>查哪</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n、c、N（自設選別計畫）</td>
+<td><strong>AOQL＝y·(1/n−1/N)</strong></td>
+<td>y 隨 c：c=2→1.372、c=3→<strong>1.946</strong>、c=4→2.544（<strong>P49</strong>）</td>
+</tr>
+<tr>
+<td>AQL＋代字（調整型當選別型）</td>
+<td><strong>AOQL＝係數×(1−n/N)</strong></td>
+<td>表 8A／V-A（<strong>P342</strong>）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>迷你例 #1821：N=2000、n=100、c=3 → 1.946×(0.01−0.0005)＝1.946×0.0095＝<strong>1.85%</strong>；#1480 N=5000 → 1.946×0.0098＝<strong>1.91%</strong>。按鍵：<code>1 ÷ 100 − 1 ÷ 2000 = × 1.946 =</code>。</li>
+<li>
+<h1>1481：n=125、Ac=3、N=1500 → 係數 1.55 × (1−125/1500)＝1.55×0.9167＝<strong>1.42%</strong>。</h1>
+</li>
+<li>
+<h1>1455：N=800、II 級 → 代字 J → (80, Ac2) → 係數 1.71 × (1−80/800)＝1.71×0.9＝<strong>1.539%</strong>。</h1>
+</li>
+<li>判斷關鍵：出現「II 級水準／AQL／CNS 2779-1」→ P342 係數；只有 n、c → P49 的 y。</li>
+</ul>
+</blockquote>
 <h3>4. ASN 與 ATI</h3>
 <ul>
 <li><strong>ASN 平均樣本數</strong>＝做出允收/拒收決策所需的平均<strong>樣本</strong>大小。</li>
@@ -1890,6 +2186,36 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 - 單次 n=75、c=2：np=0.75 → Pa=0.959 → ATI＝75＋0.041×725＝<strong>105</strong>。
 - 雙次 n₁=39、c₁=0、n₂=81、c₂=4：Pa₁=0.677、Pa₂=0.316、Pa=0.993 → ATI＝39＋81×0.323＋680×0.007＝<strong>70</strong>。
 - 結論：<strong>雙次 ATI 全程比單次小</strong>（總檢驗費較省）——呼應<strong>乙一§7</strong> 比較表：總檢驗費用單次最多。</p>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯4題）：ATI——單次 n＋(1−Pa)(N−n)；雙次要三項相加</strong></p>
+<ul>
+<li>誤區：ATI 寫成 n·Pa；雙次漏掉 (n₁+n₂)·Pa₂ 那一項；Pa₂ 算成 Pa 而非 Pa−Pa₁。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>計畫</th>
+<th>ATI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>單次</td>
+<td><strong>n＋(1−Pa)(N−n)</strong></td>
+</tr>
+<tr>
+<td>雙次</td>
+<td><strong>n₁·Pa₁＋(n₁+n₂)·Pa₂＋N·(1−Pa)</strong>，Pa₂＝Pa−Pa₁</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>迷你例 #1900：N=1000、n=50、c=2、p=0.02 → λ=1 → Pa=0.920 → ATI＝50＋0.080×950＝<strong>126</strong>。#1473：λ=1.6、c=2 → Pa=0.783 → ATI＝32＋0.217×768＝<strong>199</strong>；AOQ＝0.05×0.783×(1−32/800)＝3.76%。</li>
+<li>雙次 #1828（50,1；100,3；N=1000；p=0.01）：Pa₁=0.910、Pa=0.970 → Pa₂=0.060 → ATI＝50×0.910＋150×0.060＋1000×0.030＝45.5＋9.0＋30＝<strong>84.5≈85</strong>。#1474：50×0.544＋150×0.0093＋1500×0.4467≈<strong>699</strong>。</li>
+<li>判斷關鍵：ATI 一定 ≥ n（單次）；Pa 愈低 ATI 愈接近 N。問「檢驗費用／工時」＝ATI。</li>
+</ul>
+</blockquote>
 <h3>5. 指定 LTPD 下求最小 ATI（例 2.10）⭐大題</h3>
 <p>題：N=2,500、β=10%、LTPD=5%、作業平均不良率 p̄=1.25%，求 ATI 最小的計畫。</p>
 <blockquote>
@@ -1956,7 +2282,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tbody>
 </table></div>
 <blockquote>
-<p>✅ <strong>已對課本 P56 核實（2026-08-16）</strong>：課本原文 c=6 列即取 <strong>n=210</strong>（10.53/0.05=210.6 未進位；其餘各列皆有進位，是課本自身不一致）。<strong>考試一律照課本答 210</strong>，後續 n·p̄=2.625、ATI=252 都以 210 計。</p>
+<p>⚠️ <strong>c=6 列取 n=210（照課本）</strong>：課本原文 c=6 列即取 <strong>n=210</strong>（10.53/0.05=210.6 未進位；其餘各列皆有進位，是課本自身不一致）。<strong>考試一律照課本答 210</strong>，後續 n·p̄=2.625、ATI=252 都以 210 計。</p>
 </blockquote>
 <p>答：<strong>N=2,500、n=210、c=6，ATI=252</strong>。Dodge-Romig 的 LTPD 表就是照這方法製成。</p>
 <h3>6. Dodge-Romig 抽樣表（1941）⭐</h3>
@@ -2010,6 +2336,16 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li><strong>p̄＞½·LTPD</strong> 時：無 SL/DL 表可查。</li>
 <li><strong>p̄＞AOQL</strong> 時：無 SA/DA 表可查。</li>
 <li>意即：製程平均太爛（相對於要保證的水準）時，選別型抽樣已無意義，只能全檢或改善製程。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯5題）：Dodge-Romig——LTPD＋p̄ 查 SL/DL；AOQL＋p̄ 查 SA/DA；p̄ 落哪一欄要看清楚</strong></p>
+<ul>
+<li>誤區：拿到 LTPD 題去翻 Z9002；p̄ 欄位看錯（1.5% 與 2% 是不同欄）；單次與雙次表混翻。</li>
+<li>查表步驟：①判「保證每批」（LTPD）或「保證長期平均」（AOQL）；②單次 S／雙次 D；③翻對應 LTPD（或 AOQL）值的那一頁；④N 範圍找列、<strong>p̄ 範圍找欄</strong> → 讀 n、c（雙次 n₁c₁n₂c₂）。頁碼：SL <strong>P260~267</strong>、DL <strong>P268~283</strong>、SA <strong>P284~296</strong>、DA <strong>P297~322</strong>（雙次每種跨 2 頁，看到「續」翻下一頁）。</li>
+<li>該題答案：#1453 LTPD 5%、p̄ 2%、N=2000 → SL-5.0 → <strong>(230, 7)</strong>；#1831 同表但 p̄ 1.5%（1.01~1.50 欄）→ <strong>(180, 5)、AOQL 1.6%</strong>；#1476 LTPD 5%、p̄ 1%、N=3000 → 單次 (135, 3)、雙次 (55,0；150,5)。</li>
+<li>
+<h1>1454 AOQL 1%、p̄ 0.5%、N=3000 → DA-1.0 → <strong>(80,0；170,4)</strong>；#1477 N=2000 → SA-1.0 (130, 2)、DA-1.0 (80,0；165,4)。</h1>
+</li>
+<li>判斷關鍵：題目出現「作業（製程）平均不良率 p̄」＋「總檢驗件數最少」＝Dodge-Romig；p̄ &gt; ½LTPD 或 p̄ &gt; AOQL 則無表可查。</li>
 </ul>
 </blockquote>
 <hr />
@@ -2179,11 +2515,31 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>例 2.19 多次（代字 K）：正常每次 n=32 共 <strong>5 次</strong>（新制由 105E 的 7 次改為 5 次），第 1 次 Ac＝#（不能允收）。</li>
 </ul>
 <blockquote>
-<p>✅ <strong>已對課本 P326 表 2C 逐格核實（2026-08-16）</strong></p>
+<p>⚠️ <strong>表 2C 減量：代字 K × AQL 1.5 ＝ Ac3／Re4</strong></p>
 <ul>
 <li>表 2C 減量單次主抽樣表，代字 K（n=50）× AQL 1.5 那格就是 <strong>Ac3／Re4</strong>，與加嚴列（125, Ac3/Re4）同值純屬巧合，課本沒印錯。</li>
 <li>K 列整排（0.65→10）依序：1/2、2/3、<strong>3/4</strong>、5/6、6/7、8/9、10/11——「取消間隙」指 <strong>Re＝Ac+1</strong>，Ac 本身在減量表原就比正常寬鬆，不是沿用正常的 Ac。</li>
-<li>先前「應為 Ac2／Re3」的推測<strong>作廢</strong>，考試照表答 <strong>Ac3／Re4</strong>。</li>
+<li>考試照表答 <strong>Ac3／Re4</strong>。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：多次第 1 次「#」不能允收；雙次第 2 次比「累計」與 Ac₂</strong></p>
+<ul>
+<li>誤區：以為品質很好多次抽樣抽 1 次就能允收；雙次第二次只數 d₂。</li>
+<li>正確：多次表（IV-A <strong>P330</strong>）第 1 次 Ac 標「#」＝不可判允收 → <strong>至少抽 2 次</strong>；每次 n 相同。雙次表（III-A <strong>P327</strong>）第二次判定用 <strong>d₁+d₂ ≤ Ac₂</strong>。</li>
+<li>該題答案：#1461 N=3000、AQL 1.0、K → 每次 32，至少 <strong>2 次</strong>；#1485 N=1500、AQL 0.65 → 每次 32，至少 2 次共 <strong>64 個</strong>。</li>
+<li>
+<h1>1483 N=1000、AQL 1.0 雙次正常，d₁=1 → 第二次最多再 Ac₂−d₁ 個（題庫解 Ac₁=0、Ac₂=3 → <strong>2 個</strong>；請對 P327 代字 J 列自行核一次）。</h1>
+</li>
+<li>判斷關鍵：「至少抽幾次」的答案永遠 ≥ 2；「最多再允許幾個」＝Ac₂ − d₁。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯5題）：2779-1 查表——批量＋水準→代字（P323）→ 主表（P324~326）；III 級與 S-4 別用 II 級代字</strong></p>
+<ul>
+<li>誤區：一律用 II 級代字；特殊水準 S-4 誤查一般水準；箭頭格沒依箭頭換 n。</li>
+<li>查表步驟：①N＋檢驗水準（未指定＝II）查表 I <strong>P323</strong> 得代字；②正常／加嚴／減量 → 表 II-A／II-B／II-C <strong>P324／325／326</strong>；③代字列 × AQL 欄讀 n、Ac、Re；④箭頭 → 順箭頭取第一個計畫，<strong>代字與 n 一起變</strong>。</li>
+<li>該題答案：#1478 N=1500、II → K → 單次 <strong>(125, 3, 4)</strong>、雙次 80/80（1,3；4,5）；#1868 N=400、II、AQL 0.4 → H → <strong>(50, 0, 1)</strong>；#1455 N=800、II、AQL 1.0 → J → (80, 2, 3)。</li>
+<li>
+<h1>1486 N=500、<strong>III 級</strong> → 代字 J（比 II 級大一級），AQL 0.40 遇↓ → <strong>(125, 1, 2)</strong>；#1457 N=10,000、<strong>S-4</strong> → 代字 G → AQL 1.5 → <strong>(32, 1, 2)</strong>（特殊水準樣本小）。</h1>
+</li>
+<li>判斷關鍵：「AQL＋N＋水準」＝調整型；先寫代字再翻主表；III 級代字往下一格、I 級往上一格。</li>
 </ul>
 </blockquote>
 <h3>5. 轉換規則 ⭐⭐（最愛考，7-15 整題就是它）</h3>
@@ -2244,6 +2600,14 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>單次、Ac=0 或 1：該批允收 → <strong>＋2</strong>；否則歸 0。</li>
 <li>雙次：第 1 次樣本就允收 → ＋3；多次：第 3 次（含）前允收 → ＋3；否則歸 0。</li>
 <li>從初始正常檢驗起算（起始 0 分），每批檢驗後更新；轉入減量後不再計分。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：減量檢驗判定——d ≤ Ac 允收且維持減量；d ≥ Re 拒收並「立即」回正常</strong></p>
+<ul>
+<li>誤區：減量下允收也選「恢復正常」；或拒收後選「改水準／改 AQL」。</li>
+<li>正確：減量表（II-C <strong>P326</strong>／III-C <strong>P329</strong>）新制 Re＝Ac+1 無間隙。d ≤ Ac → 允收、<strong>維持減量</strong>；d ≥ Re → 拒收、<strong>下批回正常</strong>（減量 1 批不允收即回）。</li>
+<li>該題答案：#1460 N=3000、AQL 2.5、K 減量 → (50, Ac5, Re6)，d=5 ≤ 5 → <strong>允收並維持減量</strong>；#1484 N=2000、AQL 1.0、K 減量 → Ac2/Re3，d=3 → <strong>拒收＋恢復正常</strong>；#1479 雙次減量 (32,3,6；32,7,8)，累計 8 ≥ Re₂=8 → <strong>拒收＋恢復正常</strong>。</li>
+<li>105E 舊制才有「Ac&lt;d&lt;Re 允收但恢復正常」的間隙情況——CNS 新制題不會出現。</li>
+<li>判斷關鍵：轉換時<strong>檢驗水準與 AQL 都不變</strong>——選項出現「改為 III 級」「AQL 改 1.5%」一律錯。</li>
 </ul>
 </blockquote>
 <h3>5-1. 新舊制對照：MIL-STD-105E vs CNS 2779-1 ⭐（比較題會考）</h3>
@@ -2309,7 +2673,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <tr>
 <td>選別型</td>
 <td>拒收批全檢剔選；查<strong>表 8A（105E 表 V-A，P342）</strong>得 AOQL 係數，AOQL＝係數×(1−n/N)</td>
-<td>例 2.14：代字 H、AQL1.5% → 2.74 → <strong>AOQL=2.74×0.9=2.47%</strong>（✅三方核實：頂層 pptx、老師手寫、AOQL=y(1/n−1/N) 交叉驗算 2.4696%；⚠️下午講義另一份簡報印 2.7/2.43% 為舊版誤植）；例 2.15 反向：AOQL=6% → 6/0.9=6.67 → 表中找 ≤6.67 得 6.3x → <strong>AQL=4.0%</strong> → (50, Ac5, Re6)</td>
+<td>例 2.14：代字 H、AQL1.5% → 2.74 → <strong>AOQL=2.74×0.9=2.47%</strong>（⚠️下午講義另一份簡報印 2.7/2.43% 為舊版誤植，以 2.47% 為準）；例 2.15 反向：AOQL=6% → 6/0.9=6.67 → 表中找 ≤6.67 得 6.3x → <strong>AQL=4.0%</strong> → (50, Ac5, Re6)</td>
 </tr>
 <tr>
 <td>單批 LQ 保證</td>
@@ -2323,6 +2687,15 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tr>
 </tbody>
 </table></div>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：單批 LQ 保證——先由 LQ 表反查 AQL，再翻主表</strong></p>
+<ul>
+<li>誤區：拿 LQ=5% 當 AQL 直接查主表。</li>
+<li>查表步驟：①N＋II 級 → 代字（#1456 N=500 → H）；②翻該代字的表 10x（10G~10M <strong>P346~357</strong>），在 Pa=10% 列向右找 <strong>≤ LQ</strong> 的值 → 往上讀對應 AQL；③以該 AQL 查主表 II-A。</li>
+<li>該題答案：N=500、LQ=5%、Pa=10% → <strong>(50, Ac0, Re1)</strong>。</li>
+<li>判斷關鍵：題目寫「界限品質 LQ／允收機率 10%（或 25%）／單獨一批」→ 走 LQ 表；LQ 意義＝選別型的 LTPD。</li>
+</ul>
+</blockquote>
 <h3>7. ASN 比較（例 2.13）與綜合判定（例 2.20）⭐</h3>
 <ul>
 <li>例 2.13：N=150、AQL=4.0、II 級 → 代字 F → (20, Ac2, Re3)。查<strong>表 IX（ASN 曲線，P344）</strong>在 n×AQL＝20×0.04＝0.8 處：<strong>多次平均檢驗量只需單次的 62%、雙次 87% → 單次最不經濟</strong>（呼應<strong>乙一§7</strong> 比較表：總檢驗費用單次最多）。</li>
@@ -2399,7 +2772,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tbody>
 </table></div>
 <blockquote>
-<p>⚠️ <strong>編號陷阱（課本 P113~115，✅08-16 補拍核對）</strong>：課本第 3 章基本原理節的命名順序<strong>相反</strong>——「<strong>第一型</strong>」＝p̂ ≤ M（M 法）、「<strong>第二型</strong>」＝Zᵤ=(U−x̄)/σ ≥ k（k 法，等價於 <strong>x̄ ≤ U−kσ＝A</strong>，把 k 換成 x̄ 的規格界限 A）。而 MIL-STD-414 的慣例是<strong>形式 1＝k 法、形式 2＝M 法</strong>。考題問「第一型/第二型」看是引課本原理節還是 414 表，別背反。</p>
+<p>⚠️ <strong>編號陷阱（課本 P113~115）</strong>：課本第 3 章基本原理節的命名順序<strong>相反</strong>——「<strong>第一型</strong>」＝p̂ ≤ M（M 法）、「<strong>第二型</strong>」＝Zᵤ=(U−x̄)/σ ≥ k（k 法，等價於 <strong>x̄ ≤ U−kσ＝A</strong>，把 k 換成 x̄ 的規格界限 A）。而 MIL-STD-414 的慣例是<strong>形式 1＝k 法、形式 2＝M 法</strong>。考題問「第一型/第二型」看是引課本原理節還是 414 表，別背反。</p>
 </blockquote>
 <h3>2. 標準計算步驟（s 法，例 3.8/3.9 為模板）⭐</h3>
 <p>題型：規格上限 U=209°F、N=40、IV 級水準、正常、AQL=1%、n=5，觀測值 197,188,184,205,201。</p>
@@ -2484,10 +2857,21 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>第二段判定看<strong>全部 n₂ 個</strong>的不良數 vs Ac。</li>
 <li>計量段用<strong>正常</strong>檢驗、計數段用<strong>加嚴</strong>檢驗——鬆緊不同，別寫反。</li>
 </ul>
-<p>✅ <strong>已解惑（第六堂課）：代字 F 為何 n=32</strong></p>
+<p>🎯 <strong>代字 F 為何 n=32（箭頭規則）</strong></p>
 <ul>
 <li>課本例 3.14 查 2779-1 加嚴表（表 II-B，P325）：代字 F × AQL 0.65% 該格是<strong>↓箭頭 → 依箭頭改用下一個計畫（n=32、Ac=0、Re=1）</strong>。</li>
 <li>所以「代字 F 卻 n=32」是箭頭規則的正常結果，與例 3.9（9445-1 代字 J→K）同一套邏輯。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯3題）：混合抽樣——計量段「正常」、計數段「加嚴」、補抽 n₂−n₁</strong></p>
+<ul>
+<li>誤區：再次把補抽數寫成整套 n₂；計數段翻成正常表；#2319 計量段 Q_L ≥ k 就直接允收，忽略樣本裡已有不合格品。</li>
+<li>正確流程：①9445-1（<strong>正常</strong>、II）→ n₁、k；②2779-1（<strong>加嚴</strong>、II）→ n₂、Ac、Re；③抽 n₁ 算 Q，Q ≥ k 且<strong>樣本無不合格品</strong> → 允收；④否則補抽 <strong>n₂−n₁</strong>，以全部 n₂ 個的不良數 vs Ac 判。</li>
+<li>該題答案：#1501 N=100、AQL 0.65 → 9445-1 F (11, 1.889)、2779-1 加嚴 F↓ (32, 0, 1)；Q_L＝1.371 &lt; 1.889 → 補抽 <strong>21</strong> 個。#1513 N=500 → 代字 H，同流程。</li>
+<li>
+<h1>2319 N=500、AQL 1.0、Q_L=1.9 但樣本有 1 個不合格品 → 官方解答：不得直接允收，補抽 <strong>56</strong> 個（＝加嚴 n₂=80 − n₁=24）。</h1>
+</li>
+<li>⚠️ 課本例 3.14 寫「第一樣本已有不良品 → 直接拒收」，與 #2319 官方解答（補抽）<strong>衝突</strong>；考試依選項：有「補抽 n₂−n₁」且數字對得上就選它。建議問老師。</li>
+<li>判斷關鍵：「混合」二字＋「常態分配、AQL」→ 兩張表都要翻；鬆緊固定搭配「正常→加嚴」。</li>
 </ul>
 </blockquote>
 <h3>4. CNS 9445-1 課本版標準程序 ⭐（課本 3.4，P132~161；第六堂課）</h3>
@@ -2579,6 +2963,38 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </ul>
 <blockquote>
 <p>🎯 <strong>fx-350MS 快解</strong>：SD 模式輸入資料 → SHIFT→2 取 x̄ 與 xσn−1（＝s）→ 代 Q＝(U−x̄)/s 或 (x̄−L)/s，直接和 k 比大小。</p>
+<p>⚠️ <strong>易錯（2026-09-06，錯9題）：9445-1 s 法——代字（P374）→ 表 B.1/B.2/B.3 → Q ≥ k 允收；箭頭要換代字</strong></p>
+<ul>
+<li>誤區：正常／加嚴／減量翻錯表；Q 分子方向寫反；遇箭頭仍用原代字的 n；σ 未知卻去翻 σ 法表 C。</li>
+<li>查表步驟：①N＋水準 → 表 A.1 <strong>P374</strong> 代字；②s 法：正常 B.1 <strong>P375</strong>、加嚴 B.2 <strong>P376</strong>、減量 B.3 <strong>P377</strong>（σ 法 C.1~C.3 <strong>P378~381</strong>）；③代字 × AQL 讀 n、k；箭頭 → 改用所指計畫（代字、n、k 一起變）；④判定：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>規格</th>
+<th>統計量</th>
+<th>允收</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>只有上限 U</td>
+<td>Qᵤ＝(U−x̄)/s</td>
+<td>Qᵤ ≥ k</td>
+</tr>
+<tr>
+<td>只有下限 L</td>
+<td>Q_L＝(x̄−L)/s</td>
+<td>Q_L ≥ k</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>該題答案：#1465 N=800、III、加嚴、AQL 1.0 → <strong>(48, 2.043)</strong>；#1466 N=1200、II、正常、AQL 0.65 → <strong>(31, 2.061)</strong>；#1903／#1495 L=4.0 秒、AQL 0.10 → 代字 J 遇↓ → 改 K：<strong>(28, 2.580)</strong>。</li>
+<li>迷你例 #1494：n=13、k=1.426，x̄=54.62、s=3.330 → Qᵤ＝(60−54.62)/3.330＝1.617 ≥ 1.426 → 允收。#1512：31,33,35,37 → x̄=34、s=2.582 → Q_L＝(34−30)/2.582＝1.549 與 k 比。</li>
+<li>fx-350MS：<code>MODE 2</code>（SD）→ 輸入各值 <code>M+</code> → <code>SHIFT 2</code>：x̄、xσn−1（＝s）→ 代入 Q。</li>
+<li>判斷關鍵：「σ 未知／題目沒給 σ」＝s 法；「加嚴」必翻 B.2；抽驗前 x̄ 已超出規格 → 直接不允收。</li>
+</ul>
 </blockquote>
 <h3>5. 雙邊合併管制：MSSD（s-法）與 MPSD（σ-法）⭐⭐（課本 P152~163）</h3>
 <blockquote>
@@ -2630,6 +3046,43 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li><strong>樣本全部落在規格內，批仍可能不允收</strong>（魚雷例、例 3.10/3.11 都是）——課本特別備考，觀念題最愛。</li>
 <li>Q 為負值（x̄ 已超出規格界限）→ 該側 p̂ &gt; 0.5，直接不允收。</li>
 <li>σ-法雙邊備考：σ &gt; 0.75σmax 且 x̄ 接近 X̄ᵤ/X̄ʟ 時，宜改用 ISO 3951-2 確切法。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯9題）：雙邊合併管制兩關——先 s vs MSSD，再 p̂ vs p*；σ 法看 x̄ 是否落在 X̄ʟ~X̄ᵤ</strong></p>
+<ul>
+<li>誤區：再次把雙邊當兩個單邊各判 Q ≥ k；MSSD 算成 (U−L)/fs；n=3、n=4、n&gt;4 的第二關方法混用；#1892 把 f_σ 的鬆緊順序背反。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>法</th>
+<th>第一關</th>
+<th>第二關</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s 法</td>
+<td><strong>s ≤ MSSD＝(U−L)·fs</strong>（表 D.1 <strong>P381</strong>）</td>
+<td>n=3：Q·√3/2 查表 F.1（<strong>P385</strong>）得 p̂ᵤ、p̂ʟ；n=4：p̂＝0.5−Q/3；n&gt;4：允收曲線圖描點 (s/(U−L), (x̄−L)/(U−L))。<strong>p̂ᵤ＋p̂ʟ ≤ p*</strong>（表 G.1 <strong>P388</strong>）允收</td>
+</tr>
+<tr>
+<td>σ 法</td>
+<td><strong>σ ≤ MPSD＝(U−L)·f_σ</strong>（表 E.1 <strong>P384</strong>）</td>
+<td><strong>X̄ʟ＝L＋kσ ≤ x̄ ≤ X̄ᵤ＝U−kσ</strong> 允收</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>迷你例 #1496（魚雷 n=3）：fs=0.475 → MSSD＝20×0.475＝9.50 &gt; s=7.436 過第一關；p̂ᵤ=0.2267 &gt; p*=0.1925 → <strong>不允收</strong>（3 個樣本全在規格內仍不允收）。#1497（n=4）：p̂ʟ＝0.5−1.2249/3＝0.0917 &gt; 0.0860 → 不允收。#1498（n=13）：MSSD＝10×0.274＝2.74 &lt; s=2.79 → <strong>第一關就出局</strong>。</li>
+<li>σ 法：#1499 單邊 X̄ʟ＝400＋2.046×21＝442.97 &gt; x̄=428.5 → 不允收；#1500 MPSD＝100×0.194＝19.4 &gt; σ=18.5 過關，X̄ʟ=501.1 ≤ x̄=508.0 ≤ X̄ᵤ=538.9 → 允收。</li>
+<li>
+<h1>1892 MPSD 大小：f_σ <strong>加嚴 &lt; 正常 &lt; 減量</strong>（愈嚴容許變異愈小）。</h1>
+</li>
+<li>
+<h1>1507~#1510 只問 MSSD：答「(U−L)×fs，fs 由代字＋AQL 查表 D.1」即可（3-8：10×fs；3-9：20×fs）。</h1>
+</li>
+<li>判斷關鍵：題目給 U 和 L 兩邊＋同一 AQL＝合併管制；s &gt; MSSD「直接不允收」，s &lt; MSSD 只是「可能允收」。</li>
 </ul>
 </blockquote>
 <h3>6. 轉換規則 ⭐⭐（課本 15.~16.，P165~167，紅筆「必考」）</h3>
@@ -2781,7 +3234,6 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tbody>
 </table></div>
 <h3>2. 書末附表區（P245 起）</h3>
-<p>✅ 2026-08-16 已用附件掃描逐頁重建（_28~_128＝P235~434 全數核對）：</p>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -2917,19 +3369,7 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>已知要查什麼、只想知道第幾頁 → 規準型與 y 係數看 <strong>§1</strong>；調整型主表看 <strong>§3</strong>；其餘附表看 <strong>§2</strong>。</li>
 </ul>
 </blockquote>
-<h3>4. 待核對清單 ✅ 已全數與課本掃描核實（2026-08-16）</h3>
-<blockquote>
-<p>✅ <strong>六項全部比對完畢，筆記數值可放心使用</strong></p>
-<ul>
-<li><strong>乙六§6 例 2.11／2.12</strong>（P57~58）✅：SL-4.0% 單次 <strong>(195, c=4, AOQL=1.2%)</strong>、SA-3.0% 單次 <strong>(44, c=2, pt=11.8%)</strong> 與課本一致（附帶：例 2.11 雙次 DL-4.0% n₁=110/c₁=1、n₂=195、AOQL=1.3%；例 2.12 雙次 DA-3.0% n₁=25/c₁=0、n₂=40/c₂=3、pt=11.4%）。</li>
-<li><strong>乙七§7 例 2.13</strong>（表 9，P344）✅：Ac=2 面板在 n×不符合率=0.8 處，多次 ≈0.62n 吻合；雙次曲線讀值約 0.78~0.85n，投影片的 87% 屬讀圖誤差範圍，「<strong>多次＜雙次＜單次、單次最不經濟</strong>」的結論不變。</li>
-<li><strong>乙七§5 正常→減量</strong>✅：課本 P76 ③(a) 原文＝「當前的轉換分數至少為 30，<strong>或先前初始檢驗經權責單位核准已允收 10 批</strong>」——CNS 新制<strong>有</strong>保留此替代條款，可放心作答。</li>
-<li><strong>乙十一</strong>✅：表 3.1＝P122、表 3.2＝P123、表 3.3＝P124~125（主表＋輔助表同編 3.3）、表 3.4＝P129，頁碼全對。</li>
-<li><strong>乙十一例 3.7</strong>✅：課本 P131 原文 n=137、k=2.08。</li>
-<li><strong>乙十二 表 III 的 F 值</strong>✅：課本 P196 為三位小數（A 列 .136/.145/.157/.174/.193/.222/<strong>.271</strong>/<strong>.370</strong>/.707），以課本為準。</li>
-</ul>
-</blockquote>
-<h3>5. 🏷️ 乙場帶書貼標籤清單（考前照這張貼）⭐⭐</h3>
+<h3>4. 🏷️ 乙場帶書貼標籤清單（考前照這張貼）⭐⭐</h3>
 <p>100 題／2 小時＝<strong>平均 72 秒一題</strong>。乙場查表題多，這本《抽樣檢驗》課本標籤要貼滿：</p>
 <div class="tw"><table>
 <thead>
@@ -3124,6 +3564,44 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <ul>
 <li>例 3.1：含水量平均 ≤0.3% 允收、≥0.6% 拒收，σ=0.15% → (0.6−0.3)/0.15＝2 → 查表 n=3、G₀=0.950 → X̄ᵤ＝0.3＋0.950×0.15＝<strong>0.4425%</strong>；抽 3 個，x̄ ≤ 0.44% 允收。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯7題）：保證「平均值」從 m₀ 往外推 G₀σ；保證「不良率」從規格界限往內縮 kσ</strong></p>
+<ul>
+<li>誤區：再次把 G₀ 與 k 混用；X̄ʟ 用 m₀＋G₀σ（方向反）；雙邊題忘了可行性檢核。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題目給</th>
+<th>查表</th>
+<th>允收界限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>m₀、m₁（平均值）</td>
+<td>表 3.1 <strong>P122</strong>：|m₁−m₀|/σ → n、G₀</td>
+<td>希望低：X̄ᵤ＝m₀＋G₀σ；希望高：X̄ʟ＝m₀−G₀σ</td>
+</tr>
+<tr>
+<td>p₀、p₁＋規格界限</td>
+<td>表 3.3 <strong>P124</strong>：→ n、k</td>
+<td>X̄ᵤ＝Sᵤ−kσ；X̄ʟ＝Sʟ＋kσ</td>
+</tr>
+<tr>
+<td>σ 未知</td>
+<td>表 3.4 <strong>P129</strong></td>
+<td>x̄＋ks ≤ Sᵤ／x̄−ks ≥ Sʟ</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>迷你例平均值：#1487 (0.6−0.3)/0.15＝2 → (3, 0.950) → X̄ᵤ＝0.3＋0.950×0.15＝<strong>0.4425%</strong>；#1502 1000/1000＝1.00 → (9, 0.548) → 希望高：X̄ʟ＝20500−548＝<strong>19,952 psi</strong>；#1489 雙邊 → 9.94 ≤ x̄ ≤ 10.06。</li>
+<li>迷你例不良率：#1488 (1%, 6%) → (14, 1.88) → X̄ʟ＝0.5＋1.88×0.02＝<strong>0.5376 mm</strong>；#1490 雙邊：先檢核 (Sᵤ−Sʟ)/σ＝10 &gt; 6.4（表 3.2 <strong>P123</strong>）→ 5.97 ≤ x̄ ≤ 6.03；#1503 (0.5%, 2%) → (32, 2.28) → X̄ʟ＝22,280 psi；#1504 σ 未知 → Z9004 → x̄−1.92s ≥ 2.5。</li>
+<li>判斷關鍵：題幹說「平均在 … 以上/以下」＝保證平均值（G₀）；說「不良率（比率）在 … 以下」＝保證不良率（k）；沒給 σ 值＝Z9004。</li>
+</ul>
+</blockquote>
 <h3>3. Z9003 保證批不良率・單邊 ⭐（查表＋空格公式）</h3>
 <div class="tw"><table>
 <thead>
@@ -3178,6 +3656,39 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>常用 Kp（＝標準常態上側分位數，輔助表 P125）：<strong>1%→2.326、2.5%→1.960、5%→1.645、10%→1.282</strong>。</li>
 <li>觀察：p₁ 從 6% 縮到 2.5%，n 從 14 暴增到 64——<strong>鑑別要求越嚴，樣本越大</strong>。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯6題）：Z9003／Z9004 查表為主、＊或空格才用公式；σ 已知／未知走不同表</strong></p>
+<ul>
+<li>誤區：σ 未知去查 Z9003；表上有值卻硬算公式（#1884 公式 n≈86 但表值 95）；Z9003 與 Z9004 的 k、n 公式互換。</li>
+<li>查表步驟：p₀ 找列、p₁ 找欄；Z9003 → 表 3.3 <strong>P124</strong>（格左下 n、右上 k）；Z9004 → 表 3.4 <strong>P129</strong>。＊／空格 → 輔助表 <strong>P125</strong> 查 Kp（1%→2.326、2.5%→1.960、5%→1.645、10%→1.282）代公式：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Z9003（σ 已知）</th>
+<th>Z9004（σ 未知）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k</td>
+<td>0.562073·Kp₁＋0.437927·Kp₀</td>
+<td>(Kp₀·K_β＋Kp₁·K_α)/(K_α＋K_β)</td>
+</tr>
+<tr>
+<td>n</td>
+<td>(2.9264/(Kp₀−Kp₁))²</td>
+<td>(1＋k²/2)·((K_α＋K_β)/(Kp₀−Kp₁))²</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>該題答案：#1464 (2%, 6%) σ 已知 → <strong>(81, 1.76)</strong>；#1492 (1%, 8%) σ 未知 → <strong>(28, 1.83)</strong>；#1884 (1.5%, 5%) σ 未知 → 表 3.4 列 1.41~1.80 → <strong>(95, 1.87)</strong>（考試以表為準，k=1.87 可辨識選項）。</li>
+<li>公式例：#1491 (1%, 2.5%) → n＝(2.9264/0.366)²≈<strong>64</strong>、k＝1.1017＋1.0186＝<strong>2.12</strong>；#1493 Z9004 (1%, 3%) → k＝(2.327×1.282＋1.881×1.645)/2.927＝<strong>2.08</strong>、n＝(1＋2.08²/2)×(2.927/0.446)²≈<strong>137</strong>；#1505 (0.5%, 8%) → (18, 1.92)。</li>
+<li>判斷關鍵：K_α=1.645、K_β=1.282 固定；同 p₀/p₁ 下 Z9004 的 n 比 Z9003 大很多（σ 要靠 s 估）。</li>
+</ul>
+</blockquote>
 <h3>4. Z9003 雙邊規格（多一道「可行性檢核」）⭐</h3>
 <div class="tw"><table>
 <thead>
@@ -3355,6 +3866,12 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>1916＝<strong>供應者／預防</strong>（品質系統、SPC）；105E＝<strong>顧客／抽樣技術</strong>（擋不合格件）。</li>
 <li>1916 不能減輕供應者滿足合約要求的責任；「單靠抽樣檢驗不能控制或改進品質」。</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：1916 觀念題五句話</strong></p>
+<ul>
+<li>誤區：以為 1916 有雙次／多次；把「0 收 1 退」寫成「0 退 1 收」；VL 級數記錯。</li>
+<li>正確：①計數值<strong>僅單次</strong>；②<strong>0 收 1 退</strong>（ZBA）；③查證水準 <strong>VL-I~VII 共 7 級，VII 最嚴</strong>（保障遞增）；④計量值須<strong>常態分配</strong>（不是卜氏）；⑤<strong>不適用破壞性試驗</strong>。</li>
+<li>判斷關鍵：選項裡「7 個等級、保障依次遞增」是正確句；其他四句都反。</li>
+</ul>
 </blockquote>
 <h3>2. 定義 ⭐</h3>
 <div class="tw"><table>
@@ -3452,6 +3969,13 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>批量 ≤ 樣本大小 → 改 <strong>100% 檢驗</strong>。</li>
 <li>表 IV 篩選階段<strong>沒有減量</strong>（R 欄＝NA）。</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯5題）：1916 查表——表 I 代字 → 表 II（na）／III（n,k,F）／IV（i,f）；加嚴左隔欄、減量右隔欄</strong></p>
+<ul>
+<li>誤區：加嚴／減量方向找反；計量值去翻表 II；連續抽樣用批量而非「生產量」。</li>
+<li>查表步驟：①批量（或生產量）× VL → 表 I <strong>P195</strong> 代字 A~E；②計數 → 表 II <strong>P195</strong>（na，Ac=0）；計量 → 表 III <strong>P196</strong>（n_v、k、F）；連續 → 表 IV <strong>P197</strong>（i、f）；③正常用該 VL 欄，<strong>加嚴＝左隔欄、減量＝右隔欄</strong>。</li>
+<li>該題答案：#1517 N=3000、VL-IV → C → na=<strong>128</strong>；#1520 同 → n_v=<strong>37、k=2.56</strong>；#1893 減量 → C × 右欄（III）→ <strong>(23, 2.21)</strong>；#1518 VL-II 加嚴（3 批中 2 批拒收）→ N=5000 → E × 左欄（III）→ na=<strong>80</strong>；#1521 生產量 3000、VL-III → D → <strong>i=368、f=1/48</strong>。</li>
+<li>判斷關鍵：「查證水準／VL／0 收 1 退」＝1916；VL 數字愈大愈嚴；批量 ≤ 樣本大小 → 100% 檢驗。</li>
+</ul>
 </blockquote>
 <h3>5. 轉換法則 ⭐⭐（速記表）</h3>
 <div class="tw"><table>
@@ -3499,6 +4023,55 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <ul>
 <li>對照乙七/乙八：加嚴（5 批中 2 批）與回正常（連 5 批）條件一樣好記；<strong>減量門檻不同——1916 是「連續 10 批」</strong>（無轉換分數、無 AQL 加嚴一級）。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：1916 轉換——5 批中 2 批拒收→加嚴；連 5 批允收→正常；連 10 批＋三條件→減量；減量 1 批拒收→正常</strong></p>
+<ul>
+<li>誤區：把 2779-1 的「轉換分數 30」搬過來；加嚴後樣本大小仍用原欄。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>現況</th>
+<th>條件</th>
+<th>轉去</th>
+<th>樣本查哪欄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正常</td>
+<td>最近 2~5 批中 2 批拒收</td>
+<td>加嚴</td>
+<td>左隔欄</td>
+</tr>
+<tr>
+<td>加嚴</td>
+<td>原因矯正＋連續 5 批允收</td>
+<td>正常</td>
+<td>原欄</td>
+</tr>
+<tr>
+<td>正常</td>
+<td>連續 10 批允收＋生產穩定＋品質系統滿意＋顧客同意</td>
+<td>減量</td>
+<td>右隔欄</td>
+</tr>
+<tr>
+<td>減量</td>
+<td>1 批拒收／生產不規則／系統不滿意</td>
+<td>正常</td>
+<td>原欄</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<h1>1514 演練：批 1、3 拒收 → 批 4 起加嚴；連 5 批允收回正常；連 10 批允收轉減量；減量中 1 批拒收 → 下批回正常。</h1>
+</li>
+<li>判斷關鍵：1916 沒有轉換分數、沒有「AQL 加嚴一級」；中止後重啟一律從加嚴開始。</li>
+</ul>
+</blockquote>
 <h3>6. 允收準則 ⭐⭐（計量值 K 法／F 法）</h3>
 <ul>
 <li>計數值（表 II）：樣本中<strong>無不合格品才允收</strong>（0 收 1 退）。</li>
@@ -3545,6 +4118,16 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>連續抽樣（表 IV）：生產開始 <strong>100% 篩選 → 連續 i 件合格 → 改頻率 f 抽驗</strong>；抽驗發現不符合／生產中斷 3 工作天以上／不再穩定 → <strong>回 100%</strong>。先決條件：移動性產品、有 100% 檢驗的場地設備人力、製程穩定。發現<strong>嚴重</strong>不合格品 → 前次合格件之後全部檢驗。</li>
 <li>完整走一遍（講義範例，VL-II、生產 8 小時 800 件）：查表 IV 得 <strong>i=116、f=1/48</strong> → 開始 100% 篩選，連續 116 件合格 → 轉抽驗每 48 件抽 1 件 → 抽驗發現不合格 → <strong>回 100% 篩選重新累計 i</strong>。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯2題）：K 法 ≥ k 允收；F 法 s/(U−L) ≤ F 允收；雙邊三關全過</strong></p>
+<ul>
+<li>誤區：再次把 F 值分母用單邊距離；F 判定方向與 k 一樣寫成 ≥。</li>
+<li>正確：①c＝0（樣本無不合格件）；②K 法：(U−x̄)/s ≥ k 且 (x̄−L)/s ≥ k；③F 法（僅雙邊）：<strong>s/(U−L) ≤ F</strong>。三關全過才允收。</li>
+<li>迷你例 #1515／#1516：197,188,184,205,201 → x̄=195、s=8.80（SD 模式取 xσn−1）；k=1.33、F=0.333 → Qᵤ＝14/8.8＝1.59 ✓、Q_L＝15/8.8＝1.70 ✓、F 值＝8.8/29＝0.304 ≤ 0.333 ✓ → 允收。</li>
+<li>手算 s：ΣX=975、CF＝975²/5＝190,125、SS＝190,435−190,125＝310、V＝310/4＝77.5、s＝√77.5＝8.80。</li>
+<li>判斷關鍵：只給上限或下限 → 不用 F 法；任一件量測超出規格 → 直接不允收。</li>
+</ul>
+</blockquote>
 <h3>7. 應用實例 ⭐（三題都完整演練過）</h3>
 <ul>
 <li><strong>計數值 20 批轉換演練</strong>（表 4.1，VL-IV）：批 1 拒收、批 3 拒收（最近 2~5 批中 2 批）→ 批 4 起<strong>加嚴（查 IV 左邊 V 欄的 n）</strong>；連 5 批允收（批 4~8）→ 批 9 回正常；批 9~18 連 10 批允收 → 批 19 <strong>減量（查 IV 右邊 III 欄）</strong>；批 20 有 1 件不合格拒收 → 下一批回正常。</li>
@@ -3709,6 +4292,63 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tr>
 </tbody>
 </table></div>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯4題）：標準對照——Z9002 計數規準、Z9003/9004 計量規準（σ 已知/未知）、2779-1 計數調整、9445-1 計量調整、D-R 選別</strong></p>
+<ul>
+<li>誤區：#1449 把 CNS 2779-1 當規準型；#1463 只選 Z9003 忘了 σ 未知的 Z9004；#1849 以為計量值不能用於破壞性檢驗、拒收批一定含不合格品。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>標準</th>
+<th>型</th>
+<th>性質</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JIS Z9002</td>
+<td>規準型</td>
+<td>計數單次（p₀、p₁）</td>
+</tr>
+<tr>
+<td>JIS Z9003／Z9004</td>
+<td>規準型</td>
+<td>計量，σ 已知／未知</td>
+</tr>
+<tr>
+<td>Dodge-Romig</td>
+<td>選別型</td>
+<td>計數，LTPD／AOQL 型</td>
+</tr>
+<tr>
+<td>CNS 2779-1（ISO 2859-1）</td>
+<td>調整型</td>
+<td>計數</td>
+</tr>
+<tr>
+<td>CNS 9445-1（ISO 3951-1）</td>
+<td>調整型</td>
+<td>計量</td>
+</tr>
+<tr>
+<td>MIL-STD-1916</td>
+<td>連續調整型</td>
+<td>計數＋計量，0 收 1 退</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<h1>1849 計量值特性：須<strong>常態</strong>（非二項）；<strong>可用於</strong>破壞性檢驗（樣本少）；每一<strong>特性</strong>一個計畫；<strong>拒收批可能一件不合格品都沒有</strong>（判定靠 x̄、s）。</h1>
+</li>
+<li>
+<h1>1875「最大樣本標準差」官方解答為 <strong>JIS Z9003</strong>（⚠️ CNS 9445-1 也有 MSSD，但該題選項無 9445-1；選項中有 9445-1 時要重新判斷）。</h1>
+</li>
+<li>判斷關鍵：「規準型計量值」問查哪張表 → 答「Z9003 或 Z9004」（看 σ 知不知道）。</li>
+</ul>
+</blockquote>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s16"><h2 onclick="tg(this)">乙十四、抽樣檢驗之實施與抽樣技術（第六堂課，課本第 6 章，P209~234）<span class="ar">▾</span></h2><div class="sb">
@@ -3784,6 +4424,15 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tr>
 </tbody>
 </table></div>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：系統抽樣的「間隔」可以是個數、長度或時間——三者皆是</strong></p>
+<ul>
+<li>誤區：只認「每隔若干個」一種，漏了長度與時間 → 沒選「以上皆是」。</li>
+<li>正確：系統抽樣＝每隔固定間隔（1/a）取一個，間隔單位可為個數（連續製品）、長度（布、電線）、時間（製程定時取樣）。</li>
+<li>「先分層再各層隨機抽」是<strong>分層抽樣</strong>，不是系統抽樣。</li>
+<li>判斷關鍵：抽樣間隔與品質變化週期相同會有偏差 → 改曲折抽樣。</li>
+</ul>
+</blockquote>
 <h3>4. 各種抽樣法對比 ⭐（判斷關鍵在「變異放哪邊」）</h3>
 <div class="tw"><table>
 <thead>
@@ -3989,6 +4638,83 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>戴明十四點<strong>沒有</strong>「區分可控制與不可控制因素」（那是裘蘭的觀念）；有：採用新哲學、停止依賴大量檢驗、打破部門間障礙、消除數字配額等。</li>
 <li>克勞斯比品管四大定理：符合要求標準（第一次就對）、<strong>預防</strong>而非檢驗、標準是<strong>零缺點</strong>不是差不多、以<strong>不符合標準的代價</strong>衡量品質。</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：戴明十四點 vs 裘蘭「可控因素」</strong></p>
+<ul>
+<li>誤區：以為「區分可控制與不可控制因素」在戴明十四點內；把「作業員能力缺乏」當成管理引發的錯誤。</li>
+<li>正確：</li>
+<li>「管理可控 vs 作業員可控」是<strong>裘蘭</strong>的錯誤分類，<strong>不在</strong>戴明十四點。</li>
+<li>戴明十四點有：採用新哲學、停止依賴大量檢驗、打破部門間障礙、消除數字配額等。</li>
+<li>裘蘭分類：優先權衝突、管理冷淡、矛盾規格、工作環境 → <strong>管理可控</strong>；作業員技巧／能力不足 → <strong>作業員可控</strong>（技術性錯誤）。</li>
+<li>判斷關鍵：題幹出現「可控制／不可控制」「管理引發的錯誤」→ 想裘蘭。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯7題）：品管大師與貢獻配對</strong></p>
+<ul>
+<li>誤區：把「柏拉圖」算給 Pareto 或戴明；把 TQC 算給石川馨；把零缺點／品質免費算給戴明或裘蘭；損失函數算給石川馨。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>考題關鍵字</th>
+<th>正解人物</th>
+<th>陷阱人物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>柏拉圖「導入品管」</td>
+<td><strong>裘蘭 Juran</strong></td>
+<td>Pareto 是經濟學家，「Pareto 提出柏拉圖」＝錯誤敘述</td>
+</tr>
+<tr>
+<td>品管圈導入者</td>
+<td><strong>石川馨</strong></td>
+<td>克勞斯比、費根堡</td>
+</tr>
+<tr>
+<td>零缺點 ZD（1961）</td>
+<td><strong>克勞斯比 Crosby</strong></td>
+<td>戴明</td>
+</tr>
+<tr>
+<td>《品質免費》「第一次就做好」</td>
+<td><strong>克勞斯比</strong></td>
+<td>裘蘭、田口</td>
+</tr>
+<tr>
+<td>TQC 全面品質管制創始（1951）</td>
+<td><strong>費根堡 Feigenbaum</strong></td>
+<td>石川馨（他是 CWQC）</td>
+</tr>
+<tr>
+<td>品質損失函數評估績效</td>
+<td><strong>田口玄一</strong></td>
+<td>蕭華特、費根堡</td>
+</tr>
+<tr>
+<td>品質三部曲</td>
+<td>裘蘭</td>
+<td>—</td>
+</tr>
+<tr>
+<td>PDCA／管制圖</td>
+<td>戴明／蕭華特</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>口訣：「裘柏拉、石魚圈、克零免、費 TQC、田損失、蕭管制、戴 PDCA」。</li>
+<li>判斷關鍵：問「導入者」看的是誰把工具<strong>帶進品管界</strong>，不是誰發明原理。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：裘蘭三部曲＝規劃／管制／改進；一維品質成正比；大 Q＝經營問題</strong></p>
+<ul>
+<li>誤區：三部曲選了含「品質保證」或「品質管理」的組合；Kano 選魅力品質；大 Q 的「技術問題」判成正確。</li>
+<li>正確：裘蘭三部曲＝<strong>品質規劃 → 品質管制 → 品質改進</strong>（沒有「保證」）。</li>
+<li>Kano：滿意度與具備程度<strong>成正比（線性）</strong>＝<strong>一維品質</strong>；魅力品質是「沒有不扣分、有了大加分」。</li>
+<li>大 Q（經營問題，全公司、所有過程、內外部顧客）vs 小 Q（<strong>技術問題</strong>、製造、外部顧客）——「品質觀點面：技術問題」是小 Q。</li>
+<li>判斷關鍵：「規劃／管制／改進」三個詞湊齊才是裘蘭；「成正比」三字＝一維。</li>
+</ul>
 </blockquote>
 <h3>4. 品質成本 ⭐（費根堡分類；老師手繪 U 型圖）</h3>
 <div class="tw"><table>
@@ -4081,6 +4807,45 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>「顧客滿意度與具備程度<strong>成正比</strong>」＝<strong>一維品質</strong>。</li>
 <li>產品生命週期<strong>成熟期</strong>要加強＝<strong>魅力品質</strong>（差異化競爭力來源）。</li>
 <li>必要品質：做好沒獎勵、做不好被罵；魅力品質：沒有不扣分、有了大加分。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯2題）：Kano 類別與生命週期／正比關係</strong></p>
+<ul>
+<li>誤區：「成熟期要加強」選必要品質；「滿意度與具備程度成正比」選魅力品質。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題幹關鍵字</th>
+<th>答案</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>生命週期<strong>成熟期</strong>最需加強</td>
+<td><strong>魅力品質</strong></td>
+<td>基本功能大家都有，靠驚喜差異化</td>
+</tr>
+<tr>
+<td>滿意度與具備程度<strong>成正比</strong>（線性）</td>
+<td><strong>一維品質</strong></td>
+<td>有愈多愈滿意、沒有就不滿</td>
+</tr>
+<tr>
+<td>做好不加分、沒做被罵</td>
+<td>必要（當然）品質</td>
+<td>門檻</td>
+</tr>
+<tr>
+<td>沒有不扣分、有了大加分</td>
+<td>魅力品質</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>判斷關鍵：「正比／線性」＝一維；「差異化／成熟期／驚喜」＝魅力。</li>
 </ul>
 </blockquote>
 <h3>6. 服務品質：P.Z.B 五大缺口與 SERVQUAL</h3>
@@ -4175,6 +4940,13 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>費根堡五階段：操作式 → 領班式 → 檢驗式 → 統計式 → 全面式。</li>
 <li>制度演化：品質檢驗 QI → 品質管制 QC → 品質保證 QA → TQC → TQA。</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯1題）：「品質是…出來的」順序</strong></p>
+<ul>
+<li>誤區：把「製造」排在「檢查」前面，或把「管理」排在「設計」前面。</li>
+<li>正確：<strong>檢查（1900s）→ 製造（1940s SQC）→ 設計（二戰）→ 管理（1960s TQC）→ 習慣（1980s TQM）</strong>。</li>
+<li>口訣：「檢製設管習」。</li>
+<li>別跟「誰來管」那條線混：作業員 → 領班 → 檢驗員 → 統計 → 全面品保。</li>
+</ul>
 </blockquote>
 <h3>8. TQM 與相關考點</h3>
 <ul>
@@ -4191,6 +4963,40 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li><strong>品質管制 QC＝回饋系統（feedback）</strong>：製程中發現→矯正，偏事後。</li>
 <li><strong>品質保證 QA＝前饋系統（feed forward）</strong>：<strong>事前</strong>預防的品質管理手法。</li>
 <li>範疇：品質管理 QM ⊃ 品質保證 ⊃ 品質管制（QC 不涵蓋 QA、QC ≠ QM）。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯4題）：TQM 觀念題四連發（QFD／PDCA 階段／QC-QA／流程再造）</strong></p>
+<ul>
+<li>誤區：把教育訓練放 Plan、標準化放 Check；把 QC 當前饋、QA 當回饋；把「根本重新設計」選成持續改善。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題幹</th>
+<th>正解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>連結<strong>產品設計與生產製程</strong>的工具</td>
+<td><strong>QFD 品質機能展開</strong>（不是 SPC、品管圈、抽樣）</td>
+</tr>
+<tr>
+<td>教育訓練屬哪階段</td>
+<td><strong>Do</strong>；訂品質水準＝Plan；效果確認＝Check；<strong>標準化與決定矯正＝Action</strong></td>
+</tr>
+<tr>
+<td>QC vs QA</td>
+<td><strong>QC＝回饋（feedback）、QA＝前饋（feed forward）</strong>；範疇 QM ⊃ QA ⊃ QC</td>
+</tr>
+<tr>
+<td>根本重新思考、重新設計、重大革新</td>
+<td><strong>流程再造 BPR</strong>（持續改善 Kaizen 是小步漸進）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>判斷關鍵：PDCA 題先問「這件事發生在做之前、做的時候、做完看、還是看完處理」；QC 是製程中量測矯正（事後→回饋）。</li>
 </ul>
 </blockquote>
 <h3>9. 我國品質發展史（年份題）</h3>
@@ -4272,6 +5078,16 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>長期最有效的激勵＝<strong>公開口頭稱讚＋適度獎金</strong>；改進員工效率長期最有效＝<strong>發展公司與員工間具體品質目標、建立建設性態度</strong>。</li>
 <li>工程圖面變更：<strong>設計部門經理與各單位主管協調決議後統一更改</strong>（不是誰發現誰改）。</li>
 <li>業務方式<strong>根本重新思考、重新設計</strong>＝<strong>流程再造</strong>（≠持續改善）。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯4題）：品管圈效益、發起者與長期激勵</strong></p>
+<ul>
+<li>誤區：以為 QCC 可以「減少維持品質所需的管理活動」；發起人選品管經理／品管工程師；激勵只選獎金或只選稱讚。</li>
+<li>正確：</li>
+<li>QCC 效益＝提升士氣、改善溝通、節省成本；<strong>管理投入不減反增</strong>（主管參與、輔導、評價是成功關鍵）。</li>
+<li>發起品質改善專案成功機會最大＝<strong>公司或機構的決策者</strong>（高階支持）。</li>
+<li>長期最有效誘因＝<strong>公開口頭稱讚＋適度獎金</strong>（精神＋物質並用）。</li>
+<li>改進員工效率長期最有效＝<strong>發展公司與員工間具體品質目標、建立建設性態度</strong>（誘因、紀律都是短期手段）。</li>
+<li>判斷關鍵：題幹有「長期」→ 選「目標共有／態度」與「精神＋物質並用」，不選單一手段。</li>
 </ul>
 </blockquote>
 <h3>2. 活動十大步驟 ⭐⭐（含 PDCA／DMAIC 對應）</h3>
@@ -4661,6 +5477,17 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>改善 vs 革新：改善＝漸進、<strong>全員</strong>、小投資、重<strong>過程</strong>、低度成長期有效；革新＝激烈、<strong>菁英</strong>、重<strong>獲利成果</strong>、高度成長期。分界＝改善範圍及投資金額。</li>
 <li>改善三層次：<strong>管理導向</strong>（公司制度與作業程序、專案團隊）／<strong>團體導向</strong>（品質小組，週期四至五個月、每年二至三件）／<strong>個人導向</strong>（本身工作、任何時間）。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：改善提案的意義與評審項目</strong></p>
+<ul>
+<li>誤區：「改善提案」選成先提案後改善；「與提案人學經歷比較」選成問題意識或改善成果。</li>
+<li>正確：</li>
+<li><strong>改善提案＝先改善後提案</strong>（提案人自己做完改善再提）；提案改善＝先提案、由被建議單位改善（早期提案箱）。</li>
+<li>改善內容 vs 提案人<strong>學經歷</strong>（能力水準）比較 → 評的是<strong>努力程度</strong>（30 分）。</li>
+<li>配分：問題意識 10／創意構想 20／努力程度 30／改善成果 40。</li>
+<li>口訣：「案」字在後＝改善已完成；「拿人比事」＝努力度。</li>
+</ul>
+</blockquote>
 <h3>3. 運作與評審 ⭐（數字必背）</h3>
 <ul>
 <li>運作七步驟：確立推行組織 → 決定提案類型 → 明訂流程 → 員工提出 → 貫徹實施與追蹤 → 評審與獎勵 → 成效指標評估。</li>
@@ -4729,6 +5556,48 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>TQM 常用激勵活動＝品管圈、無缺點計畫（ZD）、提案改善制度；<strong>「目標管理」不是</strong>。</li>
 <li>參與管理常用方法＝提案制度、品管圈、目標管理；<strong>「計畫評核術（PERT）」不是</strong>。</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：特性列舉法三種特性</strong></p>
+<ul>
+<li>誤區：看到「代名詞」以為也是一種特性。</li>
+<li>正確：特性列舉法只列 <strong>名詞特性</strong>（材質、部位）、<strong>形容詞特性</strong>（性質）、<strong>動詞特性</strong>（機能動作）——<strong>沒有代名詞特性</strong>。</li>
+<li>用途：產品研發、設計改善，逐項檢討是否可改良。</li>
+<li>口訣：「名形動」三詞。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯2題）：激勵活動／參與管理「不包括誰」</strong></p>
+<ul>
+<li>誤區：兩題都有「目標管理」選項，一題是答案、一題不是，容易互相污染。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題目</th>
+<th>包含</th>
+<th><strong>不包含（答案）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TQM 常用<strong>激勵活動</strong></td>
+<td>品管圈、無缺點計畫 ZD、提案改善制度</td>
+<td><strong>目標管理 MBO</strong>（由上而下管理制度）</td>
+</tr>
+<tr>
+<td><strong>參與管理</strong>常用方法</td>
+<td>提案制度、品管圈、目標管理</td>
+<td><strong>計畫評核術 PERT</strong>（專案時程技術）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>判斷關鍵：激勵活動＝由下而上激發參與；參與管理可含 MBO（員工參與訂目標）；PERT 永遠是時程工具。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：愚巧法、目視管理、腦力激盪、魚骨圖反轉法——都是提案改善手法</strong></p>
+<ul>
+<li>誤區：把「目視管理」或「魚骨圖反轉法」排除在外。</li>
+<li>正確：四者皆屬提案改善常用手法 → 選「以上皆屬於」。</li>
+<li>判斷關鍵：題目問「何者不屬於」而四個都眼熟 → 找「以上皆屬於」選項。</li>
+</ul>
 </blockquote>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
@@ -4781,6 +5650,15 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>ISO 標準是<strong>自願性</strong>標準，<strong>不具強制性</strong>（「具強制性的國際標準」＝錯誤敘述）。</li>
 <li>ISO 是往 <strong>TQM</strong> 的階梯（ISO → 國品獎 → TQM）。</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯2題）：ISO 9000「敘述何者錯誤」型</strong></p>
+<ul>
+<li>誤區：把「著重品質改善活動」「具強制性的國際標準」當成正確敘述。</li>
+<li>正確：</li>
+<li>ISO 9000 系列著重<strong>品質管理系統的要求與保證</strong>（寫下來、照著做、留紀錄），<strong>不是</strong>品質改善活動本身。</li>
+<li>ISO 標準是<strong>自願性</strong>，不具強制性（1987 年由 ISO 技術委員會擬定這句是對的）。</li>
+<li>正確敘述清單：通過後須<strong>定期稽核</strong>維持證書；不保證顧客完全滿意；證書<strong>不保證產品品質</strong>；2000 版流程導向；2008 版八項原則；2015 版<strong>刪管理代表</strong>。</li>
+<li>判斷關鍵：出現「強制」「保證產品品質」「都著重改善」→ 錯誤選項。</li>
+</ul>
 </blockquote>
 <h3>2. 驗證與認證體系 ⭐（考題常客）</h3>
 <div class="tw"><table>
@@ -4816,6 +5694,41 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>通過驗證後<strong>必須定期接受稽核</strong>才能維持證書有效。</li>
 <li>證書<strong>驗的是品質管理制度</strong>，不是產品：正確寫法＝「本公司<strong>品保制度</strong>榮獲 <strong>ISO 9001</strong>:2015 <strong>驗證</strong>」（×榮獲 ISO 9000 認證、×本產品取得認證）。</li>
 <li>ISO 9001 證書<strong>不保證產品品質</strong>、也不保證顧客完全滿意；ISO 9000 系列著重<strong>品質管理系統要求</strong>，不是「都著重品質改善活動」。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯2題）：驗證／認證體系與對外宣傳寫法</strong></p>
+<ul>
+<li>誤區：以為認證機構直接稽核發證給企業；企業可自稱「認證」；寫「本產品取得 ISO 9001 認證」。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>角色</th>
+<th>做什麼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>驗證機構 certification body</td>
+<td>稽核企業、<strong>發證書</strong></td>
+</tr>
+<tr>
+<td>認證機構 accreditation body（TAF）</td>
+<td>認可<strong>驗證機構</strong>資格，不直接發證給企業</td>
+</tr>
+<tr>
+<td>顧問公司</td>
+<td>協助建置，<strong>非必要</strong></td>
+</tr>
+<tr>
+<td>整個過程</td>
+<td>企業＋顧問公司＋驗證機構＋認證機構＝<strong>四個團體</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>正確寫法：「本公司<strong>品保制度</strong>榮獲 <strong>ISO 9001:2015 驗證</strong>」；三個檢查點＝驗制度不驗產品、是 9001 不是 9000、是驗證不是認證。</li>
+<li>口訣：認證認人（機構能力），驗證驗物（符合性）。</li>
 </ul>
 </blockquote>
 <h3>3. 品質文件與 HLS 架構</h3>
@@ -4879,6 +5792,15 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>改版重點不包括「<strong>勞資契約關係</strong>」（考「差異不包括哪項」）。</li>
 <li>用字：<strong>維持（maintain）＝程序文件；保持（retain）＝紀錄</strong>。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：2015 vs 2008 改版重點「不包括」</strong></p>
+<ul>
+<li>誤區：看到「外包管制」「領導管理」以為不是改版重點。</li>
+<li>正確：改版重點＝<strong>風險思維</strong>（取代預防措施）、<strong>外部提供（採購＋外包）管制</strong>、<strong>強化領導</strong>（刪管理代表）、文件化資訊、組織背景／利害關係人。</li>
+<li><strong>不包括「勞資契約關係」</strong>。</li>
+<li>口訣：「風險、外包、領導、文件」四大改；勞資不在內。</li>
+</ul>
+</blockquote>
 <h3>6. 條文速記（老師手寫白話註）</h3>
 <div class="tw"><table>
 <thead>
@@ -4942,6 +5864,15 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tr>
 </tbody>
 </table></div>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：8.3.5 設計及開發「產出」要含允收準則；4.4.2 保存文件化資訊範圍很廣</strong></p>
+<ul>
+<li>誤區：#1885 選「設計及開發投入」或「監督量測分析」；#1902 只選 A 或 A+C。</li>
+<li>正確：「包括或引用監督及量測要求事項，適當時包括允收準則」＝<strong>8.3.5 設計及開發產出</strong>（產出要能被驗證）。</li>
+<li>4.4.2 b) 保存文件化資訊以確信過程依規劃執行 → 設計投入／產出（8.3）、待生產產品特性（8.5.1）、外部提供者績效（8.4.1）<strong>皆是</strong> → 以上皆是。</li>
+<li>判斷關鍵：「允收準則」跟著「產出」走；ISO 9001 問「保存哪些」多半答「以上皆是」。</li>
+</ul>
+</blockquote>
 <h3>7. 各產業品質系統標準對照 ⭐（考題已考；講義未列，依考題補充）</h3>
 <div class="tw"><table>
 <thead>
@@ -4987,6 +5918,45 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </table></div>
 <blockquote>
 <p>⚠️ 陷阱題型：「TS 16949 是通訊產業」＝<strong>錯</strong>（汽車）；「ISO 27001 與醫療器材有關」＝<strong>錯</strong>（資安）。ISO 9001＝最通用的品質系統標準。</p>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯2題）：ISO/TS 16949 是汽車，不是通訊</strong></p>
+<ul>
+<li>誤區：TS 16949 與 TL 9000 張冠李戴。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>標準</th>
+<th>產業</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ISO/TS 16949</strong>（現 IATF 16949）</td>
+<td><strong>汽車</strong>供應鏈</td>
+</tr>
+<tr>
+<td><strong>TL 9000</strong></td>
+<td><strong>電信／通訊</strong>（部分與 ISO 9001 相同）</td>
+</tr>
+<tr>
+<td>ISO 13485</td>
+<td>醫療器材</td>
+</tr>
+<tr>
+<td>ISO 22000</td>
+<td>食品</td>
+</tr>
+<tr>
+<td>AS 9100</td>
+<td>航太</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>其他正確敘述：ISO 9001＝最通用的品質系統標準；品質系統標準規範公司內部 QMS 應包括的內容。</li>
+<li>口訣：「TS 開車、TL 打電話」。</li>
+</ul>
 </blockquote>
 <h3>8. 白話實例對照：手搖飲料店（老師提供，講義 P62~73）⭐幫助理解條文</h3>
 <p>每章先記「一句話＋流程口訣」，再用飲料店例子對回條文：</p>
@@ -5341,6 +6311,16 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>統一指揮＝一人只對一個上司（人對人）；授權＝清晰的指揮線（層級）。</li>
 <li>職責原則：授權後<strong>責任仍在上級</strong>（絕對的），選擇題愛考。</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：職位說明書＝定義原則；製作樣品供試用不是品管職責；製程管制／藍圖／公差／產品稽核皆與品質直接相關</strong></p>
+<ul>
+<li>誤區：#1905 選「職責原則」或「目標原則」；#1898 把「資料收集分析」當非典型職責；#1909 只挑一項。</li>
+<li>正確：八原則中「每一職位明確說明權責與目標」＝<strong>定義原則</strong>；職責原則是「授權後責任仍在上級」。</li>
+<li>品管典型職責：進料檢驗與供應商評核、資料收集分析、外包品檢驗與異常處理、協力廠稽核輔導；<strong>製作樣品供顧客試用</strong>屬業務／研發。</li>
+<li>
+<h1>1909：製程管制與製程能力、適用藍圖、尺寸公差、產品稽核 → <strong>以上皆是</strong>。</h1>
+</li>
+<li>判斷關鍵：「說明書」「明確定義」→ 定義原則；「一人一上司」→ 統一指揮。</li>
+</ul>
 </blockquote>
 <h3>4. 各部門品質職責（挑代表記）</h3>
 <div class="tw"><table>
@@ -5593,6 +6573,16 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tbody>
 </table></div>
 <p><strong>Ansoff 成長矩陣</strong>（產品×市場，各分新舊）：舊產品×舊市場＝<strong>市場滲透</strong>；舊產品×新市場＝<strong>市場開發</strong>；新產品×舊市場＝<strong>產品開發</strong>；新產品×新市場＝<strong>多角化</strong>。</p>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：書面協調優點／製造公司規劃起點</strong></p>
+<ul>
+<li>誤區：書面協調選「使協調快速」「以上皆是」；規劃起點選人力資源或成本分析。</li>
+<li>正確：</li>
+<li>書面協調主要優點＝<strong>使平常性（例行性）協調事項順利受重視</strong>——不是快速、不是臨時事項。</li>
+<li>製造公司<strong>最先規劃＝銷售需求預測</strong>（先知道要賣多少，再排產能、人力、成本）。</li>
+<li>判斷關鍵：書面＝慢但可留存 → 適合例行事項；規劃順序＝需求 → 產能 → 資源。</li>
+</ul>
+</blockquote>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 <section id="s24"><h2 onclick="tg(this)">乙二十二、品質標準化 ⭐⭐（第九堂課，品質概念 3-2，配分 20%＝乙最大子題）<span class="ar">▾</span></h2><div class="sb">
@@ -5672,6 +6662,36 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li><strong>界面標準</strong>：管「<strong>交接處</strong>」的相容性要求。</li>
 <li><strong>相容性標準</strong>：組合使用之二個以上產品/系統<strong>不互相影響產生故障</strong>。</li>
 <li><strong>互換性標準</strong>：零組件可互相替換。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯3題）：標準種類配對（尺寸／性能／互換性）</strong></p>
+<ul>
+<li>誤區：互換性零件先建「品質標準」；性能要求選「產品標準」；插頭通用選「均一性」。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題幹關鍵字</th>
+<th>答案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>生產<strong>互換性零件</strong>的先決條件</td>
+<td><strong>尺寸標準</strong>（公差配合）</td>
+</tr>
+<tr>
+<td>針對產品<strong>性能特性</strong>之要求</td>
+<td><strong>性能標準</strong>（不是產品標準）</td>
+</tr>
+<tr>
+<td>電器插頭各國通用</td>
+<td><strong>互換性</strong>（產品標準化三特性：互換、均一、固定）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>判斷關鍵：能互換 → 先有尺寸；問「性能」就答性能標準，不要往上抽象成產品標準。</li>
 </ul>
 </blockquote>
 <h3>4. 標準層級（金字塔）⭐</h3>
@@ -5798,6 +6818,17 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>⭐ 標準化的對象：重複頻率高、可系列化、需要量高、多人重複執行之相同手續，及<strong>不良、抱怨、錯誤發生頻率較高者</strong>。</li>
 <li>推行原則（8 項挑重點）：<strong>重點主義</strong>（貢獻最大者優先）、記錄具體客觀（<strong>數值＋公差</strong>）、定期檢討、長期方針。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：標準化推行原則與優先項目</strong></p>
+<ul>
+<li>誤區：「貢獻最大者優先」選成作業標準或定期檢討；「優先標準化」選變異小或駕輕就熟者。</li>
+<li>正確：</li>
+<li>貢獻最大者優先執行＝<strong>重點主義</strong>（重點管理）原則。</li>
+<li>推行時最優先項目＝<strong>新製程或方法改變者</strong>（趁變化點建立新標準；官方解答 C）。</li>
+<li>補充對象：重複頻率高、多人執行、不良／抱怨頻率高者。</li>
+<li>判斷關鍵：已熟練、變異小的東西不急著標準化；「變化點」才是優先。</li>
+</ul>
+</blockquote>
 <h3>10. 標準的擬定法（三法比較 ⭐常考）</h3>
 <div class="tw"><table>
 <thead>
@@ -5842,6 +6873,14 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <ul>
 <li>使員工遵守標準三要點：<strong>倡導</strong>（引起動機）→ <strong>教育</strong>（提高能力）→ <strong>提高參加意識</strong>（激勵）；可與赫茲伯格雙因子理論比較。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：標準化僵化的主因＝未隨內外環境變動修正標準</strong></p>
+<ul>
+<li>誤區：選「部門配合不順」或「教育訓練未落實」。</li>
+<li>正確：標準是活的，須隨環境變動<strong>隨時修正</strong>；不修正 → 標準過時 → 組織失去彈性。</li>
+<li>判斷關鍵：題幹「僵化、失去彈性」→ 答案含「修正／更新」字眼。</li>
+</ul>
+</blockquote>
 <h3>12. 效果評估與二公式 ⭐</h3>
 <ul>
 <li>負面效果三來源：<strong>過分標準化、標準化不足、錯誤的應用</strong>。</li>
@@ -5937,6 +6976,48 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>「被顧客懷疑為不良品」的支出也算<strong>外部失敗</strong>——常見陷阱。</li>
 <li>判斷型考法：量產試做/試模具→預防；供應商<strong>評價</strong>→鑑定；供應商<strong>管理輔導</strong>→預防；供應商<strong>選擇錯誤</strong>→失敗。</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯5題）：品質成本四類歸類</strong></p>
+<ul>
+<li>誤區：供應商審查歸鑑定；在製品／製成品稽查歸內部失敗；退貨歸內部失敗；外部失效選「修理重作廢品」。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>類別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>供應商審查（評鑑）成本</strong></td>
+<td><strong>預防</strong>（事前把關）</td>
+</tr>
+<tr>
+<td>在製品、製成品之<strong>稽查</strong>；<strong>產品稽核</strong>費用</td>
+<td><strong>鑑定</strong></td>
+</tr>
+<tr>
+<td>修理、重作、廢品、損壞</td>
+<td>內部失敗</td>
+</tr>
+<tr>
+<td><strong>退貨損失</strong>、抱怨處理、售後服務（保固）</td>
+<td><strong>外部失敗</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>口訣：交貨前＝內敗，交貨後＝外敗；「查、驗、稽、測」＝鑑定；「訓、劃、審供應商」＝預防。</li>
+<li>⚠️ 本章上方表格把「供應商評價」放鑑定，題庫 #1732「供應商<strong>審查</strong>成本」正解＝<strong>預防</strong>——區分：審查（事前資格評鑑）＝預防；評價（進料績效查核）＝鑑定。考試以題庫為準。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：品質績效獎金＝預防成本；內部失敗的資料來源＝重工的人工與材料憑證</strong></p>
+<ul>
+<li>誤區：#1854 把獎金歸鑑定或「以上皆非」；#1855 選「退回原物料報告」或「客戶抱怨件數」（那是外部失敗）。</li>
+<li>正確：品質激勵／獎勵活動是為了<strong>防止不良發生</strong> → 預防成本。</li>
+<li>內部失敗＝出廠前重工、報廢 → 資料來源是<strong>人工與材料費用憑證</strong>；退貨報告、客訴件數 → 外部失敗；預算表、銷售報告與失敗成本無關。</li>
+<li>判斷關鍵：交貨前＝內敗、交貨後＝外敗；「獎勵／訓練／規劃」＝預防。</li>
+</ul>
 </blockquote>
 <h3>3. 比率關係 ⭐（數字必背）</h3>
 <div class="tw"><table>
@@ -5993,6 +7074,17 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>⭐ <strong>裘蘭主張</strong>：增加預防＋鑑定成本之<strong>邊際成本</strong>＝失敗成本節省之<strong>邊際效益</strong>時，即最適點。</li>
 <li>曲線（橫軸良率、縱軸成本）：失敗成本隨良率↑而<strong>下降</strong>；預防＋鑑定成本隨良率↑而<strong>上升</strong>；總合成本呈 <strong>U 字形</strong>，最低點＝最適品質水準。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯4題）：品質成本的增減方向與最適檢查水準</strong></p>
+<ul>
+<li>誤區：以為推 QCC 後所有成本都降；以為加強最終鑑定是為了降鑑定成本或內部失敗；最適 p 用猜的。</li>
+<li>正確：</li>
+<li>實施 QCC → <strong>預防成本不降反升、增幅最大</strong>（教育訓練、圈會都是預防投入）；換來內外部失敗下降。</li>
+<li>增加<strong>最後產品鑑定</strong> → 攔截不良品流出 → <strong>降低外部失敗成本</strong>。</li>
+<li>最適檢查水準：<strong>TC(p)＝預防鑑定＋失敗成本</strong>，例 TC＝120＋7p＋2000/p＋4(50−p)，逐一代入選項取最小 → p＝25.82（TC≈474.9）。</li>
+<li>判斷關鍵：「1＋2」隨品質升而增、「3＋4」隨品質升而減；計算題直接代四個選項比大小，不必微分。</li>
+</ul>
+</blockquote>
 <h3>5. 隱藏損失與隱形成本</h3>
 <ul>
 <li>⭐ <strong>哈靈頓</strong>：傳統失敗成本通常被<strong>嚴重低估</strong>（顧客端、顧客不滿意、商譽受損）。</li>
@@ -6005,6 +7097,17 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>資料來源 5 法：現有會計科目（最簡易）→ 會計科目成分 → 原始會計記錄 → 估計法（<strong>工作抽查</strong>）→ 專用表單。</li>
 <li>⭐ 制度建立 9 步驟：評估企業內外 → 層峰支持 → 宣導教育 → 收集初步資料 → 制定典章制度 → 定期資料 → 分析報告 → 尋求低減對策 → 審議成本目標。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：品質成本名詞與制度第一步</strong></p>
+<ul>
+<li>誤區：「輸入成本」選失效成本；第一步選「蒐集」；三分法創始人選裘蘭或戴明。</li>
+<li>正確：</li>
+<li><strong>輸入（投入）成本＝預防＋鑑定</strong>（主動投入的易控成本）；失敗成本是輸出／損失。</li>
+<li>建立品質成本系統<strong>第一步＝品質成本之識別</strong>（先辨識歸類，才能蒐集、分析、分攤）。</li>
+<li>首先將品質成本分為<strong>預防、鑑定、失敗三類</strong>＝<strong>費根堡</strong>。</li>
+<li>⚠️ 本章 §1 寫「裘蘭 1951 年《品質管制手冊》首先提出品質成本<strong>觀念</strong>」；題庫 #1742 問的是「首先<strong>分成三類</strong>」→ 費根堡。兩者不同題意：觀念＝裘蘭、三分類＝費根堡。</li>
+</ul>
+</blockquote>
 <h3>7. 部門類推（挑代表項）</h3>
 <div class="tw"><table>
 <thead>
@@ -6077,6 +7180,42 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <ul>
 <li>安全需求屬馬斯洛最基本需求 → <strong>安全性是所有產品設計的基礎與前提</strong> ⭐。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯4題）：產品安全「誰負責／誰作證」</strong></p>
+<ul>
+<li>誤區：防錯法責任選製造或品保部門；產品安全責任只選品管部門；訴訟見證人選設計人或消費者；品保紀錄重要性選「提高品質」。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題目</th>
+<th>正解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>產品安全上運用防錯法（Fool-Proof）的責任部門</td>
+<td><strong>設計部門</strong>（防錯要在設計階段納入）</td>
+</tr>
+<tr>
+<td>產品安全與產品責任是哪一部門的責任</td>
+<td><strong>以上皆是</strong>（總經理、開發設計、製造、品管全公司共責）</td>
+</tr>
+<tr>
+<td>產品訴訟案件的見證人</td>
+<td><strong>品保人員</strong>（掌握品質紀錄）</td>
+</tr>
+<tr>
+<td>品保紀錄在 PL 中重要的原因</td>
+<td><strong>可在訴訟中證明生產者有企圖把產品做好</strong>（無過失舉證）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>判斷關鍵：「防錯」→ 設計；「責任」→ 全公司；「紀錄／作證」→ 品保。</li>
+</ul>
+</blockquote>
 <h3>2. 產品責任三種法律責任型態 ⭐⭐（高頻）</h3>
 <div class="tw"><table>
 <thead>
@@ -6109,6 +7248,41 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <ul>
 <li>考「又稱嚴格責任」的是<strong>無過失責任</strong>。</li>
 <li>消保法採<strong>無過失責任主義</strong>（製造者、輸入者）。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：PL 三時期與風險負擔</strong></p>
+<ul>
+<li>誤區：把 1960 年後選成「擔保責任」；商品缺陷風險選買方或雙方分攤。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>時期</th>
+<th>法律基礎</th>
+<th>風險由誰負擔</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>早期</td>
+<td><strong>過失責任</strong></td>
+<td>買方（買者自慎）</td>
+</tr>
+<tr>
+<td>中期</td>
+<td><strong>擔保（保證）責任</strong></td>
+<td>過渡</td>
+</tr>
+<tr>
+<td><strong>1960 年以後</strong></td>
+<td><strong>不法行為之嚴格責任</strong>（＝無過失責任）</td>
+<td><strong>賣方</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>口訣：「過→擔→嚴」，60 年代起賣方扛。</li>
+<li>記 1960 為分界年。</li>
 </ul>
 </blockquote>
 <h3>3. 消保法重點（第 7～10 條之 1）⭐</h3>
@@ -6188,6 +7362,14 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <h3>4. ITE 產品六大潛在危險（IEC 60950-1）⭐⭐（紅筆「考過」）</h3>
 <p><strong>電擊、能量、火災、機械性、輻射、化學</strong>危險（速記：電、能、火、機、輻、化）。</p>
 <p>防止步驟：定義確認危險 → 產品測試 → 確認危險程度 → 隔離危險 → 測試隔離是否有效。</p>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：IEC 60950-1 不包括的危險</strong></p>
+<ul>
+<li>誤區：把「能量危險 Energy hazards」當成不在範圍內。</li>
+<li>正確：六大危險＝<strong>電擊、能量、火災、機械、輻射、化學</strong>；<strong>不包括生物性危險</strong>。</li>
+<li>口訣：「電能火機輻化」，沒有「生」。</li>
+</ul>
+</blockquote>
 <h3>5. 危害評估與管制</h3>
 <ul>
 <li>嚴重等級：I 極嚴重（<strong>死亡</strong>/完全損壞）→ II 嚴重 → III 重要（輕傷害）→ IV 輕級。</li>
@@ -6211,6 +7393,22 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>1962 美國總統<strong>甘迺迪</strong>提出<strong>四大權利</strong>：講求安全、知道真相、選擇、表達意見 ⭐。</li>
 <li>1963 <strong>IOCU</strong>（國際消費者組織聯盟）據此定出<strong>八大權利、五大義務</strong>。</li>
 <li>考點：分清甘迺迪四權是八大權利中的哪四項。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：PL 法律術語、美國法案與價值工程</strong></p>
+<ul>
+<li>誤區：「對可靠度作敘述的法定術語」選保證 warranties；兒童安全栓蓋選兒童保護法案或消費者產品安全法案；價值工程選「製造工程之經濟性」。</li>
+<li>正確：</li>
+<li>對產品可靠度所作敘述的適當法定術語＝<strong>說明（representations）</strong>；warranties 另有法律擔保責任之意。</li>
+<li>危險物品須裝<strong>兒童不易打開之栓蓋</strong>＝美國<strong>毒物容器法案</strong>（Poison Prevention Packaging Act）。</li>
+<li><strong>價值工程 VE</strong>＝以最低成本達成必要機能 → <strong>降低成本、改進產品品質</strong>。</li>
+<li>口訣：「說明≠保證」「毒物容器管栓蓋」「VE 降本又提質」。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：消費者四大權利歸類</strong></p>
+<ul>
+<li>誤區：「免於受危害身體健康及生活商品推銷」選成知情或選擇的權利。</li>
+<li>正確：免於危害身體健康＝<strong>安全的權利</strong>（甘迺迪 1962 四大權利之首）。</li>
+<li>四大權利：<strong>安全、知情（知道真相）、選擇、發言（表達意見）</strong>。</li>
+<li>判斷關鍵：題幹有「危害／健康」→ 安全；「資訊／真相」→ 知情；「多種可選」→ 選擇；「意見」→ 發言。</li>
 </ul>
 </blockquote>
 <hr />
@@ -6299,6 +7497,17 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </tr>
 </tbody>
 </table></div>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：稽核種類、對象與定期評級</strong></p>
+<ul>
+<li>誤區：買賣雙方直接稽核選第三者；定期評級目的選「防止不良品」；品質稽核參考對象選「整個工廠」。</li>
+<li>正確：</li>
+<li>買賣雙方之間<strong>直接</strong>進行＝<strong>第二者稽核</strong>（第一者＝自己查自己；第三者＝驗證機構）。</li>
+<li>定期評級目的＝<strong>防止（供應商／製程）能力衰退</strong>。</li>
+<li>「品質稽核可參考哪一品質系統的評估」官方解答＝<strong>(D) 某一計畫</strong>。</li>
+<li>口訣：一自、二買賣、三驗證；評級防衰退。</li>
+</ul>
+</blockquote>
 <h3>3. 內部稽核流程（10 步驟）</h3>
 <p>訂定稽核計畫 → 稽核人員資格認定與訓練 → 稽核前作業 → <strong>文件審查</strong> → 稽核前會議 → <strong>現場稽核</strong> → 終結會議 → 稽核報告 → 矯正措施及跟催 → <strong>管理審查</strong>。</p>
 <blockquote>
@@ -6321,6 +7530,16 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </li>
 <li>稽核方案應考慮：品質目標、流程重要性、顧客回饋、變更影響、以往稽核結果；選稽核員確保<strong>客觀性和公正性</strong>、保留<strong>文件化資訊</strong>。</li>
 </ol>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：稽核 4P 與稽核方案考量</strong></p>
+<ul>
+<li>誤區：4P 選 People 或 Process 為「不屬於」；稽核方案考量把「品質成本」當成有。</li>
+<li>正確：</li>
+<li>品質稽核 4P＝<strong>Product、Process、People、Practice（程序）</strong>；<strong>Place 不是</strong>。</li>
+<li>稽核方案應考慮＝相關流程的<strong>重要性</strong>、<strong>顧客回饋</strong>、<strong>以往稽核結果</strong>（另含品質目標、變更影響）；<strong>品質成本不是</strong>。</li>
+<li>口訣：4P 沒有地方；方案看「重要、回饋、歷史」不看錢。</li>
+</ul>
+</blockquote>
 <h3>5. 執行職責 ⭐（歸屬易混）</h3>
 <div class="tw"><table>
 <thead>
@@ -6354,6 +7573,14 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>年度計劃＝<strong>召集人</strong>；稽核計劃準備與裁決＝<strong>主任稽核員</strong>。</li>
 <li><strong>矯正行動由受稽單位決定發起</strong>；稽核員只查驗有效性，<strong>不作判別、不作顧問</strong>。</li>
 <li>稽核目標是「<strong>找符合性</strong>」而非「找缺點」。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：稽核員不調查原因、不決定矯正措施；新產品稽核加倍抽樣；品質成本分類不是稽核工作</strong></p>
+<ul>
+<li>誤區：#1876 選「以上皆是稽核人員責任」；#1863 選減量或雙次；#1894 把「矯正措施建議」當非稽核工作。</li>
+<li>正確：稽核員責任＝準備計畫與查檢表、報告結果、後續跟催、<strong>建議</strong>矯正；<strong>調查原因並確定矯正措施＝受稽單位</strong>。</li>
+<li>新設計產品的產品稽核初期品質不穩 → <strong>增加抽樣數量，甚至加倍</strong>；穩定後再減。</li>
+<li>品質稽核主要工作：產品稽核、品質作業稽核、矯正措施建議、TQM 功能評估；<strong>品質成本分類</strong>屬品質成本制度。</li>
+<li>判斷關鍵：「決定／確定」矯正措施的是受稽單位，稽核員只「建議／查驗有效性」。</li>
 </ul>
 </blockquote>
 <h3>6. 稽核計畫排定三方式</h3>
@@ -6416,6 +7643,15 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li><strong>品質 Quality</strong>：訂定合理之材料規格＋確保材料符合規格。</li>
 <li><strong>成本 Cost</strong>：以合理價格取得及儲存材料。</li>
 <li><strong>交期 Delivery</strong>：適時、適量且源源不絕地獲得供應。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：進料管制的部門責任與名詞</strong></p>
+<ul>
+<li>誤區：材料規格由採購或品管訂；有品質手冊＝已通過 ISO 或合格供應商；測試目的選外觀大小。</li>
+<li>正確：</li>
+<li>材料規格由<strong>設計部門</strong>訂定（採購負責取得、品管負責驗證）。</li>
+<li>供應商編有品質手冊與下階文件 → 僅表示<strong>已建立</strong>品質管理系統，<strong>不代表已實施、已通過驗證、或合格</strong>。</li>
+<li>協力廠對零組件做<strong>測試（test）</strong>＝決定零組件在<strong>特定環境條件下之性能</strong>（檢查外觀尺寸是檢驗，不是測試）。</li>
+<li>判斷關鍵：「建立」≠「實施」≠「驗證」三階段分清；「測試」永遠跟「性能／實驗」綁在一起。</li>
 </ul>
 </blockquote>
 <h3>2. 協力廠管理與供應商評鑑 ⭐</h3>
@@ -6501,6 +7737,14 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>ISO 9001 進料檢驗流程：廠商送貨 → 物管<strong>收料</strong>（核對訂購單號/品名/數量/外觀）→ 品保<strong>免驗判定</strong>（免驗零件一覽表）→ <strong>外觀及特性檢驗</strong>（不合格 → 不合格品管制）→ 入庫 → 登錄（進料檢驗履歷表）。</li>
 <li>驗收不合格作業：逾期未交貨 ⭐ 促其履約＋<strong>按合約罰款</strong>；<strong>減價收貨</strong>須<strong>使用部門主管</strong>核准；不符情形 ⭐ <strong>列入供應商往來記錄</strong>；退回更換者<strong>交貨日期以補送到達日為準</strong>。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：進料驗收看「時間、規格、品質、數量」，不看金額</strong></p>
+<ul>
+<li>誤區：把「交貨金額是否符合」當驗收重點。</li>
+<li>正確：驗收作業核對交期、規格、品質、數量；<strong>金額</strong>是採購／會計對帳的事。</li>
+<li>判斷關鍵：出現「金額／價格／付款」→ 非驗收重點。</li>
+</ul>
+</blockquote>
 <h3>4. 不合格品處置與特採（MRB）⭐</h3>
 <ul>
 <li>管理重點：不合格品先<strong>區隔</strong>，再處置。</li>
@@ -6546,6 +7790,37 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <ul>
 <li>「特採原則上」官方解答＝<strong>(C) 可以有慣例</strong>（與例外處置的精神相左）。</li>
 <li>「推動免檢制度目的」官方解答＝<strong>(B) 提高製程效率</strong>（講義寫的是免除重覆檢驗、爭取時效）。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯3題）：特採／免檢</strong></p>
+<ul>
+<li>誤區：特採由品管委員會或經營會議決定；特採「不可有慣例」；免檢目的選「減少檢驗費用」。</li>
+<li>正確（依題庫官方解答）：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題目</th>
+<th>正解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不合格批急需，提交誰審查特採</td>
+<td><strong>材料審查會議 MRB</strong></td>
+</tr>
+<tr>
+<td>特採原則上</td>
+<td><strong>(C) 可以有慣例</strong></td>
+</tr>
+<tr>
+<td>推動免檢制度目的</td>
+<td><strong>(B) 提高製程效率</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>特採＝對已判不合格批的事後例外處置；免檢＝對長期優良供應商的事前制度性豁免。</li>
+<li>⚠️ 本節上方已註明後兩題官方解答與講義精神（例外處置／免除重覆檢驗爭取時效）不同，考試先照官方解答作答。</li>
 </ul>
 </blockquote>
 <h3>5. 倉儲：領發料與退料 ⭐</h3>
@@ -6682,6 +7957,22 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>反之：檢驗項目多、破壞性試驗、單位檢驗費用高或耗時 → 適合抽樣。</li>
 <li>抽樣 vs 全檢的經濟比較要考慮：檢驗零件成本、修正不良零件成本、不良品沒被發現的成本；<strong>「改善生產製程的成本」不在此列</strong>。</li>
 </ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯6題）：品管手法功能對照（機械製造教科書版）</strong></p>
+<ul>
+<li>標準差與平均值<strong>不成正比</strong>（#1932 C 錯）；σ 愈大分布愈廣；99.7% 落在 ±3σ。</li>
+<li>直方圖：看分布情形；QCC 用直方圖決定<strong>數值上下限</strong>（#1933，題庫）。</li>
+<li>管制圖：判斷<strong>是否有變異並查出原因</strong>（#2244）；統計解析法：<strong>推測變異可能原因</strong>（#2245）；抽驗法：以樣本推定全體、經濟可靠（#2247）。</li>
+<li>⚠️題庫：#2209 正解 B「查核表可了解一對資料之對應關係及強弱」；一般教材此為散布圖功能，而 A（魚骨圖）、C（直方圖）敘述也正確，該題疑有誤，遇原題照題庫。</li>
+<li>判斷關鍵：「找原因」→統計解析／魚骨；「看有沒有變」→管制圖；「推全體」→抽驗。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯2題）：抽樣 vs 全檢經濟比較／缺點率與檢驗員錯誤</strong></p>
+<ul>
+<li>誤區：把「改善生產製程的成本」納入抽樣／全檢決策；直覺認為缺點率高檢驗員愈容易錯。</li>
+<li>正確：</li>
+<li>抽樣 vs 全檢經濟比較只看：<strong>檢驗零件成本、修正不良零件成本、不良品沒被發現的成本</strong>；<strong>改善製程成本不在內</strong>。</li>
+<li>缺點率<strong>愈高</strong> → 缺點愈常出現愈容易看到 → 檢驗員犯錯可能性<strong>較低</strong>（Juran：缺點率極低時最易漏檢）。</li>
+<li>判斷關鍵：決策只算「檢、修、漏」三種錢；檢驗員錯誤與缺點率<strong>反向</strong>。</li>
+</ul>
 </blockquote>
 <h3>3. 量測數據名詞：精密度 vs 準確度 ⭐⭐</h3>
 <ul>
@@ -6726,6 +8017,22 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>集中但整體偏一側 → 精密度<strong>優</strong>、準確度<strong>劣</strong>。</li>
 <li>散布寬又偏 → 兩者皆劣；集中且以 A 為中心 → 兩者皆優。</li>
 <li>題目問「precision 與 accuracy 意義」→ 答「分別是<strong>一致性與正確性</strong>」，不是相同、也不是精確性與追溯性。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯6題）：精密度／準確度／解析度／靈敏度定義與誤差大小</strong></p>
+<ul>
+<li>解析度＝量具能顯示的<strong>最小讀數</strong>（#1943）；靈敏度＝輸出變化/輸入變化，<strong>放大率愈大靈敏度愈高</strong>（#1940 B 錯；A「靈敏度是最小變量值」錯，那是解析度）。</li>
+<li>精密度＝測量值彼此的差異程度（分散，#2260）；準確度＝與真值的差。#1927：「誤差愈小愈靠近真值」對、「誤差愈小愈精密」錯（誤差小是準確）；儀器愈精密準確度不一定愈高。</li>
+<li>⚠️題庫：#1940 正解 C「偶然誤差的大小決定量具的準確度」（該教科書 2-3-6）；本章 §4 一般認知是隨機誤差影響精密度，遇原題照題庫。</li>
+<li>量具精度選用：<strong>工件公差的 1/10</strong>（公差 0.2 → 0.02，#1944）。</li>
+<li>各誤差中可能最大：<strong>刻度誤差</strong>（磨耗誤差要用久才發生，#1923）。</li>
+<li>判斷關鍵：「最小讀數」→解析度；「分散」→精密度；「偏離真值」→準確度。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯1題）：precision／accuracy 的同義詞</strong></p>
+<ul>
+<li>誤區：選「精確性與追溯性」或「相反」。</li>
+<li>正確：<strong>精密度＝一致性（consistency）</strong>、<strong>準確度＝正確性（correctness）</strong>。</li>
+<li>精密度看反覆量測的分配寬度（對應 Cp）；準確度看平均值與真值之差（對應 Ca）。</li>
+<li>口訣：「精＝密集一致，準＝正中真值」。</li>
 </ul>
 </blockquote>
 <h3>4. 量測誤差三分類 ⭐⭐（老師註「有考過」）</h3>
@@ -6773,6 +8080,15 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </ul>
 </blockquote>
 <p><strong>確保量測精度 5 注意</strong>：適合的器具與方法、求出系統/隨機誤差並管理（<strong>定期校正</strong>）、官能檢驗<strong>計量化</strong>（否則做限度樣本）、量測作業<strong>治具化</strong>（減人為誤差）、注意<strong>環境條件</strong>。</p>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯1題）：設備解析度 → B 類不確定度（非統計）</strong></p>
+<ul>
+<li>誤區：再次把「解析度」當隨機誤差（因為 §4 誤差三分類把解析度列在隨機誤差）而選 A 類或「隨機量測誤差」。</li>
+<li>正確：不確定度評估分兩類——<strong>A 類＝統計方法</strong>（重複量測算標準差）；<strong>B 類＝非統計資訊</strong>（校正證書、規格書、<strong>設備解析度</strong>、經驗）。</li>
+<li>「解析度」在誤差分類屬隨機誤差來源，但在<strong>不確定度評估</strong>時因為不是靠重複量測得來 → <strong>B 類</strong>。兩套分類不要串在一起。</li>
+<li>判斷關鍵：題幹有「不確定度」四字 → 只在 A/B 類之間選；「解析度、證書、規格」→ B。</li>
+</ul>
+</blockquote>
 <h3>5. 精密量測六大誤差與阿貝原則 ⭐⭐</h3>
 <div class="tw"><table>
 <thead>
@@ -6877,6 +8193,75 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 - 12 mm 內主尺 24 格（每格 0.5 mm）、副尺 25 格（每格 0.48 mm）→ 0.5 − 0.48 ＝ <strong>0.02 mm</strong>。
 - 游標卡尺可量外徑、內孔尺寸、孔槽深度；一般機工教材認為<strong>不宜當劃線工具</strong>（傷測爪、精度受損）——此題官方解答未提供，建議問老師。
 - 雙向公差：設計尺寸在基本尺寸兩側給公差 → <strong>正向或負向</strong>均付予公差。空氣量規需<strong>穩定且經過濾清淨</strong>的壓縮空氣。</p>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯4題）：量錶餘弦誤差 D＝L·cosθ 與量錶使用</strong></p>
+<ul>
+<li>誤區：真值寫成 L/cosθ 或 L·sinθ。</li>
+<li>正確：量錶軸線與工件面法線偏 θ，顯示 L → <strong>真值 D ＝ L·cosθ</strong>（#1930、#1945：讀 0.5 → 0.5cosθ）。</li>
+<li>使用：齒桿主軸、槓桿樞軸<strong>不可加油</strong>（#1960 A 錯）；可測長度、平面度、垂直度；必須與工件面垂直。</li>
+<li>銑床虎鉗座校正歪斜 → <strong>槓桿式量表</strong>（#1973）。</li>
+<li>判斷關鍵：偏角只會讓讀值「偏大」，真值 ＝ 讀值乘 cosθ（＜1）。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯8題）：游標卡尺精度計算（本尺 kn−1 格分 n 等分）</strong></p>
+<ul>
+<li>誤區：忘了本尺 1 格可能是 <strong>0.5 mm</strong>；把「取本尺 39 格分 20 等分」算錯；「取本尺 8 等分作游尺 7 等分」以為可行。</li>
+<li>正確：游尺 n 格取本尺 <strong>kn−1</strong> 格（k＝1 或 2）→ <strong>精度 ＝ 本尺 1 格值 S ÷ n</strong>。</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>本尺 S</th>
+<th>取本尺</th>
+<th>游尺 n</th>
+<th>精度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 mm</td>
+<td>49 格</td>
+<td>50</td>
+<td>1/50＝<strong>0.02</strong>（#2184）</td>
+</tr>
+<tr>
+<td>0.5 mm</td>
+<td>24 格（12 mm）</td>
+<td>25</td>
+<td>0.5/25＝<strong>0.02</strong>（#1949）</td>
+</tr>
+<tr>
+<td>0.5 mm</td>
+<td>49 格（24.5 mm）</td>
+<td>25</td>
+<td>0.5/25＝<strong>0.02</strong>（#2237 C 是 0.02）</td>
+</tr>
+<tr>
+<td>1 mm</td>
+<td>19 格</td>
+<td>20</td>
+<td>1/20＝<strong>0.05</strong>（#1965、#2237 D）</td>
+</tr>
+<tr>
+<td>1 mm</td>
+<td>39 格</td>
+<td>20</td>
+<td>1/20＝<strong>0.05</strong>（#1986 D、#2238 D）</td>
+</tr>
+<tr>
+<td>0.5 mm</td>
+<td>21 格（10.5 mm）</td>
+<td>11</td>
+<td>0.5/11＝<strong>1/22</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<h1>1946 A 錯：本尺 0.5、24.5 mm 分 25 → 0.02，不是 1/40。#1947 D 錯：本尺 8 等分作游尺 7 等分（游尺格數少於本尺格數）不成立。</h1>
+</li>
+<li>判斷關鍵：先問「本尺 1 格幾 mm」，再「÷ 游尺格數」。</li>
+</ul>
+</blockquote>
 <h3>6. 量測標準器的分級與校驗系統 ⭐</h3>
 <div class="tw"><table>
 <thead>
@@ -6916,6 +8301,16 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>週期性校驗的理由：<strong>器具用久精密度變差影響產品品質</strong>（不是「美軍規範規定」或「校驗人員要求」）。校正主要確保儀器的<strong>準確度</strong>。</li>
 <li>MIL-I-45662：契約商可用<strong>任何自行決定</strong>的檢驗程序及儀器，但<strong>須經政府部門同意</strong>。</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：管制量測標準三件事與 MIL-I-45662</strong></p>
+<ul>
+<li>誤區：以為「只有術語與數目的量測標準表」不算管制作法而漏選；MIL-I-45662 選「必須用政府指定程序」。</li>
+<li>正確：</li>
+<li>管制量測標準＝<strong>A 建立量測標準表（術語與數目）＋B 決定校準區間與校準來源＋C 保持環境並追溯至國際標準局</strong> → <strong>A.B.C 皆是</strong>。</li>
+<li>MIL-I-45662：契約商<strong>可自行決定</strong>檢驗程序及儀器，<strong>但須經政府部門同意</strong>。</li>
+<li>判斷關鍵：量測標準管制題出現「以上皆是」通常就是它；MIL 規範是「自訂＋核准」不是「指定」。</li>
+</ul>
+</blockquote>
 <h3>7. SI 國際單位制 ⭐⭐（克耳文、燭光老師註「常考」）</h3>
 <ul>
 <li>1960 年第 11 屆國際度量衡大會制定。<strong>七個基本單位：m、kg、s、A、K、cd、mol</strong>；輔助單位 rad；導出單位（N、V、Ω、m/s…）。</li>
@@ -6981,6 +8376,13 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 <li>「七個度量衡單位」清單裡出現<strong>輻射量</strong>、力、電壓 → 不是基本單位。</li>
 <li>三相點 273.<strong>16</strong>（定義 K）vs 冰點 273.<strong>15</strong>（0 ℃）。</li>
 <li>檢測結果表示法：溫度 25 ℃ 正確；<strong>硬度 HRC 60 不加「°」</strong>；抗拉強度應為 kgf/mm²（單位面積），只寫 kgf 不正確。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯4題）：SI 基本單位與 µm／nm／「條」換算</strong></p>
+<ul>
+<li>SI 基本單位：<strong>m、kg、s、A、K、cd、mol</strong>；電學基本單位是<strong>電流 A</strong>（#1931），不是 mm、mA、℃（#1919 只有「時間以秒」對）。</li>
+<li>1 µm ＝ 10⁻⁶ m ＝ 0.001 mm（#1975）；1 nm ＝ 10⁻⁹ m ＝ <strong>1 毫微米</strong>（#1926 C）；「1 條」＝ 0.01 mm ＝ 10 µm（1 µm ≠ 1 條）。</li>
+<li>高精度儀器不會讓工件公差變小（#1926 A 錯）。</li>
+<li>判斷關鍵：µ→10⁻⁶、n→10⁻⁹、條→10⁻² mm。</li>
 </ul>
 </blockquote>
 <h3>8. MSA、CLASS、參考物質 ⭐</h3>
@@ -7094,6 +8496,647 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </ul>
 <blockquote>
 <p>⚠️ <strong>檢定效力（power）</strong>：製程<strong>已發生變化</strong>時，判斷「已發生變化」之機率＝1−β（對照：α＝未變判變、β＝已變判未變）。</p>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：ISO 長度量測實驗室等級與 CNLA</strong></p>
+<ul>
+<li>ISO 長度量測實驗室分<strong>一級、二級</strong>兩種（AA/A/B/C 是平板／塊規等級，#1913）。</li>
+<li>
+<h1>1914 正解 A 為「二級實驗室溫度」項（數值原檔遺失，一級控溫更嚴）；其餘「照明 1000/700 lux、噪音最大 60 dB、塵埃粒子數」敘述皆非正解。整個環境溫度與量測點溫度不必相同。</h1>
+</li>
+<li>CNLA 認證領域 <strong>11 項</strong>（#1918）。</li>
+<li>判斷關鍵：實驗室分「級」（一、二），塊規／平板分 AA/A/B/C。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：FMEA vs FTA</strong></p>
+<ul>
+<li>誤區：「某一零件何以會失效」選 FTA。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>技術</th>
+<th>出發點</th>
+<th>適用題幹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FMEA</strong> 失效模式與效應分析</td>
+<td>由<strong>零件失效模式</strong>往上推影響</td>
+<td>「某一零件何以會失效」</td>
+</tr>
+<tr>
+<td><strong>FTA</strong> 故障樹分析</td>
+<td>由<strong>頂端事件</strong>往下找原因</td>
+<td>「系統故障的原因組合」</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>口訣：FMEA 由下往上（零件→系統）；FTA 由上往下（事件→原因）。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：雙向公差＝正向或負向皆給；首件檢驗時機「以上皆需要」；液體滴到手／金屬圖示＝腐蝕性</strong></p>
+<ul>
+<li>誤區：#1842 選「上下偏差付予基本偏差」；#1906 只挑「換模換刀後」一項；#1890 把腐蝕圖示看成「使用後要洗手／戴手套」。</li>
+<li>正確：雙向公差＝基本尺寸<strong>兩側</strong>都有公差（±），即<strong>正向或負向</strong>均付予公差。</li>
+<li>首件檢驗時機：每天每批第一件、每班第一件、軟體自動量測／程式變更、車床／模具／刀具變化後第一件 → <strong>以上皆需要</strong>。</li>
+<li>GHS 危害圖示：液體滴到手與金屬並腐蝕＝<strong>腐蝕性物料</strong>；火焰＝易燃；骷髏＝急毒性；驚嘆號＝刺激性。</li>
+<li>判斷關鍵：量測雜項題多為「以上皆是」型；公差題看「兩側」二字。</li>
+</ul>
+</blockquote>
+<h3>11. 量測學補充——必背數字／公式總表 ⭐⭐（2026-09-06 依錯題整理）</h3>
+<p>量測學教科書習題、機械製造「量測與品管」、電子儀表三批錯題共 200 題，先把數字與公式集中在這張表，§12~§19 是各主題的易錯框。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>主題</th>
+<th>公式／數字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>游標卡尺精度</td>
+<td>精度 ＝ 本尺 1 格值 ÷ 游尺格數 n（本尺取 kn−1 格時）；1/50→0.02、0.5/25→0.02、1/20→0.05、0.5/11→1/22</td>
+</tr>
+<tr>
+<td>分厘卡精度</td>
+<td>精度 ＝ 導程（螺距）÷ 套筒等分；1/100＝0.01、0.5/50＝0.01；襯筒 9 格分 10 等分再加 0.001</td>
+</tr>
+<tr>
+<td>量錶餘弦誤差</td>
+<td>真值 D ＝ 讀值 L × cosθ</td>
+</tr>
+<tr>
+<td>正弦桿</td>
+<td>H ＝ L·sinθ；sinθ ＝ H/L；100 mm×sin30°＝50 mm</td>
+</tr>
+<tr>
+<td>水平儀</td>
+<td>高度差 ＝ 靈敏度(mm/m) × 格數 × 底座長(m)；0.02×3×0.2＝0.012；0.01×2×0.2＝0.004</td>
+</tr>
+<tr>
+<td>光學平鏡</td>
+<td>每 λ/2 一條暗帶（λ＝0.588 µm→0.294 µm/條）；直且等距＝平面度 0</td>
+</tr>
+<tr>
+<td>餘隙／干涉</td>
+<td>最大餘隙＝孔大−軸小；最小餘隙（裕度）＝孔小−軸大；最大干涉＝孔小−軸大（負值取絕對）；配差變化總量＝最大餘隙＋最大緊度＝孔公差＋軸公差</td>
+</tr>
+<tr>
+<td>IT 等級</td>
+<td>20 級：IT01、IT0、IT1～IT18；IT01～IT4 規具、IT5～IT10 配合、IT11～IT18 不配合</td>
+</tr>
+<tr>
+<td>公差帶字母</td>
+<td>28 個位置，缺 I、L、O、Q、W（記「IQ LOW」）；大寫孔、小寫軸；H 下偏差 0、h 上偏差 0</td>
+</tr>
+<tr>
+<td>塊規等級</td>
+<td>AA(00) 校正塊規/精密儀器、A(0) 校正一般儀器量規、B(1) 檢驗量規量具、C(2) 現場加工檢驗；A 級 ±0.1 µm；基數 1 mm、2 mm</td>
+</tr>
+<tr>
+<td>量具精度選用</td>
+<td>取工件公差的 1/10（公差 0.2 → 量具 0.02）</td>
+</tr>
+<tr>
+<td>真圓度分析</td>
+<td>最小外接圓值最大、最小環帶（區域）圓值最小；濾波 15 CPR（題庫）</td>
+</tr>
+<tr>
+<td>表面粗糙度</td>
+<td>Ra 中心線平均、Rz 十點平均、Rmax 最大高度；Ra＜Rz；切斷值常用 0.8 mm；探針垂直刀痕（90°）得最大值；等級 N1～N12</td>
+</tr>
+<tr>
+<td>CMM</td>
+<td>最常用移動橋架型、精度最佳閉環橋架型、空氣軸承導軌、觸發式探頭、內孔取 6 點、DMIS</td>
+</tr>
+<tr>
+<td>量規公差</td>
+<td>量規公差 ≈ 工件公差 1/10（0.02→0.002）；美制磨耗公差＝工件公差 5%；我國通過端單向、不通過端雙向</td>
+</tr>
+<tr>
+<td>dB／dBm</td>
+<td>電壓 dB＝20·log(V₁/V₂)，40 dB→100 倍；0 dBm＝1 mW/600 Ω → V＝√(0.001×600)＝0.775 V；VU 參考同 1 mW/600 Ω</td>
+</tr>
+<tr>
+<td>儀表誤差</td>
+<td>±x% f.s. 的相對誤差＝x%×滿刻度/讀值（10 V 錶 ±2%，讀 5 V → ±4%）；並聯電表總誤差＝Σ(各錶誤差量)/總電流</td>
+</tr>
+<tr>
+<td>單位</td>
+<td>1 µm＝10⁻⁶ m＝0.001 mm；1 nm＝10⁻⁹ m＝1 毫微米；「1 條」＝0.01 mm＝10 µm</td>
+</tr>
+<tr>
+<td>密位</td>
+<td>一圓周＝6400 密位（不是 3200）</td>
+</tr>
+</tbody>
+</table></div>
+<h3>12. 量測學補充——公差配合與 IT 等級 ⭐（易錯框，2026-09-06）</h3>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯7題）：基孔制 H／基軸制 h 與配合種類判別</strong></p>
+<ul>
+<li>誤區：看到 G8/h7 以為「大寫在前就是基孔制」；把 H7/g6 當基軸制。</li>
+<li>正確：<strong>孔是 H → 基孔制；軸是 h → 基軸制</strong>。φ40G8/h7 是基軸制（#2162）、φ20H7/g6 是基孔制（#2181）、基孔制孔必為 H（#2178）。</li>
+<li>配合種類看軸字母（基孔制）：a～g 餘隙、h 最小餘隙 0、j/js/k/m/n 過渡、p 以後干涉。H8/f7 餘隙，H8/s7、t7、p7 干涉（#2253）。</li>
+<li>因<strong>孔較難加工</strong>，一般常採基孔制（#1929 D 錯：不是基軸制）；基軸制多用於鬆配合、基孔制多用於緊配合。</li>
+<li>迷你例（#2252）：軸 φ10 0/−0.009 ＝ h6（上偏差 0）→ 基軸制；要餘隙 → 孔用 G（正偏差）→ φ10 G7/h6。</li>
+<li>H8/f7：孔不小於基本尺寸、軸不大於基本尺寸、<strong>孔必大於軸</strong>（#2179 D 錯）。</li>
+<li>判斷關鍵：先找 H/h 決定基準制，再看另一方字母決定鬆緊。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯6題）：公差帶字母位置與偏差正負</strong></p>
+<ul>
+<li>誤區：以為 f 軸「最大尺寸是正偏差」；記錯缺少的字母數。</li>
+<li>正確（孔，大寫）：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>偏差</th>
+<th>基本偏差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A～G</td>
+<td>上、下偏差皆<strong>正</strong>（零線以上）</td>
+<td>下偏差</td>
+</tr>
+<tr>
+<td>H</td>
+<td>下偏差＝0、上偏差正</td>
+<td>下偏差</td>
+</tr>
+<tr>
+<td>J、JS、K</td>
+<td>跨零線，雙向</td>
+<td>—</td>
+</tr>
+<tr>
+<td>M～ZC</td>
+<td>上、下偏差皆<strong>負</strong></td>
+<td><strong>上偏差</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>軸（小寫）完全相反：a～g 皆負（f 上下皆負，#2160 D 錯）、h 上偏差 0、m～zc 皆正。</li>
+<li>28 個位置，缺 <strong>I、Q、L、O、W</strong>（「IQ LOW」），不是 26 個（#2226 D 錯）。</li>
+<li>迷你例（#2173）：φ30H10 → 下偏差 0、上偏差 +0.08 → φ30 +0.08/0。（#2177）最大尺寸：E5（孔、正偏差）＞H6（0～+）＞h6（−～0）＞a8（大負）→ 選 φ30E5。</li>
+<li>判斷關鍵：大寫＝孔、小寫＝軸；字母越前越「鬆」（孔偏正、軸偏負）。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯7題）：餘隙／干涉／裕度計算與 MMC</strong></p>
+<ul>
+<li>誤區：裕度算成最大間隙；干涉題忘了「孔小−軸大」；把「配差變化總量」算成餘隙相減。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>名詞</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最大餘隙</td>
+<td>孔最大 − 軸最小</td>
+</tr>
+<tr>
+<td>最小餘隙 ＝ <strong>裕度（allowance）</strong></td>
+<td>孔最小 − 軸最大</td>
+</tr>
+<tr>
+<td>最大干涉（緊度）</td>
+<td>軸最大 − 孔最小</td>
+</tr>
+<tr>
+<td>配差變化總量</td>
+<td>最大餘隙 ＋ 最大緊度 ＝ 孔公差 ＋ 軸公差（#1937：正解為「最大餘隙＋最小緊度」的寫法，符號遺失，本質同上）</td>
+</tr>
+<tr>
+<td>孔的最大實體狀況 MMC</td>
+<td><strong>孔徑最小值</strong>（材料最多）；軸的 MMC 為軸徑最大值（#1928）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>迷你例：#2161 孔 +0.04/0、軸 −0.02/−0.05 → 裕度 0−(−0.02)＝0.02（B 錯）、最大間隙 0.04−(−0.05)＝0.09。#2175 → 0.02−(−0.02)＝0.04。#2250 → 25.033−24.987＝0.046。#2251 → 孔小 −0.06、軸大 +0.06 → 干涉 0.12。#1941 → 0.130（正解 C）。</li>
+<li>判斷關鍵：「最大間隙」用兩個極端（孔大、軸小）；「裕度／最大干涉」都用「孔小、軸大」，正值＝餘隙、負值＝干涉。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯10題）：IT 公差等級數量、順序與用途</strong></p>
+<ul>
+<li>誤區：以為 IT01～IT4 是配合公差；以為 IT0 或 00 級最精；同尺寸不同等級、同等級不同尺寸的公差大小方向搞反。</li>
+<li>正確：CNS/ISO 共 <strong>20 級</strong>：<strong>IT01、IT0、IT1、IT2…IT18</strong>（無「00 級」，#2218 正解 IT01 最小、#2172 IT01 最高精密）。</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>等級</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IT01～IT4</td>
+<td>規具（塊規、量規）公差（#2220 IT4 → 規具）</td>
+</tr>
+<tr>
+<td>IT5～IT10</td>
+<td>機件<strong>配合</strong>公差（#1942、#2221）</td>
+</tr>
+<tr>
+<td>IT11～IT18</td>
+<td>不配合件、拉製/鑄鍛粗加工公差</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>尺寸相同：級數越大公差越大（#1938 A、#2202：H8 公差＞H7）；級數相同：<strong>尺寸越大公差越大</strong>（#2225：25h8＜35h8）。</li>
+<li>一般機件配合：<strong>孔用單向正公差</strong>、軸用單向負公差（#2223 B）。</li>
+<li>
+<h1>1938 陷阱：IT11 不是軸承公差；IT01～IT4 不是配合公差。</h1>
+</li>
+<li>判斷關鍵：規具 → 小號；配合 → 5～10；不配合 → 11 以上。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：公差名詞——通用（一般）公差 vs 專用公差</strong></p>
+<ul>
+<li>誤區：以為圖面上沒標公差的尺寸就沒有公差；以為精度高才用一般公差。</li>
+<li>正確：未標註者採<strong>通用（一般）公差</strong>（標題欄或附註說明，#2215）；<strong>專用公差</strong>與公稱尺寸並列、<strong>精度較高時使用</strong>（#2217 C 錯）。</li>
+<li>雙向公差：如 20JS6、20J7（跨零線）。</li>
+<li>⚠️題庫：#2171「工件於加工時容許之尺度變化量」題庫正解為 <strong>B 裕度</strong>；一般教材此定義是「公差」，裕度＝孔小−軸大。考到原題照題庫，其他題仍用標準定義。</li>
+<li>判斷關鍵：「沒標」＝通用；「精密／並列」＝專用。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：幾何公差分類與符號</strong></p>
+<ul>
+<li>正確分類：<strong>形狀公差</strong>＝真直度（—）、真平度（平行四邊形 ▱，#1936）、真圓度（○，#2035）、圓柱度（⌭）；<strong>方向公差</strong>＝平行度、垂直度、傾斜度；<strong>定位公差</strong>＝位置度（正位度）、同心度、對稱度；<strong>偏轉度</strong>。</li>
+<li>⚠️題庫：#1935「何者不屬位置公差」正解 <strong>D 正位度</strong>（該教科書把平行度、圓柱度、同心度都歸「位置公差」）；與 CNS 通用分類不同，遇原題照題庫。</li>
+<li>判斷關鍵：「真×度」四個是形狀；帶「度」且需基準（平行、垂直、同心）是位置類。</li>
+</ul>
+</blockquote>
+<h3>13. 量測學補充——長度量具 ⭐（易錯框，2026-09-06）</h3>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：游標卡尺讀值</strong></p>
+<ul>
+<li>正確：讀值 ＝ 游尺 0 刻度左側本尺整數 ＋ 精度 × 對齊格數。</li>
+<li>迷你例：#2235 游尺 0 在本尺 9～10 之間、第 9 格對齊、精度 0.02 → 9＋0.02×9＝<strong>9.18</strong>。</li>
+<li>迷你例（反算型）：#2255 游尺第 14 格對齊本尺 60 mm、精度 0.02 → 游尺 1 格＝0.98 mm → 0 點在 60−14×0.98＝<strong>46.28</strong>（速算：60−14＝46，＋0.02×14＝0.28）。</li>
+<li>判斷關鍵：題目給「第 k 格對齊本尺 X」時，0 點 ＝ X − k ＋ k×精度。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯4題）：游標卡尺用途、操作與齒輪游標卡尺</strong></p>
+<ul>
+<li>游標卡尺可量外徑、內孔、深度、階級，<strong>不宜當劃線工具</strong>（#1950 B 錯）；可找粗圓棒端面中心點。</li>
+<li>量內徑：使用前不必加機油擦拭（#1958 A 錯，有定期保養即可）；卡腳先調到略<strong>小</strong>於待測尺寸再張開貼合。</li>
+<li>
+<h1>1957 D 錯：游標卡尺接觸位置不正確時，量測值<strong>大於</strong>真值的敘述不成立（教材：游標尺量工件非量塊規）。餘弦誤差、阿貝誤差皆隨量測長度增加而增大；指針與錶面間隙越大視差越大。</h1>
+</li>
+<li>齒輪游標卡尺：<strong>垂尺量齒頂高（弦齒頂）、平尺量弦齒厚</strong>（#2239 C 錯：不是齒寬）。</li>
+<li>判斷關鍵：卡尺 ≠ 劃線工具；齒輪卡尺「垂高平厚」。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯7題）：分厘卡精度、讀值、使用與校正</strong></p>
+<ul>
+<li>精度 ＝ <strong>導程 ÷ 套筒等分</strong>：1 mm/100＝0.01（#1977）；0.5 mm/50＝0.01，外套筒轉一圈心軸移 <strong>0.5 mm</strong> 不是 1 mm（#2208 D 錯）；0～100 mm 有 25 mm 為一級的 4 支。</li>
+<li>襯筒游標：襯筒 9 格分 10 等分 → 再讀 0.001。#1985：主尺 6.0＋套筒 31 格×0.01＋游標 3×0.001＝<strong>6.313</strong>。</li>
+<li>使用：棘輪 <strong>3 響</strong>再讀；不用時砧座與主軸<strong>不可接緊</strong>（留隙，#1959 D 錯）；用細軟布擦測量面並歸零。</li>
+<li>校正／檢驗：測長儀、塊規、<strong>光學平板／光學平行鏡</strong>（檢查砧座真平度、兩測面平行度與磨損，#2195、#1962 B/D）；<strong>塞規不能校正分厘卡</strong>（#1962 C）。</li>
+<li>螺紋量測：<strong>螺絲分厘卡量節徑</strong>（不是外徑，#2165 B 錯）；三線規也量節徑。</li>
+<li>判斷關鍵：分厘卡 ＝ 螺紋運動原理、符合阿貝原則。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯8題）：塊規等級、用途、組合與密合順序</strong></p>
+<ul>
+<li>誤區：精度分「三級」；密合／分離順序記反；選塊從最左位數開始。</li>
+<li>等級與用途（四級，#1980 A 錯、#2240 C 對）：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>舊制</th>
+<th>新制</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AA</td>
+<td>00</td>
+<td>校正塊規、精密儀器；<strong>量具精度檢驗</strong>（#1954）</td>
+</tr>
+<tr>
+<td>A</td>
+<td>0</td>
+<td>校正一般儀器、量規；A 級精度 ±0.1 µm（範圍 0.2 µm，#2192）</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1</td>
+<td>檢驗量規、量具</td>
+</tr>
+<tr>
+<td>C</td>
+<td>2</td>
+<td><strong>工廠現場加工及檢驗</strong>（#1976）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>密合：由<strong>厚而薄</strong>（先厚後薄，#1948 C 錯）；分離：由<strong>薄而厚</strong>（#1961 C 錯）；密合不宜超過 1 小時；用石油精去油、戴手套、放密閉盒與 20 ℃ 保存。</li>
+<li>選塊：以尺寸<strong>最右方（最小位）數字</strong>為基數挑最大塊，塊數最少（#2240 B 錯）；組合數愈多誤差愈大（#1967 D）；基數 1 mm 與 2 mm；組合法＝堆疊法、旋轉法；塊規可做精密劃線（配附件）。</li>
+<li>判斷關鍵：「疊厚拆薄」、「從個位數後面的小數挑起」。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯5題）：高度規、組合角尺、螺紋三線規</strong></p>
+<ul>
+<li>量錶式高度規歸零：轉<strong>錶盤外環</strong>對齊指針，不是轉指針旋鈕（#1979 C 錯）；裝劃刀可劃線、裝測深附件量孔深階級差。</li>
+<li>精密電子（線性）高度規：線型編碼器＋微處理器、空氣軸承基座、RS-232；<strong>不能量直圓度</strong>（#1983 B 錯）。</li>
+<li>組合角尺構件：直尺（鋼尺）＋直角規＋中心規＋量角器（角度規）；<strong>樣規不是</strong>（#1982）。⚠️題庫：#1995 正解 C「角度規」不是構件，與 #1982 矛盾；遇原題各照題庫。</li>
+<li>螺紋三線規量<strong>節徑</strong>（#2199）。</li>
+<li>判斷關鍵：高度規歸零轉錶盤；三線規／螺絲分厘卡都對節徑。</li>
+</ul>
+</blockquote>
+<h3>14. 量測學補充——角度量測 ⭐（易錯框，2026-09-06）</h3>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯5題）：正弦桿 H＝L·sinθ</strong></p>
+<ul>
+<li>公式：<strong>sinθ ＝ H/L</strong> → H ＝ L·sinθ（#2002）；L＝兩圓柱中心距、H＝塊規堆疊高。</li>
+<li>迷你例：#2191 L＝100、θ＝30° → 100×0.5＝<strong>50 mm</strong>。#1998 L＝300、正解 129.9 mm → sinθ＝0.433（θ≈25°40′，題幹角度遺失由正解反推）。</li>
+<li>正弦桿精度高但<strong>角度大（＞45°）誤差大，不宜多用</strong>（#1993 B 錯）；間接量測非不得已不用；正弦桿與正弦平板原理相同；現場錐度常用錐度規。</li>
+<li>兩圓柱半徑不等造成的角度誤差 → <strong>量具製造誤差</strong>（#2006）。</li>
+<li>判斷關鍵：H 在上（對邊）、L 在下（斜邊）。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯5題）：水平儀靈敏度換算與用途</strong></p>
+<ul>
+<li>公式：<strong>兩端高度差 ＝ 靈敏度(mm/m) × 移動格數 × 底座長(m)</strong>。</li>
+<li>迷你例：#2005 0.01 mm/m×2 格×0.2 m＝<strong>0.004 mm</strong>；#2001 0.02×3×0.2＝<strong>0.012 mm</strong>。</li>
+<li>氣泡往哪邊漂＝那邊高：#2001 氣泡向左 → 左高 → <strong>以左端為支點，提升右端 0.012 mm</strong>（C）。</li>
+<li>水平儀量<strong>真平度</strong>（平板，#1994）；評估<strong>真直度最簡單常用 → 電子水平儀</strong>（#2076）；方框水平儀可量垂直度；電子水平儀（電容／電感式）<strong>只能量小角度</strong>（#1992 C 錯）。</li>
+<li>判斷關鍵：mm/m × 格 × m，單位互消剩 mm；記得底座長要換成公尺。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯6題）：角度標準器、多面稜規、小角度量測與密位</strong></p>
+<ul>
+<li>角度標準器：多面稜規、角度塊規、旋轉分度校正盤；<strong>分度器不是</strong>（#1989）。</li>
+<li>多面稜規須配合<strong>自動視準儀</strong>使用（#1990 B），不能直接讀角度，面數可超過 36。</li>
+<li>小角度量測儀器：雷射干涉儀、自動視準儀、水平儀；<strong>光學平鏡不是</strong>（#1997）。</li>
+<li>無法檢測角度／錐度：<strong>環規</strong>（#1996）、<strong>刀邊直規</strong>（#2018）；電子水平儀、正弦桿、角度塊規可以。</li>
+<li>密位制：一圓周 <strong>6400 密位</strong>（#1987 D「3200」錯）。</li>
+<li>判斷關鍵：能「比出角度」的才是標準器；光學平鏡管平面不管角度。</li>
+</ul>
+</blockquote>
+<h3>15. 量測學補充——真直度／真平度／真圓度 ⭐（易錯框，2026-09-06）</h3>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯7題）：真直度／真平度量測工具、分析法與平板等級</strong></p>
+<ul>
+<li>可量真直度：直規、刀邊直規、水平儀、自動視準儀、雷射干涉／準直儀、<strong>量錶＋直規</strong>；<strong>雷射掃瞄儀</strong>（#2007）、<strong>單獨量表</strong>（#2017）不行。</li>
+<li>真直度誤差分析最常用 <strong>最小平方法</strong>（#2011）；真平度取樣最常用 <strong>米字型分割法</strong>（#2012）。</li>
+<li>平板（舊制）四級 <strong>AA、A、B、C</strong>（#2013）；刀邊直規最長約 200 mm、有三角／四角形；電子水平儀精度高於酒精式（#2009 A 精度數值敘述錯）。</li>
+<li>
+<h1>2014：氣壓量規可量內徑與高度差（D 對）；花崗平板兩面不必平行、針盤量錶不量粗糙度、氣壓量規反應比電子式<strong>慢</strong>。</h1>
+</li>
+<li>判斷關鍵：真直度靠「直線基準＋讀高低」；掃瞄儀、單支量表沒有基準。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯9題）：真圓度量測法、四種參考圓與真圓度儀</strong></p>
+<ul>
+<li>量測法：直徑法、三點法（V 型塊，工廠常用）、半徑法；<strong>沒有四點法</strong>（#2025）；真圓度儀屬<strong>半徑法</strong>（#2026）。</li>
+<li>四種參考圓（失圓值大小）：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>參考圓</th>
+<th>失圓值</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最小外接圓 MCC</td>
+<td><strong>最大</strong>（#2036、#2030 D）</td>
+<td>＝環規圓（檢環規）</td>
+</tr>
+<tr>
+<td>最大內切圓 MIC</td>
+<td>—</td>
+<td>＝檢<strong>塞規</strong>參考圓（#2030 B 錯）</td>
+</tr>
+<tr>
+<td>最小平方圓 LSC</td>
+<td>中間</td>
+<td>最常用</td>
+</tr>
+<tr>
+<td>最小環帶（區域）圓 MZC</td>
+<td><strong>最小</strong></td>
+<td>符合定義</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>儀器：X/Y 工作台與旋轉台用<strong>空氣軸承</strong>（#2028）；收錄器 LVDT；精確主軸法；<strong>大工件用旋轉收錄器式、小工件用旋轉工作台式</strong>，方型八缸引擎（大）用旋轉收錄器式（#2031 E 錯）；轉速非 10 rpm（#2032 C 錯）；工件軸心與台軸夾角愈小愈佳。</li>
+<li>圖形濾波常用 <strong>15 CPR</strong>（#2034，題庫）。</li>
+<li>操作順序（#2038 代號遺失，依正解邏輯）：放置工件 → 調工作台水平 → 調中心對正工件軸 → 開始量測。</li>
+<li>判斷關鍵：外接最大、環帶最小；塞規配內切、環規配外接。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯4題）：輪廓量測儀</strong></p>
+<ul>
+<li>X 軸位移常用<strong>電感式</strong>（#2020）、Y 軸位移常用<strong>機械式</strong>（#2021）（題庫）。</li>
+<li>探針材料：鋼、碳化鎢、鑽石；放大倍率可達 200 倍；水平量程可達 150 mm；<strong>直角度工件無法一次完成</strong>（#2024 E 錯）；CMM 也可做輪廓量測。</li>
+<li>由放大圖換算實際值：<strong>半徑</strong>要除以放大倍率（#2091）；角度、平行度、形狀不受放大影響。</li>
+<li>判斷關鍵：長度量才受倍率影響，角度不會。</li>
+</ul>
+</blockquote>
+<h3>16. 量測學補充——表面粗糙度 ⭐（易錯框，2026-09-06）</h3>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯10題）：粗糙度參數 Ra／Rz／Rmax／RMS 與參數分類</strong></p>
+<ul>
+<li>三大 CNS 參數：<strong>Ra 中心線平均粗糙度</strong>（#2056、#2057）、<strong>Rz 十點平均粗糙度</strong>（#2060）、<strong>Rmax 最大高度粗糙度</strong>；RMS（均方根）非 CNS 主參數且漸不採用（#2039 D、#2040）。</li>
+<li><strong>Ra 各國意義完全相同</strong>（#2041）；同一面 <strong>Ra ＜ Rz</strong>（#2259 B「Ra＞Rz」錯）；單位 µm。</li>
+<li>參數分類：Ra、Rq、Rz、Rmax、Rp 屬<strong>振幅（高度）參數</strong>；Sm 等屬間距參數；斜率 Δa、波長 λa 等屬<strong>綜合參數</strong>（#2042 D、#2043 B 為分類錯置，符號遺失）。</li>
+<li>粗糙度等級標示：數值前加 <strong>N</strong>（N1～N12，#2049）。</li>
+<li>判斷關鍵：a＝average（中心線平均）、z＝十點、max＝最大高度。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯5題）：切斷值、探針方向、Ra 缺點、滑塊功能</strong></p>
+<ul>
+<li>切斷值（cut-off）常用 <strong>0.8 mm</strong>（0.25／0.8／2.5 三種，2.5 不常用，#2044 D 錯）；切斷值愈小 Ra 愈小；<strong>粗糙面用較大切斷值</strong>。</li>
+<li>探針方向與刀痕<strong>垂直（90°）</strong>得最大 Ra（#2050）。</li>
+<li>Ra 相同的兩表面外形<strong>不一定相同</strong>（#2051 C 錯）→ Ra 最大缺點：<strong>不同外形可能有相同 Ra</strong>（#2052）；Ra 相同 Rmax 不一定相同。</li>
+<li>滑塊（skid）功能：減振、濾掉波形（waviness）、防觸針陷入窄槽；<strong>不是保護觸針</strong>（#2053 D）。</li>
+<li>收錄器 LVDT；無滑塊時可量真直度。</li>
+<li>判斷關鍵：「垂直刀痕量最大」、「Ra 平均會抹平外形差異」。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯4題）：表面符號標註：刀痕方向、織構符號各欄位</strong></p>
+<ul>
+<li>表面符號第二項＝<strong>刀痕方向符號</strong>（#2045）：＝平行、⊥垂直、X 交叉、M 多方向、<strong>C 同心圓</strong>（#2046）、R 放射狀、P 顆粒。</li>
+<li>織構符號欄位（#2205）：上值＝粗糙度上限（Ra 6.3）、下值＝下限（Ra 3.2）、左側數字＝<strong>加工裕度</strong>（2 mm，不是基準長度）、「=」＝刀痕平行邊緣、加工方法「鉋」。</li>
+<li>
+<h1>2206 Rz 0.2：單邊上限界規格、R 輪廓最大高度 0.2 µm、評估長度未標＝5 倍取樣長度；符號未加圓圈 → <strong>不是「不得去除材料」</strong>（C 錯）。</h1>
+</li>
+<li>判斷關鍵：左側數字＝裕度；圓圈才是不去除材料。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：粗糙度量測方法（含光散射）</strong></p>
+<ul>
+<li>可用：探針斷面測定法、光線切斷測定法、光波干涉測定法、光散射法；<strong>光學投影法不適合</strong>（#2089）。</li>
+<li>光散射法：快速、線上量測，<strong>0.3 秒</strong>內完成（#2054）；適用較光滑面的細微粗糙度範圍（#2055 正解 C，數值遺失）。</li>
+<li>不能量粗糙度：針盤量錶、光學平鏡、CMM、工具顯微鏡（只看表面狀況）。</li>
+<li>判斷關鍵：投影機看輪廓不看粗糙。</li>
+</ul>
+</blockquote>
+<h3>17. 量測學補充——光學量測與 CMM ⭐（易錯框，2026-09-06）</h3>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯6題）：光學平鏡干涉條帶判讀與應用</strong></p>
+<ul>
+<li>原理：光波<strong>干涉</strong>（不是反射，#2164 C 錯）；與工件面每距 <strong>λ/2</strong> 產生一條暗帶；精度可達 λ/4。</li>
+<li>條帶判讀：<strong>直且等距 → 完全平</strong>；彎曲 → 凸或凹；放在標準圓柱上條帶<strong>不是</strong>等距平行直線（#2079 A 錯）。</li>
+<li>迷你例（#2093）：四條直而平行的暗帶、λ＝0.588 µm → 平面度 <strong>0</strong>（若條帶彎曲 a，平面度＝(a/條帶間距)×0.294 µm）。</li>
+<li>應用：平面度、平行度、計算條紋數做誤差檢驗、分厘卡砧座檢查；<strong>不做微細孔真圓度</strong>（#2083）、<strong>不量粗糙度</strong>（#2068）；⚠️題庫 #2069 B「可用於工件高度比較量測」判為不正確。</li>
+<li>判斷關鍵：平鏡只管「平不平」。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯6題）：工具顯微鏡 vs 投影比較儀 vs 二次元量測</strong></p>
+<ul>
+<li>工具顯微鏡：<strong>非接觸</strong>，放大觀測小工件輪廓、形狀、刀具尺寸與角度、<strong>表面加工狀況</strong>（#2086 A、#2090 B）；<strong>不能</strong>大尺寸厚度、曲面量測、<strong>三次元量測</strong>（#2090 D 錯）、以標準比對片比對（那是投影機，#2067 A 錯）。</li>
+<li>針筆畫線粗細 → <strong>工具顯微鏡</strong>（#2084）。</li>
+<li>投影比較儀（光學投影機）：在<strong>光亮毛玻璃幕</strong>上檢查小物體表面與外形（#2200），可配標準比對片。</li>
+<li>二次元量測：CMM、工具顯微鏡、投影機都可；<strong>分厘卡不行</strong>（#2154）。</li>
+<li>判斷關鍵：顯微鏡看「小＋表面」、投影機看「輪廓＋比對片」。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯6題）：雷射干涉儀／雷射掃瞄儀／雷射探頭用途</strong></p>
+<ul>
+<li>雷射干涉儀最常用檢驗工具機<strong>線性位置誤差</strong>（#2074）；也可測真直度、真平度、垂直度、小角度；<strong>不適合水平度</strong>（#2087）；可用來<strong>校正量錶</strong>（#1925 B）。</li>
+<li>雷射掃瞄儀量外徑，<strong>不能量角度</strong>（#1924 B 錯）；CMM、精密高度規可量角度／孔距。</li>
+<li>鞍座沿 X 軸的六個誤差：3 平移（定位、水平／垂直真直）＋3 旋轉（俯仰 pitch、偏搖 yaw、橫轉 roll）；<strong>平行度不屬</strong>（#2075）。</li>
+<li>雷射探頭：用於 CMM、散射式原理、量測範圍小；光源多為<strong>半導體雷射，非氦氖</strong>（#2077 C 錯）。</li>
+<li>判斷關鍵：干涉儀＝「位置／直度」；掃瞄儀＝「徑」。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯9題）：CMM 結構、探頭、取點數、DMIS</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>正解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最早三軸座標</td>
+<td><strong>光學式尺</strong>（#2142）</td>
+</tr>
+<tr>
+<td>結構最常用</td>
+<td><strong>移動橋架型</strong>（#2143）</td>
+</tr>
+<tr>
+<td>結構精度最佳</td>
+<td><strong>閉環橋架型</strong>（#2144）</td>
+</tr>
+<tr>
+<td>軸向導引</td>
+<td><strong>空氣軸承導軌</strong>（#2145）</td>
+</tr>
+<tr>
+<td>大型 CMM 光學尺</td>
+<td><strong>莫瑞（Moiré）條紋編碼器</strong>（#2146）</td>
+</tr>
+<tr>
+<td>探頭最常用</td>
+<td><strong>觸發式</strong>（#2147）</td>
+</tr>
+<tr>
+<td>觸發式量內孔最佳點數</td>
+<td><strong>6 點</strong>（#2148）</td>
+</tr>
+<tr>
+<td>掃描式探頭內部</td>
+<td><strong>電磁式尺</strong>（#2149）</td>
+</tr>
+<tr>
+<td>CAD↔量測介面格式</td>
+<td><strong>DMIS</strong>（#2150）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>判斷關鍵：「常用」是移動橋架＋觸發；「最精」是閉環；內孔 6 點。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯5題）：CMM 量測能力與附件</strong></p>
+<ul>
+<li>三方向五面：上、前、後、左、右；<strong>下視圖量不到</strong>（#2151）。</li>
+<li>可量真圓度、平行度、同心度、真平度、齒形、輪廓；<strong>不能量光滑度（粗糙度）</strong>（#2152）。</li>
+<li>精度為微米級，<strong>不到奈米級</strong>（#2153 A 錯）；接觸式探頭要<strong>半徑補償</strong>；探頭有接觸、觸發、非接觸（雷射／CCD），<strong>非各類都須接觸</strong>（#2156 B 錯）；線性量測系統常用光學尺。</li>
+<li>附件：推拔測頭量兩孔中心距、定心顯微鏡非接觸定圓孔中心；探針球徑與球心校正用<strong>標準球</strong>，<strong>不是光學積分球</strong>（#2157 D 錯）。</li>
+<li>判斷關鍵：CMM 管「幾何」不管「粗糙」；奈米、光滑度、積分球都是陷阱。</li>
+</ul>
+</blockquote>
+<h3>18. 量測學補充——量規與限規 ⭐（易錯框，2026-09-06）</h3>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯6題）：量規種類、性質與尺寸取法</strong></p>
+<ul>
+<li>量規（規量）只判「通／不通」，<strong>不能直接讀尺寸</strong>（#2166 D 錯）；游標卡尺屬<strong>計量</strong>不是規量（#2230）；大量生產車削內孔用<strong>柱塞規</strong>（#2198）。</li>
+<li>尺寸取法：<strong>環規通過端＝軸最大尺寸</strong>；<strong>塞規不通過端＝孔最大尺寸</strong>（通過端＝孔最小）。</li>
+<li>CNS 量規：工作量規、校對量規、塞規、環規；<strong>「檢驗量規」不列 CNS</strong>（#2133，題庫）。</li>
+<li>固定量規：螺紋節距規、模板規、環規、塞規；<strong>電子量規不是</strong>（#2139）。</li>
+<li>空氣量規四型：流量式、壓力差式、背壓式、水柱式；<strong>電感式不是</strong>（#2135）；需穩定且過濾的壓縮空氣。</li>
+<li>判斷關鍵：環規對軸取大、塞規對孔「通小不通大」。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：量規公差（我國／美國／英國）</strong></p>
+<ul>
+<li><strong>量規公差比工件公差小</strong>（約 1/10，#2140 B 錯）；工件公差 0.02 → 量規製作公差 <strong>0.002</strong>（#2137 D 對）。</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>制度</th>
+<th>通過端</th>
+<th>不通過端</th>
+<th>磨耗公差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>我國 CNS</td>
+<td>單向</td>
+<td><strong>雙向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>美國</td>
+<td>單向</td>
+<td>單向</td>
+<td>＝工件公差 <strong>5%</strong>；標準環規四級</td>
+</tr>
+<tr>
+<td>英國</td>
+<td>製作＋磨耗</td>
+<td>製作公差</td>
+<td><strong>只有通過端</strong>考慮磨耗（#2137 B「兩端」錯）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<h1>2138 D 錯：美制某級「為精密研磨之標準量規所採用」敘述不正確（等級代號遺失）。</h1>
+</li>
+<li>判斷關鍵：磨耗只發生在「通過端」；量規永遠比工件精一階。</li>
+</ul>
+</blockquote>
+<h3>19. 量測學補充——電子儀表 ⭐（易錯框，2026-09-06）</h3>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：dB／dBm／VU 換算</strong></p>
+<ul>
+<li>電壓（電流）dB ＝ <strong>20·log(V₁/V₂)</strong>；功率 dB ＝ 10·log(P₁/P₂)。衰減 40 dB → 電壓 10^(40/20)＝<strong>100 倍</strong>（#2261）。</li>
+<li><strong>0 dBm ＝ 1 mW 消耗於 600 Ω</strong>；V ＝ √(P·R) ＝ √(0.001×600) ＝ <strong>0.775 V</strong>（#2262）。</li>
+<li>VU（音量單位）參考值同樣是 <strong>1 mW／600 Ω</strong>（#2269）。</li>
+<li>判斷關鍵：電壓用 20、功率用 10；0 dBm 記 0.775 V。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：儀表準確度誤差計算（f.s. 與並聯電表）</strong></p>
+<ul>
+<li>±x%（f.s.）是對<strong>滿刻度</strong>：絕對誤差 ＝ x%×滿刻度；讀值愈小相對誤差愈大。#2270：10 V 錶 ±2% → ±0.2 V，讀 5 V → 0.2/5 ＝ <strong>±4%</strong>。</li>
+<li>並聯兩電表量總電流：總誤差 ＝ (各錶讀值×各自誤差) 之和 ÷ 總電流。#2268：例 A1 20 A×2%＝0.4、A2 10 A×1%＝0.1 → 0.5/30 ＝ <strong>1.67%</strong>，總電流 30 A。</li>
+<li>判斷關鍵：看到「f.s.」先算絕對誤差，再除讀值。</li>
+</ul>
+<p>⚠️ <strong>易錯（2026-09-06，錯3題）：電子儀表電路與 IEEE-488 常識</strong></p>
+<ul>
+<li>射極隨耦器在儀表內作<strong>阻抗匹配</strong>（高輸入、低輸出阻抗），非放大／振盪（#2264）。</li>
+<li>精密儀器電阻器要<strong>溫度係數小</strong>（#2265）。</li>
+<li>IEEE-488（GPIB）匯流排：<strong>非同步</strong>（交握式）傳送，有 talker、listener、controller；「同步傳送」錯（#2267 D）。</li>
+<li>判斷關鍵：GPIB＝非同步三線交握。</li>
+</ul>
 </blockquote>
 <hr />
 <button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
@@ -7261,6 +9304,15 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 - 適用三情形：①預期<strong>納入實驗室自身活動</strong>；②<strong>直接提供給顧客</strong>；③用於<strong>支持實驗室運作</strong>。
 - 產品：量測標準與設備、輔助設備、消耗材料、參考物質；服務：校正、抽樣、測試、設施設備維修、<strong>能力試驗、評鑑及稽核服務</strong>。→ 「<strong>內部提供</strong>的服務」不在 6.6 範圍。
 - 6.6.2 程序與紀錄：明定審查核准要求、供應者<strong>評估/遴選/監控/再評估準則</strong>、使用前確保符合、依評估結果採措施。6.6.3 向供應者傳達：產品服務、<strong>允收準則</strong>、能力（人員資格）、在其設施執行的活動。</p>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯1題）：6.6 外部提供的產品與服務「不包括」</strong></p>
+<ul>
+<li>誤區：把「能力試驗」「評鑑及稽核服務」當成不在 6.6 範圍。</li>
+<li>正確：6.6 涵蓋外部的校正、抽樣、測試、設施設備維修、<strong>能力試驗、評鑑及稽核服務</strong>與量測標準、消耗品、參考物質等。</li>
+<li><strong>不包括「內部提供」的服務</strong>——條文名稱就是「外部」。</li>
+<li>判斷關鍵：只要選項寫「內部」就是答案。</li>
+</ul>
+</blockquote>
 <h3>5. 第 7 章 過程要求 ⭐⭐</h3>
 <p><strong>7.1 需求、標單及合約審查</strong>
 - 程序應確保：要求已明定文件化瞭解、實驗室<strong>有能力與資源</strong>、使用外部供應者時<strong>告知顧客並取得同意</strong>、選用適當方法。
@@ -7298,6 +9350,16 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 - 資訊管理系統（LIMS）用以<strong>收集、處理、紀錄、報告、儲存、擷取</strong>數據，投入使用前應<strong>確認功能</strong>（含內部介面）；變更（含市售軟體修改）前應授權、文件化、確認；含電腦化與<strong>非電腦化</strong>系統；市售商用軟體在設計範圍內視為已充分確認。
 - 7.11.3 應：防止未經授權存取、安全保護防竄改遺失、遵照規定環境操作（<strong>非電腦化系統也要提供人工紀錄與轉錄準確性的安全保護</strong>）、維持完整性、記錄系統失效與矯正措施。
 - 外部管理維持的系統 → 提供者須遵照本文件要求；計算與數據轉換應<strong>系統化查核</strong>。</p>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06，錯2題）：7.8 報告共通要求／7.9 抱怨處理要素</strong></p>
+<ul>
+<li>誤區：報告共通要求把「物件保存期限」當成有；抱怨處理選「以上皆是」（把召回、退換貨也算進去）。</li>
+<li>正確：</li>
+<li>7.8.2.1 共通 16 項含：執行活動的<strong>場所</strong>、<strong>執行日期</strong>、<strong>發行日期</strong>、收件／抽樣日期、授權人員識別等；<strong>「物件保存期限」不是</strong>。</li>
+<li>7.9.3 抱怨過程三要素＝<strong>接收／確認／調查與回應</strong>、<strong>追蹤與記錄</strong>、<strong>確保已採取適當措施</strong>；<strong>通知顧客召回、退換貨不是</strong>必要要素（召回屬 7.10 不符合工作）。</li>
+<li>判斷關鍵：報告題挑「跟報告本身無關的管理事項」；抱怨題單選「抱怨之接收」，別被「以上皆是」誘答。</li>
+</ul>
+</blockquote>
 <h3>6. 第 8 章 管理系統要求 ⭐</h3>
 <div class="tw"><table>
 <thead>
@@ -7342,7 +9404,35 @@ P₀＝e^(−3)＝0.04979；P₁＝3e^(−3)＝0.14937。</p>
 </ul>
 </blockquote>
 <hr />
-<p><em>（全十堂課講義已收錄完畢；之後只依錯題匯出補「易錯框」）</em></p><button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
+<p><em>（全十堂課講義已收錄完畢；之後只依錯題匯出補「易錯框」）</em></p>
+<blockquote>
+<p>⚠️ <strong>易錯（2026-09-06 再次答錯，錯2題）：選項 A 八項／8.6.2 顧客回饋用途</strong></p>
+<ul>
+<li>誤區：選項 A 題選「以上皆是」（把組織、人員能力算進去）；顧客回饋用途只選「管理系統」。</li>
+<li>正確：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>題目</th>
+<th>正解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>選項 A 包含</td>
+<td><strong>管理系統文件化</strong>（8.2）等八項：8.2 文件化、8.3 文件管制、8.4 紀錄管制、8.5 風險與機會、8.6 改進、8.7 矯正、8.8 內部稽核、8.9 管理審查；<strong>組織（第 5 章）、人員能力（6.2）不在</strong></td>
+</tr>
+<tr>
+<td>8.6.2 顧客回饋用以改進</td>
+<td><strong>以上皆是</strong>：管理系統、實驗室活動<strong>及顧客服務</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>判斷關鍵：選項 A 只在第 8 章內找；8.6.2 三者並列，出現「以上皆是」就選它。</li>
+</ul>
+</blockquote><button class="fold" onclick="foldSec(this)">▴ 收合本節</button></div></section>
 </main>
 <button id="top" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script>
