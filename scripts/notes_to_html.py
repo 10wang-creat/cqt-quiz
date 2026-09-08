@@ -10,10 +10,12 @@ import sys, os, re, base64, datetime
 import markdown
 
 def main():
-    if len(sys.argv) not in (3, 4):
-        print("用法: python3 notes_to_html.py 輸入.md 輸出.html [題庫連結]"); sys.exit(1)
-    md_path, out_path = sys.argv[1], sys.argv[2]
-    quiz_href = sys.argv[3] if len(sys.argv) == 4 else "index.html"
+    uniform = "--uniform-font" in sys.argv
+    argv = [a for a in sys.argv if a != "--uniform-font"]
+    if len(argv) not in (3, 4):
+        print("用法: python3 notes_to_html.py 輸入.md 輸出.html [題庫連結] [--uniform-font]"); sys.exit(1)
+    md_path, out_path = argv[1], argv[2]
+    quiz_href = argv[3] if len(argv) == 4 else "index.html"
     base_dir = os.path.dirname(os.path.abspath(md_path))
     text = open(md_path, encoding="utf-8").read()
 
@@ -51,6 +53,8 @@ def main():
 
     html = TEMPLATE.replace("{{HEAD}}", head_html).replace("{{SECS}}", "\n".join(secs)) \
         .replace("{{TOC}}", "\n".join(toc)).replace("{{DATE}}", today).replace("{{QUIZ}}", quiz_href)
+    if uniform:  # 全文字級一致（標題只用粗體區分）
+        html = html.replace("</style>", "h1,h2,h3,table,blockquote,code,pre,.fold,#toc a{font-size:16px!important}\n</style>", 1)
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
 
